@@ -1,0 +1,53 @@
+{
+  "agent": "narrative",
+  "run_id": "2026-11-12-trial1",
+  "as_of": "2026-11-12",
+  "price_at_call": 165.785,
+  "view": "The Huang / Megaspeed story is an unresolved key-person and export-control overhang, not yet a thesis break: no finding against Nvidia, no charge against Huang, but three live tracks (board probe, DOJ inquiry, Congress) keep headline risk skewed down and widen both tails into the 2026-11-17 print. Tactical: Wait (no new entries until earnings and the first governance read-through); strategic: Hold the thesis, with any TB1-TB3 trigger pausing all buying.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 165.785. next_2_weeks: up > +5% (close > 174.07), down < -5% (close < 157.50), range between; measured at close 2026-11-26. this_quarter: last close of Q4 2026 (2026-12-31); next_quarter: last close of Q1 2027 (2027-03-31); up > +10% (> 182.36), down < -10% (< 149.21), range between. up + range + down = 100.",
+    "next_2_weeks": {"up": 33, "range": 30, "down": 37},
+    "this_quarter": {"up": 34, "range": 36, "down": 30},
+    "next_quarter": {"up": 43, "range": 30, "down": 27}
+  },
+  "confidence": 45,
+  "evidence": [
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view 2w (n=258): up 33 / range 45 / down 22. I keep up at 33, cut range by 15 to 30 and add 15 to down (37): an earnings binary sits inside the window and governance headlines are arriving daily, so a ±5% move in 14 days is more likely than usual, with the skew to the downside while the DOJ track is open."},
+    {"ref": "base_rates.this_quarter_approx_7w", "point": "Outside view to 2026-12-31 (n=253): up 39 / range 43 / down 18. Moved to 34 / 36 / 30: down +12 because a TB1 or TB3 event, or a Congressional restriction push, could land before year-end and the -10% line (149.21) is close in ATR terms."},
+    {"ref": "base_rates.next_quarter_13w", "point": "Outside view to 2027-03-31 (n=247): up 50 / range 31 / down 19. Moved to 43 / 30 / 27: regulatory and key-person shocks usually fade if no charge follows, but this one has a live DOJ inquiry whose timing I cannot bound, so I keep a fatter down tail than the base rate."},
+    {"ref": "base_rates.conditional_2w_drop_le_minus15", "point": "After 2w drops <= -15% the next 13w was up in 4 of 4 (median +32.1%), but n=4 with overlapping windows: weak evidence, and none of those episodes had an open DOJ inquiry touching the CEO. Used only to stop me from going further bearish on next_quarter."},
+    {"ref": "base_rates.conditional_weekly_rsi_le_36", "point": "Oversold-RSI conditional (n=13) shows 13w up 69 / down 31; same caveat (small, autocorrelated). Price-momentum group belongs to technical; noted once, not weighted heavily here."},
+    {"ref": "news_governance", "point": "Board opened an independent investigation (Wachtell Lipton) into whether Huang was targeted by a foreign intelligence operation, after Huang acknowledged a relationship with a former Megaspeed director. Board framing is victim/counter-intelligence, not misconduct: lowers near-term TB2 odds but extends the story's lifespan."},
+    {"ref": "news_governance", "point": "Reported DOJ inquiry into whether Megaspeed routed ~240,000 chips / $7.5bn to China; Megaspeed denies. NYT: the BIS probe moved to DOJ after Nvidia's general counsel contacted investigators. Company-initiated contact reads as cooperative, which lowers (does not remove) TB1 risk; DOJ timelines are typically months, so a 2-week resolution is unlikely."},
+    {"ref": "news_governance", "point": "No public finding that Nvidia knowingly violated export controls; no charges against Huang reported. TB1 and TB2 have NOT fired as of 2026-11-12."},
+    {"ref": "news_governance", "point": "Senator Cramer called for Huang's resignation and the chip-export restriction push revived on Capitol Hill; earlier 2026 context (Super Micro-linked charges, Warren/Banks licence review request, Oct 1 DOJ smuggling arrest) shows a pattern, raising TB3 odds over 2 quarters more than over 2 weeks (legislation is slow)."},
+    {"ref": "news_governance", "point": "Wedbush flags key-person risk and analysts cut targets; Burry calls it 'a heck of a trade'. Narrative is now two-sided; I count all governance/export headlines as one evidence group."},
+    {"ref": "structure.week_change_pct", "point": "Week change -11.2% with Monday volume spike ratio 3.6 and drawdown -31.9% from ATH: the shock is already being priced aggressively; a governance-driven gap down this large means part of the downside narrative is in the price."},
+    {"ref": "tv_relative", "point": "NVDA perf_w -15.45 vs SOX +7.99, SMH +4.83, AMD +30.2, AVGO +17.46: the selloff is idiosyncratic (company/governance), not a sector or AI-demand break. That is consistent with a key-person/regulatory discount rather than a TB4-type fundamental break."},
+    {"ref": "tv_fundamentals", "point": "Last quarter revenue YoY +105.9%, fwd P/E on next FY 17.85, 58 of 73 analysts Buy: the fundamental thesis is intact on these numbers; the narrative discount is what is moving price. Earnings 2026-11-17 after close is the first chance for management to address governance directly."},
+    {"ref": "pages.options_positioning", "point": "Options positioning is not in my slice and was reported unavailable this run: I cannot see how much hedging/put demand already prices the governance tail, which lowers my confidence in the 2w down skew."}
+  ],
+  "key_levels": [
+    {"level": 157.50, "why": "2w down bucket line (-5%); a close below by 2026-11-26 most likely needs a negative governance development or a weak print/guide.", "ref": "probabilities.defs"},
+    {"level": 174.07, "why": "2w up bucket line (+5%); reachable on a clean print plus a quiet governance tape (ATR 5.9% daily).", "ref": "structure.atr_daily_pct"},
+    {"level": 149.21, "why": "Quarter down line (-10%); where a confirmed TB1/TB3 headline would likely take price.", "ref": "probabilities.defs"},
+    {"level": 179.92, "why": "Bottom of the 179.92-185.22 gap left by the governance shock; filling it would signal the market is discounting the probe.", "ref": "structure.gap_zone"},
+    {"level": 180, "why": "Lowest analyst price target; a close above it suggests the key-person discount is being unwound.", "ref": "tv_fundamentals.pt_low"}
+  ],
+  "what_would_change_my_mind": [
+    "More bearish (and TB1 fires): any DOJ charge, settlement or company admission that Nvidia knowingly violated export controls; or Nvidia disclosing a material DOJ/BIS matter in the 2026-11-17 release or 10-Q.",
+    "More bearish (TB2): board investigation findings adverse to Huang, Huang taking leave, or a second board member/institutional holder calling for resignation before 2026-12-31.",
+    "More bearish (TB3): a bill or Commerce rule restricting chip exports advancing past committee or being published before 2027-03-31.",
+    "More bullish: the board investigation (Wachtell Lipton) concludes Huang was a target, not a participant, and DOJ signals no case against Nvidia; or a 2026-11-17 call where management addresses governance credibly and price closes back above 179.92 (gap bottom).",
+    "Neutral-to-bullish: governance headlines go quiet for 2 weeks after earnings with no new DOJ/Congress steps; key-person shocks without charges typically fade from price within one to two quarters."
+  ],
+  "notes_for_chair": [
+    "Thesis-break status as of 2026-11-12: TB1 not fired, TB2 not fired, TB3 not fired, TB4 outside my lane (no capex data in my slice). My judgmental odds of a trigger firing: next 2 weeks TB1 ~3%, TB2 ~4%, TB3 ~3%; within 2 quarters TB1 ~15%, TB2 ~10%, TB3 ~20%. These are narrative judgments, not slice numbers.",
+    "Before vs after earnings (2026-11-17): before the print my 2w distribution is deliberately wide and down-skewed. After it, update hard on two things only: (a) any 10-Q/release language on DOJ/BIS matters (risk-factor or legal-proceedings changes are signal), (b) whether Huang runs the call. Beat/miss magnitude belongs to fundamentals.",
+    "Noise vs signal, next 2 weeks: noise = senator statements, China denials, analyst target cuts, Burry-type commentary. Signal = DOJ filings/subpoena disclosures, board statements on scope or timing, Nvidia legal-proceedings disclosures, leadership changes.",
+    "Noise vs signal, next 2 quarters: signal = BIS/Commerce rule text, export-control bill markups, DOJ charges against Megaspeed or individuals (would raise TB1 odds even without charging Nvidia), board investigation conclusion.",
+    "Cross-domain: options positioning unavailable this run, so the size of the governance hedge in the price is unknown (sentiment/red team). Relative-strength divergence (NVDA -15.45% vs SOX +7.99% week) supports that this is idiosyncratic; relative_strength should confirm.",
+    "Pre-mortem: if this is badly wrong in 3 months, the most likely reason is that I under-weighted how fast a resolved/quiet governance story re-rates a stock at fwd P/E 17.85 (too bearish), or that DOJ charges Megaspeed and Congress acts within the quarter (too bullish on TB1/TB3 timing).",
+    "Stance: Tactical Wait into 2026-11-17; Strategic Hold. Reduce is not available (no recorded position, no thesis break fired). No orders suggested; ladder changes only with owner approval."
+  ]
+}

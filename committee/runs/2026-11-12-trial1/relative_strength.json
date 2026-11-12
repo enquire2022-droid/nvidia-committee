@@ -1,0 +1,51 @@
+{
+  "agent": "relative_strength",
+  "run_id": "2026-11-12-trial1",
+  "as_of": "2026-11-12",
+  "price_at_call": 164.33,
+  "view": "Revision 2. The shock is now confirmed as NVDA-specific and structural: the CEO has left (8-K), and NVDA has lagged SOX by 23.4 pts this week and the NVDA/SOX ratio is down 44.4% over 52w, while peers (AMD, AVGO, TSM) and SOX rallied. Today's -14.3% low and +10.4% intraday recovery on 3.8x volume is a capitulation-style bar, but it is unconfirmed until the close. With a possible TB2 trigger, earnings (2026-11-17) under an interim CEO and testimony before Thanksgiving inside the 2w window, I keep both tails wide and lean slightly bearish on relative grounds.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 164.33 (2026-11-12 intraday, revision 2). next_2_weeks: up > 172.55, down < 156.11, range in between, measured at the 2026-11-25 close (2026-11-26 Thanksgiving, market closed). this_quarter: to the 2026-12-31 close; next_quarter: to the 2027-03-31 close; up > 180.76, down < 147.90, range in between. up + range + down = 100.",
+    "next_2_weeks": {"up": 33, "range": 32, "down": 35},
+    "this_quarter": {"up": 33, "range": 33, "down": 34},
+    "next_quarter": {"up": 42, "range": 26, "down": 32}
+  },
+  "confidence": 35,
+  "evidence": [
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view (n=258): up 33 / range 45 / down 22. I am at 33/32/35: range -13, down +13. ATR is 6.0% a day, today's volume is 3.8x the 60d average, and there are two binary events inside the window (earnings 2026-11-17 and congressional testimony before Thanksgiving), so a ±5% band is unlikely to hold."},
+    {"ref": "base_rates.this_quarter_approx_7w", "point": "Base 39/43/18 (n=253). I am at 33/33/34: down +16. A leadership change at the dominant AI-semis name, while peers are taking share of flows, raises the odds of a further 10% de-rating."},
+    {"ref": "base_rates.next_quarter_13w", "point": "Base 50/31/19 (n=247). I am at 42/26/32: still up-tilted (long-run drift; conditional bounce data) but down +13 for leadership and governance uncertainty that relative strength cannot resolve."},
+    {"ref": "base_rates.conditional_2w_drop_le_minus15", "point": "This now qualifies: structure.two_week_change_pct -19.7 (from 204.64 two weekly closes ago). Historically n=4: 2w 50 up / 50 range / 0 down, 13w all 4 up (median +32.1%). Tiny, overlapping, and none of those cases involved a CEO departure, so it is weak evidence; it keeps next_quarter up at 42 rather than lower."},
+    {"ref": "tv_relative", "point": "1W: NVDA -15.45% vs SOX +7.99%, SMH +4.83%, AMD +30.2%, AVGO +17.46%, TSM +7.53%, SPX -0.45%, NDX +1.6%. Every peer and index is up or flat; the selling is NVDA-specific, and capital is rotating within AI semis rather than leaving the sector."},
+    {"ref": "relative.nvda_vs_sox_13w_change_pct", "point": "NVDA/SOX ratio 15.5182, down 14.4% over 13w (from 18.1331) and 44.4% over 52w (from 27.9202). The relative downtrend predates the CEO news; the news extends it."},
+    {"ref": "relative.nvda_vs_spx_52w_change_pct", "point": "NVDA vs SPX: -25.7% over 13w and -23.9% over 52w. YTD NVDA -12.67% vs SOX +45.29%, SMH +36.99%, AMD +169.15%, SPX +11.14%."},
+    {"ref": "relative.beta_vs_sox_59w", "point": "Beta vs SOX 0.44, correlation 0.51 (59w): a strong sector gives NVDA little lift. Beta vs SPX 1.40 (59w) / 1.75 (tv_relative 1y): a broad-market pullback would hit NVDA harder."},
+    {"ref": "structure.today_recovery_from_low_pct", "point": "Today: gap open -13.1%, low -14.3% vs the prior close at 148.80, recovered 10.4% off the low to 164.33 on 498.56M shares (3.8x 60d average). This is the first sign of a buyer response, but today_bar_status = open and unconfirmed. Per lessons-log, I do not count it until the bar is complete."},
+    {"ref": "tv_purple_list", "point": "Backdrop is not risk-off: VIX 17.62, s5th_pct_above_200d 63.81, RSP 1m +4.03% vs SPY 1m -2.12%. Breadth is rotating away from mega-cap leaders, which fits continued NVDA relative weakness rather than a market washout that lifts everything later."},
+    {"ref": "judgment (no data in slice)", "point": "Relative strength after a founder-CEO exit: there is no event study in the slice, so this is judgment only. When a dominant name loses its founder under scrutiny while competitors rally, the relative gap usually takes more than one quarter to close, and the first relief bounce often fails. If guidance and customer commitments hold on 2026-11-17, the relative gap can close quickly because the sector is strong."}
+  ],
+  "key_levels": [
+    {"level": 148.8, "why": "Today's capitulation low. A daily close below it invalidates the reversal bar and confirms continued idiosyncratic de-rating.", "ref": "snapshot.today_low"},
+    {"level": 156.11, "why": "2w down-bucket threshold (-5%).", "ref": "rules: next_2_weeks bucket"},
+    {"level": 167.14, "why": "Today's high. A close above it would confirm the reversal bar.", "ref": "snapshot.today_high"},
+    {"level": 173.73, "why": "Prior daily close (2026-11-11), just above the 2w up threshold of 172.55. Reclaiming it means the 8-K gap has been fully absorbed.", "ref": "snapshot.nvda_last_close"},
+    {"level": 179.92, "why": "Lower edge of the 179.92-185.22 gap zone; filling it would close most of this week's relative gap to SOX.", "ref": "structure.gap_zone"},
+    {"level": 15.5182, "why": "NVDA/SOX ratio now. Further declines while SOX rises mean rotation out of NVDA is continuing; a move back toward 18.1331 (13w ago) would mean the leadership shock has been priced out.", "ref": "relative.nvda_vs_sox_ratio_now"}
+  ],
+  "what_would_change_my_mind": [
+    "More bullish: today's bar closes above 167.14 (confirmed reversal) and NVDA outperforms SOX in the week after earnings (week ending 2026-11-20).",
+    "More bullish: NVDA closes above 173.73 by 2026-11-25 while AMD/AVGO give back part of this week's gains, which would mean the rotation is unwinding.",
+    "More bearish: a daily close below 148.80, or the NVDA/SOX ratio keeps falling after the 2026-11-17 print. That would mean the market is pricing a lasting loss of leadership, not a one-off shock.",
+    "More bearish: congressional testimony before Thanksgiving, or any filing, shows the departure was tied to legal or regulatory exposure (confirms TB2), or links to export issues (TB1/TB3).",
+    "More bearish: SOX turns down while NVDA still underperforms it, removing the sector cushion."
+  ],
+  "notes_for_chair": [
+    "What changed vs my first submission: price_at_call 165.785 -> 164.33 and new bucket defs (2w measured on 2026-11-25). 2w moved from 34/33/33 to 33/32/35, this_quarter from 35/34/31 to 33/33/34, next_quarter from 44/27/29 to 42/26/32. Confidence went from 40 to 35. Reasons: the CEO exit is confirmed (a possible TB2), there is a new event inside the 2w window (testimony), and the 2w-drop conditional base rate now qualifies (-19.7%), which partly offsets.",
+    "TB2 check is for the chair: the 8-K says resignation, effective immediately, with congressional testimony pending. Whether that is a departure 'under legal or regulatory pressure' is outside my lane. If it is ruled TB2, all buying pauses regardless of my relative-strength read.",
+    "Slice staleness: tv_relative (perf_w, peers) and relative.this_week_nvda_minus_sox_pts (-23.4) are unchanged from the first build, although the price and ratio fields were refreshed. The peer-week figures may predate today's 8-K reaction. The coordinator's note that AMD/AVGO rose up to ~5% on the news is not in my slice and I have not used that number.",
+    "Data correction: the first slice gave the last close as 168.89 for 2026-11-11; the rebuilt slice gives 173.73 for 2026-11-11 and lists 168.89 as the prior day. week_change_pct is now -12.0 vs tv_relative nvda_perf_w -15.45, probably different windows; please reconcile before anyone cites a weekly figure.",
+    "Before vs after the print (2026-11-17): before, relative strength says idiosyncratic weakness in a strong sector, and that is not a buy signal on its own. After, NVDA vs SOX/SMH over the week of the print is the cleanest test of whether the market accepts interim-CEO guidance. I would move up to 10 pts on that alone.",
+    "Options positioning is not in my slice, so I cannot tell whether the intraday recovery was hedge-driven (short covering / dealer flows). Treat the reversal bar with extra caution.",
+    "Overlap: today's hammer-shaped bar belongs to the technical member's price-momentum group; I used it only as relative context and not as a separate signal."
+  ]
+}

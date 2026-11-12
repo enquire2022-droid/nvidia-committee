@@ -1,0 +1,55 @@
+{
+  "agent": "technical",
+  "run_id": "2026-11-12-trial1",
+  "as_of": "2026-11-12",
+  "price_at_call": 165.785,
+  "view": "Structure is broken on 1D/4H and weakening on 1W: price is 31.9% off the ATH, below the 100W SMA (-5.3%) and the 200D SMA (-18.9%), with an unfilled gap 179.92-185.22 overhead; daily/4H are oversold but the weekly RSI (33.3, open bar) is not below 30. Short-term the earnings binary on 2026-11-17 dominates and widens both tails; the 200W SMA (123.61, +34.1% below price) keeps the long-term uptrend intact, so I lean range-to-down tactically and modestly constructive over two quarters.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 165.785. next_2_weeks: up > +5% (close > 174.07), down < -5% (close < 157.50), range between, measured at the 2026-11-26 close. this_quarter: last close of Q4 2026 (2026-12-31); next_quarter: last close of Q1 2027 (2027-03-31); up > +10% (> 182.36), down < -10% (< 149.21), range between. up + range + down = 100.",
+    "next_2_weeks": {"up": 32, "range": 33, "down": 35},
+    "this_quarter": {"up": 33, "range": 37, "down": 30},
+    "next_quarter": {"up": 45, "range": 27, "down": 28}
+  },
+  "confidence": 50,
+  "evidence": [
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view 33 up / 45 range / 22 down (n=258). I cut range by 12 and add 13 to down / -1 up: daily ATR is 9.86 (5.9%), so a ±5% band over 2 weeks with earnings 2026-11-17 inside it is unlikely to hold, and trend/ADX favour the downside tail."},
+    {"ref": "base_rates.this_quarter_approx_7w", "point": "Outside view 39/43/18. Moved to 33/37/30: price is below the 100W SMA and the gap, so +10% (>182.36) requires filling the 179.92-185.22 gap and reclaiming 175.09; -10% (<149.21) only requires losing the fib 0.618 (154.53) zone in a high-ATR tape."},
+    {"ref": "base_rates.next_quarter_13w", "point": "Outside view 50/31/19. Moved to 45/27/28. Conditional weekly RSI<=36 (n=13: 69/0/31, median +21.5%) and 2w drop<=-15% (n=4: 100% up) lean up, but are tiny, overlapping, autocorrelated samples: weak evidence, so I only partially offset the broken-trend drag."},
+    {"ref": "weekly_rsi", "point": "Weekly RSI 33.3 engine / 33.13 TradingView vs oversold threshold 30: is_oversold = false, and the bar is open (Thursday); lowest since 2023 but the Apr 2025 low-week print was 35.7. Per lessons-log 2026-11-11, do not call it oversold before a completed bar below 30."},
+    {"ref": "pages.tv_technicals_1d", "point": "Daily RSI 25.69, Stoch K 14.39 > D 12.66, CCI -178.55 (oversold); but ADX 39.48 with MACD -13.32 below signal -9.09, price below every daily MA (SMA10 186.83 to SMA200 204.33); summary SELL, MA summary STRONG_SELL. Strong downtrend, stretched."},
+    {"ref": "pages.tv_technicals_4h", "point": "4H RSI 27.92, ADX 38.0, STRONG_SELL; HullMA9 169.6 just above price is the first short-term reclaim line. Counted with 1D/1W as one momentum group."},
+    {"ref": "pages.tv_technicals_1w", "point": "Weekly MACD -1.8 crossed below signal 4.54, AO -6.83, Stoch K 17.73 < D 26.68, CCI -263.14; price below SMA10/20/50 (211.05/211.92/199.89) and below SMA100 175.09, above SMA200 123.61. Weekly summary SELL: intermediate trend has turned down, long-term trend still up."},
+    {"ref": "structure.gap_zone", "point": "Unfilled daily gap 179.92-185.22 sits just above the 100W SMA (175.09) = a stacked resistance band; it is also why the proposed breakout trigger is a weekly close above 186."},
+    {"ref": "structure.volume_spike_ratio_mon", "point": "Monday volume 3.6x the 60D average (462.7M and 429.3M shares Mon/Tue vs 130.1M avg): heavy distribution or the start of capitulation; one spike is not a confirmed washout."},
+    {"ref": "pages.tv_chart_owner.daily_bottom_oscillator", "point": "Owner's daily bottom oscillator printed a green triangle 2026-11-10/11 but is unconfirmed, and its sub-pane values were not readable: information only. Weekly SELL label printed at the October top."},
+    {"ref": "fib_check", "point": "Linear fibs (10.81 -> 243.37) match the owner's chart labels (0.65 = 161.97/161.98, 0.618 = 154.53, 0.5 = 127.09). On log scale the same anchors give much lower levels (0.65 = 81.83, 0.618 = 74.07, 0.5 = 51.29), so the fib levels are scale-dependent; I weight them below swing lows and the 200W SMA."},
+    {"ref": "snapshot.nvda_week_low_so_far", "point": "Data inconsistency: price 165.785 is below the recorded week low 165.89, so the snapshot fields are from slightly different times. Minor, but it means the Apr 2026 swing low 164.27 is within about 1% and may be tested intraday."}
+  ],
+  "key_levels": [
+    {"level": 185.22, "why": "Top of unfilled gap (179.92-185.22); weekly close above 186 is the proposed breakout-tranche trigger and would negate the breakdown.", "ref": "structure.gap_zone"},
+    {"level": 175.09, "why": "100W SMA, now overhead resistance (price -5.3% below); reclaim on a weekly close is the first sign the intermediate trend is repairing.", "ref": "pages.tv_technicals_1w.sma100"},
+    {"level": 169.6, "why": "4H HullMA9; first short-term reclaim line.", "ref": "pages.tv_technicals_4h.hullma9"},
+    {"level": 164.27, "why": "Apr 2026 swing low and L1 anchor; a daily close below that is reclaimed within 1-3 daily closes is a trap (bullish), otherwise the 2026 range low has failed.", "ref": "pages.tv_chart_owner.swing_labels"},
+    {"level": 161.98, "why": "Linear fib 0.65 (L1 lower anchor); scale-dependent.", "ref": "fib_check.chart_labels.0.65"},
+    {"level": 154.53, "why": "Linear fib 0.618 with Jul 2025 breakout closes 157.75 (L2 confluence); a 2-week close below 157.50 resolves the 2w bucket down.", "ref": "fib_check.computed.level_0.618"},
+    {"level": 140.76, "why": "2024 range top / swing label, with Jul 2025 breakout base 143.85 (L3 confluence).", "ref": "ladder_audit.orders.L3.anchors"},
+    {"level": 123.61, "why": "200W SMA: the long-term trend line (price +34.1% above); strongest single anchor on the ladder (L4, with fib 0.5 at 127.09).", "ref": "pages.tv_technicals_1w.sma200"}
+  ],
+  "what_would_change_my_mind": [
+    "Bullish: a weekly close above 186 (gap 179.92-185.22 filled and 100W SMA 175.09 reclaimed) - I would move next_2_weeks and this_quarter up toward or above the base rate.",
+    "Bullish trap signal: a daily close below 164.27 that is reclaimed within 1-3 daily closes (trap rule), especially with the daily bottom oscillator confirming.",
+    "Bearish: two consecutive daily closes below 154.53 (fib 0.618 / L2 zone) after the 2026-11-17 print - I would raise this_quarter down above 40.",
+    "Weekly RSI on a completed Friday bar (2026-11-13) below 30 would make the weekly genuinely oversold for the first time since before 2023 and raise next_quarter up modestly (conditional base rate, weak evidence).",
+    "Earnings 2026-11-17: a post-print gap through 174.07 or below 157.50 effectively resolves the 2w bucket; I will re-run after the print."
+  ],
+  "notes_for_chair": [
+    "Before vs after earnings: pre-print, technicals say downtrend with stretched daily/4H momentum, so a reflex bounce toward 169.6-175 is plausible but not a trend change. After the 2026-11-17 print, price action relative to 164.27 (below) and 175.09/186 (above) matters more than any oscillator; I would roughly halve the weight on my pre-print probabilities.",
+    "Ladder Audit - fill likelihood: L1 (162-164, -1.7%) is inside one daily ATR (9.86) and likely to fill before earnings; L2 (154-157, -6.2%) is about one ATR and could fill on the print; L3 (141-145, -13.7%) and L4 (124-128, -24.0%) are post-earnings levels needing a negative reaction or a multi-week decline.",
+    "Ladder Audit - conflict: today is inside the proposed earnings blackout (2026-11-12 to 2026-11-17), yet L1 is the level most likely to trade during it. Owner must decide whether L1 resting orders are paused or exempt; the committee does not place or suggest executing orders.",
+    "Ladder Audit - anchors: L4 (200W SMA 123.61 + fib 0.5) is the highest-quality anchor; L3 (2024 range top / Jul 2025 base) is solid structure; L1 and L2 lean on linear fibs that do not hold on log scale, and L1's swing-low anchor 164.27 is already being approached, which raises the chance it is a break level rather than support.",
+    "Ladder Audit - spacing: gaps widen 4.8% -> 8.7% -> 13.5% and weights rise 1.0 -> 1.5 -> 2.0 -> 3.0, which is sensible for a high-ATR (5.9%) stock; L1-L2 at 4.8% is under one ATR apart, so both can fill on a single earnings move. Cumulative average if all filled 139.99; through L2 158.42.",
+    "Equity Bottom checklist remains draft and not back-tested; I report the daily bottom-oscillator print and the 3.6x volume spike as information only.",
+    "Missing evidence: options positioning is not in this run and owner-chart oscillator values were unreadable; these would bear on the earnings-week tails, so my confidence is capped at 50.",
+    "Pre-mortem: if this is badly wrong in three months, the likeliest reason is that the -31.9% drawdown plus 3.6x volume was the capitulation low and the small conditional samples (RSI<=36, 2w drop<=-15%) were right, producing a fast reclaim of 175-186."
+  ]
+}

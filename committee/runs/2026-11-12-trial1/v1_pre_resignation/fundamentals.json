@@ -1,0 +1,53 @@
+{
+  "agent": "fundamentals",
+  "run_id": "2026-11-12-trial1",
+  "as_of": "2026-11-12",
+  "price_at_call": 165.785,
+  "view": "Fundamentals are strong and the stock is cheap against its own growth (17.85x forward EPS with 83.4% TTM revenue growth), but last quarter's FCF fell by more than half while total debt tripled, and the 2026-11-17 print is a binary event inside every window. Before the print I lean mildly bullish on the quarters and roughly balanced but wide on 2 weeks. Strategic: Accumulate (in stages, owner's ladder only). Tactical: Wait until the print.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 165.785. next_2_weeks: up = close > 174.07, down = close < 157.50, range in between, measured at the 2026-11-26 close. this_quarter: to the last close of 2026-12-31; next_quarter: to the last close of 2027-03-31; up > 182.36, down < 149.21, range in between. up + range + down = 100.",
+    "next_2_weeks": {"up": 36, "range": 34, "down": 30},
+    "this_quarter": {"up": 41, "range": 34, "down": 25},
+    "next_quarter": {"up": 52, "range": 26, "down": 22}
+  },
+  "confidence": 45,
+  "evidence": [
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view: 33 up / 45 range / 22 down (n=258). I moved range down 11 and both tails up (+3 up, +8 down) because the 2026-11-17 print sits inside the window and daily ATR is already 5.9% (structure.atr_daily_pct), which makes a ±5% move more likely than in an average 2-week window."},
+    {"ref": "base_rates.this_quarter_approx_7w", "point": "Outside view 39/43/18 (n=253). Moved to 41/34/25: earnings widens both tails; down raised more than up because of the cash-flow and debt flags below."},
+    {"ref": "base_rates.next_quarter_13w", "point": "Outside view 50/31/19 (n=247), but the window to 2027-03-31 is about 20 weeks, longer than the 13w sample, so range should be smaller. Moved to 52/26/22."},
+    {"ref": "base_rates.conditional_2w_drop_le_minus15", "point": "After 2-week drops of 15% or more, 13w outcomes were 100% up (median +32.1%), but n=4 with overlapping windows. Weak evidence; it nudges up only by a point or two."},
+    {"ref": "tv_fundamentals.revenue_yoy_ttm_pct", "point": "TTM revenue 302.97B, +83.4% YoY; last quarter 96.22B, +105.9% YoY. Growth is accelerating on a quarterly basis, not fading."},
+    {"ref": "tv_fundamentals.revenue_next_q_est", "point": "The bar for 2026-11-17: consensus revenue 108.67B (about +12.9% vs last quarter's 96.22B) and EPS 2.47. These are the numbers a beat or miss is measured against; guidance for the following quarter is not in slice."},
+    {"ref": "tv_fundamentals.gross_margin_pct", "point": "Gross margin 74.7%, operating margin 65.2%, net margin 63.7%. Very high margins leave little room for upside surprise and make any margin slip on the print a material negative."},
+    {"ref": "tv_fundamentals.fwd_pe_on_next_fy", "point": "P/E TTM 20.94 and forward P/E 17.85 on next-FY EPS 9.29 (TTM EPS 7.9482, implying about +17% EPS growth). Price-to-sales TTM 13.28. Against 83.4% revenue growth this is a low multiple; the market is pricing a sharp growth slowdown or margin peak."},
+    {"ref": "tv_fundamentals.last_q_fcf", "point": "Last-quarter FCF 21.40B vs 48.59B the prior quarter (down about 56%) while revenue grew. Cause (working capital, inventory, prepayments, capex) is not in slice. This is the main quality-of-earnings question for the print."},
+    {"ref": "tv_fundamentals.last_q_total_debt", "point": "Total debt rose from 12.81B to 38.86B in one quarter (about 3x, +26.05B). Debt/equity is still only 0.17 and TTM FCF is 127.0B, so solvency is not a concern, but the purpose of the new debt is not in slice and should be explained on the call."},
+    {"ref": "tv_fundamentals.pt_avg", "point": "Analyst group (count once): 63 of 73 buy/overweight, 9 hold, 1 sell; targets avg 309.21, low 180, high 710.29. The lowest target is above price. Dispersion is extreme (low-to-high ratio about 3.9x), so the average is a weak anchor; treat as one sentiment input, not as a valuation."},
+    {"ref": "tv_fundamentals.next_earnings", "point": "Earnings 2026-11-17 21:00 UTC, after close, confirmed. Quarter end 2026-10-31. Fiscal-label convention as served by TradingView (Q3 2025..Q3 2026), so quarter labels may not match Nvidia's own fiscal naming."},
+    {"ref": "economic_calendar", "point": "Same day as the print: October retail sales (2026-11-17). Monthly options expiry 2026-11-20 and core PCE/GDP 2026-11-25 fall inside the 2-week window and can amplify the post-earnings move."},
+    {"ref": "structure.drawdown_from_ath_pct", "point": "Price is 31.9% below the 243.37 ATH and -11.2% on the week while fundamentals in slice show no deterioration in revenue or margins. The drawdown is a multiple compression, not an earnings collapse (so far)."},
+    {"ref": "pages (missing)", "point": "Options positioning / implied earnings move is not in my slice and not available this run, so I cannot say how big a move is priced. Guidance, segment mix, hyperscaler capex and export news are also not in slice. This caps my confidence at 45."}
+  ],
+  "key_levels": [
+    {"level": 180.0, "why": "Lowest analyst price target; a sustained close above it would mean the stock is back inside the full analyst range.", "ref": "tv_fundamentals.pt_low"},
+    {"level": 179.92, "why": "Bottom of the gap zone 179.92-185.22; a strong print could fill it within the 2-week window.", "ref": "structure.gap_zone"},
+    {"level": 174.07, "why": "2-week up bucket edge (+5%).", "ref": "snapshot.nvda_price"},
+    {"level": 157.50, "why": "2-week down bucket edge (-5%); a miss or weak guide with ATR at 9.86 could reach it in one session.", "ref": "structure.atr_daily"},
+    {"level": 149.21, "why": "Quarter down bucket edge (-10%); about 16x forward EPS of 9.29, roughly where valuation support becomes very strong unless estimates are cut.", "ref": "tv_fundamentals.eps_next_fy_est"}
+  ],
+  "what_would_change_my_mind": [
+    "2026-11-17 print: revenue below 108.67B or EPS below 2.47, or gross margin falling meaningfully below 74.7%, would move me to Hold strategic / Avoid New Entry tactical and shift about 10 points from up to down on both quarters.",
+    "2026-11-17 print: a clear beat with an explanation that the FCF drop (21.40B vs 48.59B) was temporary working capital and the debt rise to 38.86B was planned, would move up about 8 points on both quarters and tactical to Accumulate.",
+    "If next-FY EPS estimate (9.29) is cut after the print, the 17.85x forward P/E is not as cheap as it looks; I would drop the quarter up buckets.",
+    "Any thesis break (TB1-TB4) firing pauses buying regardless of the print.",
+    "A close below 149.21 before 2026-12-31 without an estimate cut would make me check for a non-fundamental driver (macro or export news) before changing the strategic view."
+  ],
+  "notes_for_chair": [
+    "Pre-print view: wide and mildly bullish on quarters (valuation cheap vs growth, drawdown is multiple compression). Post-print view will be driven by guidance and the FCF/debt explanation, not the headline beat; re-score after 2026-11-17.",
+    "The FCF halving and debt tripling in one quarter are the two numbers the red team should press on; I do not know their cause from my slice.",
+    "Implied earnings move (options) is missing; the technical member's ATR (9.86, 5.9%) is the only proxy I have. Do not treat missing options data as neutral.",
+    "Hyperscaler capex (TB4) and export-control news (TB1/TB3) are outside my slice; narrative and macro members should confirm none has fired.",
+    "Analyst targets/ratings count as one evidence group; do not double count them with narrative or sentiment members citing the same targets.",
+    "Stance: strategic Accumulate in stages per owner's ladder (owner approval required for any ladder change); tactical Wait until after the 2026-11-17 print. No orders placed or suggested."
+  ]
+}

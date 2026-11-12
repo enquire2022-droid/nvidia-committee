@@ -1,0 +1,53 @@
+{
+  "agent": "sentiment",
+  "run_id": "2026-11-12-trial1",
+  "revision": 2,
+  "as_of": "2026-11-12",
+  "price_at_call": 164.33,
+  "view": "Today's -14.3% gap-to-low on the CEO resignation followed by a +10.4% recovery on 3.8x volume is the capitulation shape I said was missing, but the bar is still open and the trigger is a governance shock, not a sentiment washout, so it is a candidate climax and not a confirmed bottom. Sentiment now tilts down-skewed over 2 weeks (testimony before Thanksgiving, earnings 11-17 under an interim CEO); tactical stance Wait, and the chair should rule on TB2 first because it would pause all buying regardless of what sentiment says.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 164.33 (2026-11-12 intraday, revision 2). next_2_weeks: up = close > 172.55, down = close < 156.11, range between, measured at the 2026-11-25 close (2026-11-26 Thanksgiving, market closed). this_quarter: to the last close of Q4 2026 (2026-12-31); next_quarter: to the last close of Q1 2027 (2027-03-31); up = close > 180.76, down = close < 147.90, range between. up+range+down=100.",
+    "next_2_weeks": {"up": 32, "range": 28, "down": 40},
+    "this_quarter": {"up": 31, "range": 33, "down": 36},
+    "next_quarter": {"up": 40, "range": 25, "down": 35}
+  },
+  "confidence": 35,
+  "evidence": [
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view 33/45/22 (n=258). Moved range -17 (ATR 6.0% daily, earnings 11-17 and congressional testimony both inside the window) and down +18 for a CEO-departure shock no base-rate window resembles; up -1 because today's reversal offsets part of it."},
+    {"ref": "base_rates.this_quarter_approx_7w", "point": "Base 39/43/18 (n=253). Moved down +18, range -10, up -8: leadership uncertainty and possible follow-on findings outlast one earnings print."},
+    {"ref": "base_rates.next_quarter_13w", "point": "Base 50/31/19 (n=247). Moved down +16, up -10, range -6. The sample (2021-2026) contains no forced CEO exit, so the base rate is a weaker anchor than usual."},
+    {"ref": "base_rates.conditional_2w_drop_le_minus15", "point": "Now applies: two_week_change_pct is -19.7%. n=4, 13w up 100%, median +32.1%. Too small and overlapping to move me much, and none of the 4 cases had a governance shock; I give it a few points of weight in next_quarter up, no more."},
+    {"ref": "base_rates.conditional_weekly_rsi_le_36", "point": "Weekly RSI 32.9 (open bar, not below 30). After <=36: 2w 46/23/31, 13w 69/0/31 (n=13, weak). Same momentum group as the RSI reading; counted once."},
+    {"ref": "structure.today_recovery_from_low_pct", "point": "Open 151.005 (-13.1% gap), low 148.80 (-14.3%), now 164.33 (+10.4% off the low), high 167.14. A long-lower-wick reversal is the classic climax footprint, but today_bar_status says it is unconfirmed until the close; a fade into the close would turn it into a failed reversal."},
+    {"ref": "structure.today_volume_vs_60d_avg", "point": "498.56M shares so far = 3.8x the 60d average, the highest of the week (Mon 462.7M, Tue 429.3M, Wed 339.2M). Fourth consecutive heavy day: either sellers are exhausting or a new holder base is absorbing a forced re-rating; volume alone cannot tell which."},
+    {"ref": "tv_purple_list.vix", "point": "VIX 17.62 (data time 2026-11-12, intraday timing not stated): still no index-level panic, and the chair reports indices reversed higher. The fear is concentrated in NVDA, which is a single-name event, not a market washout; market-wide capitulation signals do not apply."},
+    {"ref": "sentiment_aaii", "point": "Bearish 48.4 vs 31.5 average (week ending 2026-11-04) predates both this week's selloff and the resignation. Stale for today; current retail mood unmeasured."},
+    {"ref": "sentiment_cnn_fg", "point": "PARTIAL: 20 on 2026-11-06, later 'Fear' with no value. Market-level gauge, says nothing about the NVDA-specific shock."},
+    {"ref": "options_positioning", "point": "FAILED. On a day with a single-name shock this is the most costly gap: I cannot see whether today's reversal was short covering or put monetisation (often fades) or real buying (often holds), nor how much implied move is priced into 11-17. Main reason confidence is 35."},
+    {"ref": "thesis_breaks", "point": "TB2: 'CEO departs under legal or regulatory pressure'. The resignation (effective immediately, testimony to Congress before Thanksgiving) is reported by the chair, not in my slice; whether it was under legal/regulatory pressure is for the narrative member and chair. If TB2 fires, all buying pauses regardless of my sentiment read."},
+    {"ref": "structure.drawdown_from_ath_pct", "point": "-32.5% from ATH 243.37. Distance from the high is not evidence of value, especially when the company that set the high had a different CEO."}
+  ],
+  "key_levels": [
+    {"level": 148.8, "why": "Today's low, the candidate climax low. A break below it would mean the reversal failed and capitulation is not done.", "ref": "snapshot.today_low"},
+    {"level": 154.53, "why": "Fib 0.618; today opened below it and reclaimed it. A close back below it would void the hammer shape.", "ref": "tv_chart_owner.fib_0618"},
+    {"level": 161.98, "why": "Fib 0.65; a daily close above it keeps the reversal intact. Treat as information, not a buy trigger (it is a drawn level, an anchor).", "ref": "tv_chart_owner.fib_065"},
+    {"level": 173.73, "why": "Prior close (2026-11-11); filling today's gap would show the shock fully absorbed.", "ref": "snapshot.nvda_last_close"},
+    {"level": 179.92, "why": "Bottom of Monday's unfilled gap (179.92-185.22).", "ref": "structure.gap_zone"}
+  ],
+  "what_would_change_my_mind": [
+    "More bullish: today (2026-11-12) closes above 161.98 with volume above 3x the 60d average, and Friday 2026-11-13 holds above 154.53 without retesting 148.80: that confirms a climax and I would lift 2w up and cut down.",
+    "More bearish: any close below 148.80 before 2026-11-25, or the reversal fading so today closes below 154.53.",
+    "More bearish: congressional testimony (before Thanksgiving) or filings that point toward TB1 (confirmed export violations).",
+    "Either way: the 2026-11-17 earnings reaction and whether guidance is reaffirmed under the interim CEO (the date holding is not in my slice).",
+    "Options data becoming available: heavy put demand persisting after today's bounce would argue the bounce is covering, not buying."
+  ],
+  "notes_for_chair": [
+    "WHAT CHANGED vs my first submission: price_at_call 165.785 -> 164.33 and new buckets, so numbers are not directly comparable. 2w 35/33/32 -> 32/28/40; this_quarter 36/36/28 -> 31/33/36; next_quarter 47/27/26 -> 40/25/35; confidence 40 -> 35. Drivers: the CEO-resignation shock (down skew, wider tails) partly offset by today's high-volume reversal (the capitulation footprint I asked for, but unconfirmed). Also corrected: the rebuilt slice dates 168.89 as the 2026-11-10 close and 173.73 as 2026-11-11; my first submission called 168.89 the 11-11 close and said price was below the week low, which no longer holds.",
+    "TB2 decision first: the approved rule says any thesis break pauses all buying. Resignation effective immediately plus congressional testimony looks like 'under legal or regulatory pressure', but that judgement is outside my lane and my slice has no 8-K text. If TB2 fires, my capitulation read is information only.",
+    "Earnings 2026-11-17: BEFORE the print, governance and testimony risk dominate and an interim CEO presents; the reversal can fade on any new headline. AFTER the print, the volume reaction plus whether guidance holds tells us if today was the climax low. Re-run my slice after 2026-11-18 close and after the testimony.",
+    "Owner-bias audit for a day like this: (1) Confirmation bias - I named this reversal shape as what capitulation needs, and now it appears; the owner (and I) will want to call the bottom. It is an open bar on a single-name shock: wait for the close and Friday's weekly bar. (2) FOMO / urgency - a +10.4% rip off the low creates fear of missing the bottom; the rule-based answer is that a TB2 review comes before any buy, and missing the exact low costs less than buying into an unresolved governance event. (3) Anchoring - on today's low 148.80 as 'the bottom', on the ATH 243.37 as 'fair value', and on Huang's era as the base case; the company's leadership changed, so old anchors carry less information. (4) Rationalising the rule away - the thesis breaks were written calmly precisely so they would bind on a day like today (Kahneman: System 2 pre-commitment beats System 1 in the moment); if the owner wants to argue 'not under legal pressure', write the reason down and have the red team challenge it before acting. (5) Lessons log: weekly RSI 32.9 is on an open bar and above 30 - still not oversold.",
+    "Stance (sentiment lane only): tactical Wait; strategic stance deferred to the chair's TB2 ruling. Never place or suggest orders; ladder changes need owner approval.",
+    "Cross-domain: VIX 17.62 and indices higher while NVDA gapped -13.1% means the market is pricing an idiosyncratic risk; relative-strength and narrative members should test whether SOX/peers held up (sector contagion vs single-name).",
+    "Pre-mortem: three months on, this was badly wrong most likely because today was the climax low (the n=4 '2w drop <=-15%' base rate was right) and the governance shock was resolved quickly, so my down skew left the owner waiting while price recovered."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "_status": "APPROVED by owner 2026-11-12. Any break pauses all buying until reviewed with the owner.",
+  "breaks": [
+    {"id": "TB1", "rule": "Export-control violations by Nvidia confirmed (government finding, charge, settlement or company admission)"},
+    {"id": "TB2", "rule": "CEO departs under legal or regulatory pressure"},
+    {"id": "TB3", "rule": "New export restrictions enacted that materially cut Nvidia's addressable market"},
+    {"id": "TB4", "rule": "Hyperscaler AI capex cuts (two or more of the top four guide capex down)"}
+  ]
+}

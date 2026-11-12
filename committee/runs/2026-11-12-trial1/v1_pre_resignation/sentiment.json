@@ -1,0 +1,51 @@
+{
+  "agent": "sentiment",
+  "run_id": "2026-11-12-trial1",
+  "as_of": "2026-11-12",
+  "price_at_call": 165.785,
+  "view": "Retail sentiment is fearful (AAII bearish 48.4 vs 31.5 average, CNN F&G hit 20 on 11-06) but VIX at 17.62 shows no market-wide panic, and this week's 3.6x volume came with a gap down and new lows, not a reversal: so far it reads as forced distribution, not confirmed capitulation. Contrarian sentiment tilts mildly bullish over a quarter, but the 11-17 earnings binary and 5.9% daily ATR make the 2-week window wide and two-sided; tactical stance Wait until after the print.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 165.785. next_2_weeks: up = close > 174.07, down = close < 157.50, range between, measured at 2026-11-26 close. this_quarter: to 2026-12-31 last close; next_quarter: to 2027-03-31 last close; up = close > 182.36, down = close < 149.21, range between. up+range+down=100.",
+    "next_2_weeks": {"up": 35, "range": 33, "down": 32},
+    "this_quarter": {"up": 36, "range": 36, "down": 28},
+    "next_quarter": {"up": 47, "range": 27, "down": 26}
+  },
+  "confidence": 40,
+  "evidence": [
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view 33/45/22 (n=258). I cut range 45->33 because daily ATR is 5.9% and earnings fall inside the window, so a >5% move either way is more likely than usual; up +2, down +10 vs base."},
+    {"ref": "base_rates.this_quarter_approx_7w", "point": "Base 39/43/18 (n=253). Moved down +10 and range -7 for elevated volatility and an unresolved distribution week; up -3."},
+    {"ref": "base_rates.next_quarter_13w", "point": "Base 50/31/19 (n=247). Kept up near base (-3); raised down +7 because the drawdown is not yet shown to be capitulation."},
+    {"ref": "base_rates.conditional_weekly_rsi_le_36", "point": "After weekly RSI <=36: 2w 46/23/31, 13w 69/0/31 (n=13, overlapping, autocorrelated). Weak evidence; it supports the contrarian up tilt but 31% down shows oversold-type readings fail often. Partly the same signal as momentum, counted once."},
+    {"ref": "base_rates.conditional_2w_drop_le_minus15", "point": "n=4 with 13w up 100%: too small to use; noted only, given ~zero weight. The weekly drop is -11.2%, and whether the 2w drop meets -15% is not in slice."},
+    {"ref": "sentiment_aaii", "point": "Week ending 2026-11-04: bullish 34.1 (avg 37.5), bearish 48.4 (avg 31.5), bearish up from 41.4 prior week. Elevated bearishness is a moderate contrarian positive, but the reading predates this week's -11.2% leg, so current retail mood is likely worse and unmeasured."},
+    {"ref": "sentiment_cnn_fg", "point": "PARTIAL: 20 (Extreme Fear) on 2026-11-06; latest reported zone 'Fear' after a post-midterm rally, exact value not read. Fear has eased from extreme at market level while NVDA kept falling, so this is not a market-wide washout."},
+    {"ref": "tv_purple_list.vix", "point": "VIX 17.62: no index-level panic. NVDA's selloff is stock/sector-specific; a true capitulation low usually coincides with a volatility spike, absent here."},
+    {"ref": "tv_purple_list.rsp_perf_1m", "point": "RSP +4.03% vs SPY -2.12% over 1m: money rotating out of mega-cap leaders into the broad market, consistent with distribution in names like NVDA rather than risk-off panic."},
+    {"ref": "structure.volume_spike_ratio_mon", "point": "Monday volume 3.6x; Mon/Tue 462.7M and 429.3M shares vs 60d avg 130.1M (tv_chart_owner). Heavy volume on a gap down that stayed unfilled and new lows Thursday = distribution so far; capitulation would need a high-volume reversal/close back up, not yet seen."},
+    {"ref": "snapshot.nvda_week_low_so_far", "point": "Price 165.785 is below the week low so far 165.89: selling is still active intraday, no exhaustion signal."},
+    {"ref": "weekly_rsi.now_engine", "point": "Weekly RSI 33.3 (TV 33.13) on an open bar: not oversold (threshold 30); lowest since 2023 but the April 2025 low week printed 35.7, so this level alone does not mark a bottom."},
+    {"ref": "tv_chart_owner.daily_bottom_oscillator", "point": "Green bottom triangle 2026-11-10/11 is unconfirmed and price has since made a lower low; oscillator values not readable. Treat as unknown."},
+    {"ref": "options_positioning", "point": "FAILED: no put/call, gamma or flow. I cannot tell whether earnings hedging is crowded (fuel for a squeeze) or complacent (room for further downside); this is the main reason confidence is 40, not higher."},
+    {"ref": "structure.drawdown_from_ath_pct", "point": "-31.9% from ATH 243.37: bias audit - the ATH is an anchor that makes 165 feel 'cheap'; the base rates, not the distance from the high, should drive sizing."}
+  ],
+  "key_levels": [
+    {"level": 161.98, "why": "Fib 0.65 of owner's 10.81-243.37 range; nearest level below - a high-volume reversal here would be the first capitulation evidence. Check it is not chosen only because it is drawn on the chart (anchor).", "ref": "tv_chart_owner.fib_065"},
+    {"level": 164.27, "why": "Owner's swing label just below price; already being tested intraday.", "ref": "tv_chart_owner.swing_labels"},
+    {"level": 154.53, "why": "Fib 0.618; a post-earnings flush into this zone on volume plus a VIX spike would look more like capitulation.", "ref": "tv_chart_owner.fib_0618"},
+    {"level": 179.92, "why": "Bottom of the unfilled gap (179.92-185.22); reclaiming it would say the Monday distribution was absorbed.", "ref": "structure.gap_zone"}
+  ],
+  "what_would_change_my_mind": [
+    "More bullish: a completed weekly bar (Friday 2026-11-13 close) with a long lower wick on volume >3x the 60d average, or a post-earnings close back above 179.92 (gap bottom).",
+    "More bullish: VIX spike with CNN F&G back into Extreme Fear and AAII bearish rising further while NVDA holds above 161.98 - a true washout profile.",
+    "More bearish: weekly close below 161.98 (fib 0.65) after the 2026-11-17 print with no volume reversal, or weekly RSI closing below 30 while VIX stays calm (orderly distribution continuing).",
+    "Options data becoming available showing heavy put demand into the print would raise my up probability (squeeze fuel); low put demand would raise down."
+  ],
+  "notes_for_chair": [
+    "Earnings 2026-11-17 after close: BEFORE the print my 2-week view is near-symmetric (35/33/32) with range compressed by volatility; sentiment cannot forecast the print itself. AFTER the print, the reaction on volume tells us whether this week was capitulation (gap-and-go reversal) or distribution (continuation). Re-run my slice after 2026-11-18 close.",
+    "Bias audit for the owner: (1) ATH anchoring - -31.9% from 243.37 is not a valuation argument; (2) 'oversold = buy' - lessons log already caught this once; weekly RSI is 33.3 on an OPEN bar, not below 30; (3) urgency before earnings - there is no sentiment reason to act before 11-17; waiting avoids sizing into a binary whose positioning we cannot see (options data failed).",
+    "Stance (sentiment lane only): strategic Accumulate is not contradicted by sentiment (owner holds no recorded position; ladder levels are the owner's call); tactical Wait until post-earnings confirmation. No thesis break is signalled by my evidence (TB1-TB4 are for the narrative/fundamentals members).",
+    "Cross-domain: RSP +4.03% vs SPY -2.12% over 1m and VIX calm suggests a rotation out of mega-cap AI leaders - macro/relative-strength members should check whether this is sector-specific (SOX) rather than market-wide.",
+    "Equity Bottom/Top checklists are draft and unapproved; I have not scored against them.",
+    "Pre-mortem: it is three months later and this view was badly wrong - most likely because earnings triggered a squeeze from crowded bearish positioning that I could not see (options data failed), and the 4-sample 'drop >=15%' base rate turned out right."
+  ]
+}

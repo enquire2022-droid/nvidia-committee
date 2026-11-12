@@ -1,0 +1,67 @@
+{
+  "agent": "chair",
+  "run_id": "2026-11-12-trial1",
+  "as_of": "2026-11-12",
+  "price_at_call": 164.33,
+  "label": "uncalibrated expert judgment (Committee trial run 1)",
+  "view": "TB2 fired: the founder-CEO left effective immediately under live legal and regulatory pressure. All buying is paused pending the owner's confirmation and an un-pause test. Today's 148.80 low with a 10.4% recovery is a news-gap reversal, unconfirmed, ahead of two binary events (print 2026-11-17, testimony before 2026-11-25). Forecast: wide, mildly down-skewed over 2 weeks; balanced this quarter; still up-leaning next quarter but below the base rate.",
+  "decision": {
+    "strategic": {"stance": "Wait", "reason": "Fundamentals intact (TTM revenue +83.4%, gross margin 74.7%) but the key-person thesis changed with the founder's exit; re-decide once the exit reason, the print and the CEO search are known."},
+    "tactical": {"stance": "Avoid New Entry", "reason": "TB2 pause in force, earnings blackout to 2026-11-17, testimony before 2026-11-25; today's reversal is unconfirmed."},
+    "reduce_available": false
+  },
+  "tb_rulings": {"TB1": "not fired", "TB2": "FIRED (chair ruling 2026-11-12; owner to confirm)", "TB3": "not fired", "TB4": "unmonitored - no hyperscaler capex data"},
+  "unpause_test_proposed": [
+    "A stated reason for the exit unrelated to legal or regulatory matters (filing, board statement or testimony)",
+    "No Nvidia-specific legal-proceedings disclosure on Megaspeed or DOJ in the 2026-11-17 release or 10-Q",
+    "TB1 and TB3 not fired",
+    "Re-check after the testimony (before 2026-11-25)"
+  ],
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 164.33 (2026-11-12 intraday). next_2_weeks: up > 172.55, down < 156.11 at the 2026-11-25 close. this_quarter (to 2026-12-31) and next_quarter (to 2027-03-31): up > 180.76, down < 147.90.",
+    "next_2_weeks": {"up": 33, "range": 30, "down": 37},
+    "this_quarter": {"up": 33, "range": 34, "down": 33},
+    "next_quarter": {"up": 42, "range": 26, "down": 32}
+  },
+  "confidence": 40,
+  "rulings": [
+    "Earnings + ATR variance counted once: range cut 15 from the 45 base rate, not once per member.",
+    "Governance counted once: the exit is in price_at_call and in each member's down bucket; the TB2 ruling is a buying policy and adds no further down adjustment (fundamentals' extra +5 rejected).",
+    "Conditional base rates (n=4 and n=13) given near-zero weight; they only keep next-quarter up above 40.",
+    "Climax-low call rejected for now: label 'news-gap reversal, unconfirmed' until today/Friday closes and the two binary events pass without a close below 148.80.",
+    "Red team's competitive share-shift hypothesis kept alive: NVDA/SOX ratio 15.5182, down 44.4% over 52w, predates the governance story."
+  ],
+  "expected_path": {
+    "hypothesis": "Volatile range 148.80-175.09 into year-end with a down lean; neither the gap 179.92-185.22 nor the -10% line 147.90 resolved by 2026-12-31",
+    "probability": 34,
+    "checkpoints": [
+      {"n": 1, "window": "2026-11-12 to 2026-11-13", "confirm": "daily and weekly close above 164.27 with the lower wick intact", "invalidate": "close below 154.53"},
+      {"n": 2, "window": "2026-11-17 to 2026-11-18", "confirm": "revenue >= 108.67B, EPS >= 2.47, gross margin near 74.7%, FCF/debt explained", "invalidate": "miss, soft guide, withdrawn outlook or postponed date"},
+      {"n": 3, "window": "2026-11-18 to 2026-11-25", "confirm": "no close below 148.80 through opex 2026-11-20 and the testimony; exit reason stated", "invalidate": "close below 148.80 or a Megaspeed/DOJ link disclosed"},
+      {"n": 4, "window": "2026-11-25 to 2026-12-10", "confirm": "NVDA/SOX ratio stops falling from 15.5182; FOMC 2026-12-09 / CPI 2026-12-10 pass without a close below 148.80", "invalidate": "ratio keeps falling while SOX rises"},
+      {"n": 5, "window": "2026-12-11 to 2026-12-31", "confirm": "range holds; weekly close above 175.09 would shift to the up branch", "invalidate": "close below 147.90 (down branch) or weekly close above 186 (breakout branch)"}
+    ],
+    "branches": {"up_breakout": "weekly close above 186 -> gap filled, 100W reclaimed", "down": "daily close below 148.80 -> L3 141-145 and 140.76 in play, then 200W SMA 123.61"}
+  },
+  "ladder_proposals": [
+    "No fills: TB2 pause in force; the ladder stays PROPOSED with no budget.",
+    "L1 (162-164) and L2 (154-157) are 4.8% apart, under one daily ATR (6.0%); both traded intraday today. Proposal for owner: merge L1 into L2 as one zone 154-157, weight 2.5, so one news day cannot fill both before the cause is known.",
+    "Do not add a level at today's 148.80 low (an open-bar anchor); revisit after checkpoint 3."
+  ],
+  "evidence": [
+    {"ref": "news_governance", "point": "8-K: CEO resigned effective immediately (board accepted 2026-11-11), interim CEO = CFO, new Chair, no reason; testimony before Thanksgiving."},
+    {"ref": "structure.today_recovery_from_low_pct", "point": "Gap -13.1%, low -14.3%, recovery 10.4% on 3.8x volume; open bar."},
+    {"ref": "base_rates", "point": "Outside view 33/45/22, 39/43/18, 50/31/19."},
+    {"ref": "relative.nvda_vs_sox_52w_change_pct", "point": "-44.4% over 52w; share-shift hypothesis."}
+  ],
+  "key_levels": [
+    {"level": 186, "why": "breakout trigger", "ref": "config/ladder.json"},
+    {"level": 175.09, "why": "100W SMA", "ref": "tv_technicals_1w.sma100"},
+    {"level": 164.27, "why": "Apr 2026 swing low", "ref": "tv_chart_owner"},
+    {"level": 148.8, "why": "today's low", "ref": "snapshot.today_low"},
+    {"level": 123.61, "why": "200W SMA", "ref": "tv_technicals_1w.sma200"}
+  ],
+  "what_would_change_my_mind": ["see checkpoints 1-5 and the un-pause test"],
+  "notes_for_chair": [],
+  "derived": {"mean_member_2w_down": 38, "members": 6, "red_team": 1}
+}

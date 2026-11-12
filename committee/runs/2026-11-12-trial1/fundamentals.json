@@ -1,0 +1,56 @@
+{
+  "agent": "fundamentals",
+  "run_id": "2026-11-12-trial1",
+  "as_of": "2026-11-12",
+  "price_at_call": 164.33,
+  "revision": 2,
+  "view": "The reported numbers in my slice are unchanged and still strong (83.4% TTM revenue growth, 74.7% gross margin, 17.7x forward EPS at 164.33), but the CEO resignation reported by the chair removes the person who has carried Nvidia's guidance and roadmap credibility, five days before the print, and may fire TB2. I cut the up buckets, raised the down buckets and lowered confidence. Strategic: Hold (no new buying) until the committee rules on TB2; tactical: Avoid New Entry until after the 2026-11-17 print and call.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 164.33 (2026-11-12 intraday, revision 2). next_2_weeks: up = close > 172.55, down = close < 156.11, range in between, measured at the 2026-11-25 close (2026-11-26 is Thanksgiving, market closed). this_quarter: to the last close of 2026-12-31; next_quarter: to the last close of 2027-03-31; up > 180.76, down < 147.90, range in between. up + range + down = 100.",
+    "next_2_weeks": {"up": 31, "range": 31, "down": 38},
+    "this_quarter": {"up": 34, "range": 33, "down": 33},
+    "next_quarter": {"up": 43, "range": 26, "down": 31}
+  },
+  "confidence": 35,
+  "evidence": [
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view 33 up / 45 range / 22 down (n=258). Moved to 31/31/38: range -14 because earnings (2026-11-17) and a leadership change both sit inside the window and daily ATR is 6.0% (structure.atr_daily_pct); down +16 and up -2 because a CEO exit before a print is a negative skew event for guidance and multiple. Revision 1 was 36/34/30."},
+    {"ref": "base_rates.this_quarter_approx_7w", "point": "Outside view 39/43/18 (n=253). Moved to 34/33/33 (revision 1: 41/34/25). Governance uncertainty (CEO search, congressional testimony) is unlikely to resolve by 2026-12-31, which caps the multiple."},
+    {"ref": "base_rates.next_quarter_13w", "point": "Outside view 50/31/19 (n=247); window to 2027-03-31 is about 20 weeks, so range should be smaller than the 13w sample. Moved to 43/26/31 (revision 1: 52/26/22). Earnings power is intact, so I stay above 40 on up, but leadership risk adds a real down tail."},
+    {"ref": "base_rates.conditional_2w_drop_le_minus15", "point": "Two-week change is now -19.7% (structure.two_week_change_pct; 204.64 to 164.33), so this conditional applies: 13w outcomes 100% up, median +32.1%, but n=4, overlapping, and none of those episodes involved a CEO departure. Weak evidence, discounted further because the cause of this drop is different."},
+    {"ref": "chair message (not in slice)", "point": "Chair reports an SEC 8-K: CEO resigned as CEO and director effective immediately (board accepted 2026-11-11); CFO is interim CEO while remaining CFO; new board chair; permanent CEO search; former CEO to testify to Congress before Thanksgiving. The governance page is not in my slice, so I cannot verify the filing or the reason for the exit; I treat it as given by the chair. Governance news counts as one evidence group."},
+    {"ref": "thesis_breaks.TB2", "point": "TB2 = CEO departs under legal or regulatory pressure. An immediate resignation from both CEO and board seats, followed by congressional testimony, is consistent with TB2 but the stated reason is not in my slice. If the committee rules TB2 fired, all buying pauses regardless of the print. This is the main driver of my stance change from Accumulate to Hold."},
+    {"ref": "tv_fundamentals.revenue_next_q_est", "point": "The bar for 2026-11-17 is unchanged: revenue 108.67B (about +12.9% vs last quarter's 96.22B) and EPS 2.47. The quarter ended 2026-10-31, before the resignation, so the reported quarter itself should not be affected; guidance is where the CEO change bites."},
+    {"ref": "tv_fundamentals.next_earnings", "point": "Slice still shows earnings 2026-11-17 21:00 UTC, confirmed (data_time 2026-11-12). A postponement is possible after a CEO exit; not in slice. A delay would itself be a negative signal."},
+    {"ref": "tv_fundamentals.fwd_pe_on_next_fy", "point": "Forward P/E in slice is 17.85 (computed at the earlier price); at 164.33 on next-FY EPS 9.29 it is about 17.7x, and about 20.7x TTM EPS 7.9482. Cheap against 83.4% revenue growth, but a leadership discount is now justified and the 9.29 estimate is at risk if guidance is conservative."},
+    {"ref": "tv_fundamentals.gross_margin_pct", "point": "Margins (gross 74.7%, operating 65.2%, net 63.7%) are at levels that leave little room for upside surprise. Any margin slip on the print will now be read through a governance lens and punished more."},
+    {"ref": "tv_fundamentals.last_q_fcf", "point": "FCF fell from 48.59B to 21.40B (about -56%) while total debt rose from 12.81B to 38.86B (tv_fundamentals.last_q_total_debt). Causes not in slice. With the CFO also acting as CEO, the clarity of the explanation on the call matters more; an evasive answer on these two numbers would be a red flag."},
+    {"ref": "tv_fundamentals.pt_avg", "point": "Analyst group (count once): 63 of 73 buy/overweight; targets avg 309.21, low 180, high 710.29. These were set before the resignation and are stale; expect target and rating cuts. I give them less weight than in revision 1."},
+    {"ref": "snapshot.today_low", "point": "Today gapped down 13.1% to open 151.005, low 148.80 (-14.3% vs prior close), and recovered 10.4% to 164.33 on 498.56M shares (3.8x the 60d average). The bar is open and unconfirmed (structure.today_bar_status). Fundamentally this says buyers are treating the fundamentals as intact; reading the candle is the technical member's lane."},
+    {"ref": "snapshot.nvda_last_close", "point": "Data note: last completed close is 173.73 (2026-11-11) in this slice; revision 1's slice gave 168.89 for the same date. 168.89 now appears as the prior day. Market cap (3.99T) and P/E 20.94 were not refreshed. I used 164.33 for my own ratio estimates."},
+    {"ref": "pages (missing)", "point": "Options positioning / implied earnings move, governance news detail, guidance, segment mix, hyperscaler capex and export news are not in my slice. The most important fact of this revision (the CEO exit) is outside my evidence, so confidence drops from 45 to 35."}
+  ],
+  "key_levels": [
+    {"level": 180.76, "why": "Quarter up bucket edge (+10%); also just above the lowest analyst target 180 and the bottom of the gap zone 179.92. Reaching it needs a clean print plus a credible leadership plan.", "ref": "tv_fundamentals.pt_low"},
+    {"level": 172.55, "why": "2-week up bucket edge (+5%); near the 173.73 prior close.", "ref": "snapshot.nvda_last_close"},
+    {"level": 156.11, "why": "2-week down bucket edge (-5%); one daily ATR (9.86) below price.", "ref": "structure.atr_daily"},
+    {"level": 148.80, "why": "Today's panic low on the CEO news; a close below it after the print would mean the market is repricing earnings, not just governance.", "ref": "snapshot.today_low"},
+    {"level": 147.90, "why": "Quarter down bucket edge (-10%); about 15.9x next-FY EPS 9.29, deep value unless estimates are cut.", "ref": "tv_fundamentals.eps_next_fy_est"}
+  ],
+  "what_would_change_my_mind": [
+    "Committee/narrative ruling on TB2: if the exit is confirmed as under legal or regulatory pressure, my strategic stance becomes Avoid New Entry (all buying paused) and I would add about 5 points to the down buckets; if the stated reason is clearly unrelated to legal/regulatory pressure, I would return toward revision 1 (Accumulate in stages).",
+    "2026-11-17 print and guide: revenue at or above 108.67B, EPS at or above 2.47, gross margin near 74.7%, guidance at or above trend, and a clear explanation of the FCF drop and the 38.86B debt would move up about 8 points on both quarters and tactical to Hold/Accumulate.",
+    "A miss on 108.67B / 2.47, a below-trend guide, a withdrawn or narrowed long-range outlook, or a postponed earnings date would move about 10 points from up to down on both quarters.",
+    "Cuts to the next-FY EPS estimate (9.29) after the print: the forward multiple is then not as cheap as it looks.",
+    "Congressional testimony before Thanksgiving revealing export-control issues would bring TB1/TB3 into play; that would override fundamentals entirely."
+  ],
+  "notes_for_chair": [
+    "What changed vs revision 1: price_at_call 165.785 to 164.33 and new bucket edges; 2w 36/34/30 to 31/31/38; this quarter 41/34/25 to 34/33/33; next quarter 52/26/22 to 43/26/31; confidence 45 to 35; strategic Accumulate to Hold (pending TB2 ruling); tactical Wait to Avoid New Entry. Reported fundamentals in my slice did not change.",
+    "CEO change and the print: the quarter (ended 2026-10-31) was earned under the old leadership, so the reported numbers should be clean. Guidance is the problem: an interim CEO who is also CFO will likely guide conservatively and may avoid long-range targets, and the market will discount any multi-year roadmap without the founder-CEO to stand behind it. Expect a beat to lift the stock less than in revision 1 and a miss or soft guide to hurt more. CFO continuity is a modest positive for the accuracy of the near-term numbers.",
+    "Before the print: governance dominates; fundamentals argue the drop is a multiple/governance repricing, not an earnings collapse. After the print: guidance tone, any CEO-search timeline, and the FCF/debt explanation decide whether the repricing deepens.",
+    "TB2 must be ruled on by the chair with the narrative member's governance evidence; I cannot verify the 8-K or the exit reason from my slice. If TB2 fires, all buying pauses regardless of my probabilities.",
+    "Possible TB1/TB3 link: congressional testimony could surface export-control matters; flag to narrative/macro.",
+    "Data inconsistency: last close for 2026-11-11 changed from 168.89 to 173.73 between slices, and market cap / P/E were not refreshed. Red team should check the fact sheet.",
+    "Analyst targets are stale after the news; count them as one group and down-weight them.",
+    "No orders placed or suggested; any ladder change requires owner approval."
+  ]
+}
