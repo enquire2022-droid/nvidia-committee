@@ -45,5 +45,26 @@ Accumulate / Hold / Wait / Reduce / Avoid New Entry: strategic (18-36 months) an
 ## Thesis breaks (approved): any one pauses all buying
 TB1 export violations confirmed; TB2 CEO departs under legal pressure; TB3 new export restrictions enacted; TB4 hyperscaler capex cuts.
 
+## Tier 1 rules (owner-approved 15 Nov 2026, adapted from BTC committee2)
+
+**Coverage and stale data.** Read `coverage` in your slice first. A page marked `stale`, `missing` or `failed` is unknown, not
+current: never quote its numbers as today's, say so, and lower your confidence. After a material event the orchestrator sets
+`event_cutoff_utc`; anything read before it is stale until re-read.
+
+**Rule L — reachable triggers, Expected line, full ladder.**
+1. Every item you put under `what_would_change_my_mind` must be reachable in its window, judged by NVDA's own history
+   (`reachability` in the fact sheet; the chair checks each price trigger with `python -m nvdaintel.engines reach`).
+   Under 5% of past windows = unreachable (drop it); over 95% = near-certain (it belongs on an "Expected" line with its effect, not a trigger).
+2. A scheduled event that will happen (an earnings date, a weekly close) is Expected; what matters is its outcome, so phrase the
+   trigger as the outcome (e.g. "guide below X"), not the event.
+3. The Ladder Audit shows every order from the plan — pre-ladder fills, dropped, filled (planned zone and weight next to actual
+   price, shares, USD and date) and resting — from `ladder_audit.history`. Rows are never removed once filled or dropped.
+
+**TB4 monitor.** `hyperscaler_capex` gives MSFT / GOOGL / AMZN / META capex (last quarter, TTM, last FY, run-rate vs TTM).
+Two or more with run-rate more than 10% below TTM = TB4 WATCH (narrative member checks guidance). TB4 fires only on capex
+guidance cuts by two or more of the four.
+
+**Independent chair.** The chair is a fresh agent (`nvda-chair`). Members write for the chair, not for the orchestrator.
+
 ## Equity Bottom / Top checklists
 **Draft, not approved, not back-tested.** Report them as information only until the owner approves them after a back-test on NVDA's 2018, 2022 and 2025 drawdowns.

@@ -1,13 +1,83 @@
 {
   "_status": "PROPOSED 2026-11-11 - weights only; owner has NOT approved levels or budget. Committee audits, never applies changes.",
   "budget_usd": null,
-  "holdings": {"shares": null, "avg_cost": null},
+  "holdings": {
+    "shares": null,
+    "avg_cost": null
+  },
   "earnings_blackout_trading_days": 3,
   "orders": [
-    {"id": "L1", "zone_low": 162.0, "zone_high": 164.0, "weight": 1.0, "anchors": [{"name": "fib_065", "ref": "tv_chart_owner.fib_065"}, {"name": "apr_2026_swing_low", "value": 164.27}]},
-    {"id": "L2", "zone_low": 154.0, "zone_high": 157.0, "weight": 1.5, "anchors": [{"name": "fib_0618", "ref": "tv_chart_owner.fib_0618"}, {"name": "jul_2025_breakout_closes", "value": 157.75}]},
-    {"id": "L3", "zone_low": 141.0, "zone_high": 145.0, "weight": 2.0, "anchors": [{"name": "2024_range_top", "value": 140.76}, {"name": "jul_2025_breakout_base", "value": 143.85}]},
-    {"id": "L4", "zone_low": 124.0, "zone_high": 128.0, "weight": 3.0, "anchors": [{"name": "sma200w", "ref": "tv_technicals_1w.sma200"}, {"name": "fib_05", "ref": "tv_chart_owner.fib_05"}]}
+    {
+      "id": "L1",
+      "zone_low": 162.0,
+      "zone_high": 164.0,
+      "weight": 1.0,
+      "anchors": [
+        {
+          "name": "fib_065",
+          "ref": "tv_chart_owner.fib_065"
+        },
+        {
+          "name": "apr_2026_swing_low",
+          "value": 164.27
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "zone_low": 154.0,
+      "zone_high": 157.0,
+      "weight": 1.5,
+      "anchors": [
+        {
+          "name": "fib_0618",
+          "ref": "tv_chart_owner.fib_0618"
+        },
+        {
+          "name": "jul_2025_breakout_closes",
+          "value": 157.75
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "zone_low": 141.0,
+      "zone_high": 145.0,
+      "weight": 2.0,
+      "anchors": [
+        {
+          "name": "2024_range_top",
+          "value": 140.76
+        },
+        {
+          "name": "jul_2025_breakout_base",
+          "value": 143.85
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "zone_low": 124.0,
+      "zone_high": 128.0,
+      "weight": 3.0,
+      "anchors": [
+        {
+          "name": "sma200w",
+          "ref": "tv_technicals_1w.sma200"
+        },
+        {
+          "name": "fib_05",
+          "ref": "tv_chart_owner.fib_05"
+        }
+      ]
+    }
   ],
-  "breakout_tranche": {"share_of_budget": "20-30% (proposed)", "trigger": "weekly close above 186 (gap 180-185 filled and 100W SMA reclaimed)"}
+  "breakout_tranche": {
+    "share_of_budget": "20-30% (proposed)",
+    "trigger": "weekly close above 186 (gap 180-185 filled and 100W SMA reclaimed)"
+  },
+  "pre_ladder_fills": [],
+  "dropped_orders": [],
+  "filled_orders": [],
+  "_history_note": "Full ladder history (rule L, owner-approved 15 Nov 2026): rows are never removed once filled or dropped. filled_orders entries: {id, planned_zone, planned_weight, actual_price, actual_shares, actual_usd, date}."
 }

@@ -1,0 +1,20 @@
+{
+  "_note": "Fixed page list (owner-approved 15 Nov 2026, Tier 1 item 3). Every run reads every page; a page not read is 'missing', never substituted. After a material event (gap, filing, CEO news) set readings.event_cutoff_utc: any page read before it is STALE and must be re-read before the memo. 'deferred' pages are expected to fail and are listed as such.",
+  "pages": [
+    {"id": "tv_technicals_1w", "how": "TradingView MCP get-technicals-rating 1W", "max_age_days": 1},
+    {"id": "tv_technicals_1d", "how": "TradingView MCP get-technicals-rating 1D", "max_age_days": 1},
+    {"id": "tv_technicals_4h", "how": "TradingView MCP get-technicals-rating 4h", "max_age_days": 1},
+    {"id": "nvda_ohlcv", "how": "TradingView MCP get-ohlcv 1D (append to data/nvda_daily.json) and 1W", "max_age_days": 1},
+    {"id": "tv_chart_owner", "how": "Owner's TradingView layout in Chrome: 1W, 1D, 4H, drawn levels, labels, every oscillator; restore timeframe; never save, never trade", "max_age_days": 1},
+    {"id": "tv_purple_list", "how": "TradingView MCP watchlist 345068655 quotes incl. AMEX:RSP/AMEX:SPY; FRED items from the owner's watchlist panel or screenshot", "max_age_days": 1},
+    {"id": "tv_relative", "how": "TradingView MCP quotes: NVDA, SOX, SMH, AMD, AVGO, NYSE:TSM, SPX, NDX (Perf.W/1M/3M/YTD)", "max_age_days": 1},
+    {"id": "tv_fundamentals", "how": "TradingView MCP financials, forecasts, financial-history, earnings calendar", "max_age_days": 1},
+    {"id": "economic_calendar", "how": "TradingView MCP economic calendar, high importance, next 30 days", "max_age_days": 1},
+    {"id": "news_governance", "how": "TradingView NVDA news feed + web search on governance / export-control story", "max_age_days": 1},
+    {"id": "sec_filings", "how": "Web: latest NVDA 8-K / 10-Q / Form 4 on sec.gov (fetch the filing page)", "max_age_days": 3},
+    {"id": "hyperscaler_capex", "how": "TradingView MCP financial-history for MSFT, GOOGL, AMZN, META (capex_latest) -> data/capex_snapshots.json", "max_age_days": 7},
+    {"id": "sentiment_aaii", "how": "Web: AAII sentiment survey (latest weekly)", "max_age_days": 8},
+    {"id": "sentiment_cnn_fg", "how": "Web: CNN Fear & Greed (value and date)", "max_age_days": 2},
+    {"id": "options_positioning", "how": "Deferred by owner (paid data)", "max_age_days": 1, "deferred": true}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+ "_note": "Point-in-time capex snapshots (append one per run). Values are TradingView capex_latest (negative = cash out), USD.",
+ "snapshots": [
+  {
+   "read_utc": "2026-11-15T15:15:00Z",
+   "source": "TradingView MCP get-financial-history (capex_latest)",
+   "companies": {
+    "MSFT": {
+     "last_quarter": -39367000000,
+     "ttm": -135921000000,
+     "last_fiscal_year": -115948000000
+    },
+    "GOOGL": {
+     "last_quarter": -51355000000,
+     "ttm": -159804000000,
+     "last_fiscal_year": -91447000000
+    },
+    "AMZN": {
+     "last_quarter": -77259000000,
+     "ttm": -215192000000,
+     "last_fiscal_year": -131819000000
+    },
+    "META": {
+     "last_quarter": -33942000000,
+     "ttm": -104438000000,
+     "last_fiscal_year": -69691000000
+    }
+   }
+  }
+ ]
+}

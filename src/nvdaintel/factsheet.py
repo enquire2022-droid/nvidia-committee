@@ -4,6 +4,7 @@ python -m nvdaintel.factsheet
 """
 import json, math, pathlib
 import numpy as np
+from nvdaintel import engines
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 
@@ -167,9 +168,14 @@ def build():
                     "avg_price_if_filled": round(float(usd.sum() / sh), 2)})
     ladder_audit = {"status": ladder["_status"], "budget_usd": ladder["budget_usd"], "orders": orders, "cumulative": cum,
                     "earnings_blackout": {"earnings": pg["tv_fundamentals"]["values"]["next_earnings"], "blackout_trading_days": ladder["earnings_blackout_trading_days"], "blackout_window": "2026-11-12 to 2026-11-17 (today is inside it)", "orders_touched_today_intraday": [o["id"] for o in ladder["orders"] if rd["snapshot"]["today_low"] <= o["zone_high"]]},
-                    "breakout_tranche": ladder["breakout_tranche"]}
+                    "breakout_tranche": ladder["breakout_tranche"],
+                    "history": engines.ladder_history(ladder)}
 
+    cov = engines.coverage(rd, rd["as_of"])
     fs = {
+        "coverage": cov,
+        "reachability": engines.reach_table(),
+        "hyperscaler_capex": engines.capex_monitor(),
         "as_of": rd["as_of"], "price_note": rd["price_note"], "snapshot": rd["snapshot"],
         "base_rates": base, "weekly_rsi": weekly_rsi, "structure": structure, "fib_check": fib_check,
         "relative": rel, "ladder_audit": ladder_audit, "thesis_breaks": tb["breaks"],
@@ -179,6 +185,10 @@ def build():
     out = ROOT / "outputs/fact_sheet.json"
     out.write_text(json.dumps(fs, indent=1, default=float))
     print("wrote", out)
+    print("coverage:", cov["line"])
+    for r in cov["rows"]:
+        if r["state"] not in ("ok", "deferred"):
+            print("  ", r["state"].upper(), r["id"], "-", "; ".join(r.get("reasons", [])) or r.get("reason") or "")
     return fs
 
 
