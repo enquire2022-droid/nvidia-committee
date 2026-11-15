@@ -58,16 +58,23 @@ def test_coverage_and_event_cutoff():
 
 def test_readings_template_archives(tmp_path):
     src = R / "inputs/readings.json"
+    as_of = json.loads(src.read_text()).get("as_of", "old")
+    archive = R / f"inputs/readings_{as_of}.json"
+    existed = archive.exists()
+    saved = archive.read_bytes() if existed else None
     backup = tmp_path / "r.json"
     shutil.copy(src, backup)
     try:
         subprocess.run([sys.executable, "-m", "nvdaintel.committee", "readings-template"], env=ENV, cwd=R, check=True, capture_output=True)
         t = json.loads(src.read_text())
         assert len(t["pages"]) == 15 and all(v["status"] in ("pending", "failed") for v in t["pages"].values())
-        assert (R / "inputs/readings_2026-11-12.json").exists()
+        assert archive.exists()
     finally:
-        (R / "inputs/readings_2026-11-12.json").unlink(missing_ok=True)
         shutil.copy(backup, src)
+        if existed:
+            archive.write_bytes(saved)      # never delete an archive the test did not create
+        else:
+            archive.unlink(missing_ok=True)
 
 
 def test_scoring_rules():

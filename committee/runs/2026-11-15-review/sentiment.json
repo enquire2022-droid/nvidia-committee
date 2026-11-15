@@ -1,0 +1,52 @@
+{
+  "agent": "sentiment",
+  "run_id": "2026-11-15-review",
+  "as_of": "2026-11-15",
+  "price_at_call": 162.85,
+  "view": "Thursday's CEO-exit bar (open 151.01, low 148.80, close 166.19 on 748M shares, about 5.2x the 60-day average) has the shape of a stock-specific selling climax. Friday then gave back the rebound on 2.5x volume, VIX fell 30% on the week, and the AAII and CNN readings are stale and taken before the shock. So this reads as forced, governance-driven distribution that may be nearing climax, not a confirmed market-wide capitulation. Tactical: Wait through the 2026-11-17 print. Strategic: no sentiment objection to Accumulate at plan levels once the chair rules on TB2. Avoid both 'oversold = buy' (weekly RSI 32.5 is not below 30) and any urgency to act before earnings.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 162.85 (Fri 2026-11-13 close, weekend run). next_2_weeks: up = close > 170.99, down = close < 154.71, range between, measured at the close on or before 2026-11-29 (i.e. Fri 2026-11-27). this_quarter: to the last close of Q4 2026 (2026-12-31); next_quarter: to the last close of Q1 2027 (2027-03-31); up = close > 179.14, down = close < 146.57, range between. up+range+down=100.",
+    "next_2_weeks": {"up": 34, "range": 28, "down": 38},
+    "this_quarter": {"up": 35, "range": 30, "down": 35},
+    "next_quarter": {"up": 43, "range": 23, "down": 34}
+  },
+  "confidence": 30,
+  "evidence": [
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view: 33 up / 45 range / 22 down (n=258). I cut range by 17 pts because earnings on 11-17 falls inside the window and daily ATR is 6.1% (structure.atr_daily_pct), so a ±5% band is narrow. I add 16 pts to down for the governance overhang and Friday's failed rebound. Net change from my 11-12 trial view (32/28/40) is small: price held above the climax low, but no fresh sentiment data has come in."},
+    {"ref": "base_rates.conditional_weekly_rsi_le_36", "point": "Weekly RSI ≤36 gives 46/23/31 over 2w and 69/0/31 over 13w, but n=13 with overlapping windows, and the 2w drop ≤-15% table has n=4. Treated as weak evidence only. It is the main reason next_quarter up sits at 43 rather than near the 50 base. None of these samples contains a CEO departure."},
+    {"ref": "snapshot.nov12_volume", "point": "Nov 12: 747.7M shares vs 60d average 144.9M (tv_chart_owner.daily_avg_volume_60d_shares), about 5.2x. Gap to 148.80, then close at 166.19, +11.7% off the low. This is the classic selling-climax shape, and it suggests forced sellers were absorbed that day."},
+    {"ref": "snapshot.today_bar_status", "point": "Fri Nov 13 opened at 169.905 (+2.2% gap), was rejected at 170.00 and closed 162.85, below Thursday's close, on 2.5x average volume (structure.today_volume_vs_60d_avg). Follow-through failed, which fits continued distribution rather than a finished capitulation. The low of 158.39 still held well above 148.80."},
+    {"ref": "snapshot.nvda_week_volume", "point": "The week traded 2.34B shares, with Mon/Tue already at 463M/429M before the shock (tv_chart_owner.volume_mon_tue_shares, structure.volume_spike_ratio_mon 3.2). Heavy selling began before the CEO news, so this is more than a one-day panic. The weekly close of 162.85 sits only about 45% up the 148.80-179.92 range, not at the high: no weekly reversal bar."},
+    {"ref": "tv_purple_list", "point": "VIX was 19.29, down 30.31% on the week, while NVDA fell 12.75%. HY OAS was 3.2 and tightening, and RSP +4.04% vs SPY -2.65% over 1m. Broad-market fear is easing while NVDA sells off, so the fear is stock-specific and megacap-rotation driven, not a market-wide washout. Contrarian 'extreme fear' readings therefore apply to NVDA less than they appear to."},
+    {"ref": "sentiment_aaii", "point": "STALE (week ending 2026-11-04, partial read): bullish 34.1, bearish 48.4, spread -14.3; historical averages are bull 37.5 / bear 31.5. Bearish has been above average for 39 weeks. That is mildly contrarian-bullish, but it predates the CEO exit, and a 39-week run of above-average bearishness has not worked as a timing signal. Weighted low."},
+    {"ref": "sentiment_cnn_fg", "point": "STALE (secondary reports, CNN page not readable): 20 'Extreme Fear' on 2026-11-06, 'Fear' with no value on 2026-11-11. Fear was already easing before NVDA's worst day, which matches the VIX picture. No reading after event_cutoff_utc 2026-11-13T21:00Z. Unknown, not neutral."},
+    {"ref": "options_positioning", "point": "Not available (deferred, paid data). Without it I cannot see the earnings implied move (is the ~6% daily ATR already priced?), put/call or skew (are holders already hedged, which would argue capitulation, or not?), or dealer gamma near 150/160/170. This is the single biggest gap for a pre-earnings sentiment call, and it is why confidence is 30 rather than about 45."},
+    {"ref": "tv_chart_owner.weekly_oscillators", "point": "Owner bias audit, 'oversold = buy': weekly RSI7 18.35, Stoch RSI 0/0, daily RSI14 24.86, two BBPCT bottom triangles. Stretched, but weekly RSI14 is 32.53, above 30 (weekly_rsi.is_oversold=false), the same trap logged on 2026-11-11. One momentum group: the technical member owns it, so count it once."},
+    {"ref": "snapshot.nvda_ath", "point": "Owner bias audit, ATH anchor: 243.37 is -33.1% away (structure.drawdown_from_ath_pct). 'A third off the high' is an anchor, not a valuation. The 0.65/0.618 fibs (161.98/154.53) are drawn from that same anchor, so they share its weakness. Levels should come from the plan, not from distance to the ATH."},
+    {"ref": "coverage", "point": "Urgency audit: the 12/14 pages that are ok are all price, macro and news. Both sentiment pages are stale and options are deferred. Acting before 11-17 means taking the binary print with the least sentiment visibility of the whole cycle. Waiting costs at most the gap between now and a post-print price, and the 2w drop ≤-15% table (n=4) is not strong enough to justify that urgency."}
+  ],
+  "key_levels": [
+    {"level": 148.8, "why": "Nov 12 climax low. A close below it means the selling climax failed and the distribution is not done.", "ref": "snapshot.nov12_low"},
+    {"level": 154.71, "why": "2w down threshold. The owner's fib 0.618 is at 154.53 (anchor caveat applies).", "ref": "tv_chart_owner.fib_0618"},
+    {"level": 162.85, "why": "price_at_call. The fib 0.65 (161.98) and swing label 164.27 are anchors near price: do not treat them as support without volume evidence.", "ref": "snapshot.nvda_price"},
+    {"level": 170.0, "why": "Fri rejection high. Just below 170.99 (2w up threshold) and sma111w 171.42.", "ref": "snapshot.today_high"},
+    {"level": 179.92, "why": "Bottom of the unfilled gap 179.92-185.22. A close inside it would mean shock sellers are trapped and sentiment has turned.", "ref": "structure.gap_zone"},
+    {"level": 243.37, "why": "ATH: named as an anchor to avoid, not a target.", "ref": "snapshot.nvda_ath"}
+  ],
+  "what_would_change_my_mind": [
+    "Daily close below 148.80 (Nov 12 climax low, -8.6%) before 2026-11-27. The climax would have failed, so I would raise 2w down to 50 or more. Reachable: 2w -5% 41.0%, -10% 17.1%.",
+    "Pullback to 150-158 that holds above 148.80 on daily volume under 290M (2x 60d average). That is a low-volume retest, which confirms capitulation, so I would move 2w up toward 42. Reachable: 2w -5% 41.0%.",
+    "Post-earnings close above 179.92 (gap bottom, +10.5%) by 2026-11-27. Sentiment would have flipped, so I would raise this_quarter up to 45 or more. Reachable: 2w +10% 26.2%.",
+    "Earnings outcome: an in-line or better guide that is still sold, with a close below 154.71 within two sessions of 11-17, would mean holders are using good news to exit (distribution). I would raise all down buckets by 5-8 pts. Event trigger: the print itself is Expected.",
+    "First post-shock AAII reading (week ending 11-18 or 11-25) with bullish above 45 while NVDA is under 170. Retail would be buying the dip too eagerly (complacency), which removes the contrarian support, so I would cut next_quarter up by about 5."
+  ],
+  "notes_for_chair": [
+    "Expected: earnings on 2026-11-17 after close, inside the 2w window. Before the print, sentiment says only that the stock is stretched and stock-specific fear is high. After the print, the reaction to the number is the real sentiment test (see triggers). Re-read sentiment and options after the print if possible.",
+    "TB2 (CEO departs under legal or regulatory pressure) is not my lane, but it overrides everything here. If TB2 fires, all buying pauses regardless of how capitulation-like the tape looks. Please rule on it before reading my strategic line.",
+    "Cross-domain for macro and relative_strength: VIX -30.31% on the week and RSP outperforming SPY while NVDA fell 12.75%. Please confirm this is idiosyncratic and rotation-driven. If so, broad-market extreme-fear readings should not be used as an NVDA bottom signal.",
+    "Do not double count: the weekly/daily oscillator readings I cite are the technical member's momentum group. My independent inputs are volume and bar structure, AAII, CNN F&G and VIX.",
+    "Both sentiment pages are stale and from before event_cutoff_utc. Options are deferred. Discount my confidence (30) accordingly.",
+    "The draft Equity Bottom checklist (not approved, not back-tested) would likely show 'volume climax' as present. Report it as information only.",
+    "Pre-mortem: three months later this was badly wrong. Most likely reason: the Nov 12 bar really was the low, the 2022/2025-style rebound (conditional n=4/13) played out, and I underweighted it because the trigger was governance rather than sentiment. Second most likely: governance de-rating persisted and 148.80 broke after a sold earnings beat."
+  ]
+}

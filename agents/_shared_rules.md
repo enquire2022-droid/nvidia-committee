@@ -5,9 +5,9 @@ Adapted from the BTC committee (btc-intelligence). Owner: Ayham. Approved 2026-1
 1. **Numbers come only from your slice** (`outputs/slices/<you>.json`). Never introduce a number from memory or the web. If you need one that is missing, write "not in slice".
 2. **Cite everything.** Each evidence item has `ref` (a fact-sheet path such as `structure.dist_to_sma100w_pct` or a page id such as `tv_fundamentals`) and `point`.
 3. **A page marked failed/partial is unknown, not neutral.** Say what its absence does to your confidence (options positioning is not available this run).
-4. **Fixed probability buckets** relative to `snapshot.nvda_price` (price_at_call = 164.33, 2026-11-12 intraday, revision 2):
-   - `next_2_weeks`: up > +5% (close > 172.55), down < -5% (close < 156.11), range in between; measured at the 2026-11-25 close (2026-11-26 is Thanksgiving, market closed).
-   - `this_quarter`: to the last close of Q4 2026 (2026-12-31); `next_quarter`: to the last close of Q1 2027 (2027-03-31). Up > +10% (> 180.76), down < -10% (< 147.90).
+4. **Fixed probability buckets** relative to `snapshot.nvda_price` (= price_at_call; the orchestrator states the exact thresholds and dates in each run's brief):
+   - `next_2_weeks`: up > +5%, down < -5%, range in between; measured at the last close on or before as_of + 14 days (weekends and holidays roll back to the prior session).
+   - `this_quarter`: to the last close of the current calendar quarter; `next_quarter`: to the last close of the following quarter. Up > +10%, down < -10%.
    - up + range + down = 100. Copy these definitions into `probabilities.defs`.
 5. **Outside view first.** Start from `base_rates` (NVDA weekly since Nov 2021), then adjust. Say how far you moved from the base rate and why. Conditional base rates are small, overlapping samples: treat them as weak evidence.
 6. **Calibrate.** 50/50 is honest when evidence conflicts. Confidence (0-100) = how much your evidence should move the chair.
@@ -19,10 +19,10 @@ Adapted from the BTC committee (btc-intelligence). Owner: Ayham. Approved 2026-1
 ## Submission format (JSON only)
 ```json
 {
-  "agent": "<name>", "run_id": "<given>", "as_of": "2026-11-12", "price_at_call": 164.33,
+  "agent": "<name>", "run_id": "<given>", "as_of": "<YYYY-MM-DD>", "price_at_call": <price>,
   "view": "one or two sentences",
   "probabilities": {
-    "defs": "2w ±5%, quarters ±10%, vs price_at_call 164.33",
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call <price>; thresholds and dates as given in the brief",
     "next_2_weeks": {"up": 0, "range": 0, "down": 0},
     "this_quarter": {"up": 0, "range": 0, "down": 0},
     "next_quarter": {"up": 0, "range": 0, "down": 0}

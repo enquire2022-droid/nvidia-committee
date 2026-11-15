@@ -1,0 +1,169 @@
+{
+ "agent": "red_team",
+ "run_id": "2026-11-15-review",
+ "as_of": "2026-11-15",
+ "price_at_call": 162.85,
+ "consensus": "Six members, simple mean (only for the chair to see the centre; not a weighting): 2w 34/33/33, this_quarter 35/35/30, next_quarter 44/27/29 (up/range/down). Shared story: fundamentals intact, governance shock mostly priced, both 2w tails fattened by the 2026-11-17 print, Wait tactically, next-quarter recovery favoured over a further fall.",
+ "view": "At 2 weeks the consensus is roughly right; I find no large error, only an over-counted down tilt. The weak point is the next-quarter lean to up (44 vs 29). It rests on an outside view taken from a 2021-2026 AI bull-run sample, on conditional samples of n=13 and n=4 with no CEO-exit episode in them, and on a 'this is a one-off governance shock' story the tape does not support: the selling, the relative decline against SOX and the cash-conversion drop all started before the 8-K. I move next_quarter toward a symmetric split and hold 2w and this_quarter close to the consensus.",
+ "probabilities": {
+  "defs": "2w +/-5%, quarters +/-10%, vs price_at_call 162.85 (Fri 2026-11-13 close, weekend run). next_2_weeks: up = close > 170.99, down = close < 154.71, range between, measured at the close on or before 2026-11-29 (i.e. Fri 2026-11-27). this_quarter: to the last close of Q4 2026 (2026-12-31); next_quarter: to the last close of Q1 2027 (2027-03-31); up = close > 179.14, down = close < 146.57, range between. up + range + down = 100.",
+  "next_2_weeks": {
+   "up": 35,
+   "range": 33,
+   "down": 32
+  },
+  "this_quarter": {
+   "up": 35,
+   "range": 37,
+   "down": 28
+  },
+  "next_quarter": {
+   "up": 40,
+   "range": 28,
+   "down": 32
+  }
+ },
+ "confidence": 35,
+ "opposite_case": [
+  {
+   "ref": "nvda_ohlcv.weekly_closes_last4",
+   "point": "The fall did not start on 2026-11-11. Weekly closes ran 210.96 -> 204.64 -> 186.64 -> 162.85: six straight weekly declines (nvda_ohlcv.six_straight_weekly_declines), and the week before the 8-K had already fallen 8.8% (204.64 -> 186.64). Mon/Tue of the exit week traded 463M/429M shares, about 3.2x the norm (structure.volume_spike_ratio_mon), before the news. 'Governance shock, now priced' explains the last leg, not the trend."
+  },
+  {
+   "ref": "relative.nvda_vs_sox_52w_change_pct",
+   "point": "NVDA/SOX fell 42.5% over 52 weeks and 11.5% over 13 weeks, while AMD is +143.97% YTD against NVDA -14.21% (tv_relative). That fits a share-shift or multiple-compression story already under way. It is also exactly what 'intact fundamentals at 17.5x' cannot rule out: estimates can be cut after the print, and 17.5x on falling estimates is not cheap."
+  },
+  {
+   "ref": "tv_fundamentals.last_q_fcf",
+   "point": "Cash conversion broke in the latest reported quarter. FCF was $21.4B against $48.6B the quarter before, only about 22% of $96.2B revenue at a 63.7% net margin, and total debt rose from $12.8B to $38.9B. The cause is not in any slice. The consensus calls it 'an open question, not a red flag'. The opposite reading is that this is the first hard number to deteriorate, a quarter before the CEO left."
+  },
+  {
+   "ref": "news_governance",
+   "point": "The legal tail is wider than the base rates know. There is a shareholder class action with D&O cover that is Side A only (up to $900M), so corporate costs and damages may be uninsured. Commerce is drafting Malaysia/Indonesia/Singapore rules, and some officials want worldwide controls. China revenue was $12.4B in six months. WSJ cites about $12B of Megaspeed-arranged shipments. None of the 260 weeks in the base-rate sample contains a founder-CEO exit under congressional scrutiny."
+  },
+  {
+   "ref": "base_rates.next_quarter_13w",
+   "point": "The outside view itself is regime-biased. The 50/31/19 next_quarter base rate comes from NVDA weekly closes since 2021-11, a period in which the stock went to a 243.37 ATH. It is the base rate of a secular winner, not of a large-cap after a leadership break. Starting there and moving down 6-9 points still leaves the committee anchored to the bull-run drift."
+  },
+  {
+   "ref": "tv_purple_list.real_10y",
+   "point": "Macro does not rescue this. Real 10y is 2.86 and rising, 30y is 5.47, CPI is forecast at 3.9 (2026-12-10) against Fed funds at 4.0, and breadth is rotating away from mega-caps (RSP 1m +4.04% vs SPY -2.65%). A long-duration mega-cap that has lost its leadership premium has no rate tailwind for re-rating inside Q1 2027."
+  }
+ ],
+ "evidence": [
+  {
+   "ref": "committee/runs/2026-11-15-review/*.json",
+   "point": "Double count, governance tail: narrative (+12 down 2w), sentiment (+16, 'governance overhang'), macro (+11, 'the rest is event/governance outside my lane'), fundamentals (+6) and relative_strength (+10) all add 2w down weight for the same governance and event story. Under the overlapping-evidence rule it is one group, but it has entered five sets of numbers. That is why the mean down (33) sits 11 points over base while up stays at base. Counted once, I put 2w down at about 32 and up at about 35."
+  },
+  {
+   "ref": "committee/runs/2026-11-15-review/*.json",
+   "point": "Double count, momentum and trend: technical (trend on every timeframe, +14 down), relative_strength (NVDA/SOX downtrend, +10 down) and sentiment ('failed follow-through' on Fri) are all readings of the same price path. On the other side, the stretched-oscillator readings (RSI7 18.35, Stoch RSI 0/0, BBPCT triangles) appear in technical, sentiment and narrative. Each group should move the chair once."
+  },
+  {
+   "ref": "committee/runs/2026-11-15-review/*.json",
+   "point": "Double count, event variance: all six members cut 2w range by 7-17 points for the same reason (the earnings print plus 6.1% daily ATR). relative_strength already flagged this. It is one adjustment, and the chair should apply it once, not average six of them."
+  },
+  {
+   "ref": "base_rates.conditional_2w_drop_le_minus15",
+   "point": "Small samples presented as patterns: the n=4 table (2w 50/50/0, 13w 100% up, median +32.1%) appears in all six submissions. It is overlapping weekly windows, so it is effectively one or two episodes. The n=13 RSI<=36 table is 69/0/31 at 13w, which means bimodal, not bullish. Every member called both 'weak', but between them they keep next_quarter up near 44 instead of letting it fall toward down. Weak evidence cited six times is still weak evidence."
+  },
+  {
+   "ref": "news_governance",
+   "point": "Unread page the consensus leans on: options_positioning is deferred (failed). The only implied-move figure, about 9.1% (Benzinga Pro), comes second-hand from a news line. Narrative uses it as if positioning had been read, and every range cut implicitly depends on it. The 9.1% is also a one-day move. The 2w bucket is scored eight sessions later, on a thin post-Thanksgiving half-day (2026-11-27), so a large print-day move can partly mean-revert into the range. That argues against cutting range as far as 28-31."
+  },
+  {
+   "ref": "tv_fundamentals.pt_low",
+   "point": "Analyst targets used as evidence: fundamentals ('even the most bearish analyst ... 170 above price') and narrative both lean on the 170 low target and the 286 average. Targets lag price, and the hold count went from 9 to 15 in three days. Count the group once and give it close to zero weight. Note too the consensus mismatch: TradingView shows $108.85B / EPS 2.47, Benzinga shows about $109.2B / 2.48. The 'bar' is not precisely known."
+  },
+  {
+   "ref": "snapshot.nvda_ath",
+   "point": "Anchoring: the ATH 243.37 ('-33% and nothing in the financials explains it', fundamentals), the linear fibs drawn from it (161.98/154.53), and the one-day wick 148.80, which every member uses as the decisive level. 148.80 is one intraday print inside a 6.1% ATR regime. Treat it as noise-sized (about 1.4 ATR below price), not as a floor or a verdict."
+  },
+  {
+   "ref": "ladder_audit.orders",
+   "point": "Anchoring to the proposed ladder: technical frames the trap test around 164.27, which is the L1 anchor, and reads L3/L4 as 'strong' structure. The ladder is PROPOSED, budget null, and TB2 may pause all buying. Probabilities must not be shaped to make L1/L2 look like good fills or L4 look unreachable. The 2w -20% touch rate (2.2%) and the 1q -20% rate (22.8%) are the only relevant facts there."
+  },
+  {
+   "ref": "tv_fundamentals.revenue_next_q_est",
+   "point": "Earnings treated as predictable: fundamentals calls clearing revenue 'a low bar', and several members script beat-and-raise vs miss paths. The reaction depends on the next-quarter guide (consensus not in slice), on gross margin, on 10-Q legal language and on how the interim CEO comes across, and the 2026-11-18 briefing follows the next day. Nobody can call the sign. 'Wait for the print' is sensible, but the print does not end the uncertainty: the governance path runs into Q1 2027."
+  },
+  {
+   "ref": "thesis_break_status",
+   "point": "Fact-sheet inconsistency for the chair: the TB2 candidate text cites a 'board probe' and a 'DOJ inquiry'. Neither appears in news_governance or sec_filings, which say no charges, a voluntary closed-door briefing, and an 8-K with no reason and no disagreement. The only investigation named is Megaspeed's own. TB4 is listed as 'unmonitored (hyperscaler capex not in data)', but hyperscaler_capex is present (0/4 falling). Before ruling on TB2 the chair should rely on the sourced items, not the status string."
+  },
+  {
+   "ref": "base_rates.next_2_weeks",
+   "point": "Where I land, outside view first. 2w: base 33/45/22 -> 35/33/32 (range -12 for the event, counted once; down +10 for governance and trend, counted once; up +2 for the stretched-oscillator and climax-volume group, counted once). this_quarter: 39/43/18 -> 35/37/28. next_quarter: 50/31/19 -> 40/28/32 (up -10, of which about 3 is for the regime bias in the base sample, the rest the opposite case above; down +13)."
+  },
+  {
+   "ref": "coverage",
+   "point": "12/14 ok. AAII and CNN F&G are stale (pre-event), so the 'capitulation' read rests on volume and bar shape alone. Options positioning is deferred. Three of the consensus's load-bearing claims (climax, implied move, hedged or not) therefore have no direct data. Confidence 35."
+  }
+ ],
+ "bias_hunt": {
+  "small_samples": "n=4 and n=13 conditional tables cited by all six members; they hold next_quarter up near 44.",
+  "double_counted": "Governance tail in 5 members' down bumps; momentum and trend across technical, relative_strength and sentiment; event range cut in all 6.",
+  "analyst_targets": "pt_low 170 and pt_avg 286.12 used as support by fundamentals and narrative; give near-zero weight.",
+  "unread_pages": "options_positioning deferred; 9.1% implied move is a second-hand news line; sentiment pages stale.",
+  "anchoring": "ATH 243.37 and fibs drawn from it; 148.80 one-day wick; 164.27 and L1-L4 of a proposed, unapproved ladder.",
+  "earnings_as_predictable": "'Low bar' framing; the print plus the 2026-11-18 briefing plus the 10-Q are three linked unknowns, not one scripted event."
+ },
+ "key_levels": [
+  {
+   "level": 170.99,
+   "why": "2w up line; just above the Fri rejection high 170.00 and below sma111w 171.42.",
+   "ref": "snapshot.today_high"
+  },
+  {
+   "level": 154.71,
+   "why": "2w down line; about 1 daily ATR (9.98) below price.",
+   "ref": "structure.atr_daily"
+  },
+  {
+   "level": 148.8,
+   "why": "Exit-day wick. It matters only on a close, and is noise-sized in a 6.1% ATR tape.",
+   "ref": "snapshot.nov12_low"
+  },
+  {
+   "level": 16.05,
+   "why": "NVDA/SOX ratio now. Whether it stops making lower weekly readings tests 'one-off shock' against 'ongoing share shift'.",
+   "ref": "relative.nvda_vs_sox_ratio_now"
+  }
+ ],
+ "checks": [
+  {
+   "check": "Post-print, post-briefing close on 2026-11-18: above 170.99 favours the consensus recovery lean; below 154.71 favours the opposite case. A close inside the band means the event range cuts were too large.",
+   "level": "170.99 / 154.71",
+   "date": "2026-11-18",
+   "reach": "1w +5% 35.8%, -5% 26.9%: reachable",
+   "ref": "reachability.windows.1w"
+  },
+  {
+   "check": "Release and 10-Q after 2026-11-17: an explanation of the FCF drop ($21.4B vs $48.6B) and the +$26.0B debt rise, plus any new legal-proceedings or export-control risk language. A benign cause with no new Nvidia-level legal exposure removes most of my next_quarter down bump. A working-capital or customer-financing cause, or new legal language, confirms it.",
+   "level": "FCF 21.4B; debt 38.9B",
+   "date": "2026-11-17 release; 10-Q after",
+   "reach": "event (outcome is the trigger)",
+   "ref": "tv_fundamentals.last_q_fcf"
+  },
+  {
+   "check": "NVDA/SOX ratio on the weekly closes of 2026-11-20 and 2026-11-27. Both above 16.05 means the idiosyncratic discount is unwinding (consensus right on the quarters). A new lower reading after the print means the relative downtrend that began before the exit is still running (red team right).",
+   "level": "NVDA/SOX 16.05",
+   "date": "2026-11-20 and 2026-11-27 weekly closes",
+   "reach": "observable weekly",
+   "ref": "relative.nvda_vs_sox_ratio_now"
+  }
+ ],
+ "what_would_change_my_mind": [
+  "Daily close above 170.99 on or before 2026-11-20 together with NVDA beating SOX that week (1w +5% touch rate 35.8%). I would drop the next_quarter down bump and move back to about 44/27/29.",
+  "A next-quarter guide implying sequential growth, plus a benign FCF/debt explanation and no new legal-proceedings language in the 10-Q (outcome of the 2026-11-17 print). next_quarter up +5.",
+  "Daily close below 148.80 on or before 2026-11-27 with SOX flat or up (2w -10% touch rate 17.1%). This_quarter down to about 38, next_quarter down to about 38.",
+  "Commerce publishes Southeast Asia or worldwide rule text that requires licensing for existing cloud channels before 2026-12-31. next_quarter down +8 (TB3 candidate)."
+ ],
+ "notes_for_chair": [
+  "Bottom line: the 2w consensus is fine. Do not average the six down bumps, because they share one cause. The quarter calls are where the committee is most likely wrong, because the outside view (2021-2026 bull sample) and the n=4/n=13 tables are doing more work than any member admits.",
+  "Expected (not triggers): the 2026-11-17 print, the reported 2026-11-18 briefing, and the 2026-11-27 half-day close that scores the 2w bucket. Only their outcomes are triggers.",
+  "Before vs after the print: before, I am near-symmetric at 2w. After, I would move 2w odds by up to about 10 points toward the side the 11-18 close and the 10-Q support. The quarter view moves mainly on the FCF/debt explanation and on NVDA/SOX, not on the beat size.",
+  "Fact-sheet hygiene: (1) the TB2 status string cites a DOJ inquiry and a board probe that no sourced item contains; (2) the TB4 status string says capex is unmonitored, but the data is present and shows 0/4 falling; (3) week change -14.78% (TradingView Perf.W) vs -12.7% close-to-close; macro's residual used -14.78; (4) agents/_shared_rules.md still lists price_at_call 164.33 and the 2026-11-25 measurement date; this run correctly used 162.85 / 2026-11-27 per the orchestrator.",
+  "Stance check: universal 'tactical Wait' is consistent with TB2 pending and the binary print. It is not a contrarian error. The overconfidence risk lies in the strategic 'Accumulate on valuation' line (fundamentals, sentiment), which assumes estimates hold. Pre-mortem: if the red team is wrong, it will be because a clean print and a non-event briefing re-rated a 17.5x stock fast and the n=4 table was right after all."
+ ]
+}

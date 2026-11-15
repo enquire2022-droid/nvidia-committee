@@ -1,0 +1,53 @@
+{
+  "agent": "macro",
+  "run_id": "2026-11-15-review",
+  "as_of": "2026-11-15",
+  "price_at_call": 162.85,
+  "view": "Macro remains a mild headwind for a long-duration mega-cap and got slightly worse on rates (10y 5.139, 30y 5.47, real 10y 2.86 +0.08, CPI 3.7 vs Fed funds 4.0 with a 3.9 forecast, breadth rotating to equal-weight), offset by benign growth, credit and conditions (ISM 55.5, HY OAS 3.2 tightening, NFCI -0.46, VIX 19.29 down 30% on the week). Macro explains almost none of NVDA's -14.78% week (beta-implied about +3.7%), so the 2-week bucket is driven by the 2026-11-17 print and the governance story, not by macro; macro matters more for the quarter buckets via FOMC 2026-12-09 and CPI 2026-12-10.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 162.85 (Fri 2026-11-13 close, weekend run). next_2_weeks: up = close > 170.99, down = close < 154.71, range between, measured at the close on or before 2026-11-29 (i.e. Fri 2026-11-27). this_quarter: to the last close of 2026-12-31; next_quarter: to the last close of 2027-03-31; up > 179.14, down < 146.57, range between. up + range + down = 100.",
+    "next_2_weeks": {"up": 32, "range": 35, "down": 33},
+    "this_quarter": {"up": 35, "range": 36, "down": 29},
+    "next_quarter": {"up": 44, "range": 27, "down": 29}
+  },
+  "confidence": 25,
+  "evidence": [
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view 33/45/22 (n=258). Moved to 32/35/33: up -1, range -10, down +11. Reasons: earnings binary 2026-11-17 inside the window, realised volatility far above the sample norm (ATR 9.98, about 6% of price; week range 148.80-179.92), and a mild macro headwind from rising long yields. Conditional base rates (RSI<=36 n=13: 46/23/31; 2w drop <=-15% n=4: 50/50/0) lean up but are tiny, overlapping samples - weak evidence, used only to keep up from falling further."},
+    {"ref": "base_rates.this_quarter_approx_7w", "point": "Base 39/43/18. Moved to 35/36/29 (up -4, range -7, down +11). Macro part of the move: real 10y 2.86 and 30y 5.47 into FOMC 2026-12-09 and CPI 2026-12-10 (fcst 3.9 vs prev 3.7) is a duration headwind; the rest of the extra down weight is event/governance uncertainty outside my lane."},
+    {"ref": "base_rates.next_quarter_13w", "point": "Base 50/31/19. Moved to 44/27/29 (up -6, range -4, down +10). Conditional rates (RSI<=36 n=13: 69% up, median +21.5%; 2w drop <=-15% n=4: 100% up) point up but contain no comparable leadership-shock episode; weak evidence. Benign growth/credit stops me going further down."},
+    {"ref": "tv_purple_list.real_10y", "point": "Real 10y 2.86 (chg +0.08), nominal 10y 5.139, 30y 5.47, TLT 79.38: restrictive and rising discount rate for long-duration equities. Headwind, slightly worse this week."},
+    {"ref": "tv_purple_list.cpi_yoy", "point": "CPI YoY 3.7 vs Fed funds 4.0 (real policy rate only ~0.3), CPI forecast 3.9 for 2026-12-10: little room for the Fed to ease on 2026-12-09; a hot print risks a hawkish repricing. Headwind."},
+    {"ref": "tv_purple_list.t10y3m", "point": "Curve positive and steepening (10y-3m 0.83, 10y-2y 0.27): bear steepening from term premium, not a growth scare. Neutral for growth, mild headwind for duration."},
+    {"ref": "tv_purple_list.hy_oas", "point": "HY OAS 3.2 (chg -0.1) and NFCI -0.46: credit tight and tightening, financial conditions loose. No systemic stress; NVDA's shock did not spill into credit. Tailwind/neutral."},
+    {"ref": "tv_purple_list.ism_pmi", "point": "ISM PMI 55.5, new orders 55.5, 4-wk claims 195250: expansion regime supportive of AI capex demand; not recessionary."},
+    {"ref": "tv_purple_list.rsp_spy_ratio", "point": "RSP 1m +4.04 vs SPY 1m -2.65 (ratio 0.2932), S5TH 63.81% above 200d: breadth healthy but rotating away from mega-caps - a positioning headwind for NVDA specifically, not a market-wide risk-off."},
+    {"ref": "tv_purple_list.vix", "point": "VIX 19.29, -30.31% on the week: market-level fear receded even as NVDA fell; confirms the move is stock-specific. Liquidity composite -0.4% and DXY 103.41 / USDJPY 159.716 are minor headwinds."},
+    {"ref": "tv_relative.nvda_perf_w", "point": "NVDA -14.78% week vs SPX +2.49%, NDX +3.32%, SOX +6.86%, SMH +2.82%, AMD +20.17%, AVGO +11.53%, TSM +4.77%. Beta 1.49 x SPX +2.49% implies about +3.7%; residual about -18.5 pts. Macro explains ~0% of the week (wrong sign). Over 1m: beta x SPX -2.73% implies about -4.1% vs actual -27.79%, so macro explains roughly 15% of the month; the remaining ~85% is idiosyncratic."},
+    {"ref": "snapshot.nvda_week_volume", "point": "Week volume 2.34B vs 30d average daily 173.76M (about 2.7x a normal week's ~0.87B) with Nov 12 at 747.71M: stock-specific repricing flow, not macro flow."},
+    {"ref": "economic_calendar", "point": "Dated catalysts: 2026-11-17 retail sales (fcst 0.2) + NVDA earnings after close; 2026-11-18 housing starts and requested House briefing (status unknown); 2026-11-20 monthly opex; 2026-11-25 GDP Q3 2nd est, core PCE, income/spending, durables (last full session before the 2w measurement); 2026-11-26 Thanksgiving; 2026-12-01 ISM mfg (prev 55.5) + JOLTS; 2026-12-03 ISM services (prev 54.5); 2026-12-04 NFP (prev 165K, unemployment 4.1); 2026-12-09 FOMC; 2026-12-10 CPI (fcst 3.9, core 2.7); 2026-12-15 PPI. A November PPI date before the 2w close is not in slice."},
+    {"ref": "coverage", "point": "Coverage 12/14 ok; sentiment pages stale (not used by me); options_positioning deferred - unknown, not neutral, so I cannot judge dealer/vol positioning around earnings and opex 2026-11-20. Event cutoff 2026-11-13T21:00Z; all my macro pages read after it."}
+  ],
+  "key_levels": [
+    {"level": 170.99, "why": "2w up threshold (+5%); just above Friday's high 170.00", "ref": "snapshot.today_high"},
+    {"level": 154.71, "why": "2w down threshold (-5%)", "ref": "snapshot.nvda_price"},
+    {"level": 148.8, "why": "Week low (Nov 12); a close below approaches the -10% quarter band 146.57", "ref": "snapshot.nvda_week_low_so_far"},
+    {"level": 5.139, "why": "US10y; sustained move higher after CPI 2026-12-10 deepens the duration headwind", "ref": "tv_purple_list.us10y"},
+    {"level": 2.86, "why": "Real 10y; falling back would ease the main macro headwind", "ref": "tv_purple_list.real_10y"},
+    {"level": 3.2, "why": "HY OAS; widening would turn credit from benign to headwind", "ref": "tv_purple_list.hy_oas"}
+  ],
+  "what_would_change_my_mind": [
+    "More bullish (quarter buckets): CPI on 2026-12-10 at or below 3.7 (vs 3.9 fcst) plus a dovish FOMC on 2026-12-09, with real 10y back below 2.78 and 10y below 5.0.",
+    "More bullish: RSP/SPY ratio turning down from 0.2932 (rotation back toward mega-caps) by early December.",
+    "More bearish: NVDA weakness turning systemic - VIX back above 25 with HY OAS above 3.5 and NFCI above -0.40 before 2026-11-27.",
+    "More bearish: ISM manufacturing on 2026-12-01 below 52 with 30y above 5.5 (stagflation mix), or core PCE on 2026-11-25 hotter than expected pushing 10y above 5.25.",
+    "Expected line (not a trigger): NVDA earnings 2026-11-17 will happen; if NVDA keeps diverging from SOX/SPX after the print, macro stays near-irrelevant to the 2w bucket; if it re-couples, macro beta (1.49) matters more for the quarter buckets."
+  ],
+  "notes_for_chair": [
+    "Update vs my 2026-11-12 trial submission (30/36/34, 34/36/30, 43/27/30 at 164.33): small changes only, mostly because buckets were re-based to 162.85. Rates slightly worse (real 10y chg +0.08), credit and VIX slightly better; net macro read unchanged as a mild headwind. Confidence held at 25 because the dominant driver is idiosyncratic and outside my lane.",
+    "Before vs after the print: before 2026-11-17 macro is marginal (retail sales same day is second-order). After it, the macro window that matters is 2026-11-25 (core PCE/GDP), 2026-12-01..04 (ISM, NFP) and 2026-12-09/10 (FOMC, CPI) - relevant to this_quarter, not to the 2w bucket.",
+    "The 2w measurement close (Fri 2026-11-27) is a post-Thanksgiving half-day session with typically thin volume; a single-day move can decide the bucket.",
+    "Governance/CEO-exit and the House briefing are not mine to judge; TB2 is the chair's call. Macro offers no evidence of contagion (VIX down 30% on the week, HY OAS tighter).",
+    "Pre-mortem: if badly wrong in three months, the likely reason is that a loose-conditions regime (NFCI -0.46, HY 3.2, ISM 55.5) let NVDA rebound with semis after a vivid single-name shock, making my extra down weight an availability-bias overreaction; or, on the other side, a hot CPI on 2026-12-10 pushing 30y through 5.5 hit all duration assets at once.",
+    "No orders suggested; ladder changes only with owner approval."
+  ]
+}

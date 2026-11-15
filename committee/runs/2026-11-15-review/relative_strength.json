@@ -1,0 +1,48 @@
+{
+  "agent": "relative_strength",
+  "run_id": "2026-11-15-review",
+  "as_of": "2026-11-15",
+  "price_at_call": 162.85,
+  "view": "This week's fall is idiosyncratic to NVDA, not sector-wide: NVDA lost about 15% while SOX gained 6.9%, and money rotated into AMD (+20%) and AVGO (+11.5%) inside AI semis. That was on top of an already badly lagging 13-week and 52-week relative trend. Relative strength gives no bottom signal yet. It argues for Wait (tactical) until NVDA/SOX stops falling, ideally on the 2026-11-17 earnings print.",
+  "probabilities": {
+    "defs": "vs price_at_call 162.85 (Fri 2026-11-13 close). next_2_weeks: up = close > 170.99 (+5%), down = close < 154.71 (-5%), range in between, measured at the close on or before 2026-11-29 (Fri 2026-11-27). this_quarter (last close of 2026-12-31) and next_quarter (last close of 2027-03-31): up > 179.14 (+10%), down < 146.57 (-10%), range in between. up + range + down = 100.",
+    "next_2_weeks": {"up": 31, "range": 37, "down": 32},
+    "this_quarter": {"up": 33, "range": 40, "down": 27},
+    "next_quarter": {"up": 43, "range": 31, "down": 26}
+  },
+  "confidence": 38,
+  "evidence": [
+    {"ref": "relative.this_week_nvda_minus_sox_pts", "point": "NVDA underperformed SOX by 21.6 points this week. That is a single-name shock; the sector was not falling."},
+    {"ref": "tv_relative", "point": "Week: NVDA -14.78%, SOX +6.86%, SMH +2.82%, AMD +20.17%, AVGO +11.53%, TSM +4.77%, SPX +2.49%, NDX +3.32%. Every peer and index was up while NVDA fell, so this week is idiosyncratic."},
+    {"ref": "tv_relative", "point": "Rotation inside AI semis: AMD +20.17% this week (YTD +143.97%) and AVGO +11.53%, against NVDA YTD -14.21% and SOX YTD +39.21%. Money appears to be moving to NVDA's AI-compute rivals, not leaving the theme. Holders are substituting peers for NVDA; they are not exiting AI demand."},
+    {"ref": "relative.nvda_vs_sox_13w_change_pct", "point": "NVDA/SOX fell 11.5% over 13 weeks (ratio 18.13 -> 16.05) and 42.5% over 52 weeks (27.92 -> 16.05). The relative downtrend was already in place before the CEO-exit week, so the shock sped up a trend that already existed."},
+    {"ref": "relative.nvda_vs_spx_13w_change_pct", "point": "NVDA/SPX fell 25.5% over 13 weeks and 23.7% over 52 weeks. Against the broad index NVDA is a clear laggard on both horizons."},
+    {"ref": "tv_relative", "point": "Over 1 month the sector was weak too: NVDA -27.79%, SOX -15.16%, NDX -7.83%, SPX -2.73%. About half of NVDA's 1M drop is sector beta and the rest is idiosyncratic. Over 3M it is NVDA -28.19% vs SOX -18.44%."},
+    {"ref": "relative.beta_vs_sox_59w", "point": "Beta to SOX is 0.48 and correlation 0.54 over 59 weeks, both low for the sector's largest name. NVDA has been trading on its own story, so sector strength gives it only partial support."},
+    {"ref": "tv_purple_list", "point": "RSP +4.04% vs SPY -2.65% over 1M (RSP/SPY 0.2932): breadth is rotating away from mega-caps. This is a headwind for NVDA's relative performance that does not depend on the CEO news."},
+    {"ref": "base_rates.next_2_weeks", "point": "Outside view for 2W is 33 up / 45 range / 22 down. I cut range by 8 and raised down by 10 because earnings (2026-11-17) lands in the window with a daily ATR of 6.1%, and the relative trend is negative. This tail-widening overlaps with the technical members' view, so the chair should count it once."},
+    {"ref": "base_rates.conditional_2w_drop_le_minus15", "point": "After 2W drops of 15% or more, n=4 gave 50/50/0 for 2W and 100% up for 13W. That sample is tiny and overlapping, and those episodes were probably sector-wide selloffs, not a single-name key-person shock with the sector rising (judgment, not data). I treat it as weak evidence and moved next_quarter only partway from the 50/31/19 base."},
+    {"ref": "judgment (no data in slice)", "point": "What relative strength usually implies after a key-person shock is judgment only; the slice has no analog data. Single-name shocks while the sector is strong often show post-event relative drift for weeks, because holders rotate to peers rather than buy the dip, until a hard catalyst (earnings or guidance) re-anchors the story. A fast reversal of the gap needs the earnings print to show the business is unaffected."},
+    {"ref": "coverage", "point": "12/14 pages ok. AAII and CNN F&G are stale, which does not matter much for relative strength. Options positioning is deferred, so I cannot see whether the peer rotation is hedged pair trading or outright, and confidence is lower."}
+  ],
+  "key_levels": [
+    {"level": 148.8, "why": "Shock low on 2026-11-12, the CEO-exit day. A close below it while SOX holds would mean the idiosyncratic de-rating is still going on.", "ref": "snapshot.nov12_low"},
+    {"level": 154.71, "why": "2W down-bucket threshold (-5%).", "ref": "snapshot.nvda_price"},
+    {"level": 170.99, "why": "2W up-bucket threshold (+5%). It is close to the 170.00 high of Nov 13.", "ref": "snapshot.today_high"},
+    {"level": 179.92, "why": "Bottom of the gap zone (179.92-185.22) and the week's high. A close back above it would mean most of the shock-week relative loss has been recovered.", "ref": "structure.gap_zone"},
+    {"level": 16.05, "why": "NVDA/SOX ratio now (13w ago 18.13). The relative trend changes only when this ratio stops making lower weekly readings.", "ref": "relative.nvda_vs_sox_ratio_now"}
+  ],
+  "what_would_change_my_mind": [
+    "Expected: earnings on 2026-11-17 after close, a binary event. Before the print the relative signal is purely negative. After it, the outcome decides. A print and guide strong enough for NVDA to beat SOX by 5 points or more in the week of 2026-11-16 to 2026-11-20 would make me move 2W up to about 40 and down to about 25: the idiosyncratic discount would be unwinding.",
+    "NVDA closes above 179.92 (+10.5%, gap bottom) on or before 2026-11-27 (2W +10% reached in 26.2% of past windows): relative repair confirmed, raise up in all horizons.",
+    "NVDA closes below 148.80 (-8.6%) on or before 2026-11-27 while SOX is flat or up (2W -5% reached in 41.0% and -10% in 17.1% of past windows): de-rating persists, raise 2W down to about 40 and this_quarter down to about 35.",
+    "AMD gives back 10% or more and SOX falls 5% or more in a week before 2026-11-27 while NVDA holds above 154.71: the peer rotation would be reversing in NVDA's favour, so I would lift relative-strength odds even if the sector is weak."
+  ],
+  "notes_for_chair": [
+    "Data inconsistency: tv_relative Perf.W for NVDA is -14.78%, but the weekly close-to-close change is -12.7% (186.64 -> 162.85, structure.week_change_pct). TradingView's Perf.W probably uses a different reference window. The relative conclusion holds on either number, but use -12.7% for the weekly bar.",
+    "TB2 (CEO departs under legal or regulatory pressure) is outside my lane. My slice shows the CEO exit only as a price shock (Nov 12) and does not show whether the departure was under legal pressure. The governance/narrative member must rule on it, because if TB2 fired, all buying pauses whatever relative strength says.",
+    "The AI-semis peers are strong (AMD +20%, AVGO +11.5%, SOX +6.9% this week), which is evidence against TB4 (hyperscaler capex cuts) as the cause of NVDA's drop. The capex member should confirm with hyperscaler_capex.",
+    "Overlap: my widening of the 2W tails comes from the earnings event and ATR, which the technical and fundamental members will also use. Count it once.",
+    "Pre-mortem: if this view is badly wrong in three months, the most likely reason is a strong earnings print plus orderly succession that re-rates NVDA quickly toward its peers. Its 52-week relative underperformance of -42.5% gives it plenty of room to catch up."
+  ]
+}

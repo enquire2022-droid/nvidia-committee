@@ -2,138 +2,116 @@
  "coverage": {
   "pages_total": 15,
   "pages_required": 14,
-  "ok": 0,
-  "stale": 11,
+  "ok": 12,
+  "stale": 2,
   "failed": 0,
-  "missing": 3,
+  "missing": 0,
   "deferred": 1,
-  "line": "0/14 pages ok (11 stale, 0 failed, 3 missing; 1 deferred)",
+  "line": "12/14 pages ok (2 stale, 0 failed, 0 missing; 1 deferred)",
   "complete": false,
-  "event_cutoff_utc": null,
+  "event_cutoff_utc": "2026-11-13T21:00:00Z",
   "rows": [
    {
     "id": "tv_technicals_1w",
     "how": "TradingView MCP get-technicals-rating 1W",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_technicals_1d",
     "how": "TradingView MCP get-technicals-rating 1D",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_technicals_4h",
     "how": "TradingView MCP get-technicals-rating 4h",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "nvda_ohlcv",
     "how": "TradingView MCP get-ohlcv 1D (append to data/nvda_daily.json) and 1W",
-    "state": "missing"
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_chart_owner",
     "how": "Owner's TradingView layout in Chrome: 1W, 1D, 4H, drawn levels, labels, every oscillator; restore timeframe; never save, never trade",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-11 11:50 UTC+3",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T16:06:00Z",
+    "data_time": "chart at 2026-11-15 19:04-19:06 UTC+3 (market closed)"
    },
    {
     "id": "tv_purple_list",
     "how": "TradingView MCP watchlist 345068655 quotes incl. AMEX:RSP/AMEX:SPY; FRED items from the owner's watchlist panel or screenshot",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T16:09:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_relative",
     "how": "TradingView MCP quotes: NVDA, SOX, SMH, AMD, AVGO, NYSE:TSM, SPX, NDX (Perf.W/1M/3M/YTD)",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_fundamentals",
     "how": "TradingView MCP financials, forecasts, financial-history, earnings calendar",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:26:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "economic_calendar",
     "how": "TradingView MCP economic calendar, high importance, next 30 days",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:26:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "news_governance",
     "how": "TradingView NVDA news feed + web search on governance / export-control story",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-10 to 2026-11-12 (8-K 2026-11-12)",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:50:00Z",
+    "data_time": "2026-11-12 to 2026-11-15"
    },
    {
     "id": "sec_filings",
     "how": "Web: latest NVDA 8-K / 10-Q / Form 4 on sec.gov (fetch the filing page)",
-    "state": "missing"
+    "state": "ok",
+    "read_utc": "2026-11-15T16:10:00Z",
+    "data_time": "8-K filed 2026-11-12"
    },
    {
     "id": "hyperscaler_capex",
     "how": "TradingView MCP financial-history for MSFT, GOOGL, AMZN, META (capex_latest) -> data/capex_snapshots.json",
-    "state": "missing"
+    "state": "ok",
+    "read_utc": "2026-11-15T15:15:00Z",
+    "data_time": "latest reported quarters"
    },
    {
     "id": "sentiment_aaii",
     "how": "Web: AAII sentiment survey (latest weekly)",
     "state": "stale",
-    "read_utc": null,
+    "read_utc": "2026-11-15T15:40:00Z",
     "data_time": "week ending 2026-11-04",
     "reasons": [
-     "no read_utc recorded"
+     "partial read"
     ]
    },
    {
     "id": "sentiment_cnn_fg",
     "how": "Web: CNN Fear & Greed (value and date)",
     "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-06; later reading undated",
+    "read_utc": "2026-11-15T15:40:00Z",
+    "data_time": "2026-11-06 / 2026-11-11",
     "reasons": [
-     "no read_utc recorded",
      "partial read"
     ]
    },
@@ -239,33 +217,40 @@
   "rule": "Proxy only: 'falling' = last-quarter run-rate more than 10% below TTM. Two or more falling raises a TB4 WATCH; TB4 itself fires only on capex guidance cuts by two or more of the four (narrative member confirms from filings/calls).",
   "status": "no capex cut signal"
  },
- "as_of": "2026-11-12",
- "price_note": "NVDA 164.33 = 2026-11-12 intraday (open bar, streaming, -5.41%). Last completed daily close 173.73 (2026-11-11). Today: open 151.005, high 167.14, low 148.80, volume 498.56M so far. Previous weekly close 186.64 (2026-11-06); weekly close two weeks earlier 204.64 (2026-10-30).",
+ "as_of": "2026-11-15",
+ "price_note": "Weekend run (Sun 2026-11-15): US market closed. Price = last completed close 162.85 (Fri 2026-11-13). Last session (Nov 13): open 169.905, high 170.00, low 158.39, volume 365.80M. Week of Nov 9: open 173.065, high 179.92, low 148.80, close 162.85 (-12.75%), volume 2.34B. Nov 12 (CEO-exit day): open 151.005, low 148.80, close 166.19, volume 747.71M. Prior weekly close 186.64 (Nov 6); weekly close two weeks earlier 204.64 (Oct 30).",
  "snapshot": {
-  "nvda_price": 164.33,
-  "nvda_last_close": 173.73,
+  "nvda_price": 162.85,
+  "nvda_last_close": 162.85,
   "nvda_prev_week_close": 186.64,
   "nvda_ath": 243.37,
   "nvda_ath_date": "2026-10 (weekly high 243.37)",
   "nvda_week_open": 173.065,
+  "nvda_week_high": 179.92,
   "nvda_week_low_so_far": 148.8,
-  "nvda_market_cap_usd": 3992526401813,
-  "today_open": 151.005,
-  "today_high": 167.14,
-  "today_low": 148.8,
-  "today_volume_so_far": 498560557,
+  "nvda_week_volume": 2344711534,
+  "today_open": 169.905,
+  "today_high": 170.0,
+  "today_low": 158.39,
+  "today_volume_so_far": 365796552,
+  "today_note": "'today' = last session Fri 2026-11-13 (bar complete)",
+  "nov12_open": 151.005,
+  "nov12_low": 148.8,
+  "nov12_close": 166.19,
+  "nov12_volume": 747707648,
   "nvda_close_2w_ago_weekly": 204.64,
-  "nvda_daily_closes_last5": [
+  "nvda_market_cap_usd": 3924685147094,
+  "nvda_daily_closes_last6": [
    186.64,
    178.67,
    168.89,
-   173.73
+   173.73,
+   166.19,
+   162.85
   ],
-  "nvda_daily_volumes_last4": [
-   462719328,
-   429273205,
-   339214801
-  ]
+  "prev_session_close": 166.19,
+  "weekly_bar_status": "weekly bar of 2026-11-09 is COMPLETE (closed 2026-11-13 at 162.85); RSI is on a completed bar",
+  "today_bar_status": "complete (last session Fri 2026-11-13: open 169.905, high 170.00, low 158.39, close 162.85; a red day that gave back Thursday's rebound)"
  },
  "base_rates": {
   "next_2_weeks": {
@@ -331,36 +316,36 @@
   }
  },
  "weekly_rsi": {
-  "now_engine": 32.9,
-  "now_tradingview": 33.13,
+  "now_engine": 32.5,
+  "now_tradingview": 32.53,
   "oversold_threshold": 30,
   "is_oversold": false,
   "rsi_at_apr_2025_low_week": 35.7,
-  "lowest_since_2023": 32.9,
-  "note": "current weekly bar is open (Thursday); RSI on completed bars only after Friday close"
+  "lowest_since_2023": 32.5,
+  "note": "weekly bar of 2026-11-09 is COMPLETE (closed 2026-11-13 at 162.85); RSI is on a completed bar"
  },
  "structure": {
-  "price": 164.33,
-  "last_completed_close": 173.73,
+  "price": 162.85,
+  "last_completed_close": 162.85,
   "prev_week_close": 186.64,
-  "drawdown_from_ath_pct": -32.5,
-  "week_change_pct": -12.0,
-  "dist_to_sma100w_pct": -6.1,
-  "dist_to_sma200w_pct": 32.9,
-  "dist_to_sma200d_pct": -19.6,
+  "drawdown_from_ath_pct": -33.1,
+  "week_change_pct": -12.7,
+  "dist_to_sma100w_pct": -7.0,
+  "dist_to_sma200w_pct": 31.8,
+  "dist_to_sma200d_pct": -20.2,
   "gap_zone": [
    179.92,
    185.22
   ],
-  "volume_spike_ratio_mon": 3.6,
-  "atr_daily": 9.86,
-  "atr_daily_pct": 6.0,
-  "two_week_change_pct": -19.7,
-  "today_gap_open_pct": -13.1,
-  "today_recovery_from_low_pct": 10.4,
-  "today_low_vs_prev_close_pct": -14.3,
-  "today_volume_vs_60d_avg": 3.8,
-  "today_bar_status": "open (intraday, streaming); hammer/spring shape is unconfirmed until the close"
+  "volume_spike_ratio_mon": 3.2,
+  "atr_daily": 9.98,
+  "atr_daily_pct": 6.1,
+  "two_week_change_pct": -20.4,
+  "today_gap_open_pct": 2.2,
+  "today_recovery_from_low_pct": 2.8,
+  "today_low_vs_prev_close_pct": -4.7,
+  "today_volume_vs_60d_avg": 2.5,
+  "today_bar_status": "complete (last session Fri 2026-11-13: open 169.905, high 170.00, low 158.39, close 162.85; a red day that gave back Thursday's rebound)"
  },
  "fib_check": {
   "anchors": [
@@ -391,17 +376,17 @@
   }
  },
  "relative": {
-  "nvda_vs_sox_ratio_now": 15.5182,
+  "nvda_vs_sox_ratio_now": 16.0501,
   "nvda_vs_sox_ratio_13w_ago": 18.1331,
   "nvda_vs_sox_ratio_52w_ago": 27.9202,
-  "nvda_vs_sox_13w_change_pct": -14.4,
-  "nvda_vs_sox_52w_change_pct": -44.4,
-  "nvda_vs_spx_13w_change_pct": -25.7,
-  "nvda_vs_spx_52w_change_pct": -23.9,
-  "beta_vs_spx_59w": 1.4,
-  "beta_vs_sox_59w": 0.44,
-  "corr_vs_sox_59w": 0.51,
-  "this_week_nvda_minus_sox_pts": -23.4
+  "nvda_vs_sox_13w_change_pct": -11.5,
+  "nvda_vs_sox_52w_change_pct": -42.5,
+  "nvda_vs_spx_13w_change_pct": -25.5,
+  "nvda_vs_spx_52w_change_pct": -23.7,
+  "beta_vs_spx_59w": 1.52,
+  "beta_vs_sox_59w": 0.48,
+  "corr_vs_sox_59w": 0.54,
+  "this_week_nvda_minus_sox_pts": -21.6
  },
  "ladder_audit": {
   "status": "PROPOSED 2026-11-11 - weights only; owner has NOT approved levels or budget. Committee audits, never applies changes.",
@@ -415,7 +400,7 @@
     ],
     "mid": 163.0,
     "weight": 1.0,
-    "dist_from_price_pct": -0.8,
+    "dist_from_price_pct": 0.1,
     "gap_from_prev_pct": null,
     "anchors": [
      {
@@ -439,7 +424,7 @@
     ],
     "mid": 155.5,
     "weight": 1.5,
-    "dist_from_price_pct": -5.4,
+    "dist_from_price_pct": -4.5,
     "gap_from_prev_pct": 4.8,
     "anchors": [
      {
@@ -463,7 +448,7 @@
     ],
     "mid": 143.0,
     "weight": 2.0,
-    "dist_from_price_pct": -13.0,
+    "dist_from_price_pct": -12.2,
     "gap_from_prev_pct": 8.7,
     "anchors": [
      {
@@ -487,12 +472,12 @@
     ],
     "mid": 126.0,
     "weight": 3.0,
-    "dist_from_price_pct": -23.3,
+    "dist_from_price_pct": -22.6,
     "gap_from_prev_pct": 13.5,
     "anchors": [
      {
       "name": "sma200w",
-      "value": 123.61,
+      "value": 123.6,
       "drift_pct_vs_mid": 1.9
      },
      {
@@ -535,8 +520,7 @@
    "blackout_trading_days": 3,
    "blackout_window": "2026-11-12 to 2026-11-17 (today is inside it)",
    "orders_touched_today_intraday": [
-    "L1",
-    "L2"
+    "L1"
    ]
   },
   "breakout_tranche": {
@@ -601,85 +585,122 @@
   }
  ],
  "thesis_break_status": {
-  "TB1": "not fired (no finding or charge)",
-  "TB2": "CANDIDATE FIRED 2026-11-11: CEO resigned effective immediately during board probe, DOJ inquiry and congressional pressure; 8-K gives no reason. Chair to rule; owner confirms.",
-  "TB3": "not fired (no restriction enacted)",
-  "TB4": "unmonitored (hyperscaler capex not in data)"
+  "TB1": "not fired: no charge, settlement, penalty or admission against Nvidia (Megaspeed and OEM-channel diversion reports only)",
+  "TB2": "FIRED by chair ruling 2026-11-12 (CEO resigned effective immediately, 2026-11-11; 8-K gives no reason; congressional briefing request pending); owner has not yet confirmed",
+  "TB3": "not fired: Commerce drafting Malaysia/Indonesia/Singapore rules; administration split; nothing enacted",
+  "TB4": "monitored: 0 of 4 hyperscalers falling (run-rate vs TTM +15.9% to +43.6%); no capex-guidance cut reported"
  },
  "pages": {
   "tv_technicals_1w": {
    "status": "ok",
-   "data_time": "2026-11-12",
+   "read_utc": "2026-11-15T15:24:00Z",
+   "data_time": "close 2026-11-13",
    "source": "TradingView MCP technicals 1W",
    "values": {
-    "rsi14": 33.13,
-    "stoch_k": 17.73,
-    "stoch_d": 26.68,
-    "cci20": -263.14,
+    "rsi14": 32.53,
+    "stoch_k": 16.88,
+    "stoch_d": 26.4,
+    "cci20": -266.3,
     "adx": 21.61,
-    "macd": -1.8,
-    "macd_signal": 4.54,
+    "macd": -1.99,
+    "macd_signal": 4.5,
     "ao": -6.83,
-    "sma10": 211.05,
-    "sma20": 211.92,
-    "sma50": 199.89,
-    "sma100": 175.09,
-    "sma200": 123.61,
-    "ema20": 207.22,
-    "ema50": 198.61,
-    "ema100": 176.08,
-    "ema200": 137.27,
+    "sma10": 210.81,
+    "sma20": 211.8,
+    "sma50": 199.84,
+    "sma100": 175.06,
+    "sma200": 123.6,
+    "ema20": 206.99,
+    "ema50": 198.52,
+    "ema100": 176.03,
+    "ema200": 137.25,
+    "hullma9": 179.66,
     "summary": "SELL",
-    "ma_summary": "STRONG_SELL",
-    "rsi14_latest": 32.9
+    "ma_summary": "STRONG_SELL"
    }
   },
   "tv_technicals_1d": {
    "status": "ok",
-   "data_time": "2026-11-12",
+   "read_utc": "2026-11-15T15:24:00Z",
+   "data_time": "close 2026-11-13",
    "source": "TradingView MCP technicals 1D",
    "values": {
-    "rsi14": 25.69,
-    "stoch_k": 14.39,
-    "stoch_d": 12.66,
-    "cci20": -178.55,
-    "adx": 39.48,
-    "macd": -13.32,
-    "macd_signal": -9.09,
-    "sma10": 186.83,
-    "sma20": 201.21,
-    "sma50": 215.94,
-    "sma100": 212.61,
-    "sma200": 204.33,
-    "ema200": 203.78,
-    "atr14": 9.86,
+    "rsi14": 24.86,
+    "stoch_k": 19.55,
+    "stoch_d": 15.49,
+    "cci20": -135.67,
+    "adx": 41.5,
+    "macd": -14.23,
+    "macd_signal": -10.11,
+    "ao": -43.44,
+    "sma10": 182.75,
+    "sma20": 198.69,
+    "sma50": 214.65,
+    "sma100": 212.26,
+    "sma200": 204.19,
+    "ema200": 203.39,
+    "hullma9": 161.64,
+    "atr14": 9.98,
     "summary": "SELL",
     "ma_summary": "STRONG_SELL",
-    "rsi14_latest": 25.39
+    "other_summary": "NEUTRAL"
    }
   },
   "tv_technicals_4h": {
    "status": "ok",
-   "data_time": "2026-11-12",
+   "read_utc": "2026-11-15T15:24:00Z",
+   "data_time": "close 2026-11-13",
    "source": "TradingView MCP technicals 4H",
    "values": {
-    "rsi14": 27.92,
-    "stoch_k": 24.04,
-    "stoch_d": 17.66,
-    "adx": 38.0,
-    "macd": -11.71,
-    "macd_signal": -10.07,
-    "sma20": 189.73,
-    "sma50": 207.46,
-    "sma200": 212.92,
-    "hullma9": 169.6,
-    "summary": "STRONG_SELL"
+    "rsi14": 28.06,
+    "stoch_k": 27.32,
+    "stoch_d": 26.64,
+    "adx": 42.0,
+    "macd": -12.32,
+    "macd_signal": -11.09,
+    "sma20": 183.18,
+    "sma50": 203.48,
+    "sma200": 212.39,
+    "hullma9": 161.38,
+    "summary": "SELL",
+    "ma_summary": "STRONG_SELL"
+   }
+  },
+  "nvda_ohlcv": {
+   "status": "ok",
+   "read_utc": "2026-11-15T15:24:00Z",
+   "data_time": "close 2026-11-13",
+   "source": "TradingView MCP OHLCV 1D (data/nvda_daily.json, 1260 bars to 2026-11-13) and 1W",
+   "values": {
+    "last_daily": {
+     "date": "2026-11-13",
+     "o": 169.905,
+     "h": 170.0,
+     "l": 158.39,
+     "c": 162.85,
+     "v": 365796552
+    },
+    "week": {
+     "o": 173.065,
+     "h": 179.92,
+     "l": 148.8,
+     "c": 162.85,
+     "v": 2344711534
+    },
+    "weekly_closes_last4": [
+     210.96,
+     204.64,
+     186.64,
+     162.85
+    ],
+    "six_straight_weekly_declines": true
    }
   },
   "tv_chart_owner": {
    "status": "ok",
-   "data_time": "2026-11-11 11:50 UTC+3",
-   "source": "Owner's TradingView layout 'Ayham main view' (read 2026-11-11, 1W and 1D)",
+   "read_utc": "2026-11-15T16:06:00Z",
+   "data_time": "chart at 2026-11-15 19:04-19:06 UTC+3 (market closed)",
+   "source": "Owner's TradingView layout 'Ayham main view' read in Chrome 1W/1D/4H (start 1W, restored 1W, not saved)",
    "values": {
     "fib_anchor_low": 10.81,
     "fib_anchor_high": 243.37,
@@ -700,94 +721,147 @@
      90.69,
      86.62
     ],
-    "weekly_sell_label": "printed at the top (Oct 2026)",
-    "daily_bottom_oscillator": "green up-triangle printed 2026-11-10/11 (unconfirmed)",
-    "daily_gap_unfilled": "179.92 (Mon high) to 185.22 (prior Fri low)",
+    "weekly_overlays": {
+     "sma200w": 123.6,
+     "ema21w": 206.99,
+     "sma111w": 171.42,
+     "sma25w": 210.43,
+     "ema50w": 198.52
+    },
+    "weekly_oscillators": {
+     "rsi7": 18.35,
+     "rsi14": 32.53,
+     "stoch_rsi_k": 0.0,
+     "stoch_rsi_d": 0.0,
+     "cipher_b_wt": -22.51,
+     "macd_hist": -6.49,
+     "macd": -1.99,
+     "macd_signal": 4.5,
+     "bbpct_algoalpha": -24.21
+    },
+    "weekly_candle": {
+     "o": 173.07,
+     "h": 179.92,
+     "l": 148.8,
+     "c": 162.85,
+     "chg_pct": -12.75
+    },
+    "weekly_sell_label": "printed at the Oct 2026 top",
+    "daily_oscillators": {
+     "rsi7": 20.28,
+     "rsi14": 24.86,
+     "stoch_rsi_k": 11.55,
+     "stoch_rsi_d": 10.62,
+     "cipher_b_wt": -0.8289,
+     "macd_hist": -4.12,
+     "macd": -14.23,
+     "macd_signal": -10.11,
+     "bbpct_algoalpha": 3.75
+    },
+    "daily_bottom_oscillator": "two green up-triangles on the BBPCT pane (Nov 10-13); BBPCT back above 0 (3.75)",
+    "fourh_oscillators": {
+     "rsi7": 27.92,
+     "rsi14": 28.08,
+     "stoch_rsi_k": 46.01,
+     "stoch_rsi_d": 44.53,
+     "cipher_b_wt": 2.05,
+     "macd_hist": -1.22,
+     "macd": -12.32,
+     "macd_signal": -11.09,
+     "bbpct_algoalpha": 17.68
+    },
+    "daily_gap_unfilled": "179.92 (Nov 9 high) to 185.22 (Nov 6 low)",
     "volume_mon_tue_shares": [
      462719328,
      429273205
     ],
-    "daily_avg_volume_60d_shares": 130136619,
-    "oscillator_values": "sub-pane values collapsed on layout; not readable"
-   }
-  },
-  "tv_relative": {
-   "status": "ok",
-   "data_time": "2026-11-12",
-   "source": "TradingView MCP quotes",
-   "values": {
-    "nvda_perf_w": -15.45,
-    "nvda_perf_1m": -26.1,
-    "nvda_perf_3m": -26.89,
-    "nvda_perf_ytd": -12.67,
-    "sox_perf_w": 7.99,
-    "sox_perf_1m": -11.46,
-    "sox_perf_3m": -14.88,
-    "sox_perf_ytd": 45.29,
-    "smh_perf_w": 4.83,
-    "smh_perf_1m": -12.56,
-    "smh_perf_ytd": 36.99,
-    "amd_perf_w": 30.2,
-    "amd_perf_ytd": 169.15,
-    "avgo_perf_w": 17.46,
-    "tsm_perf_w": 7.53,
-    "spx_perf_w": -0.45,
-    "spx_perf_1m": -1.94,
-    "spx_perf_ytd": 11.14,
-    "ndx_perf_w": 1.6,
-    "ndx_perf_1m": -6.17,
-    "nvda_beta_1y": 1.75,
-    "nvda_volatility_m_pct": 3.79,
-    "nvda_avg_volume_30d": 157504697
+    "nov12_volume_shares": 747707648,
+    "daily_avg_volume_60d_shares": 144919900
    }
   },
   "tv_purple_list": {
    "status": "ok",
-   "data_time": "2026-11-12",
-   "source": "TradingView Purple list (owner screenshot + MCP)",
+   "read_utc": "2026-11-15T16:09:00Z",
+   "data_time": "close 2026-11-13",
+   "source": "TradingView MCP quotes + owner's Purple list panel in Chrome (switched back to Red list afterwards)",
    "values": {
-    "dxy": 103.12,
+    "dxy": 103.41,
     "ism_new_orders": 55.5,
     "ism_pmi": 55.5,
-    "hy_oas": 3.3,
-    "us30y": 5.35,
-    "t10y3m": 0.68,
-    "t10y2y": 0.25,
-    "us10y": 5.0,
-    "tlt": 80.22,
+    "us30y": 5.47,
+    "us10y": 5.139,
+    "tlt": 79.38,
     "cpi_yoy": 3.7,
     "fed_funds": 4.0,
-    "sp500_div_yield": 1.08,
-    "gbpusd": 1.3239,
-    "eurusd": 1.1063,
-    "usdjpy": 159.92,
-    "custom_liquidity_composite_chg_pct": 0.32,
+    "gbpusd": 1.3211,
+    "eurusd": 1.1022,
+    "usdjpy": 159.716,
+    "vix": 19.29,
+    "vix_perf_w": -30.31,
+    "sox": 10146.32,
+    "rsp": 221.16,
+    "spy": 754.37,
+    "rsp_spy_ratio": 0.2932,
+    "rsp_perf_1m": 4.04,
+    "spy_perf_1m": -2.65,
+    "hy_oas": 3.2,
+    "hy_oas_chg": -0.1,
+    "t10y3m": 0.83,
+    "t10y2y": 0.27,
     "jobless_claims_4wk": 195250,
     "nfci": -0.46,
-    "real_10y": 2.66,
+    "real_10y": 2.86,
+    "real_10y_chg": 0.08,
     "s5th_pct_above_200d": 63.81,
-    "vix": 17.62,
-    "sox": 10589.51,
-    "rsp": 222.21,
-    "spy": 760.84,
-    "rsp_spy_ratio": 0.2921,
-    "rsp_perf_1m": 4.03,
-    "spy_perf_1m": -2.12
+    "sp500_div_yield": 1.08,
+    "custom_liquidity_composite_chg_pct": -0.4
+   }
+  },
+  "tv_relative": {
+   "status": "ok",
+   "read_utc": "2026-11-15T15:24:00Z",
+   "data_time": "close 2026-11-13",
+   "source": "TradingView MCP quotes",
+   "values": {
+    "nvda_perf_w": -14.78,
+    "nvda_perf_1m": -27.79,
+    "nvda_perf_3m": -28.19,
+    "nvda_perf_ytd": -14.21,
+    "sox_perf_w": 6.86,
+    "sox_perf_1m": -15.16,
+    "sox_perf_3m": -18.44,
+    "sox_perf_ytd": 39.21,
+    "smh_perf_w": 2.82,
+    "smh_perf_ytd": 31.93,
+    "amd_perf_w": 20.17,
+    "amd_perf_ytd": 143.97,
+    "avgo_perf_w": 11.53,
+    "tsm_perf_w": 4.77,
+    "spx_perf_w": 2.49,
+    "spx_perf_1m": -2.73,
+    "spx_perf_ytd": 9.94,
+    "ndx_perf_w": 3.32,
+    "ndx_perf_1m": -7.83,
+    "nvda_beta_1y": 1.49,
+    "nvda_avg_volume_30d": 173755910,
+    "nvda_atr": 9.98
    }
   },
   "tv_fundamentals": {
    "status": "ok",
-   "data_time": "2026-11-12",
-   "source": "TradingView MCP financials/forecasts/history",
+   "read_utc": "2026-11-15T15:26:00Z",
+   "data_time": "close 2026-11-13",
+   "source": "TradingView MCP financials, forecasts, earnings calendar (+ financial history read 2026-11-12)",
    "values": {
-    "pe_ttm": 20.94,
+    "pe_ttm": 20.59,
     "eps_ttm": 7.9482,
     "eps_next_q_est": 2.47,
-    "eps_next_fy_est": 9.29,
-    "fwd_pe_on_next_fy": 17.85,
+    "eps_next_fy_est": 9.3,
+    "fwd_pe_on_next_fy": 17.51,
     "revenue_ttm": 302969000000,
     "revenue_yoy_ttm_pct": 83.4,
-    "revenue_next_q_est": 108672227985,
+    "revenue_next_q_est": 108849389565,
+    "company_q_guide": "$108B +/-2% (per TradingView key-facts summary)",
     "last_q_revenue": 96221000000,
     "last_q_revenue_yoy_pct": 105.9,
     "gross_margin_pct": 74.7,
@@ -798,89 +872,137 @@
     "prior_q_fcf": 48587000000,
     "last_q_total_debt": 38860000000,
     "prior_q_total_debt": 12814000000,
-    "price_to_sales_ttm": 13.28,
+    "price_to_sales_ttm": 13.05,
     "debt_to_equity": 0.17,
     "analysts_total": 73,
-    "analysts_buy": 58,
+    "analysts_buy": 52,
     "analysts_overweight": 5,
-    "analysts_hold": 9,
+    "analysts_hold": 15,
     "analysts_sell": 1,
-    "pt_avg": 309.21,
-    "pt_low": 180,
+    "analysts_hold_change": "hold 9 -> 15 since 2026-11-12",
+    "pt_avg": 286.12,
+    "pt_avg_prev": 309.21,
+    "pt_low": 170,
     "pt_high": 710.29,
     "next_earnings": "2026-11-17 21:00 UTC (after close, confirmed)",
-    "next_q_fiscal_end": "2026-10-31",
-    "history_labels": "TradingView labels Q3 2025..Q3 2026 (fiscal-label convention as served)"
+    "next_q_fiscal_end": "2026-10-31 (company: quarter ended Oct 25)"
+   }
+  },
+  "economic_calendar": {
+   "status": "ok",
+   "read_utc": "2026-11-15T15:26:00Z",
+   "data_time": "close 2026-11-13",
+   "source": "TradingView MCP economic calendar (high importance, to 2026-12-15)",
+   "values": {
+    "events": [
+     "2026-11-17 Retail sales MoM Oct (fcst 0.2)",
+     "2026-11-17 NVDA earnings after close",
+     "2026-11-18 Requested House closed-door briefing (Huang, Megaspeed) - status after resignation unknown",
+     "2026-11-18 Housing starts (fcst 1.268M) / permits",
+     "2026-11-20 Monthly options expiry",
+     "2026-11-25 GDP Q3 2nd est, core PCE, personal income/spending, durables",
+     "2026-11-26 Thanksgiving (US market closed)",
+     "2026-12-01 ISM manufacturing (prev 55.5), JOLTS",
+     "2026-12-03 ISM services (prev 54.5)",
+     "2026-12-04 NFP (prev 165K), unemployment (prev 4.1)",
+     "2026-12-09 FOMC decision",
+     "2026-12-10 CPI YoY (fcst 3.9, prev 3.7); core CPI YoY (fcst 2.7)",
+     "2026-12-15 PPI MoM Nov"
+    ]
    }
   },
   "news_governance": {
    "status": "ok",
-   "data_time": "2026-11-10 to 2026-11-12 (8-K 2026-11-12)",
-   "source": "TradingView news feed + web search (roic.ai, gadgetreview, thenextweb, cryptobriefing)",
+   "read_utc": "2026-11-15T15:50:00Z",
+   "data_time": "2026-11-12 to 2026-11-15",
+   "source": "TradingView NVDA news feed + full stories (Seeking Alpha, Benzinga, TradingView key facts) + web search",
    "values": {
     "items": [
-     "SEC 8-K (filed 2026-11-12): on 2026-11-11 the Board accepted Jensen Huang's resignation as President, CEO and director, effective immediately. CFO Colette Kress (age 59, CFO since 2013) appointed interim CEO while remaining CFO; board search for a permanent CEO (internal and external). Harvey C. Jones (age 73, director since 1993) appointed first-ever Chair. The 8-K gives no reason for the resignation.",
-     "Huang agreed to testify before Congress before Thanksgiving (CNBC via Reuters). Interim CEO Kress gathering the executive team at HQ.",
-     "Market reaction 2026-11-12: NVDA opened 151.005, low 148.80, then recovered to ~164 on ~499M shares; AMD and Broadcom up to ~5% on the news; US indices reversed higher.",
-     "Context: resignation came three days after the board opened its investigation and amid a DOJ inquiry and congressional pressure; Fortune (2026-11-09) noted no telegraphed succession plan.",
-     "Huang acknowledged a relationship with Alice Huang, a former Megaspeed director (Mar-Nov 2023).",
-     "Board opened an independent investigation (Wachtell Lipton) into whether Huang was targeted by a foreign intelligence operation.",
-     "Reported DOJ inquiry into whether Singapore-based Megaspeed routed Nvidia chips to China; ~240,000 chips / $7.5bn alleged; Megaspeed denies.",
-     "NYT: Commerce (BIS) Megaspeed probe moved to DOJ after Nvidia's general counsel contacted investigators; investigation continues.",
-     "No public finding that Nvidia knowingly violated export controls; no charges against Huang reported.",
-     "GOP Senator Kevin Cramer called for Huang's resignation; push for chip-export restrictions revived on Capitol Hill.",
-     "Earlier 2026 context: Super Micro-linked smuggling charges; Senators Warren and Banks asked Commerce to review Nvidia export licences (Mar 2026); Oct 1 DOJ arrest in a $300m server smuggling case.",
-     "China rejects espionage allegations. Analysts cut price targets; Wedbush flags key-person risk. Michael Burry calls NVDA 'a heck of a trade'."
+     "8-K: Huang resigned as President, CEO and director effective immediately (accepted 2026-11-11); no reason stated, no disagreement reported. Kress interim CEO and CFO; Harvey C. Jones Chair; search for permanent CEO.",
+     "Succession: reports NVIDIA approached Arm CEO Rene Haas; Google Cloud's Thomas Kurian reported considered; board says no formal contact yet, still choosing a search firm. Trump suggested Tim Cook. Petition to reinstate Huang passed 135,000 signatures.",
+     "Congress: three House chairs (Mast, Moolenaar, Crawford) requested a closed-door briefing from Huang on 2026-11-18 (voluntary, not a subpoena); CNBC reported Huang agreed to testify before Thanksgiving. No charges against Huang, Nvidia, Megaspeed or Alice Huang.",
+     "Megaspeed (Sun 2026-11-15): Alice Huang left 2025-08-30, no current role; Megaspeed hired outside lawyers for an internal investigation; denies wrongdoing. Bloomberg (Fri): a Chinese company founded by Alice Huang procured banned Nvidia chips (22 Dell H800 servers, 52 Super Micro H100/H200 servers) at a Shanghai data center; Nvidia declined comment.",
+     "WSJ: Southeast Asia cloud channel gives Chinese firms legal remote access; Megaspeed arranged ~$12B of Nvidia chip shipments to Chinese companies Mar 2024-Jun 2025 (documents do not establish delivery); Commerce developing rules for Malaysia, Indonesia, Singapore; Malaysia investigating re-exports. Nvidia China revenue $12.4B in six months to Jul 26.",
+     "NYT: Commerce Secretary Lutnick favours narrower controls (seven countries, future shipments only, notification not licensing for some Chinese training); other officials favour worldwide restrictions. No rule enacted.",
+     "FT: shareholder class action filed against Nvidia and Huang (alleged misleading statements); Nvidia's D&O cover is Side A only (up to $900M), no Side B/C, so corporate defence costs/damages may be uninsured.",
+     "Analysts: at least six downgrades Thu-Fri (Truist, Melius, Oppenheimer, Bernstein; HSBC to Hold, target 170); Barclays target 210; Yorkville Ives target 300 -> 225 (Buy). Six straight weekly declines, longest since Oct 2012.",
+     "Options: implied earnings move about 9.1% either way (Benzinga Pro). Company guide for the quarter $108B +/-2%; consensus about $109.2B revenue, EPS $2.48.",
+     "Customers say Nvidia chips remain preferred despite expected near-term shortages; some considering rival servers.",
+     "Context carried from the 2026-11-12 run (sources then: WSJ/Dow Jones, NYT via TheNextWeb, Reuters): the board opened an independent investigation (Wachtell Lipton) into whether Huang was targeted by a foreign intelligence operation; a DOJ inquiry into whether Megaspeed routed Nvidia chips to China was reported (Commerce/BIS probe moved to DOJ). No finding or charge reported as of 2026-11-15."
     ]
    }
   },
-  "sentiment_aaii": {
+  "sec_filings": {
    "status": "ok",
+   "read_utc": "2026-11-15T16:10:00Z",
+   "data_time": "8-K filed 2026-11-12",
+   "source": "sec.gov 8-K (nvda-20261111.htm) fetched; Form 4 / 10-Q: no new filing found in search",
+   "values": {
+    "latest_8k": "2026-11-12 (event 2026-11-11): Item 5.02 CEO resignation effective immediately; no reason or disagreement stated; Kress interim CEO; Jones Chair; Item 9.01 press release",
+    "form4_recent": "none found since the resignation",
+    "next_10q": "after 2026-11-17 results"
+   }
+  },
+  "hyperscaler_capex": {
+   "status": "ok",
+   "read_utc": "2026-11-15T15:15:00Z",
+   "data_time": "latest reported quarters",
+   "source": "TradingView MCP financial-history capex_latest (MSFT, GOOGL, AMZN, META)",
+   "values": {
+    "MSFT": {
+     "last_quarter": -39367000000,
+     "ttm": -135921000000,
+     "last_fiscal_year": -115948000000
+    },
+    "GOOGL": {
+     "last_quarter": -51355000000,
+     "ttm": -159804000000,
+     "last_fiscal_year": -91447000000
+    },
+    "AMZN": {
+     "last_quarter": -77259000000,
+     "ttm": -215192000000,
+     "last_fiscal_year": -131819000000
+    },
+    "META": {
+     "last_quarter": -33942000000,
+     "ttm": -104438000000,
+     "last_fiscal_year": -69691000000
+    }
+   }
+  },
+  "sentiment_aaii": {
+   "status": "partial",
+   "read_utc": "2026-11-15T15:40:00Z",
    "data_time": "week ending 2026-11-04",
-   "source": "aaii.com (via web search)",
+   "source": "aaii.com Sentiment Survey page (via web search)",
    "values": {
     "bullish": 34.1,
     "neutral": 17.5,
     "bearish": 48.4,
+    "week_ending": "2026-11-04",
     "hist_avg_bullish": 37.5,
     "hist_avg_bearish": 31.5,
-    "prior_week_bullish": 37.8,
-    "prior_week_bearish": 41.4
-   }
+    "bull_bear_spread": -14.3,
+    "bearish_above_avg_weeks": 39
+   },
+   "reason": "newest week shown is 2026-11-04; the week ending 2026-11-11 was not found"
   },
   "sentiment_cnn_fg": {
    "status": "partial",
-   "data_time": "2026-11-06; later reading undated",
-   "source": "placera.se / itiger (via web search) - CNN page not read directly",
+   "read_utc": "2026-11-15T15:40:00Z",
+   "data_time": "2026-11-06 / 2026-11-11",
+   "source": "secondary reports of CNN Fear & Greed (CNN page not readable)",
    "values": {
     "cnn_fg_2026_11_06": 20,
     "zone_2026_11_06": "Extreme Fear",
-    "latest_zone_reported": "Fear (after post-midterm rally; exact value not read)"
-   }
+    "zone_2026_11_11": "Fear (value not reported)"
+   },
+   "reason": "no value after 2026-11-06"
   },
   "options_positioning": {
    "status": "failed",
-   "reason": "paid data deferred by owner (gamma exposure, options flow, put/call not available via TradingView MCP)"
-  },
-  "economic_calendar": {
-   "status": "ok",
-   "data_time": "2026-11-12",
-   "source": "TradingView MCP economic calendar (high importance)",
-   "values": {
-    "events": [
-     "2026-11-13 PPI MoM Oct (fcst 0.4, prev 1.3)",
-     "2026-11-17 Retail Sales MoM Oct (fcst 0.0)",
-     "2026-11-17 NVDA earnings after close",
-     "2026-11-18 Housing starts / permits",
-     "2026-11-20 Monthly options expiry (third Friday)",
-     "2026-11-25 GDP Q3 2nd est, Core PCE MoM, Personal income/spending, Durable goods",
-     "2026-12-01 ISM Manufacturing PMI (prev 55.5), JOLTS",
-     "2026-12-03 ISM Services (prev 54.5)",
-     "2026-12-04 NFP (prev 165K), Unemployment (prev 4.1)",
-     "2026-12-09 FOMC decision",
-     "2026-12-10 CPI YoY (fcst 3.9, prev 3.7), Core CPI YoY (fcst 2.8)"
-    ]
-   }
+   "reason": "deferred by owner (paid data)"
   }
  }
 }

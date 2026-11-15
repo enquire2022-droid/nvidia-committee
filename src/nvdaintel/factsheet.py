@@ -85,7 +85,7 @@ def build():
         "is_oversold": bool(r[-1] < 30),
         "rsi_at_apr_2025_low_week": 35.7,
         "lowest_since_2023": round(min(rs_hist[60:]), 1),
-        "note": "current weekly bar is open (Thursday); RSI on completed bars only after Friday close",
+        "note": rd["snapshot"].get("weekly_bar_status", "current weekly bar is open; RSI on completed bars only after Friday close"),
     }
 
     # drawdown / structure
@@ -103,11 +103,11 @@ def build():
         "atr_daily": pg["tv_technicals_1d"]["values"]["atr14"],
         "atr_daily_pct": round(pg["tv_technicals_1d"]["values"]["atr14"] / price * 100, 1),
         "two_week_change_pct": round((price / rd["snapshot"]["nvda_close_2w_ago_weekly"] - 1) * 100, 1),
-        "today_gap_open_pct": round((rd["snapshot"]["today_open"] / rd["snapshot"]["nvda_last_close"] - 1) * 100, 1),
+        "today_gap_open_pct": round((rd["snapshot"]["today_open"] / rd["snapshot"].get("prev_session_close", rd["snapshot"]["nvda_last_close"]) - 1) * 100, 1),
         "today_recovery_from_low_pct": round((price / rd["snapshot"]["today_low"] - 1) * 100, 1),
-        "today_low_vs_prev_close_pct": round((rd["snapshot"]["today_low"] / rd["snapshot"]["nvda_last_close"] - 1) * 100, 1),
+        "today_low_vs_prev_close_pct": round((rd["snapshot"]["today_low"] / rd["snapshot"].get("prev_session_close", rd["snapshot"]["nvda_last_close"]) - 1) * 100, 1),
         "today_volume_vs_60d_avg": round(rd["snapshot"]["today_volume_so_far"] / pg["tv_chart_owner"]["values"]["daily_avg_volume_60d_shares"], 1),
-        "today_bar_status": "open (intraday, streaming); hammer/spring shape is unconfirmed until the close",
+        "today_bar_status": rd["snapshot"].get("today_bar_status", "open (intraday, streaming); hammer/spring shape is unconfirmed until the close"),
     }
 
     # fib check (linear, owner's anchors)
@@ -179,7 +179,7 @@ def build():
         "as_of": rd["as_of"], "price_note": rd["price_note"], "snapshot": rd["snapshot"],
         "base_rates": base, "weekly_rsi": weekly_rsi, "structure": structure, "fib_check": fib_check,
         "relative": rel, "ladder_audit": ladder_audit, "thesis_breaks": tb["breaks"],
-        "thesis_break_status": {"TB1": "not fired (no finding or charge)", "TB2": "CANDIDATE FIRED 2026-11-11: CEO resigned effective immediately during board probe, DOJ inquiry and congressional pressure; 8-K gives no reason. Chair to rule; owner confirms.", "TB3": "not fired (no restriction enacted)", "TB4": "unmonitored (hyperscaler capex not in data)"},
+        "thesis_break_status": rd.get("thesis_break_status", {}),
         "pages": pg,
     }
     out = ROOT / "outputs/fact_sheet.json"

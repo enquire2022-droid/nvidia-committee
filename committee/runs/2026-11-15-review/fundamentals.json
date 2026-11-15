@@ -1,0 +1,49 @@
+{
+ "agent": "fundamentals",
+ "run_id": "2026-11-15-review",
+ "as_of": "2026-11-15",
+ "price_at_call": 162.85,
+ "view": "Fundamentals are not what broke: revenue +105.9% YoY last quarter, 74.7% gross margin, and the stock at 17.5x next-FY EPS / 20.6x TTM after a -33% drawdown is cheap against its own growth. The 1-2 week view is a coin-flip with fat tails because the 2026-11-17 print lands inside the window, and two things lower confidence: the latest quarter's FCF halving and debt tripling (cause not in slice), and the governance shock that drove the selloff, which is outside my lane.",
+ "probabilities": {
+  "defs": "vs price_at_call 162.85 (Fri 2026-11-13 close, weekend run). next_2_weeks: up = close > 170.99 (+5%), down = close < 154.71 (-5%), range between; measured at the close on or before 2026-11-29 (Fri 2026-11-27). this_quarter (last close of 2026-12-31) and next_quarter (last close of 2027-03-31): up = close > 179.14 (+10%), down = close < 146.57 (-10%), range between. up + range + down = 100.",
+  "next_2_weeks": {"up": 37, "range": 35, "down": 28},
+  "this_quarter": {"up": 40, "range": 35, "down": 25},
+  "next_quarter": {"up": 50, "range": 25, "down": 25}
+ },
+ "confidence": 42,
+ "evidence": [
+  {"ref": "base_rates.next_2_weeks", "point": "Outside view 33/45/22 (n=258). I move up +4, range -10, down +6: an earnings print inside the window plus daily ATR 6.1% (structure.atr_daily_pct) make both tails fatter than an average 2-week window. The conditional samples (RSI<=36: 46/23/31, n=13; 2w drop <=-15%: 50/50/0, n=4) are small and overlapping, so they count as weak evidence only."},
+  {"ref": "base_rates.this_quarter_approx_7w", "point": "Base rate 39/43/18; I hold up about level (40) and add +7 to down because the ±10% band is narrow next to 6.1% daily ATR and there is an unresolved governance overhang. next_quarter base rate 50/31/19: I keep up at 50 (valuation support, conditional RSI<=36 13w median +21.5%, weak) and move 6 points from range to down."},
+  {"ref": "tv_fundamentals.revenue_yoy_ttm_pct", "point": "Revenue TTM $303.0B, +83.4% YoY; last quarter $96.2B, +105.9% YoY. Growth is still accelerating on the reported numbers; nothing in the reported financials explains a -33.1% drawdown from the 243.37 ATH (structure.drawdown_from_ath_pct)."},
+  {"ref": "tv_fundamentals.gross_margin_pct", "point": "Margins: gross 74.7%, operating 65.2%, net 63.7%. Pricing power is intact. Gross margin is the first line to check on the print."},
+  {"ref": "tv_fundamentals.fwd_pe_on_next_fy", "point": "Valuation vs own growth: P/E TTM 20.59 (EPS TTM 7.95), forward P/E 17.51 on next-FY EPS 9.30, P/S 13.05. Next-FY EPS is only +17% over TTM, which gives a PEG of about 1.0 on that basis. But next-Q EPS estimate 2.47 x4 = 9.88 annualised is above 9.30, which suggests the 9.30 is the current fiscal year (already partly reported) rather than a true 12-month-forward figure. The fiscal-year label is not in the slice; if 9.30 is the current FY, the real forward multiple is lower than 17.5x."},
+  {"ref": "tv_fundamentals.last_q_fcf", "point": "Balance-sheet swing: last-quarter FCF $21.4B vs $48.6B the quarter before (-56%), only about 22% of $96.2B revenue against a 63.7% net margin. Over the same quarter total debt rose from $12.8B to $38.9B (+$26.0B, about 3x). Debt/equity is still low at 0.17 and FCF TTM is $127.0B. The cause (working capital, inventory or prepaid supply, an acquisition, or buybacks) is not in the slice, so this is an open question, not a red flag yet. Note that these quarterly figures come from financial history read on 2026-11-12, before event_cutoff_utc. They are reported figures, so the event does not change them."},
+  {"ref": "tv_fundamentals.revenue_next_q_est", "point": "The bar for 2026-11-17: consensus revenue $108.85B against the company guide of $108B +/-2% (range about $105.8B-$110.2B), with consensus about 0.8% above the guide midpoint. Consensus EPS is 2.47. Clearing the revenue number alone is a low bar. The next-quarter guide and gross margin will decide the reaction, and consensus for the next-quarter guide is not in the slice."},
+  {"ref": "tv_fundamentals.pt_avg", "point": "Analyst group (counted once): average target cut from 309.21 to 286.12 (-7.5%). Spread is very wide: low 170 / high 710.29, a 4.2x range. Holds went from 9 to 15 since 2026-11-12, and 57 of 73 are buy or overweight. The lowest target (170) is still above price, so even the most bearish analyst has not re-underwritten to today's level. Targets lag the price, and the wide spread means they carry little information."},
+  {"ref": "hyperscaler_capex", "point": "Demand side intact: 0 of 4 hyperscalers falling. Run-rate vs TTM: MSFT +15.9%, GOOGL +28.5%, AMZN +43.6%, META +30.0%. There is no TB4 signal, which supports the revenue line through the next two quarters."},
+  {"ref": "coverage", "point": "tv_fundamentals is ok and was read after the event cutoff. Options positioning is deferred, so I cannot see the implied earnings move or how much of a miss or beat is priced. That uncertainty lowers my confidence on the 2-week bucket. Reachability one_day: >=+10% only 0.48% and <=-10% 0.16% of days historically, but an earnings day with ATR at 6.1% is not a typical day."}
+ ],
+ "key_levels": [
+  {"level": 186.0, "why": "20x the 9.30 next-FY EPS (derived: 9.30 x 20). Near the 186.64 prior weekly close and above the 179.92-185.22 gap. A re-rate to the TTM multiple only needs the governance discount to fade.", "ref": "tv_fundamentals.eps_next_fy_est"},
+  {"level": 170.0, "why": "Lowest analyst target and the Nov 13 high. A cut of the low target below price would be the first sign the sell-side is re-underwriting fundamentals, not just narrative.", "ref": "tv_fundamentals.pt_low"},
+  {"level": 148.8, "why": "Nov 12 (CEO-exit day) low; about 16.0x next-FY EPS. A close below it means the market is pricing impaired earnings, not only governance risk.", "ref": "snapshot.nov12_low"},
+  {"level": 139.5, "why": "15x the 9.30 next-FY EPS (derived). Where fundamentals-based valuation would flag deep value if growth holds. -14% away, reachable in a quarter (1q -10%: 48.5%, -20%: 22.8%).", "ref": "tv_fundamentals.eps_next_fy_est"}
+ ],
+ "what_would_change_my_mind": [
+  "Print 2026-11-17: next-quarter revenue guide midpoint at or below the reported quarter's revenue (no sequential growth), or gross margin below 72%. Either would cut my up probabilities by about 10 points in every horizon and remove the cheap-vs-growth argument.",
+  "Print 2026-11-17: reported revenue at or below $108B (guide midpoint) combined with a second quarter of FCF near or below $21.4B. That would turn the FCF/debt swing from an open question into a cash-conversion problem: down probabilities +8.",
+  "Print 2026-11-17: revenue above $110.2B (top of guide), gross margin at or above 74.7% and a next-quarter guide implying double-digit sequential growth. 2-week up to about 45, next_quarter up to about 58, unless the governance issue (TB2) is ruled live.",
+  "Company explanation that the +$26.0B debt rise funded a buyback or prepaid supply (benign) or an acquisition or contingency (needs review). This would move confidence by about ±8.",
+  "Lowest analyst target cut below 162.85 by 2026-11-27 (now 170). That would mean fundamentals, not only the narrative, are being re-underwritten.",
+  "Daily close below 148.80 before 2026-11-27 (-8.6%; 2w -5% reached in 41.0% of windows, -10% in 17.1%: reachable). That would mean the market prices impaired earnings beyond what the financials show, and I would cut next_quarter up to about 42."
+ ],
+ "notes_for_chair": [
+  "Expected: the 2026-11-17 after-close print will happen. Its outcome (guide, gross margin, FCF/debt explanation) is the trigger, not the event itself. Before the print, fundamentals support a strategic Accumulate case on valuation vs growth (17.5x forward, ~100% YoY growth, hyperscaler capex rising), and tactically Wait until the print. After the print: a beat-and-raise with margin held favours a tactical upgrade. A guide with no sequential growth or a gross-margin slip favours tactical Wait or Avoid New Entry, with strategic Hold unless a thesis break fires.",
+  "Cross-lane, TB2: the slice calls Nov 12 the 'CEO-exit day' and lists a requested House briefing (Huang, Megaspeed) with 'status after resignation unknown'. Whether the departure was under legal or regulatory pressure is a TB2 question for the narrative member. If TB2 fires, all buying pauses regardless of my fundamentals view.",
+  "Cross-lane, TB1/TB3: if the Megaspeed matter involves export violations or new restrictions, the revenue estimates (108.85B and 9.30 EPS) may not yet include it. My valuation argument assumes estimates hold. Ask narrative whether any revenue exclusion is being discussed.",
+  "The FCF halving and debt tripling in the latest quarter are unexplained in my slice. They are not a thesis break, but they are the main balance-sheet item to resolve on the call.",
+  "The 9.30 'next FY' EPS looks like the current fiscal year, because next-Q 2.47 x4 = 9.88 is higher. If so, the real forward P/E is below 17.5x. Treat the multiple as an upper bound.",
+  "Options positioning is deferred, so the implied earnings move is unknown. I widened the tails instead of guessing the priced move.",
+  "Pre-mortem: if this is badly wrong in three months, the most likely reason is that the governance or export story cut forward revenue (estimates fall), so 17.5x was never cheap. Valuation anchored on stale estimates is my main bias risk (anchoring)."
+ ]
+}

@@ -1,31 +1,38 @@
 {
- "as_of": "2026-11-12",
- "price_note": "NVDA 164.33 = 2026-11-12 intraday (open bar, streaming, -5.41%). Last completed daily close 173.73 (2026-11-11). Today: open 151.005, high 167.14, low 148.80, volume 498.56M so far. Previous weekly close 186.64 (2026-11-06); weekly close two weeks earlier 204.64 (2026-10-30).",
+ "as_of": "2026-11-15",
+ "price_note": "Weekend run (Sun 2026-11-15): US market closed. Price = last completed close 162.85 (Fri 2026-11-13). Last session (Nov 13): open 169.905, high 170.00, low 158.39, volume 365.80M. Week of Nov 9: open 173.065, high 179.92, low 148.80, close 162.85 (-12.75%), volume 2.34B. Nov 12 (CEO-exit day): open 151.005, low 148.80, close 166.19, volume 747.71M. Prior weekly close 186.64 (Nov 6); weekly close two weeks earlier 204.64 (Oct 30).",
  "snapshot": {
-  "nvda_price": 164.33,
-  "nvda_last_close": 173.73,
+  "nvda_price": 162.85,
+  "nvda_last_close": 162.85,
   "nvda_prev_week_close": 186.64,
   "nvda_ath": 243.37,
   "nvda_ath_date": "2026-10 (weekly high 243.37)",
   "nvda_week_open": 173.065,
+  "nvda_week_high": 179.92,
   "nvda_week_low_so_far": 148.8,
-  "nvda_market_cap_usd": 3992526401813,
-  "today_open": 151.005,
-  "today_high": 167.14,
-  "today_low": 148.8,
-  "today_volume_so_far": 498560557,
+  "nvda_week_volume": 2344711534,
+  "today_open": 169.905,
+  "today_high": 170.0,
+  "today_low": 158.39,
+  "today_volume_so_far": 365796552,
+  "today_note": "'today' = last session Fri 2026-11-13 (bar complete)",
+  "nov12_open": 151.005,
+  "nov12_low": 148.8,
+  "nov12_close": 166.19,
+  "nov12_volume": 747707648,
   "nvda_close_2w_ago_weekly": 204.64,
-  "nvda_daily_closes_last5": [
+  "nvda_market_cap_usd": 3924685147094,
+  "nvda_daily_closes_last6": [
    186.64,
    178.67,
    168.89,
-   173.73
+   173.73,
+   166.19,
+   162.85
   ],
-  "nvda_daily_volumes_last4": [
-   462719328,
-   429273205,
-   339214801
-  ]
+  "prev_session_close": 166.19,
+  "weekly_bar_status": "weekly bar of 2026-11-09 is COMPLETE (closed 2026-11-13 at 162.85); RSI is on a completed bar",
+  "today_bar_status": "complete (last session Fri 2026-11-13: open 169.905, high 170.00, low 158.39, close 162.85; a red day that gave back Thursday's rebound)"
  },
  "base_rates": {
   "next_2_weeks": {
@@ -111,138 +118,116 @@
  "coverage": {
   "pages_total": 15,
   "pages_required": 14,
-  "ok": 0,
-  "stale": 11,
+  "ok": 12,
+  "stale": 2,
   "failed": 0,
-  "missing": 3,
+  "missing": 0,
   "deferred": 1,
-  "line": "0/14 pages ok (11 stale, 0 failed, 3 missing; 1 deferred)",
+  "line": "12/14 pages ok (2 stale, 0 failed, 0 missing; 1 deferred)",
   "complete": false,
-  "event_cutoff_utc": null,
+  "event_cutoff_utc": "2026-11-13T21:00:00Z",
   "rows": [
    {
     "id": "tv_technicals_1w",
     "how": "TradingView MCP get-technicals-rating 1W",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_technicals_1d",
     "how": "TradingView MCP get-technicals-rating 1D",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_technicals_4h",
     "how": "TradingView MCP get-technicals-rating 4h",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "nvda_ohlcv",
     "how": "TradingView MCP get-ohlcv 1D (append to data/nvda_daily.json) and 1W",
-    "state": "missing"
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_chart_owner",
     "how": "Owner's TradingView layout in Chrome: 1W, 1D, 4H, drawn levels, labels, every oscillator; restore timeframe; never save, never trade",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-11 11:50 UTC+3",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T16:06:00Z",
+    "data_time": "chart at 2026-11-15 19:04-19:06 UTC+3 (market closed)"
    },
    {
     "id": "tv_purple_list",
     "how": "TradingView MCP watchlist 345068655 quotes incl. AMEX:RSP/AMEX:SPY; FRED items from the owner's watchlist panel or screenshot",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T16:09:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_relative",
     "how": "TradingView MCP quotes: NVDA, SOX, SMH, AMD, AVGO, NYSE:TSM, SPX, NDX (Perf.W/1M/3M/YTD)",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:24:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "tv_fundamentals",
     "how": "TradingView MCP financials, forecasts, financial-history, earnings calendar",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:26:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "economic_calendar",
     "how": "TradingView MCP economic calendar, high importance, next 30 days",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-12",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:26:00Z",
+    "data_time": "close 2026-11-13"
    },
    {
     "id": "news_governance",
     "how": "TradingView NVDA news feed + web search on governance / export-control story",
-    "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-10 to 2026-11-12 (8-K 2026-11-12)",
-    "reasons": [
-     "no read_utc recorded"
-    ]
+    "state": "ok",
+    "read_utc": "2026-11-15T15:50:00Z",
+    "data_time": "2026-11-12 to 2026-11-15"
    },
    {
     "id": "sec_filings",
     "how": "Web: latest NVDA 8-K / 10-Q / Form 4 on sec.gov (fetch the filing page)",
-    "state": "missing"
+    "state": "ok",
+    "read_utc": "2026-11-15T16:10:00Z",
+    "data_time": "8-K filed 2026-11-12"
    },
    {
     "id": "hyperscaler_capex",
     "how": "TradingView MCP financial-history for MSFT, GOOGL, AMZN, META (capex_latest) -> data/capex_snapshots.json",
-    "state": "missing"
+    "state": "ok",
+    "read_utc": "2026-11-15T15:15:00Z",
+    "data_time": "latest reported quarters"
    },
    {
     "id": "sentiment_aaii",
     "how": "Web: AAII sentiment survey (latest weekly)",
     "state": "stale",
-    "read_utc": null,
+    "read_utc": "2026-11-15T15:40:00Z",
     "data_time": "week ending 2026-11-04",
     "reasons": [
-     "no read_utc recorded"
+     "partial read"
     ]
    },
    {
     "id": "sentiment_cnn_fg",
     "how": "Web: CNN Fear & Greed (value and date)",
     "state": "stale",
-    "read_utc": null,
-    "data_time": "2026-11-06; later reading undated",
+    "read_utc": "2026-11-15T15:40:00Z",
+    "data_time": "2026-11-06 / 2026-11-11",
     "reasons": [
-     "no read_utc recorded",
      "partial read"
     ]
    },
@@ -310,86 +295,93 @@
  "pages": {
   "tv_purple_list": {
    "status": "ok",
-   "data_time": "2026-11-12",
-   "source": "TradingView Purple list (owner screenshot + MCP)",
+   "read_utc": "2026-11-15T16:09:00Z",
+   "data_time": "close 2026-11-13",
+   "source": "TradingView MCP quotes + owner's Purple list panel in Chrome (switched back to Red list afterwards)",
    "values": {
-    "dxy": 103.12,
+    "dxy": 103.41,
     "ism_new_orders": 55.5,
     "ism_pmi": 55.5,
-    "hy_oas": 3.3,
-    "us30y": 5.35,
-    "t10y3m": 0.68,
-    "t10y2y": 0.25,
-    "us10y": 5.0,
-    "tlt": 80.22,
+    "us30y": 5.47,
+    "us10y": 5.139,
+    "tlt": 79.38,
     "cpi_yoy": 3.7,
     "fed_funds": 4.0,
-    "sp500_div_yield": 1.08,
-    "gbpusd": 1.3239,
-    "eurusd": 1.1063,
-    "usdjpy": 159.92,
-    "custom_liquidity_composite_chg_pct": 0.32,
+    "gbpusd": 1.3211,
+    "eurusd": 1.1022,
+    "usdjpy": 159.716,
+    "vix": 19.29,
+    "vix_perf_w": -30.31,
+    "sox": 10146.32,
+    "rsp": 221.16,
+    "spy": 754.37,
+    "rsp_spy_ratio": 0.2932,
+    "rsp_perf_1m": 4.04,
+    "spy_perf_1m": -2.65,
+    "hy_oas": 3.2,
+    "hy_oas_chg": -0.1,
+    "t10y3m": 0.83,
+    "t10y2y": 0.27,
     "jobless_claims_4wk": 195250,
     "nfci": -0.46,
-    "real_10y": 2.66,
+    "real_10y": 2.86,
+    "real_10y_chg": 0.08,
     "s5th_pct_above_200d": 63.81,
-    "vix": 17.62,
-    "sox": 10589.51,
-    "rsp": 222.21,
-    "spy": 760.84,
-    "rsp_spy_ratio": 0.2921,
-    "rsp_perf_1m": 4.03,
-    "spy_perf_1m": -2.12
+    "sp500_div_yield": 1.08,
+    "custom_liquidity_composite_chg_pct": -0.4
    }
   },
   "economic_calendar": {
    "status": "ok",
-   "data_time": "2026-11-12",
-   "source": "TradingView MCP economic calendar (high importance)",
+   "read_utc": "2026-11-15T15:26:00Z",
+   "data_time": "close 2026-11-13",
+   "source": "TradingView MCP economic calendar (high importance, to 2026-12-15)",
    "values": {
     "events": [
-     "2026-11-13 PPI MoM Oct (fcst 0.4, prev 1.3)",
-     "2026-11-17 Retail Sales MoM Oct (fcst 0.0)",
+     "2026-11-17 Retail sales MoM Oct (fcst 0.2)",
      "2026-11-17 NVDA earnings after close",
-     "2026-11-18 Housing starts / permits",
-     "2026-11-20 Monthly options expiry (third Friday)",
-     "2026-11-25 GDP Q3 2nd est, Core PCE MoM, Personal income/spending, Durable goods",
-     "2026-12-01 ISM Manufacturing PMI (prev 55.5), JOLTS",
-     "2026-12-03 ISM Services (prev 54.5)",
-     "2026-12-04 NFP (prev 165K), Unemployment (prev 4.1)",
+     "2026-11-18 Requested House closed-door briefing (Huang, Megaspeed) - status after resignation unknown",
+     "2026-11-18 Housing starts (fcst 1.268M) / permits",
+     "2026-11-20 Monthly options expiry",
+     "2026-11-25 GDP Q3 2nd est, core PCE, personal income/spending, durables",
+     "2026-11-26 Thanksgiving (US market closed)",
+     "2026-12-01 ISM manufacturing (prev 55.5), JOLTS",
+     "2026-12-03 ISM services (prev 54.5)",
+     "2026-12-04 NFP (prev 165K), unemployment (prev 4.1)",
      "2026-12-09 FOMC decision",
-     "2026-12-10 CPI YoY (fcst 3.9, prev 3.7), Core CPI YoY (fcst 2.8)"
+     "2026-12-10 CPI YoY (fcst 3.9, prev 3.7); core CPI YoY (fcst 2.7)",
+     "2026-12-15 PPI MoM Nov"
     ]
    }
   },
   "tv_relative": {
    "status": "ok",
-   "data_time": "2026-11-12",
+   "read_utc": "2026-11-15T15:24:00Z",
+   "data_time": "close 2026-11-13",
    "source": "TradingView MCP quotes",
    "values": {
-    "nvda_perf_w": -15.45,
-    "nvda_perf_1m": -26.1,
-    "nvda_perf_3m": -26.89,
-    "nvda_perf_ytd": -12.67,
-    "sox_perf_w": 7.99,
-    "sox_perf_1m": -11.46,
-    "sox_perf_3m": -14.88,
-    "sox_perf_ytd": 45.29,
-    "smh_perf_w": 4.83,
-    "smh_perf_1m": -12.56,
-    "smh_perf_ytd": 36.99,
-    "amd_perf_w": 30.2,
-    "amd_perf_ytd": 169.15,
-    "avgo_perf_w": 17.46,
-    "tsm_perf_w": 7.53,
-    "spx_perf_w": -0.45,
-    "spx_perf_1m": -1.94,
-    "spx_perf_ytd": 11.14,
-    "ndx_perf_w": 1.6,
-    "ndx_perf_1m": -6.17,
-    "nvda_beta_1y": 1.75,
-    "nvda_volatility_m_pct": 3.79,
-    "nvda_avg_volume_30d": 157504697
+    "nvda_perf_w": -14.78,
+    "nvda_perf_1m": -27.79,
+    "nvda_perf_3m": -28.19,
+    "nvda_perf_ytd": -14.21,
+    "sox_perf_w": 6.86,
+    "sox_perf_1m": -15.16,
+    "sox_perf_3m": -18.44,
+    "sox_perf_ytd": 39.21,
+    "smh_perf_w": 2.82,
+    "smh_perf_ytd": 31.93,
+    "amd_perf_w": 20.17,
+    "amd_perf_ytd": 143.97,
+    "avgo_perf_w": 11.53,
+    "tsm_perf_w": 4.77,
+    "spx_perf_w": 2.49,
+    "spx_perf_1m": -2.73,
+    "spx_perf_ytd": 9.94,
+    "ndx_perf_w": 3.32,
+    "ndx_perf_1m": -7.83,
+    "nvda_beta_1y": 1.49,
+    "nvda_avg_volume_30d": 173755910,
+    "nvda_atr": 9.98
    }
   }
  }
