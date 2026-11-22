@@ -150,13 +150,15 @@ def build():
         for a in o["anchors"]:
             v = a.get("value", resolve.get(a.get("ref")))
             anchors.append({"name": a["name"], "value": v, "drift_pct_vs_mid": round((mid / v - 1) * 100, 1)})
-        gap = None if prev_mid is None else round((prev_mid / mid - 1) * 100, 1)
+        otype = o.get("type", "dip")
+        # spacing and anchor drift are dip-ladder checks; confirmation tranches are triggers, not zones
+        gap = None if (prev_mid is None or otype != "dip") else round((prev_mid / mid - 1) * 100, 1)
         flags = []
-        if any(abs(a["drift_pct_vs_mid"]) > 2 for a in anchors):
+        if otype == "dip" and any(abs(a["drift_pct_vs_mid"]) > 2 for a in anchors):
             flags.append("anchor drift >2%")
         if gap is not None and gap < 3:
             flags.append("<3% from previous order")
-        otype = o.get("type", "dip")          # "dip" = limit below price; "confirmation" = buy-stop above price after a close
+        # "dip" = limit below price; "confirmation" = buy-stop above price after a close
         if otype == "dip" and mid > price:
             flags.append("dip order above price")
         if otype == "dip" and o["zone_low"] <= price <= o["zone_high"]:
@@ -164,7 +166,7 @@ def build():
         orders.append({"id": o["id"], "type": otype, "zone": [o["zone_low"], o["zone_high"]], "mid": mid, "weight": o["weight"],
                        "dist_from_price_pct": round((mid / price - 1) * 100, 1), "gap_from_prev_pct": gap,
                        "anchors": anchors, "flags": flags})
-        prev_mid = mid
+        prev_mid = mid if otype == "dip" else prev_mid
     # cumulative average for equal-dollar-per-weight sizing (shares = usd/price), DIP orders only, walking down from price.
     # Confirmation tranches can only fill on a rally, so they never enter a fill-on-the-way-down average.
     dips = sorted([o for o in orders if o["type"] == "dip"], key=lambda o: -o["mid"])
