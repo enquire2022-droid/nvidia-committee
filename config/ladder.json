@@ -1,5 +1,5 @@
 {
-  "_status": "ADOPTED by owner 2026-11-22 (levels, weights and conditions from chair run 2026-11-22-review). DORMANT: budget not set; buying paused under TB2 and TB3 (owner has not confirmed either); every tranche activates only when its own condition AND all activation_conditions hold. Committee audits, never applies changes; no order is placed by the committee.",
+  "_status": "PROPOSED (revision pending) 2026-11-22: owner approved sending the 2026-11-22 replacement back to the chair (split dip vs confirmation tranches, fix N1's noise-sized trigger, re-anchor at gate-opening). Not adopted; budget not set; buying paused under TB2 and TB3. Committee audits, never applies changes; no order is placed by the committee.",
   "budget_usd": null,
   "holdings": {
     "shares": 30,
@@ -30,7 +30,7 @@
         }
       ],
       "condition": "Confirmation tranche (old L3 converted). Only after a daily close above 145.71 AND the accounting gate (activation condition 5) is met. Buys strength, not a dip.",
-      "status": "dormant (adopted 2026-11-22; budget not set; TB2/TB3 pause)",
+      "status": "proposed (under chair revision)",
       "reach": {
         "145.71_by_2026-12-31": {
           "level": 145.71,
@@ -59,7 +59,8 @@
           "n": 1173,
           "verdict": "reachable"
         }
-      }
+      },
+      "type": "confirmation"
     },
     {
       "id": "N1",
@@ -81,7 +82,7 @@
         }
       ],
       "condition": "Conditional, never resting: only after a capitulation-reclaim signature by daily closes: a close below 124.14 reclaimed within 1-3 closes (technical trap rule), OR a session trading below 124.50 that closes in the upper half of its range on volume above 328M followed by a higher low (sentiment). Not if two consecutive closes below 122 without reclaim.",
-      "status": "dormant (adopted 2026-11-22; budget not set; TB2/TB3 pause)",
+      "status": "proposed (under chair revision)",
       "reach": {
         "127_by_2026-12-04": {
           "level": 127.0,
@@ -110,7 +111,8 @@
           "n": 1237,
           "verdict": "reachable"
         }
-      }
+      },
+      "type": "dip"
     },
     {
       "id": "N2",
@@ -128,7 +130,7 @@
         }
       ],
       "condition": "Weak anchor (no structure or fib between 124 and 99.65), so least weight and gated: only if NVDA/SOX has not made a new low below 14.93 for two weekly closes (relative_strength). Counts toward the one-third cap before FOMC/CPI 2026-12-09/10.",
-      "status": "dormant (adopted 2026-11-22; budget not set; TB2/TB3 pause)",
+      "status": "proposed (under chair revision)",
       "reach": {
         "115_by_2026-12-31": {
           "level": 115.0,
@@ -157,7 +159,8 @@
           "n": 1173,
           "verdict": "reachable"
         }
-      }
+      },
+      "type": "dip"
     },
     {
       "id": "N3",
@@ -175,7 +178,7 @@
         }
       ],
       "condition": "Resting only once all activation conditions hold. Two-anchor level; weight cut from technical's 3.0 because one leg is ATH-derived (red team).",
-      "status": "dormant (adopted 2026-11-22; budget not set; TB2/TB3 pause)",
+      "status": "proposed (under chair revision)",
       "reach": {
         "101_by_2026-12-31": {
           "level": 101.0,
@@ -213,7 +216,8 @@
           "n": 1173,
           "verdict": "reachable"
         }
-      }
+      },
+      "type": "dip"
     },
     {
       "id": "N4",
@@ -231,7 +235,7 @@
         }
       ],
       "condition": "Resting only once all activation conditions hold. Unreachable by 2026-12-31 (90.5: 3.2%, 86.5: 2.2%); a next-quarter, post-print tail level.",
-      "status": "dormant (adopted 2026-11-22; budget not set; TB2/TB3 pause)",
+      "status": "proposed (under chair revision)",
       "reach": {
         "90.5_by_2026-12-31": {
           "level": 90.5,
@@ -260,7 +264,8 @@
           "n": 1173,
           "verdict": "reachable"
         }
-      }
+      },
+      "type": "dip"
     }
   ],
   "breakout_tranche": {
@@ -287,7 +292,7 @@
         "verdict": "reachable"
       }
     },
-    "status": "dormant"
+    "status": "proposed (under chair revision)"
   },
   "pre_ladder_fills": [
     {
@@ -359,6 +364,7 @@
     "9. Invalidation (fundamentals): pause or drop N2-N4 if guarantees_paid rises above $0, Q4 revenue lands below $126.1B, or the next-FY growth forecast falls well below 75%."
   ],
   "_change_log": [
-    "2026-11-22: owner reported 30 sh @171 filled and the other orders cancelled; owner asked to update the complete ladder -> chair's 2026-11-22 replacement (C1, N1-N4, breakout) adopted as dormant; old L1-L4 moved to dropped_orders."
+    "2026-11-22: owner reported 30 sh @171 filled and the other orders cancelled; owner asked to update the complete ladder -> chair's 2026-11-22 replacement (C1, N1-N4, breakout) adopted as dormant; old L1-L4 moved to dropped_orders.",
+    "2026-11-22 18:11: owner approved fixes D/E: ladder back to PROPOSED pending chair revision; orders typed dip/confirmation; averages exclude confirmation tranches and blend holdings when a budget exists."
   ]
 }

@@ -156,20 +156,38 @@ def build():
             flags.append("anchor drift >2%")
         if gap is not None and gap < 3:
             flags.append("<3% from previous order")
-        orders.append({"id": o["id"], "zone": [o["zone_low"], o["zone_high"]], "mid": mid, "weight": o["weight"],
+        otype = o.get("type", "dip")          # "dip" = limit below price; "confirmation" = buy-stop above price after a close
+        if otype == "dip" and mid > price:
+            flags.append("dip order above price")
+        if otype == "dip" and o["zone_low"] <= price <= o["zone_high"]:
+            flags.append("price inside zone")
+        orders.append({"id": o["id"], "type": otype, "zone": [o["zone_low"], o["zone_high"]], "mid": mid, "weight": o["weight"],
                        "dist_from_price_pct": round((mid / price - 1) * 100, 1), "gap_from_prev_pct": gap,
                        "anchors": anchors, "flags": flags})
         prev_mid = mid
-    w = np.array([o["weight"] for o in orders]); m = np.array([o["mid"] for o in orders])
-    # cumulative average for equal-dollar-per-weight sizing (shares = usd/price)
+    # cumulative average for equal-dollar-per-weight sizing (shares = usd/price), DIP orders only, walking down from price.
+    # Confirmation tranches can only fill on a rally, so they never enter a fill-on-the-way-down average.
+    dips = sorted([o for o in orders if o["type"] == "dip"], key=lambda o: -o["mid"])
+    tot_w = sum(o["weight"] for o in orders) or 1.0
+    w = np.array([o["weight"] for o in dips]); m = np.array([o["mid"] for o in dips])
+    hold = ladder.get("holdings") or {}
+    budget = ladder.get("budget_usd")
     cum = []
-    for k in range(1, len(orders) + 1):
+    for k in range(1, len(dips) + 1):
         usd = w[:k]; sh = (usd / m[:k]).sum()
-        cum.append({"through": orders[k - 1]["id"], "weight_used": float(usd.sum()), "share_of_budget_pct": round(float(usd.sum() / w.sum() * 100), 1),
-                    "avg_price_if_filled": round(float(usd.sum() / sh), 2)})
+        row = {"through": dips[k - 1]["id"], "weight_used": float(usd.sum()), "share_of_budget_pct": round(float(usd.sum() / tot_w * 100), 1),
+               "avg_price_if_filled": round(float(usd.sum() / sh), 2)}
+        if budget and hold.get("shares"):      # blended with the existing position only when dollars are known
+            new_usd = budget * usd.sum() / tot_w; new_sh = new_usd / (usd.sum() / sh)
+            row["avg_cost_incl_holdings"] = round((hold["shares"] * hold["avg_cost"] + new_usd) / (hold["shares"] + new_sh), 2)
+        cum.append(row)
     ladder_audit = {"status": ladder["_status"], "budget_usd": ladder["budget_usd"], "orders": orders, "cumulative": cum,
                     "earnings_blackout": {"earnings": pg["tv_fundamentals"]["values"]["next_earnings"], "blackout_trading_days": ladder["earnings_blackout_trading_days"], "blackout_window": rd["snapshot"].get("blackout_window", "2026-11-12 to 2026-11-17"), "orders_touched_today_intraday": [o["id"] for o in ladder["orders"] if rd["snapshot"]["today_low"] <= o["zone_high"]]},
                     "breakout_tranche": ladder["breakout_tranche"],
+                    "confirmation_tranches": [o["id"] for o in orders if o["type"] == "confirmation"],
+                    "holdings": hold or None,
+                    "holdings_vs_price_pct": round((price / hold["avg_cost"] - 1) * 100, 1) if hold.get("avg_cost") else None,
+                    "blend_note": None if budget else "budget not set: average cost including existing holdings cannot be computed",
                     "history": engines.ladder_history(ladder)}
 
     cov = engines.coverage(rd, rd["as_of"])
