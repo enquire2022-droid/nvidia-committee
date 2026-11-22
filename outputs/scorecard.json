@@ -1,9 +1,9 @@
 {
- "built_utc": "2026-11-15T15:23:07+00:00",
- "last_close": "2026-11-13",
- "n_forecasts": 24,
+ "built_utc": "2026-11-22T09:02:49+00:00",
+ "last_close": "2026-11-20",
+ "n_forecasts": 48,
  "n_resolved": 0,
- "n_pending": 24,
+ "n_pending": 48,
  "by_agent": {},
  "calibration_note": "uncalibrated: fewer than 20 resolved forecasts",
  "min_n_for_weights": 10

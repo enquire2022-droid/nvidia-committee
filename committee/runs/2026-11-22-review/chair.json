@@ -1,0 +1,1114 @@
+{
+ "agent": "chair",
+ "run_id": "2026-11-22-review",
+ "as_of": "2026-11-22",
+ "price_at_call": 125.53,
+ "label": "uncalibrated expert judgment",
+ "view": "All buying stays paused: TB2 stands (owner still to confirm) and TB3 is ruled FIRED (provisional on materiality) because the remote-access rule took effect 2026-11-19 and meets the test this committee pre-committed to on 2026-11-15. The SEC accounting report is outside TB1-TB4; I propose a TB5 to the owner and rate it WATCH. Price sits on the 200W SMA (124.14) after the worst week since 2008. The 2-week call is two-sided (36/28/36): the base-rate up skew and a 1.94 beta rebound offset the governance overhang, counted once. Quarters are near-balanced. The proposed ladder is dormant, event-gated and smaller near price.",
+ "probabilities": {
+  "defs": "2w +/-5%, quarters +/-10%, vs price_at_call 125.53 (Fri 2026-11-20 close, weekend run). next_2_weeks: up = close > 131.81, down = close < 119.25, range between, measured at the close on or before 2026-12-06 (Fri 2026-12-04). this_quarter: last close of 2026-12-31; next_quarter: last close of 2027-03-31; up = close > 138.08, down = close < 112.98, range between. up + range + down = 100.",
+  "next_2_weeks": {
+   "up": 36,
+   "range": 28,
+   "down": 36
+  },
+  "this_quarter": {
+   "up": 35,
+   "range": 31,
+   "down": 34
+  },
+  "next_quarter": {
+   "up": 43,
+   "range": 24,
+   "down": 33
+  }
+ },
+ "confidence": 30,
+ "member_table_order": "up/range/down",
+ "member_table": [
+  {
+   "agent": "technical",
+   "conf": 35,
+   "next_2_weeks": [
+    35,
+    29,
+    36
+   ],
+   "this_quarter": [
+    33,
+    35,
+    32
+   ],
+   "next_quarter": [
+    43,
+    25,
+    32
+   ]
+  },
+  {
+   "agent": "fundamentals",
+   "conf": 33,
+   "next_2_weeks": [
+    34,
+    30,
+    36
+   ],
+   "this_quarter": [
+    35,
+    30,
+    35
+   ],
+   "next_quarter": [
+    42,
+    22,
+    36
+   ]
+  },
+  {
+   "agent": "macro",
+   "conf": 30,
+   "next_2_weeks": [
+    35,
+    29,
+    36
+   ],
+   "this_quarter": [
+    34,
+    32,
+    34
+   ],
+   "next_quarter": [
+    42,
+    24,
+    34
+   ]
+  },
+  {
+   "agent": "narrative",
+   "conf": 44,
+   "next_2_weeks": [
+    37,
+    27,
+    36
+   ],
+   "this_quarter": [
+    35,
+    30,
+    35
+   ],
+   "next_quarter": [
+    41,
+    24,
+    35
+   ]
+  },
+  {
+   "agent": "relative_strength",
+   "conf": 32,
+   "next_2_weeks": [
+    35,
+    25,
+    40
+   ],
+   "this_quarter": [
+    34,
+    30,
+    36
+   ],
+   "next_quarter": [
+    42,
+    23,
+    35
+   ]
+  },
+  {
+   "agent": "sentiment",
+   "conf": 30,
+   "next_2_weeks": [
+    33,
+    25,
+    42
+   ],
+   "this_quarter": [
+    34,
+    30,
+    36
+   ],
+   "next_quarter": [
+    42,
+    22,
+    36
+   ]
+  },
+  {
+   "agent": "red_team",
+   "conf": 40,
+   "next_2_weeks": [
+    38,
+    28,
+    34
+   ],
+   "this_quarter": [
+    37,
+    30,
+    33
+   ],
+   "next_quarter": [
+    45,
+    22,
+    33
+   ]
+  },
+  {
+   "agent": "chair (ruled, not averaged)",
+   "conf": 30,
+   "next_2_weeks": [
+    36,
+    28,
+    36
+   ],
+   "this_quarter": [
+    35,
+    31,
+    34
+   ],
+   "next_quarter": [
+    43,
+    24,
+    33
+   ]
+  },
+  {
+   "agent": "chair 2026-11-15 (at 162.85, old thresholds)",
+   "conf": 35,
+   "next_2_weeks": [
+    33,
+    33,
+    34
+   ],
+   "this_quarter": [
+    34,
+    36,
+    30
+   ],
+   "next_quarter": [
+    41,
+    28,
+    31
+   ]
+  }
+ ],
+ "decision": {
+  "strategic": {
+   "stance": "Wait",
+   "reason": "Reported business is strong (revenue $115.84B +103% YoY, $130B guide, 0/4 hyperscalers cutting capex, ~8.4x forward), but TB2 and TB3 both pause all buying and the reliability of the reported numbers is under an unresolved SEC question; Accumulate is not available while a thesis break stands."
+  },
+  "tactical": {
+   "stance": "Avoid New Entry",
+   "reason": "Thesis-break pause in force; the 10-Q is unread, requested testimony (12-01 to 12-03) and the 2w scoring close (12-04) fall in the window, and the 11-20 bar closed 0.8% above its low with no reversal yet."
+  },
+  "reduce_available": false,
+  "reduce_note": "Owner holds no recorded position (holdings null), so Reduce does not apply. TB2/TB3 would otherwise make it available."
+ },
+ "tb_rulings": {
+  "TB1": {
+   "status": "NOT FIRED",
+   "evidence": "No charge, settlement, penalty or admission naming Nvidia. DOJ charged Super Micro executives with conspiring to divert AI servers to China (Supermicro's probe found no senior-management involvement). DOJ's review of the $12.9B Hugging Face purchase is a deal review, not an export finding. Narrative raises 2q TB1 odds (judgment) because DOJ is prosecuting the channel and the general counsel has been requested; noted, not a fire."
+  },
+  "TB2": {
+   "status": "FIRED (chair ruling 2026-11-12 stands; owner has not confirmed)",
+   "evidence": "Board chair Jones says Huang will not be reinstated and took no questions on the departure; Heidrick & Struggles hired, no timeline; Treasury Secretary Bessent urged an outside CEO and questioned whether illicit sales boosted earnings; Huang testimony requested 2026-12-01 (House, closed door) and 2026-12-03 (Senate Banking). Nothing establishes an unrelated cause, and regulatory pressure has increased. The departure is now permanent. Owner action requested: confirm or reject. If rejected, buying stays paused under TB3."
+  },
+  "TB3": {
+   "status": "FIRED (provisional on materiality; owner to confirm)",
+   "evidence": "Rule: 'New export restrictions enacted that materially cut Nvidia's addressable market'. Enacted: BIS interim final rule 'Addressing Remote Access to Advanced Semiconductors', filed 2026-11-16, effective 2026-11-19. New restriction: licences for advanced AI chips to Singapore, Malaysia, Indonesia, Thailand and Brazil, and for any data center worldwide giving large compute to China-HQ (D:5) companies; existing providers have 90 days (~2027-02-17). It meets the trigger this committee pre-committed to on 2026-11-15 (worldwide or SE-Asia rule covering existing cloud/remote-access channels, licensing not notification); re-defining it now would be moving the goalposts. Materiality is unquantified: the Q4 guide already assumes zero China DC compute, China Hopper was $2.4B last quarter, FY26 China-HQ revenue $19.7B, a licence is not a denial, the Diffusion Rule was rescinded, and 'Singapore-billed sales near half of revenue' (FT) is billing location, not end use. Un-fire test: licence grants for the large SG/MY operators or a company quantification showing small at-risk revenue before ~2027-02-17, judged by the owner on evidence, not price."
+  },
+  "TB4": {
+   "status": "NOT FIRED, NOT ON WATCH",
+   "evidence": "hyperscaler_capex: 0 of 4 falling (run-rate vs TTM MSFT +15.9%, GOOGL +28.5%, AMZN +43.6%, META +30.0%; proxy_flag false; no new quarter since the 2026-11-15 read). Guidance: Alphabet 2026 range unchanged ($195-205B), Amazon ~$220B. Microsoft quarterly capex below estimates is not a guidance cut; negative FCF at Amazon, Alphabet and Meta is financing pressure, not a cut."
+  },
+  "TB5_proposal": {
+   "status": "PROPOSED TO OWNER (not a rule until approved); would be WATCH today",
+   "wording": "TB5 Financial-reporting integrity: Nvidia restates or says prior financials should not be relied on; discloses a material weakness; its auditor resigns or issues a qualified/adverse opinion; it misses a 10-Q/10-K deadline; or it discloses a Wells notice or SEC enforcement action on accounting. A company-confirmed formal SEC investigation or subpoena on revenue recognition, geographic attribution or guarantee accounting is an escalation review, not an automatic fire. A press report alone (today's state: Reuters 2026-11-20, WSJ 2026-11-17, no company or SEC confirmation) is WATCH.",
+   "reason": "TB1-TB4 protect demand and the legal/export thesis, not the integrity of the reported numbers. Every valuation argument (~8.4x forward, the beat-and-raise) assumes those numbers hold. Fundamentals and narrative proposed it independently; red team accepts that a press report should not fire it. Owner approves rules; the committee does not apply it."
+  }
+ },
+ "unpause_test_proposed": [
+  "TB2: the 2026-12-01 to 12-03 sessions (or their replacements) produce no credible report that Nvidia knew of the diversion; no charge or admission names Nvidia; a permanent CEO is named or the board gives a credible timeline.",
+  "TB3: owner rules the remote-access rule immaterial on evidence (licence grants or company quantification) before ~2027-02-17, not on price.",
+  "TB1 and TB4 not fired; proposed TB5 (if adopted) not fired.",
+  "Owner approval required; the committee never un-pauses on its own."
+ ],
+ "rulings": [
+  "Never averaged. Outside view: base rates 33/45/22 (2w), 39/43/18 (this quarter), 50/31/19 (next quarter). Moves: 2w up +3, range -17, down +14; this_quarter up -4, range -12, down +16; next_quarter up -7, range -7, down +14.",
+  "Volatility (ATR 10.71, 8.5%) is ONE adjustment, applied once: 2w range to 28, not the 25 of relative_strength and sentiment. Red team is right that this ATR includes the 19.2-point 11-20 bar, so part of it may not persist through ten sessions; it is also why the band (119.25-131.81) is only about 1.2 ATRs wide.",
+  "Governance group (CEO exit, SEC report, testimony requests, remote-access rule headlines) counted ONCE. Every member added 14-20 points to 2w down for it; I add it once, about +6 to 2w down, on top of the share of the range cut that goes to down. The thesis-break rulings are buying policy and add no further probability adjustment.",
+  "Momentum is ONE group and its halves offset: trend down on 1W/1D/4H, price 28.3% below the 100W and 38.3% below the 200D, full-body weekly bar closed at the low; against that, weekly RSI 25.01 on a completed bar (oversold, lessons-log check passed), RSI7 11.78, Stoch RSI 0/0. Net about zero on 2w up beyond the base.",
+  "2w disagreement: sentiment 33/25/42 and relative_strength 35/25/40 vs red team 38/28/34. Sentiment and relative_strength lean on the close location of one bar (n=1) and the SEC headline already counted; the red team leans on the base-rate up skew (2w +5% touch 52.2% vs -5% 41.2%; engine 50.2% for 131.81 vs 39.6% for 119.25) and beta 1.94 to SPX in a VIX-35.9 market. Both sets of arguments carry some weight, and neither is decisive. Ruling 36/28/36, between the red team and the others, with the down tilt removed rather than reversed.",
+  "this_quarter disagreement: technical 33/35/32 vs red team 37/30/33 vs relative_strength/sentiment 34/30/36. FOMC 2026-12-09 and CPI 2026-12-10 (fcst 3.9 vs 3.7) inside the window with Fed speakers discussing hikes (macro), and no governance clearing event before year-end (narrative), offset the reported fundamentals. Up line 138.08 sits below the 143.725-145.71 gap, so partial repair counts. Ruling 35/31/34.",
+  "next_quarter disagreement: red team 45/22/33 vs fundamentals/sentiment 42/22/36. Over 13 weeks the reported revenue, the $130B guide and rising hyperscaler capex favour up unless the numbers are impaired; impairment has no filing behind it yet. But the late-Feb print is a second binary inside the window and SEC reviews rarely resolve in a quarter. Ruling 43/24/33, closer to the red team on down, not on up.",
+  "Analyst targets, ratings and estimates are ONE group with near-zero weight: pt_avg 242.79 and median 222.5 predate the SEC report, and forward P/E 8.4 rests on the same consensus EPS. Fundamentals' EPS-multiple ladder levels (149.4, 112.1, 107.2) are therefore not used as anchors (red team: circular if E is in doubt).",
+  "Conditional base rates (weekly RSI <= 36 n=13: 13w 69/0/31; 2w drop <= -15% n=4: 13w 100/0/0) are context, not evidence: overlapping windows, about one episode, none with an accounting probe. They do not lift next_quarter up.",
+  "Fib confluence: per red team, the 122-127 cluster has one independent anchor (200W SMA 124.14); linear fib 0.5 and log fib 0.786 share the ATH anchor and 124.50 is the current low. Fibs are tie-breakers in the ladder, not anchors.",
+  "Rule L: technical's trigger 'close back above 140.76 by 2026-11-25' is dropped as unreachable (engine 1.0%). The breakout trigger (weekly close above 186) is unreachable by 2026-12-31 (2.7%) and is dated to 2027-03-31 (32.5%).",
+  "Last run's 2w call (33/33/34 vs 154.71/170.99, scored at the 2026-11-27 close) is effectively resolving down (125.53 vs 154.71). Lesson candidate for the lessons log: the down branch played out in five sessions, faster than the path assumed; price went through L3 to the 200W in one week."
+ ],
+ "coverage_note": "7/14 required pages ok (7 stale, 0 failed, 0 missing; 1 deferred). event_cutoff_utc 2026-11-20T21:00Z. Stale (partial) although read after the cutoff: tv_technicals_1w/1d/4h (TradingView MCP down; oscillators from the owner's chart, MAs/ATR computed; no ADX/CCI/AO/summary), tv_relative (no AMD/AVGO/TSM/SMH weekly figures), sec_filings (Q3 10-Q not located; legal-proceedings section unread). Stale and pre-event, treated as unknown, not current: sentiment_aaii (week ending 2026-11-11) and sentiment_cnn_fg (2026-11-06). Deferred: options_positioning (put walls or short gamma near 120-125 unknown in both directions). hyperscaler_capex numbers were read 2026-11-15 (within its 7-day limit; no new quarter). sec_filings is price-sensitive and the whole SEC question depends on it; the technicals and tv_relative pages are price-sensitive and partial. This memo must not be delivered as current until sec_filings (10-Q legal proceedings, any SEC disclosure, guarantee footnote) and the three technicals pages and tv_relative are re-read in full; the Monday 2026-11-23 session will also make every price page stale. Confidence lowered to 30 (35 on 2026-11-15).",
+ "evidence": [
+  {
+   "ref": "thesis_break_status",
+   "point": "TB1 not fired; TB2 FIRED by chair 2026-11-12 (owner not confirmed); TB3 candidate (remote-access rule effective 2026-11-19), ruled FIRED provisional; TB4 not fired (0/4). SEC accounting report not covered by TB1-TB4."
+  },
+  {
+   "ref": "news_governance",
+   "point": "Reuters 2026-11-20 (two people briefed): SEC enforcement staff examining potential accounting issues; Nvidia did not respond, SEC declined comment; WSJ reported an SEC investigation 2026-11-17. No subpoena, Wells notice, restatement or company disclosure in the slice."
+  },
+  {
+   "ref": "tv_fundamentals",
+   "point": "Q3 FY27 revenue $115.84B (+103% YoY) vs $108.73B est; adj EPS 2.68 vs 2.47; Q4 guide $130B +/-3% vs ~$124.8B consensus assuming zero China DC compute; GM guide 71-72%. Guarantees $118B (from $108.5B), $105B for one OpenAI campus, $0 paid, vs $53.5B cash."
+  },
+  {
+   "ref": "snapshot.today_bar_status",
+   "point": "Fri 2026-11-20: -14.01%, low 124.50, close 125.53 (0.8% above the low) on 633.4M shares, 3.9x the 60-day average. Week -22.92%, seventh straight weekly decline."
+  },
+  {
+   "ref": "weekly_rsi",
+   "point": "Weekly RSI 25.01 on a completed bar (oversold; lowest since 2023); 35.7 at the Apr 2025 low. One momentum group."
+  },
+  {
+   "ref": "structure",
+   "point": "Price +1.1% above the 200W SMA 124.14, -28.3% below the 100W SMA, -38.3% below the 200D SMA; ATR 10.71 (8.5%); drawdown -48.4%; open gaps 143.725-145.71 and 179.92-185.22."
+  },
+  {
+   "ref": "tv_relative",
+   "point": "Week: NVDA -22.92%, SOX -17.13%, SPX -8.61%; Friday NVDA -14.01% vs SOX -10.73%, AMD -13.25%. Most of the move was sector-wide; NVDA's excess about 5.8 points for the week."
+  },
+  {
+   "ref": "relative",
+   "point": "NVDA/SOX 14.93, a new low (13w -18.4%, 52w -46.5%); beta to SPX 1.94; correlation to SOX 0.64."
+  },
+  {
+   "ref": "tv_purple_list",
+   "point": "VIX 35.9, S5TH 45.92, HY OAS 3.52 (+0.05), NFCI -0.48: equity fear without credit stress. CPI 3.7 vs Fed funds 4.0, Oct PPI 6.5, hike talk: no Fed put."
+  },
+  {
+   "ref": "hyperscaler_capex",
+   "point": "0 of 4 falling; no guidance cut reported."
+  },
+  {
+   "ref": "base_rates",
+   "point": "Unconditional 33/45/22, 39/43/18, 50/31/19 used as the starting point; conditional tables (n=13, n=4) treated as context only."
+  },
+  {
+   "ref": "coverage",
+   "point": "7/14 ok; sec_filings partial is the decisive gap; options deferred."
+  }
+ ],
+ "key_levels": [
+  {
+   "level": 186.0,
+   "why": "Proposed breakout-tranche trigger (weekly close); unreachable by 2026-12-31 (2.7%), 32.5% by 2027-03-31",
+   "ref": "ladder_audit.breakout_tranche"
+  },
+  {
+   "level": 174.97,
+   "why": "100W SMA",
+   "ref": "pages.tv_technicals_1w.sma100"
+  },
+  {
+   "level": 145.71,
+   "why": "Top of the SEC-day gap; C1 price condition; 33.9% by 2026-12-31",
+   "ref": "structure.gap_zones_open"
+  },
+  {
+   "level": 143.725,
+   "why": "Bottom of the SEC-day gap (11-20 high)",
+   "ref": "structure.gap_zone"
+  },
+  {
+   "level": 140.76,
+   "why": "2024 range top, broken 2026-11-20; with the ~140 trendline now resistance",
+   "ref": "pages.tv_chart_owner.swing_labels"
+  },
+  {
+   "level": 138.08,
+   "why": "Quarter up line",
+   "ref": "probabilities.defs"
+  },
+  {
+   "level": 131.81,
+   "why": "2w up line (50.2% touch by 2026-12-04)",
+   "ref": "probabilities.defs"
+  },
+  {
+   "level": 124.14,
+   "why": "200W SMA, the only independent anchor in the 122-127 cluster; trap-rule level",
+   "ref": "pages.tv_technicals_1w.sma200"
+  },
+  {
+   "level": 122.0,
+   "why": "Confirmed-break line: two closes below without reclaim of 124.14",
+   "ref": "committee/runs/2026-11-22-review/technical.json"
+  },
+  {
+   "level": 119.25,
+   "why": "2w down line (39.6% touch by 2026-12-04)",
+   "ref": "probabilities.defs"
+  },
+  {
+   "level": 112.98,
+   "why": "Quarter down line (36.4% by 2026-12-31)",
+   "ref": "probabilities.defs"
+  },
+  {
+   "level": 99.65,
+   "why": "Fib 0.382 with swing 97.40 below: N3 zone; 10.1% by 2026-12-31, 27.4% by 2027-03-31",
+   "ref": "fib_check.computed.level_0.382"
+  },
+  {
+   "level": 90.69,
+   "why": "Swing label; with 86.62 the N4 zone",
+   "ref": "pages.tv_chart_owner.swing_labels"
+  }
+ ],
+ "triggers": [
+  {
+   "text": "Bullish trap at the 200W SMA: a daily close below 124.14 that is reclaimed (close back above 124.14) within 1-3 daily closes, by 2026-12-04. 2w moves toward technical's 45/27/28; next_quarter up toward 48. This is also N1's condition.",
+   "level": 124.14,
+   "by": "2026-12-04",
+   "reach": {
+    "level": 124.14,
+    "by": "2026-12-04",
+    "trading_days": 9,
+    "move_needed_pct": -1.1,
+    "freq_pct": 69.4,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Confirmed break: two or more consecutive daily closes below 122 with no reclaim of 124.14 within three closes, by 2026-12-04. 2w down above 45, this_quarter down toward 42; 112.98 then 97-101 become the path.",
+   "level": 122.0,
+   "by": "2026-12-04",
+   "reach": {
+    "level": 122.0,
+    "by": "2026-12-04",
+    "trading_days": 9,
+    "move_needed_pct": -2.8,
+    "freq_pct": 57.1,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close above 131.81 by 2026-12-04 with NVDA/SOX at or above 14.93: the governance down tilt was over-counted; 2w up to about 45 (red team).",
+   "level": 131.81,
+   "by": "2026-12-04",
+   "reach": {
+    "level": 131.81,
+    "by": "2026-12-04",
+    "trading_days": 9,
+    "move_needed_pct": 5.0,
+    "freq_pct": 50.2,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close below 119.25 by 2026-12-04 while SOX holds up: the NVDA-specific accounting discount is still being added; 2w down to about 50 (relative_strength).",
+   "level": 119.25,
+   "by": "2026-12-04",
+   "reach": {
+    "level": 119.25,
+    "by": "2026-12-04",
+    "trading_days": 9,
+    "move_needed_pct": -5.0,
+    "freq_pct": 39.6,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Completed weekly bar (2026-11-27 or 2026-12-04) closing above 127.09 with a lower wick at least 2x its body: first weekly rejection of lower prices; +5 to up on both quarters (technical).",
+   "level": 127.09,
+   "by": "2026-12-04",
+   "reach": {
+    "level": 127.09,
+    "by": "2026-12-04",
+    "trading_days": 9,
+    "move_needed_pct": 1.2,
+    "freq_pct": 78.6,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close back above 143.725 (inside the SEC-day gap) by 2026-12-04: shock sellers trapped; this_quarter up to 45 or more (sentiment).",
+   "level": 143.725,
+   "by": "2026-12-04",
+   "reach": {
+    "level": 143.725,
+    "by": "2026-12-04",
+    "trading_days": 9,
+    "move_needed_pct": 14.5,
+    "freq_pct": 10.6,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close above 145.71 (gap filled, 140.76 range top and ~140 trendline reclaimed) by 2026-12-31: first structural repair; this_quarter up toward 45-50; price leg of C1 met.",
+   "level": 145.71,
+   "by": "2026-12-31",
+   "reach": {
+    "level": 145.71,
+    "by": "2026-12-31",
+    "trading_days": 28,
+    "move_needed_pct": 16.1,
+    "freq_pct": 33.9,
+    "n": 1237,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close below 112.98 by 2026-12-31: next_quarter down above 40; the 97.40-99.65 zone (N3) becomes live (99.65 by 2026-12-31: 10.1%).",
+   "level": 112.98,
+   "by": "2026-12-31",
+   "reach": {
+    "level": 112.98,
+    "by": "2026-12-31",
+    "trading_days": 28,
+    "move_needed_pct": -10.0,
+    "freq_pct": 36.4,
+    "n": 1237,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Weekly close above 174.97 (100W SMA) by 2027-03-31: weekly downtrend repaired; quarter up buckets above base (technical).",
+   "level": 174.97,
+   "by": "2027-03-31",
+   "reach": {
+    "level": 174.97,
+    "by": "2027-03-31",
+    "trading_days": 92,
+    "move_needed_pct": 39.4,
+    "freq_pct": 36.1,
+    "n": 1173,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Weekly close above 186 by 2027-03-31 (179.92-185.22 gap filled, 100W reclaimed): proposed breakout-tranche trigger. Unreachable by 2026-12-31 (2.7%), so it is dated to next quarter. The engine measures daily closes, so a weekly close is harder than shown.",
+   "level": 186.0,
+   "by": "2027-03-31",
+   "reach": {
+    "level": 186.0,
+    "by": "2027-03-31",
+    "trading_days": 92,
+    "move_needed_pct": 48.2,
+    "freq_pct": 32.5,
+    "n": 1173,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "SEC matter, bearish: Nvidia confirms (8-K, 10-Q or statement) a formal SEC investigation, subpoena or Wells notice on revenue recognition, geographic attribution or the guarantees, or delays its 10-Q. 2w down about +8, next_quarter up about -10; proposed TB5 moves from WATCH to escalation review.",
+   "by": "2026-12-04",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "SEC matter, bullish: the Q3 10-Q is found with no SEC-inquiry or accounting legal-proceedings language, or the company/SEC describes the matter as informal or narrow with no restatement expected. next_quarter up to about 50 (red team, fundamentals); 2w down tilt largely removed.",
+   "by": "2026-12-04",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "Restatement or non-reliance statement, material weakness, auditor resignation or qualified opinion, or a missed 10-Q/10-K deadline: up at or below 20 in every horizon (fundamentals); proposed TB5 would fire.",
+   "by": "2027-03-31",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "Testimony outcome (Huang 2026-12-01 House, general counsel 2026-12-02, Huang 2026-12-03 Senate Banking; all requested, may slip): a credible report that Nvidia knew of the diversion moves this_quarter toward 28/27/45 (narrative) and raises TB1 risk; no new Nvidia-level disclosure moves it toward 42/28/30.",
+   "by": "2026-12-04",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "NVDA/SOX ratio: two weekly closes (2026-11-27, 2026-12-04) without a new low below 14.93 = sector washout, next_quarter up toward 50; new lows during a SOX bounce = NVDA-specific discount, shift about 5 points from up to down in both quarters (relative_strength). Ratio, not NVDA price: no reach test.",
+   "by": "2026-12-04",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "FOMC 2026-12-09 / CPI 2026-12-10: a hike or hiking bias with CPI at or above 3.9 is bearish for the quarter buckets; a hold without hiking bias with CPI at or below 3.7 and real 10y below 2.80 is bullish (macro).",
+   "by": "2026-12-10",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "Credit: HY OAS above 4.0 with NFCI above -0.30 before 2026-12-31 turns the equity de-rating into a credit event; this_quarter down above 40 (macro).",
+   "by": "2026-12-31",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "TB1 fires: DOJ or Commerce charge, settlement or penalty, or a company admission, naming Nvidia itself (not Super Micro, Megaspeed or Alice Huang).",
+   "by": "2027-03-31",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "TB3 un-fire test: BIS licences granted to the large Singapore/Malaysia operators, or a company quantification showing small at-risk revenue, before the ~2027-02-17 licence deadline. Licence denials or a large company estimate keep it fired; a figure near the FT's 'about half of revenue billed in Singapore' moves next_quarter down above 40 (red team).",
+   "by": "2027-02-17",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "TB4 WATCH: two or more of MSFT/GOOGL/AMZN/META with run-rate more than 10% below TTM, or any one guiding capex down; TB4 fires only if two or more guide down.",
+   "by": "2027-03-31",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "Guarantees: guarantees_paid above $0 or total disclosed above $118B: next_quarter down +8 (fundamentals).",
+   "by": "2027-03-31",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "Late-Feb 2027 print outcome: Q4 revenue below $126.1B (bottom of the $130B +/-3% guide) or gross margin below 71%: next_quarter up about -10 (fundamentals).",
+   "by": "2027-03-31",
+   "reach": {
+    "verdict": "event"
+   }
+  }
+ ],
+ "what_would_change_my_mind": [
+  "Bullish trap at the 200W SMA: a daily close below 124.14 that is reclaimed (close back above 124.14) within 1-3 daily closes, by 2026-12-04. 2w moves toward technical's 45/27/28; next_quarter up toward 48. This is also N1's condition.",
+  "Confirmed break: two or more consecutive daily closes below 122 with no reclaim of 124.14 within three closes, by 2026-12-04. 2w down above 45, this_quarter down toward 42; 112.98 then 97-101 become the path.",
+  "Daily close above 131.81 by 2026-12-04 with NVDA/SOX at or above 14.93: the governance down tilt was over-counted; 2w up to about 45 (red team).",
+  "Daily close below 119.25 by 2026-12-04 while SOX holds up: the NVDA-specific accounting discount is still being added; 2w down to about 50 (relative_strength).",
+  "Completed weekly bar (2026-11-27 or 2026-12-04) closing above 127.09 with a lower wick at least 2x its body: first weekly rejection of lower prices; +5 to up on both quarters (technical).",
+  "Daily close back above 143.725 (inside the SEC-day gap) by 2026-12-04: shock sellers trapped; this_quarter up to 45 or more (sentiment).",
+  "Daily close above 145.71 (gap filled, 140.76 range top and ~140 trendline reclaimed) by 2026-12-31: first structural repair; this_quarter up toward 45-50; price leg of C1 met.",
+  "Daily close below 112.98 by 2026-12-31: next_quarter down above 40; the 97.40-99.65 zone (N3) becomes live (99.65 by 2026-12-31: 10.1%).",
+  "Weekly close above 174.97 (100W SMA) by 2027-03-31: weekly downtrend repaired; quarter up buckets above base (technical).",
+  "Weekly close above 186 by 2027-03-31 (179.92-185.22 gap filled, 100W reclaimed): proposed breakout-tranche trigger. Unreachable by 2026-12-31 (2.7%), so it is dated to next quarter. The engine measures daily closes, so a weekly close is harder than shown.",
+  "SEC matter, bearish: Nvidia confirms (8-K, 10-Q or statement) a formal SEC investigation, subpoena or Wells notice on revenue recognition, geographic attribution or the guarantees, or delays its 10-Q. 2w down about +8, next_quarter up about -10; proposed TB5 moves from WATCH to escalation review.",
+  "SEC matter, bullish: the Q3 10-Q is found with no SEC-inquiry or accounting legal-proceedings language, or the company/SEC describes the matter as informal or narrow with no restatement expected. next_quarter up to about 50 (red team, fundamentals); 2w down tilt largely removed.",
+  "Restatement or non-reliance statement, material weakness, auditor resignation or qualified opinion, or a missed 10-Q/10-K deadline: up at or below 20 in every horizon (fundamentals); proposed TB5 would fire.",
+  "Testimony outcome (Huang 2026-12-01 House, general counsel 2026-12-02, Huang 2026-12-03 Senate Banking; all requested, may slip): a credible report that Nvidia knew of the diversion moves this_quarter toward 28/27/45 (narrative) and raises TB1 risk; no new Nvidia-level disclosure moves it toward 42/28/30.",
+  "NVDA/SOX ratio: two weekly closes (2026-11-27, 2026-12-04) without a new low below 14.93 = sector washout, next_quarter up toward 50; new lows during a SOX bounce = NVDA-specific discount, shift about 5 points from up to down in both quarters (relative_strength). Ratio, not NVDA price: no reach test.",
+  "FOMC 2026-12-09 / CPI 2026-12-10: a hike or hiking bias with CPI at or above 3.9 is bearish for the quarter buckets; a hold without hiking bias with CPI at or below 3.7 and real 10y below 2.80 is bullish (macro).",
+  "Credit: HY OAS above 4.0 with NFCI above -0.30 before 2026-12-31 turns the equity de-rating into a credit event; this_quarter down above 40 (macro).",
+  "TB1 fires: DOJ or Commerce charge, settlement or penalty, or a company admission, naming Nvidia itself (not Super Micro, Megaspeed or Alice Huang).",
+  "TB3 un-fire test: BIS licences granted to the large Singapore/Malaysia operators, or a company quantification showing small at-risk revenue, before the ~2027-02-17 licence deadline. Licence denials or a large company estimate keep it fired; a figure near the FT's 'about half of revenue billed in Singapore' moves next_quarter down above 40 (red team).",
+  "TB4 WATCH: two or more of MSFT/GOOGL/AMZN/META with run-rate more than 10% below TTM, or any one guiding capex down; TB4 fires only if two or more guide down.",
+  "Guarantees: guarantees_paid above $0 or total disclosed above $118B: next_quarter down +8 (fundamentals).",
+  "Late-Feb 2027 print outcome: Q4 revenue below $126.1B (bottom of the $130B +/-3% guide) or gross margin below 71%: next_quarter up about -10 (fundamentals)."
+ ],
+ "expected": [
+  {
+   "text": "Weekly closes 2026-11-27 (after the 2026-11-26 holiday, half-day session) and 2026-12-04 (2w scoring close, NFP day).",
+   "effect": "None by themselves; the range cut (-17, once) already reflects the 8.5% ATR. Thin half-day liquidity and NFP can swing the scoring close."
+  },
+  {
+   "text": "NVDA ex-dividend 2026-12-02.",
+   "effect": "Immaterial."
+  },
+  {
+   "text": "Macro calendar: GDP/core PCE 2026-11-25, ISM 2026-12-01 (prev 55.5), ISM services 2026-12-03, NFP 2026-12-04, FOMC 2026-12-09, CPI 2026-12-10 (fcst 3.9 vs 3.7), PPI 2026-12-15.",
+   "effect": "Already in this_quarter as part of the down +16 (macro duration headwind); only surprise outcomes move it (see triggers)."
+  },
+  {
+   "text": "Remote-access rule 90-day licence-application deadline ~2027-02-17.",
+   "effect": "Date carries no effect; licence outcomes or a company quantification decide TB3 (trigger)."
+  },
+  {
+   "text": "NVDA Q4 FY27 results late Feb 2027 (date not confirmed) inside next_quarter; 3-trading-day blackout before it.",
+   "effect": "Second binary inside the next_quarter window: part of the next_quarter range cut (-7). Only the outcome (guide, GM, any accounting language) moves the numbers."
+  },
+  {
+   "text": "More SEC, testimony and remote-access headlines in the next two weeks (narrative).",
+   "effect": "Already counted once in the governance group; only official documents or credible testimony accounts are triggers."
+  }
+ ],
+ "catalysts": [
+  {
+   "date": "2026-11-25",
+   "name": "GDP Q3 2nd est, core PCE, personal income/spending, durables"
+  },
+  {
+   "date": "2026-11-26",
+   "name": "Thanksgiving (US market closed)"
+  },
+  {
+   "date": "2026-11-27",
+   "name": "Half-day session"
+  },
+  {
+   "date": "2026-12-01",
+   "name": "Huang closed-door interview, House Foreign Affairs (requested); ISM manufacturing (prev 55.5)"
+  },
+  {
+   "date": "2026-12-02",
+   "name": "Nvidia general counsel interview (requested); NVDA ex-dividend"
+  },
+  {
+   "date": "2026-12-03",
+   "name": "Senate Banking hearing requested for Huang; ISM services"
+  },
+  {
+   "date": "2026-12-04",
+   "name": "NFP; 2w bucket scoring close"
+  },
+  {
+   "date": "2026-12-09",
+   "name": "FOMC decision"
+  },
+  {
+   "date": "2026-12-10",
+   "name": "CPI (fcst 3.9, prev 3.7); Senate Banking hearing requested for Lutnick"
+  },
+  {
+   "date": "2026-12-15",
+   "name": "PPI"
+  },
+  {
+   "date": "2027-02-17",
+   "name": "Approx. 90-day licence-application deadline under the remote-access rule"
+  }
+ ],
+ "last_run_checkpoints_rescored": [
+  {
+   "n": 1,
+   "window": "2026-11-16 to 2026-11-18",
+   "status": "invalidated",
+   "note": "No close above 164.27; 11-16 close 156.14 was below 158.39, and the 11-18 close 150.96 was below 154.71 (explicit invalidation)."
+  },
+  {
+   "n": 2,
+   "window": "2026-11-17 to 2026-11-18",
+   "status": "stale",
+   "note": "Business legs confirmed (Q4 guide $130B vs $96.2B bar; GM 74.9% adj). FCF/debt legs not in this fact sheet and the 10-Q (legal language) is unread; the briefing did not happen. Cannot be scored in full."
+  },
+  {
+   "n": 3,
+   "window": "2026-11-18 to 2026-11-27",
+   "status": "invalidated",
+   "note": "Daily close 145.98 on 2026-11-19 below 148.80; NVDA/SOX 14.93 below 16.05. SOX was not flat or up (-17.13% week), so it broke on a sector move, not only the idiosyncratic route the invalidation named."
+  },
+  {
+   "n": 4,
+   "window": "2026-11-30 to 2026-12-10",
+   "status": "invalidated",
+   "note": "Price already below the 146.57 down line before the window opened (close 125.53)."
+  },
+  {
+   "n": 5,
+   "window": "2026-12-11 to 2026-12-31",
+   "status": "stale",
+   "note": "Thresholds 146.57/179.14 superseded; path redrawn on 112.98/138.08."
+  }
+ ],
+ "expected_path": {
+  "hypothesis": "Washout-and-reclaim at the 200W SMA: any undercut of 124.14 is reclaimed within 1-3 closes (no two closes below 122), the SEC matter gets no worse in filings or testimony, NVDA/SOX stops making new lows, FOMC/CPI pass, and the 2026-12-31 close is above 138.08 (this_quarter up). Most likely of three near-equal branches (35 vs 34 down, 31 range); redrawn because last run's checkpoints 1, 3 and 4 were invalidated.",
+  "probability": 35,
+  "checkpoints": [
+   {
+    "n": 1,
+    "window": "2026-11-23 to 2026-11-25",
+    "confirm": "No two consecutive daily closes below 122; any close below 124.14 reclaimed within 1-3 closes",
+    "invalidate": "Two or more consecutive daily closes below 122 with no reclaim of 124.14",
+    "status": "pending"
+   },
+   {
+    "n": 2,
+    "window": "2026-11-23 to 2026-12-04",
+    "confirm": "Q3 10-Q found with no SEC accounting legal-proceedings language, or company describes an informal/narrow inquiry; 12-01 to 12-03 sessions add no Nvidia-knew report",
+    "invalidate": "Company confirms formal investigation, subpoena or Wells notice, delayed 10-Q, or credible report that Nvidia knew of the diversion",
+    "status": "pending"
+   },
+   {
+    "n": 3,
+    "window": "2026-11-27 to 2026-12-04",
+    "confirm": "NVDA/SOX weekly readings on 2026-11-27 and 2026-12-04 not below 14.93; 2026-12-04 close at or above 119.25",
+    "invalidate": "New NVDA/SOX low below 14.93 during a SOX bounce, or 2026-12-04 close below 119.25",
+    "status": "pending"
+   },
+   {
+    "n": 4,
+    "window": "2026-12-07 to 2026-12-15",
+    "confirm": "FOMC 2026-12-09 and CPI 2026-12-10 pass with daily closes above 124.14",
+    "invalidate": "Daily close below 112.98, or a hike with CPI at or above 3.9 and closes below 122",
+    "status": "pending"
+   },
+   {
+    "n": 5,
+    "window": "2026-12-16 to 2026-12-31",
+    "confirm": "2026-12-31 close above 138.08 (a close above 145.71 fills the SEC-day gap)",
+    "invalidate": "2026-12-31 close at or below 138.08",
+    "status": "pending"
+   }
+  ],
+  "branches": {
+   "range": "Bounce stalls below the 143.725-145.71 gap and fades; 2026-12-31 close between 112.98 and 138.08 (31).",
+   "down": "Two closes below 122 without reclaim, or an adverse SEC filing/testimony account: 112.98 then the 97.40-99.65 zone (99.65 by 2026-12-31: 10.1%); 2026-12-31 close below 112.98 (34)."
+  }
+ },
+ "ladder_proposals": [
+  "PROPOSAL ONLY. Nothing here is applied, approved or placed; no order is to be placed or executed. Status of the current ladder: PROPOSED 2026-11-11, budget null, holdings null, never approved or placed; filled_orders empty.",
+  "Ladder Audit (history, rows never removed): L1 162-164 (w 1.0), L2 154-157 (w 1.5) and L3 141-145 (w 2.0) were all traded through in the week of 2026-11-16 while buying was paused under TB2: record as 'passed during TB2 pause', never as fills. L4 124-128 (w 3.0) contains the call price: 'in zone at call, paused', not a fill. Had the price-only ladder been live, it would have used 100% of weight in one week at an average of 139.99 vs the 125.53 close (red team). Lesson-log candidate: a price-only ladder spaced 4.8-13.5% apart does not survive an information shock; ladders need event gates and spacing of at least ~1 daily ATR.",
+  "Drop L1 and L2: both anchors broke on confirmed closes (164.27 on 2026-11-13; 154.53 and 148.80 on 2026-11-18/19, none reclaimed) and are now resistance.",
+  "Convert L3 into C1, a confirmation tranche (144-150, w 1.0): only after a daily close above 145.71 (gap filled, 140.76 and the ~140 trendline reclaimed) AND the accounting gate. Reach 145.71: 33.9% by 2026-12-31, 66.8% by 2027-03-31. This is the fundamentals 'credibility tranche' and technical's reclaim tranche combined; EPS-multiple levels are not used (red team).",
+  "Convert L4 into N1 (122-127, w 1.5, down from 3.0), conditional on a capitulation-reclaim signature, never resting: 127 is touched by 2026-12-04 in 78.7% of windows, so a resting order there is close to a market order placed while the SEC, testimony and TB3 overhangs are least resolved (red team). Only independent anchor: 200W SMA 124.14.",
+  "N2 (111-115, w 1.0): weak ATR-derived anchor (113.43 = 200W minus one ATR; quarter down line 112.98). Least weight and gated on NVDA/SOX not making a new low for two weekly closes (relative_strength). Red team would drop it; I keep it small so the ladder is not empty between 124 and 101.",
+  "N3 (97-101, w 2.0, technical proposed 3.0): swing 97.40 independent, fib 0.382 99.65 tie-breaker. N4 (86.5-90.5, w 2.0): swings 90.69 and 86.62, both independent; unreachable by 2026-12-31 (90.5: 3.2%), reachable by 2027-03-31 (20.1%).",
+  "Spacing (mid to mid): N1 124.5 -> N2 113 about 1.1 ATR (9.2%); N2 -> N3 99 about 1.3 ATR (12.4%); N3 -> N4 88.5 about 1.0 ATR (10.6%). Percent spacing is stated as well because the 10.71 ATR is crash-inflated (red team).",
+  "Weights: C1 1.0 | N1 1.5 | N2 1.0 | N3 2.0 | N4 2.0 = 7.5, the same total as the old ladder, so shares of budget stay comparable. N1 + N2 = 2.5 of 7.5 (one third), matching macro's cap before FOMC/CPI 2026-12-09/10. The heaviest weights sit at the levels with independent anchors and lowest near-term reach, not at the level price is already touching.",
+  "Breakout tranche unchanged in substance: weekly close above 186 (179.92-185.22 gap filled, 100W 174.97 reclaimed), 20-30% of budget (proposed). Unreachable by 2026-12-31 (2.7%); 32.5% by 2027-03-31.",
+  "Do not finalise this weekend (sentiment): it is a dormant pre-commitment, to be confirmed by the owner after the 10-Q is read and at least the 2026-11-23 to 11-25 sessions (trap clock) have traded."
+ ],
+ "ladder_proposed": [
+  {
+   "id": "C1",
+   "zone_low": 144.0,
+   "zone_high": 150.0,
+   "weight": 1.0,
+   "anchors": [
+    {
+     "name": "gap_top_nov19_low",
+     "value": 145.71
+    },
+    {
+     "name": "gap_bottom_nov20_high",
+     "value": 143.725
+    },
+    {
+     "name": "2024_range_top",
+     "value": 140.76
+    }
+   ],
+   "condition": "Confirmation tranche (old L3 converted). Only after a daily close above 145.71 AND the accounting gate (activation condition 5) is met. Buys strength, not a dip.",
+   "reach": {
+    "145.71_by_2026-12-31": {
+     "level": 145.71,
+     "by": "2026-12-31",
+     "trading_days": 28,
+     "move_needed_pct": 16.1,
+     "freq_pct": 33.9,
+     "n": 1237,
+     "verdict": "reachable"
+    },
+    "145.71_by_2027-03-31": {
+     "level": 145.71,
+     "by": "2027-03-31",
+     "trading_days": 92,
+     "move_needed_pct": 16.1,
+     "freq_pct": 66.8,
+     "n": 1173,
+     "verdict": "reachable"
+    },
+    "150_by_2027-03-31": {
+     "level": 150.0,
+     "by": "2027-03-31",
+     "trading_days": 92,
+     "move_needed_pct": 19.5,
+     "freq_pct": 58.5,
+     "n": 1173,
+     "verdict": "reachable"
+    }
+   }
+  },
+  {
+   "id": "N1",
+   "zone_low": 122.0,
+   "zone_high": 127.0,
+   "weight": 1.5,
+   "anchors": [
+    {
+     "name": "sma200w (only independent anchor)",
+     "value": 124.14
+    },
+    {
+     "name": "nov20_low (price observation, not support)",
+     "value": 124.5
+    },
+    {
+     "name": "fib_05 (ATH-anchored, tie-breaker only)",
+     "value": 127.09
+    }
+   ],
+   "condition": "Conditional, never resting: only after a capitulation-reclaim signature by daily closes: a close below 124.14 reclaimed within 1-3 closes (technical trap rule), OR a session trading below 124.50 that closes in the upper half of its range on volume above 328M followed by a higher low (sentiment). Not if two consecutive closes below 122 without reclaim.",
+   "reach": {
+    "127_by_2026-12-04": {
+     "level": 127.0,
+     "by": "2026-12-04",
+     "trading_days": 9,
+     "move_needed_pct": 1.2,
+     "freq_pct": 78.7,
+     "n": 1256,
+     "verdict": "reachable"
+    },
+    "122_by_2026-12-04": {
+     "level": 122.0,
+     "by": "2026-12-04",
+     "trading_days": 9,
+     "move_needed_pct": -2.8,
+     "freq_pct": 57.1,
+     "n": 1256,
+     "verdict": "reachable"
+    },
+    "124.14_by_2026-12-31": {
+     "level": 124.14,
+     "by": "2026-12-31",
+     "trading_days": 28,
+     "move_needed_pct": -1.1,
+     "freq_pct": 80.2,
+     "n": 1237,
+     "verdict": "reachable"
+    }
+   }
+  },
+  {
+   "id": "N2",
+   "zone_low": 111.0,
+   "zone_high": 115.0,
+   "weight": 1.0,
+   "anchors": [
+    {
+     "name": "sma200w_minus_1_atr (ATR-derived, WEAK)",
+     "value": 113.43
+    },
+    {
+     "name": "quarter_down_threshold",
+     "value": 112.98
+    }
+   ],
+   "condition": "Weak anchor (no structure or fib between 124 and 99.65), so least weight and gated: only if NVDA/SOX has not made a new low below 14.93 for two weekly closes (relative_strength). Counts toward the one-third cap before FOMC/CPI 2026-12-09/10.",
+   "reach": {
+    "115_by_2026-12-31": {
+     "level": 115.0,
+     "by": "2026-12-31",
+     "trading_days": 28,
+     "move_needed_pct": -8.4,
+     "freq_pct": 42.6,
+     "n": 1237,
+     "verdict": "reachable"
+    },
+    "111_by_2026-12-31": {
+     "level": 111.0,
+     "by": "2026-12-31",
+     "trading_days": 28,
+     "move_needed_pct": -11.6,
+     "freq_pct": 31.0,
+     "n": 1237,
+     "verdict": "reachable"
+    },
+    "111_by_2027-03-31": {
+     "level": 111.0,
+     "by": "2027-03-31",
+     "trading_days": 92,
+     "move_needed_pct": -11.6,
+     "freq_pct": 45.7,
+     "n": 1173,
+     "verdict": "reachable"
+    }
+   }
+  },
+  {
+   "id": "N3",
+   "zone_low": 97.0,
+   "zone_high": 101.0,
+   "weight": 2.0,
+   "anchors": [
+    {
+     "name": "swing_low (independent)",
+     "value": 97.4
+    },
+    {
+     "name": "fib_0382 (ATH-anchored, tie-breaker)",
+     "value": 99.65
+    }
+   ],
+   "condition": "Resting only once all activation conditions hold. Two-anchor level; weight cut from technical's 3.0 because one leg is ATH-derived (red team).",
+   "reach": {
+    "101_by_2026-12-31": {
+     "level": 101.0,
+     "by": "2026-12-31",
+     "trading_days": 28,
+     "move_needed_pct": -19.5,
+     "freq_pct": 12.3,
+     "n": 1237,
+     "verdict": "reachable"
+    },
+    "97_by_2026-12-31": {
+     "level": 97.0,
+     "by": "2026-12-31",
+     "trading_days": 28,
+     "move_needed_pct": -22.7,
+     "freq_pct": 7.2,
+     "n": 1237,
+     "verdict": "reachable"
+    },
+    "101_by_2027-03-31": {
+     "level": 101.0,
+     "by": "2027-03-31",
+     "trading_days": 92,
+     "move_needed_pct": -19.5,
+     "freq_pct": 28.8,
+     "n": 1173,
+     "verdict": "reachable"
+    },
+    "97_by_2027-03-31": {
+     "level": 97.0,
+     "by": "2027-03-31",
+     "trading_days": 92,
+     "move_needed_pct": -22.7,
+     "freq_pct": 25.6,
+     "n": 1173,
+     "verdict": "reachable"
+    }
+   }
+  },
+  {
+   "id": "N4",
+   "zone_low": 86.5,
+   "zone_high": 90.5,
+   "weight": 2.0,
+   "anchors": [
+    {
+     "name": "swing_low (independent)",
+     "value": 90.69
+    },
+    {
+     "name": "swing_low (independent)",
+     "value": 86.62
+    }
+   ],
+   "condition": "Resting only once all activation conditions hold. Unreachable by 2026-12-31 (90.5: 3.2%, 86.5: 2.2%); a next-quarter, post-print tail level.",
+   "reach": {
+    "90.5_by_2026-12-31": {
+     "level": 90.5,
+     "by": "2026-12-31",
+     "trading_days": 28,
+     "move_needed_pct": -27.9,
+     "freq_pct": 3.2,
+     "n": 1237,
+     "verdict": "unreachable"
+    },
+    "90.5_by_2027-03-31": {
+     "level": 90.5,
+     "by": "2027-03-31",
+     "trading_days": 92,
+     "move_needed_pct": -27.9,
+     "freq_pct": 20.1,
+     "n": 1173,
+     "verdict": "reachable"
+    },
+    "86.5_by_2027-03-31": {
+     "level": 86.5,
+     "by": "2027-03-31",
+     "trading_days": 92,
+     "move_needed_pct": -31.1,
+     "freq_pct": 15.5,
+     "n": 1173,
+     "verdict": "reachable"
+    }
+   }
+  }
+ ],
+ "breakout_tranche": {
+  "share_of_budget": "20-30% (proposed, unchanged)",
+  "trigger": "Weekly close above 186 (179.92-185.22 gap filled and 100W SMA 174.97 reclaimed)",
+  "condition": "All activation conditions hold; not available before 2027 in practice",
+  "reach": {
+   "186_by_2026-12-31": {
+    "level": 186.0,
+    "by": "2026-12-31",
+    "trading_days": 28,
+    "move_needed_pct": 48.2,
+    "freq_pct": 2.7,
+    "n": 1237,
+    "verdict": "unreachable"
+   },
+   "186_by_2027-03-31": {
+    "level": 186.0,
+    "by": "2027-03-31",
+    "trading_days": 92,
+    "move_needed_pct": 48.2,
+    "freq_pct": 32.5,
+    "n": 1173,
+    "verdict": "reachable"
+   }
+  }
+ },
+ "dropped_orders": [
+  {
+   "id": "L1",
+   "planned_zone": [
+    162.0,
+    164.0
+   ],
+   "planned_weight": 1.0,
+   "status": "dropped (proposed, never approved or placed); passed during TB2 pause; NOT a fill",
+   "reason": "Anchors 164.27 (Apr 2026 swing low) and fib 0.65 broken on confirmed closes; now resistance; 29.8% above price."
+  },
+  {
+   "id": "L2",
+   "planned_zone": [
+    154.0,
+    157.0
+   ],
+   "planned_weight": 1.5,
+   "status": "dropped (proposed, never approved or placed); passed during TB2 pause; NOT a fill",
+   "reason": "Fib 0.618 154.53 and the 148.80 low lost on closes 2026-11-18/19 with no reclaim; now resistance; 23.9% above price."
+  },
+  {
+   "id": "L3",
+   "planned_zone": [
+    141.0,
+    145.0
+   ],
+   "planned_weight": 2.0,
+   "status": "converted to C1 (confirmation tranche); passed during TB2 pause; NOT a fill",
+   "reason": "Zone now sits under the broken 140.76/~140 trendline and inside the 143.725-145.71 gap: support flipped to resistance. Kept only as a buy-on-reclaim level."
+  },
+  {
+   "id": "L4",
+   "planned_zone": [
+    124.0,
+    128.0
+   ],
+   "planned_weight": 3.0,
+   "status": "converted to N1 (122-127, w 1.5, conditional); in zone at call while paused; NOT a fill",
+   "reason": "Price is inside it after a full-body breakdown with no demand shown; 3.0 weight on the first level tested is too heavy, and a resting order would fill almost surely."
+  }
+ ],
+ "activation_conditions": [
+  "1. Owner approval of levels, weights and a budget (budget_usd is null). Nothing is live until then, and no order is ever placed by the committee.",
+  "2. TB2: owner confirms or rejects the 2026-11-12 ruling; if confirmed, the un-pause test (no credible Nvidia-knew report from the 12-01 to 12-03 sessions, no charge or admission naming Nvidia, permanent CEO named or credible timeline) must be met and approved by the owner.",
+  "3. TB3: owner rules the remote-access rule immaterial on evidence (licence grants for the large SG/MY operators or a company quantification of at-risk revenue) before ~2027-02-17, or rules TB3 not fired; never on price.",
+  "4. TB1 and TB4 not fired.",
+  "5. Accounting gate (applies whether or not TB5 is adopted): the Q3 10-Q is located and read (legal proceedings, any SEC disclosure, guarantee footnote); Nvidia has described the scope of the SEC matter or the 10-Q is silent on it with clean statements; no restatement, non-reliance, material weakness, auditor change or missed filing. If the owner adopts TB5, it must not be fired.",
+  "6. Data gate: sec_filings, the three technicals pages and tv_relative re-read in full; no activation on stale pages.",
+  "7. Pacing: no more than one third of total ladder weight (N1 + N2 = 2.5 of 7.5) before FOMC/CPI 2026-12-09/10; levels written down before the session they apply to, never changed intraday.",
+  "8. Earnings blackout: nothing new in the 3 trading days before the late-Feb 2027 print.",
+  "9. Invalidation (fundamentals): pause or drop N2-N4 if guarantees_paid rises above $0, Q4 revenue lands below $126.1B, or the next-FY growth forecast falls well below 75%."
+ ],
+ "notes_for_chair": []
+}

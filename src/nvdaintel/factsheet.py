@@ -98,7 +98,8 @@ def build():
         "dist_to_sma100w_pct": round((price / pg["tv_technicals_1w"]["values"]["sma100"] - 1) * 100, 1),
         "dist_to_sma200w_pct": round((price / pg["tv_technicals_1w"]["values"]["sma200"] - 1) * 100, 1),
         "dist_to_sma200d_pct": round((price / pg["tv_technicals_1d"]["values"]["sma200"] - 1) * 100, 1),
-        "gap_zone": [179.92, 185.22],
+        "gap_zone": rd["snapshot"].get("gap_zone", [179.92, 185.22]),
+        "gap_zones_open": rd["snapshot"].get("gap_zones_open", [[179.92, 185.22]]),
         "volume_spike_ratio_mon": round(pg["tv_chart_owner"]["values"]["volume_mon_tue_shares"][0] / pg["tv_chart_owner"]["values"]["daily_avg_volume_60d_shares"], 1),
         "atr_daily": pg["tv_technicals_1d"]["values"]["atr14"],
         "atr_daily_pct": round(pg["tv_technicals_1d"]["values"]["atr14"] / price * 100, 1),
@@ -121,7 +122,7 @@ def build():
                  "log_scale_info": {f"log_{k}": round(math.exp(math.log(lo) + (math.log(hi) - math.log(lo)) * k), 2) for k in (0.5, 0.618, 0.65, 0.786)}}
 
     # relative strength (weekly)
-    sox, spx = bm["SOX"], bm["SPX"]
+    sox, spx = bm["SOX"][-60:], bm["SPX"][-60:]
     nv60 = c[-60:]
     rel = {
         "nvda_vs_sox_ratio_now": round(nv60[-1] / sox[-1] * 1000, 4),
@@ -167,7 +168,7 @@ def build():
         cum.append({"through": orders[k - 1]["id"], "weight_used": float(usd.sum()), "share_of_budget_pct": round(float(usd.sum() / w.sum() * 100), 1),
                     "avg_price_if_filled": round(float(usd.sum() / sh), 2)})
     ladder_audit = {"status": ladder["_status"], "budget_usd": ladder["budget_usd"], "orders": orders, "cumulative": cum,
-                    "earnings_blackout": {"earnings": pg["tv_fundamentals"]["values"]["next_earnings"], "blackout_trading_days": ladder["earnings_blackout_trading_days"], "blackout_window": "2026-11-12 to 2026-11-17 (today is inside it)", "orders_touched_today_intraday": [o["id"] for o in ladder["orders"] if rd["snapshot"]["today_low"] <= o["zone_high"]]},
+                    "earnings_blackout": {"earnings": pg["tv_fundamentals"]["values"]["next_earnings"], "blackout_trading_days": ladder["earnings_blackout_trading_days"], "blackout_window": rd["snapshot"].get("blackout_window", "2026-11-12 to 2026-11-17"), "orders_touched_today_intraday": [o["id"] for o in ladder["orders"] if rd["snapshot"]["today_low"] <= o["zone_high"]]},
                     "breakout_tranche": ladder["breakout_tranche"],
                     "history": engines.ladder_history(ladder)}
 

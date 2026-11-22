@@ -49,13 +49,19 @@ def main(run_id):
         return st.startswith("FIRED")
     fired = [k for k, v in ch.get("tb_rulings", {}).items() if _fired(v)]
     status = "paused" if fired else "proposed"
-    for o in lad["orders"]:
+    zones = ch.get("ladder_proposed") or lad["orders"]
+    zlabel = "proposed, dormant" if ch.get("ladder_proposed") else status
+    for o in zones:
         ax.axhspan(o["zone_low"], o["zone_high"], color=BLUE, alpha=0.06, lw=0)
-        ax.text(xr[1] - dt.timedelta(days=1), (o["zone_low"] + o["zone_high"]) / 2, f"{o['id']} {o['zone_low']:g}–{o['zone_high']:g} ({status})",
+        ax.text(t[-1] - dt.timedelta(days=4), (o["zone_low"] + o["zone_high"]) / 2, f"{o['id']} {o['zone_low']:g}–{o['zone_high']:g} w{o['weight']:g} ({zlabel})",
                 fontsize=7.5, color=BLUE, ha="right", va="center")
     # key levels from chair.json
-    for kl in ch.get("key_levels", [])[:8]:
+    shown = []
+    for kl in ch.get("key_levels", [])[:10]:
         y = float(kl["level"])
+        if any(abs(y - z) / z < 0.012 for z in shown):
+            continue          # skip labels that would overprint a nearby level
+        shown.append(y)
         col = UP if y > p0 * 1.04 else DN if y < p0 * 0.96 else MUTE
         ax.axhline(y, color=col, lw=0.8, ls=":", alpha=0.75)
         ax.text(t[0] + dt.timedelta(days=2), y + 0.9, f"{y:g}  {kl.get('why', '')[:58]}", fontsize=7.3, color=col)
@@ -123,7 +129,7 @@ def main(run_id):
         ax.annotate("Catalysts: " + "  ·  ".join(f"{pd.Timestamp(c_['date']):%b %d} {short(c_['name'])}" for c_ in ch["catalysts"][:7]),
                     (0.01, 0.015), xycoords="axes fraction", fontsize=7.6, color=BLUE)
 
-    lo = min(min(c), dnq * 0.85, min(o["zone_low"] for o in lad["orders"])) - 5
+    lo = min(min(c), dnq * 0.85, min(o["zone_low"] for o in zones)) - 5
     hi = max(max(c), upq * 1.15) + 8
     ax.set_xlim(*xr); ax.set_ylim(lo, hi)
     ax.set_ylabel("NVDA price (USD)", color=INK)
