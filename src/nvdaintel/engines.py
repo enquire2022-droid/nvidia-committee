@@ -149,7 +149,8 @@ def ladder_history(ladder: dict) -> list:
     filled_ids = {f.get("id") for f in ladder.get("filled_orders", [])} | {f.get("id") for f in ladder.get("dropped_orders", [])}
     for o in ladder.get("orders", []):
         if o["id"] not in filled_ids:
-            rows.append({"order": o["id"], "status": "resting (proposed)" if ladder.get("budget_usd") is None else "resting",
+            default = "resting (proposed)" if ladder.get("budget_usd") is None else "resting"
+            rows.append({"order": o["id"], "status": o.get("status", default),
                          "planned_zone": [o["zone_low"], o["zone_high"]], "planned_weight": o["weight"]})
     return rows
 
