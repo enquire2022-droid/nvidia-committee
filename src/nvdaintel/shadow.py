@@ -126,7 +126,97 @@ def history_check(run_id):
     return out
 
 
+# ---- charts (owner request 24 Nov 2026) ----
+def _plt():
+    import matplotlib; matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    return plt
+
+
+INK, MUTE, GRID, RED, BLUE, GREEN = "#1f2328", "#6e7781", "#e6e8eb", "#cf222e", "#0969da", "#1a7f37"
+
+
+def chart_drawdown(out_png=None):
+    """Drawdown clock: every 30%+ NVDA drawdown since 1999 as % below the peak vs weeks since the peak; current one in red."""
+    plt = _plt(); r = json.loads((OUT / "drawdown_clock.json").read_text()); df = _weekly(); c = df.c
+    fig, ax = plt.subplots(figsize=(13, 6.8), dpi=150)
+    for e in r["completed_episodes"]:
+        i0 = c.index.get_loc(pd.Timestamp(e["peak_week"]))
+        i1 = c.index.get_loc(pd.Timestamp(e["recovered_week"])) if e["recovered_week"] else len(c) - 1
+        i1 = min(i1, i0 + 80)
+        seg = c.iloc[i0:i1 + 1] / c.iloc[i0] * 100 - 100
+        ax.plot(range(len(seg)), seg.values, color=MUTE, lw=1.1, alpha=0.75)
+        k = int(np.argmin(seg.values))
+        ax.annotate(f"{e['peak_week'][:4]} ({e['depth_close_pct']:.0f}%, {e['weeks_top_to_low']}w)", (k, seg.values[k]),
+                    xytext=(4, -4), textcoords="offset points", fontsize=7.5, color=MUTE)
+    cur = r["current"]
+    if cur:
+        i0 = c.index.get_loc(pd.Timestamp(cur["peak_week"]))
+        seg = c.iloc[i0:] / c.iloc[i0] * 100 - 100
+        ax.plot(range(len(seg)), seg.values, color=RED, lw=2.6)
+        ax.annotate(f"now: {seg.values[-1]:.1f}% at week {len(seg) - 1}\n(low {cur['depth_close_pct']}% at week {cur['weeks_top_to_low']})",
+                    (len(seg) - 1, seg.values[-1]), xytext=(10, 6), textcoords="offset points", fontsize=9, color=RED, fontweight="bold")
+    st = r["completed_stats"]
+    ax.axhline(st["depth_close_pct"]["median"], color=BLUE, ls="--", lw=1)
+    ax.text(79, st["depth_close_pct"]["median"] + 1.2, f"median depth {st['depth_close_pct']['median']:.0f}%", ha="right", fontsize=8.5, color=BLUE)
+    ax.axvline(st["weeks_top_to_low"]["median"], color=BLUE, ls=":", lw=1)
+    ax.text(st["weeks_top_to_low"]["median"] + 0.6, 3, f"median top-to-low {st['weeks_top_to_low']['median']:.0f}w", fontsize=8.5, color=BLUE)
+    ax.set_xlim(0, 80); ax.set_ylim(-95, 8)
+    ax.set_xlabel("weeks since the all-time-high weekly close", color=INK); ax.set_ylabel("% below the peak (weekly closes)", color=INK)
+    ax.grid(color=GRID, lw=0.6); ax.set_axisbelow(True)
+    for s in ("top", "right"):
+        ax.spines[s].set_visible(False)
+    ax.set_title(f"NVDA drawdown clock - {r['n_completed']} completed drawdowns of 30%+ since 1999 vs now", loc="left", fontsize=12.5, fontweight="bold", color=INK)
+    fig.text(0.01, 0.005, "SHADOW check, context only, LOW CONFIDENCE (few episodes; the business changed). Episodes cut at 80 weeks "
+             "(2002 and 2008 took 215 and 390 weeks from the low to a new high). Source: TradingView weekly closes.", fontsize=7.5, color=MUTE)
+    out = out_png or OUT / "drawdown_clock.png"; fig.tight_layout(rect=(0, 0.03, 1, 1)); fig.savefig(out, facecolor="white"); return out
+
+
+def chart_history(run_id, out_png=None):
+    """History check: chair vs history (with 90% band) per window and bucket; ladder touch odds within 1 and 4 weeks."""
+    plt = _plt(); h = json.loads((OUT / f"{run_id}_history_check.json").read_text())
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(14, 6.2), dpi=150, gridspec_kw={"width_ratios": [1.5, 1]})
+    names = {"next_2_weeks": "2 weeks", "this_quarter": "this quarter", "next_quarter": "next quarter"}
+    x = 0; ticks = []; labels = []
+    for cw in h["calls"]:
+        for k, col in (("up", GREEN), ("range", "#9a6700"), ("down", RED)):
+            hv = cw["history"][k]; cv = cw["chair"][k]
+            a1.bar(x - 0.18, hv, 0.36, color=col, alpha=0.35, edgecolor=col)
+            a1.bar(x + 0.18, cv, 0.36, color=col, alpha=0.95)
+            band = cw["history_band90"].get(k)
+            if band and band[0] is not None:
+                a1.plot([x - 0.18, x - 0.18], band, color=INK, lw=1.2)
+            if abs(hv - cv) > 10:
+                a1.annotate(f"gap {cv - hv:+.0f}", (x, max(hv, cv) + 2), ha="center", fontsize=8.5, color=RED, fontweight="bold")
+            ticks.append(x); labels.append(f"{names[cw['window']]}\n{k}"); x += 1
+        x += 0.6
+    a1.set_xticks(ticks); a1.set_xticklabels(labels, fontsize=7.8)
+    a1.set_ylabel("probability %"); a1.set_title("Chair (solid) vs NVDA history (light, 90% band)", loc="left", fontsize=10.5, color=INK)
+    a1.grid(axis="y", color=GRID, lw=0.6); a1.set_axisbelow(True)
+    rows = h["ladder_touch_odds"]
+    y = np.arange(len(rows))
+    a2.barh(y + 0.2, [r["touch_4w_pct"] for r in rows], 0.4, color=BLUE, label="within 4 weeks")
+    a2.barh(y - 0.2, [r["touch_1w_pct"] for r in rows], 0.4, color="#8c959f", label="within 1 week")
+    for i, r in enumerate(rows):
+        a2.text(r["touch_4w_pct"] + 0.8, i + 0.2, f"{r['touch_4w_pct']}%", va="center", fontsize=8)
+    a2.set_yticks(y); a2.set_yticklabels([f"{r['order']} {r['level']:g}" for r in rows], fontsize=8.5)
+    a2.invert_yaxis(); a2.legend(fontsize=8, frameon=False, loc="upper right"); a2.set_xlim(0, max(r["touch_4w_pct"] for r in rows) * 1.25 + 2)
+    a2.set_title("Ladder levels: odds of a touch (history)", loc="left", fontsize=10.5, color=INK)
+    a2.grid(axis="x", color=GRID, lw=0.6); a2.set_axisbelow(True)
+    for a in (a1, a2):
+        for s in ("top", "right"):
+            a.spines[s].set_visible(False)
+    fig.suptitle(f"NVDA history check - run {run_id}, call {h['price_at_call']}, weekly vol {h['weekly_vol_52w_pct']}%", x=0.01, ha="left",
+                 fontsize=12.5, fontweight="bold", color=INK)
+    fig.text(0.01, 0.005, "SHADOW check: NVDA weekly history since 1999 in volatility units; never moves the numbers. Gaps over 10 points "
+             "are questions for the next run. History contains no accounting or governance overhang.", fontsize=7.5, color=MUTE)
+    out = out_png or OUT / f"{run_id}_history_check.png"; fig.tight_layout(rect=(0, 0.03, 1, 0.95)); fig.savefig(out, facecolor="white"); return out
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1]
-    r = drawdown_clock() if cmd == "drawdown" else history_check(sys.argv[2])
-    print(json.dumps(r, indent=1)[:4000])
+    if cmd == "drawdown":
+        r = drawdown_clock(); print(chart_drawdown())
+    else:
+        r = history_check(sys.argv[2]); print(chart_history(sys.argv[2]))
+    print(json.dumps(r, indent=1)[:1500])
