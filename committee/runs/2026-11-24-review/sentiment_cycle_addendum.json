@@ -1,0 +1,32 @@
+{
+ "agent": "nvda-sentiment",
+ "run_id": "2026-11-24-review",
+ "as_of": "2026-11-24",
+ "addendum": "cycle_placement",
+ "cycle_placement_proposal": {
+  "stage": "Relief rally: unconfirmed",
+  "since": "2026-11-23",
+  "why": "The week of 2026-11-16 was the capitulation leg: weekly close 125.53, low 124.50, weekly RSI 25.01, and a -46.3% close-to-close drawdown from the 233.95 peak. The 2026-11-23 week is a reversal week (+31.5% on 782.59M shares, leaving the 125.53-156.93 gap open), which permits the one-step rule-2 move to Relief rally, but the bar is still forming (1 of 4 sessions), so the move is unconfirmed until the 2026-11-27 weekly close. Neither structure line has fired: B (weekly close below the drawdown low) has not fired, with price at 165.05 against the 124.50 low, and C (two weekly closes above the 100W 175.25) has not happened, with price 5.8% below it. A pre-Hope label is consistent with the chair's this-quarter down of 30 and 2w down 33 vs up 35, which rule 3 says rule out Hope.",
+  "refs": [
+   "pages.nvda_ohlcv.values.prev_week.l 124.50",
+   "snapshot.nvda_prev_week_close 125.53",
+   "snapshot.weekly_bar_status (2026-11-23 bar FORMING, 1 of 4 sessions)",
+   "structure.week_change_pct 31.5",
+   "structure.gap_zones_open [125.53,156.93] and [179.92,185.22]",
+   "structure.dist_to_sma100w_pct -5.8 (pages.tv_chart_owner.values.weekly_overlays.sma100w 175.25)",
+   "structure.drawdown_from_ath_pct -32.2",
+   "weekly_rsi completed bar 2026-11-16 = 25.01",
+   "snapshot.nvda_week_volume 782593289",
+   "shadow drawdown_clock.current depth_close_pct -46.3, trough_week_close 2026-11-16 (context only)",
+   "fact_sheet.ladder_triggers ABSENT: key not present in outputs/fact_sheet.json, so B and C were checked by hand from the fields above"
+  ],
+  "alternative_considered": {
+   "stage": "Capitulation",
+   "why_rejected": "Keeping Capitulation would ignore a structural reversal. The week opened 33.1% above the prior close, the low of 156.93 held 25.0% above Friday's close, and a 31-point gap was left open. That is not a one-day wiggle inside a selling climax. Hope was also rejected: trigger C has not fired, and Hope next to this-quarter down 30 breaks rule 3."
+  },
+  "what_moves_it": {
+   "up_a_step": "Confirm Relief rally: a 2026-11-27 weekly close that holds above 156.93 (gap top and Monday's low). Move to Hope only on trigger C, two consecutive weekly closes above the 100W SMA 175.25, and only if the chair's this-quarter down is then below 30 and the 2w down is not above up.",
+   "down": "A weekly close back below 156.93 (relief failed, gap fill under way) moves it to Depression. Trigger B, a weekly close below the established drawdown low (124.50 low / 125.53 weekly close), makes it 'Depression: new low'."
+  }
+ }
+}

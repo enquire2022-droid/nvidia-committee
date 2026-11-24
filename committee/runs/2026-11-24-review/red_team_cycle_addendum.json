@@ -1,0 +1,30 @@
+{
+ "agent": "nvda-red-team",
+ "run_id": "2026-11-24-review",
+ "addendum": "cycle_placement",
+ "verdict": "agree_with_caveat",
+ "contradiction_with_probabilities": false,
+ "contradiction_note": "No contradiction. Relief rally comes before Hope, so rule 3 (no Hope or later next to this-quarter down >= 30 or a 2w down above up) is not in play. The chair's 2w 35/32/33 is close to two-sided and this quarter's down is 30, which fits an unconfirmed relief. Hope would break rule 3 on this-quarter down = 30 alone.",
+ "strongest_case_against": "Rule 2's own example lets the label move Capitulation -> Relief rally 'after a reversal week', and that week does not exist yet. The 2026-11-23 bar has 1 of 4 sessions done, and the +31.5% is a one-session news gap on the reinstatement, not a completed weekly reversal. That one session also closed below its open (167.035 -> 165.05) after trading down to 156.93, and rule 2 defines no 'unconfirmed' sub-label. So the strict reading is Capitulation (since the week of 2026-11-16) until the 2026-11-27 weekly close. The shadow drawdown clock (context only, n=10) also does not show the low is in: the current -46.3% is shallower than the -49.05% median, and 7 weeks top-to-low is below the 14-week median, with 7 of 10 episodes running longer.",
+ "preferred_stage_if_different": null,
+ "caveats_for_chair": [
+  "Hand check of the triggers. B has not fired: the last completed weekly close is 125.53 (week of 2026-11-16), it is the drawdown low itself, and price is 165.05. C has not fired: the last completed weekly close of 125.53 is below the 100W of 175.25, and price is 5.8% below it, so 0 of 2 closes are above. The proposal reads both correctly.",
+  "'Since 2026-11-23' is right for the reversal session and week. Save it as provisional: basis 'one session of a forming weekly bar; confirms on a 2026-11-27 weekly close >= 156.93'. If that close is below 156.93, the move did not happen and the label should not show a Relief rally that lasted one week.",
+  "Skipping steps. In the listed order Depression sits between Capitulation and Relief rally. The move is allowed only because rule 2's example names Capitulation -> Relief rally directly, so the chair should cite that example in the basis.",
+  "Weekly RSI is 25.01 on the completed bar against 40.65 on TradingView, which includes the forming bar. Use only the completed-bar value as capitulation evidence.",
+  "The drawdown clock is shadow context only (n=10, NVDA's business has changed a lot since 1999). It must not move the label, either way."
+ ],
+ "refs": [
+  "agents/_shared_rules.md Cycle placement rules 1-3",
+  "chair.json probabilities: 2w 35/32/33, this_quarter 37/33/30, next_quarter 46/24/30",
+  "fact_sheet.snapshot.weekly_bar_status (2026-11-23 bar FORMING, 1 of 4 sessions)",
+  "fact_sheet.pages.nvda_ohlcv.values.last_daily o 167.035 h 171.5 l 156.93 c 165.05",
+  "fact_sheet.pages.nvda_ohlcv.values.prev_week l 124.50 c 125.53",
+  "fact_sheet.pages.tv_chart_owner.values.weekly_overlays.sma100w 175.25, sma200w 124.86",
+  "fact_sheet.structure.dist_to_sma100w_pct -5.8, drawdown_from_ath_pct -32.2, week_change_pct 31.5",
+  "fact_sheet.weekly_rsi now_engine 25.0 (completed bar), now_tradingview 40.65",
+  "fact_sheet.ladder_triggers absent; B and C checked by hand",
+  "outputs/shadow/drawdown_clock.json current depth_close_pct -46.3, weeks_top_to_low 7; completed_stats median depth -49.05, median weeks_top_to_low 14, n_completed 10",
+  "sentiment.json (11-23 candle closed below its open; supply into strength)"
+ ]
+}

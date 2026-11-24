@@ -1,0 +1,18 @@
+{
+ "agent": "nvda-chair",
+ "run_id": "2026-11-24-review",
+ "as_of": "2026-11-24",
+ "addendum": "cycle_placement",
+ "cycle_placement": {
+  "stage": "Capitulation: reversal week forming",
+  "since": "2026-11-16",
+  "basis": "The week of 2026-11-16 is the capitulation leg on completed weekly structure: close 125.53, low 124.50, completed-bar weekly RSI 25.01, -46.3% close-to-close from the 233.95 peak. Rule 2 moves the label one step only with a stated reason, and its own example (Capitulation -> Relief rally) requires a reversal week; the 2026-11-23 bar is 1 of 4 sessions and that one session closed below its open (167.035 -> 165.05), so the reversal week does not yet exist. Neither line has fired: B not fired (price 165.05 vs the 125.53 close low / 124.50 low), C not fired (0 of 2 weekly closes above the 100W 175.25; price 5.8% below it).",
+  "agrees_with_probabilities": {
+   "value": true,
+   "note": "A pre-Hope label sits correctly next to this-quarter down 30 and a near two-sided 2w 35/32/33; rule 3 is not in play."
+  },
+  "provisional": true,
+  "confirm_or_revert": "Moves one step to 'Relief rally' (since 2026-11-23) on a 2026-11-27 weekly close at or above 156.93 (gap top and Monday's low), which completes the reversal week; a 2026-11-27 weekly close below 156.93 keeps Capitulation (relief failed, 125.53-156.93 gap filling), and trigger B, a weekly close below the drawdown low (125.53 close / 124.50 low), makes it 'Depression: new low'. Hope only on trigger C (two weekly closes above 175.25) and only if rule 3 then allows it.",
+  "red_team_ruling": "accepted: the strict reading holds - rule 2's example names a completed reversal week and the label moves on weekly structure, so one forming session (closed below its open) does not move it; sentiment's 'Relief rally: unconfirmed' is held until the 2026-11-27 close, and the drawdown clock did not move the label."
+ }
+}
