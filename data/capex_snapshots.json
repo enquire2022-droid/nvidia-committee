@@ -26,6 +26,32 @@
      "last_fiscal_year": -69691000000
     }
    }
+  },
+  {
+   "read_utc": "2026-11-24T07:05:00Z",
+   "source": "carried: no new hyperscaler quarter since the 2026-11-15 snapshot",
+   "companies": {
+    "MSFT": {
+     "last_quarter": -39367000000,
+     "ttm": -135921000000,
+     "last_fiscal_year": -115948000000
+    },
+    "GOOGL": {
+     "last_quarter": -51355000000,
+     "ttm": -159804000000,
+     "last_fiscal_year": -91447000000
+    },
+    "AMZN": {
+     "last_quarter": -77259000000,
+     "ttm": -215192000000,
+     "last_fiscal_year": -131819000000
+    },
+    "META": {
+     "last_quarter": -33942000000,
+     "ttm": -104438000000,
+     "last_fiscal_year": -69691000000
+    }
+   }
   }
  ]
 }

@@ -122,6 +122,12 @@ def main(run_id):
     if fired:
         ax.annotate(f"{', '.join(fired)} FIRED — buying paused", (0.01, 0.91), xycoords="axes fraction", fontsize=9.5, color=DN, fontweight="bold",
                     va="top", bbox=dict(boxstyle="round,pad=0.3", fc="#ffebe9", ec=DN, lw=0.8))
+    def _dated(c_):
+        try:
+            return pd.Timestamp(c_["date"])
+        except Exception:
+            return None                      # e.g. "2027-02 (late, not confirmed)": no tick
+    ch["catalysts"] = [c_ for c_ in ch.get("catalysts", []) if _dated(c_) is not None]
     for cat in ch.get("catalysts", []):
         x = D(cat["date"]); ax.axvline(x, ymin=0, ymax=0.025, color=BLUE, lw=1.2)
     if ch.get("catalysts"):

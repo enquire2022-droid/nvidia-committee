@@ -1,0 +1,983 @@
+{
+ "agent": "chair",
+ "run_id": "2026-11-24-review",
+ "as_of": "2026-11-24",
+ "price_at_call": 165.05,
+ "label": "uncalibrated expert judgment",
+ "view": "The 2026-11-23 reinstatement removed the key-person discount in one session (+31.48% to 165.05) but did not touch the business numbers or the open accounting items (SEC inquiry, Q3 10-Q due about 2026-12-04, 12-01 to 12-03 sessions). Counting the shared down items once, the 2w view is close to two-sided (35/32/33) and the quarters lean mildly up (37/33/30, 46/24/30). TB2 is cleared on its premise (owner to confirm); TB3 still pauses buying, so the stance is Hold (strategic) and Wait (tactical).",
+ "probabilities": {
+  "defs": "2w +/-5%, quarters +/-10%, vs price_at_call 165.05 (Mon 2026-11-23 close; pre-market Tue run). next_2_weeks: up = close > 173.30, down = close < 156.80, range between, measured at the close on or before 2026-12-08 (Tue 2026-12-08). this_quarter: last close of 2026-12-31; next_quarter: last close of 2027-03-31; up = close > 181.56, down = close < 148.55, range between. up + range + down = 100.",
+  "next_2_weeks": {
+   "up": 35,
+   "range": 32,
+   "down": 33
+  },
+  "this_quarter": {
+   "up": 37,
+   "range": 33,
+   "down": 30
+  },
+  "next_quarter": {
+   "up": 46,
+   "range": 24,
+   "down": 30
+  }
+ },
+ "confidence": 32,
+ "member_table_order": "up/range/down",
+ "member_table": [
+  {
+   "agent": "technical",
+   "conf": 33,
+   "next_2_weeks": [
+    38,
+    30,
+    32
+   ],
+   "this_quarter": [
+    36,
+    35,
+    29
+   ],
+   "next_quarter": [
+    46,
+    24,
+    30
+   ]
+  },
+  {
+   "agent": "fundamentals",
+   "conf": 32,
+   "next_2_weeks": [
+    31,
+    33,
+    36
+   ],
+   "this_quarter": [
+    34,
+    33,
+    33
+   ],
+   "next_quarter": [
+    44,
+    24,
+    32
+   ]
+  },
+  {
+   "agent": "macro",
+   "conf": 27,
+   "next_2_weeks": [
+    31,
+    36,
+    33
+   ],
+   "this_quarter": [
+    34,
+    34,
+    32
+   ],
+   "next_quarter": [
+    45,
+    25,
+    30
+   ]
+  },
+  {
+   "agent": "narrative",
+   "conf": 42,
+   "next_2_weeks": [
+    33,
+    31,
+    36
+   ],
+   "this_quarter": [
+    37,
+    32,
+    31
+   ],
+   "next_quarter": [
+    46,
+    25,
+    29
+   ]
+  },
+  {
+   "agent": "relative_strength",
+   "conf": 30,
+   "next_2_weeks": [
+    33,
+    31,
+    36
+   ],
+   "this_quarter": [
+    36,
+    32,
+    32
+   ],
+   "next_quarter": [
+    46,
+    24,
+    30
+   ]
+  },
+  {
+   "agent": "sentiment",
+   "conf": 28,
+   "next_2_weeks": [
+    30,
+    34,
+    36
+   ],
+   "this_quarter": [
+    30,
+    38,
+    32
+   ],
+   "next_quarter": [
+    40,
+    28,
+    32
+   ]
+  },
+  {
+   "agent": "red_team",
+   "conf": 35,
+   "next_2_weeks": [
+    36,
+    32,
+    32
+   ],
+   "this_quarter": [
+    38,
+    33,
+    29
+   ],
+   "next_quarter": [
+    47,
+    24,
+    29
+   ]
+  },
+  {
+   "agent": "chair (ruled, not averaged)",
+   "conf": 32,
+   "next_2_weeks": [
+    35,
+    32,
+    33
+   ],
+   "this_quarter": [
+    37,
+    33,
+    30
+   ],
+   "next_quarter": [
+    46,
+    24,
+    30
+   ]
+  },
+  {
+   "agent": "chair 2026-11-22 (at 125.53, old thresholds 131.81/119.25, 138.08/112.98; unscored until its resolution close)",
+   "conf": 30,
+   "next_2_weeks": [
+    36,
+    28,
+    36
+   ],
+   "this_quarter": [
+    35,
+    31,
+    34
+   ],
+   "next_quarter": [
+    43,
+    24,
+    33
+   ]
+  }
+ ],
+ "decision": {
+  "strategic": {
+   "stance": "Hold",
+   "reason": "Business and demand intact (Q3 revenue $115.84B +103% YoY, $130B Q4 guide, 0/4 hyperscalers cutting capex, next-FY growth forecast 75%), but TB3 (provisional) still pauses all buying and the accounting gate (10-Q unread) is open, so Accumulate is not available; nothing argues for exiting the thesis."
+  },
+  "tactical": {
+   "stance": "Wait",
+   "reason": "Buying paused under TB3; the 10-Q (about 2026-12-04) and the 12-01 to 12-03 sessions are dated binaries inside the 2w window, and the ladder is dormant before G; no chasing a +31.48% day."
+  },
+  "reduce_available": true,
+  "reduce_note": "Committee ruling, not personal advice. Price 165.05 is below the owner's blended cost 171.00 (-3.5%), so under the shared rule Reduce is available only because a thesis break has fired. TB2 no longer supplies it (cleared, below). TB3 does, but only on the letter of the rule: it is a chair ruling, provisional on materiality and never confirmed by the owner. If the owner rules TB3 not fired or immaterial, Reduce stops being available below 171.00. Availability is not a recommendation: the committee's stance is Hold, because TB3's materiality is unquantified (the Q4 guide already assumes zero China data-center compute) and the thesis evidence is otherwise intact. The 171.00 cost and the 171.50 Monday high are not levels for any stance (anchoring); 'back to breakeven' is not a signal either way, and averaging down to fix cost stays excluded by holdings_treatment."
+ },
+ "tb_rulings": {
+  "TB1": {
+   "status": "NOT FIRED",
+   "evidence": "No charge, settlement, penalty or admission naming Nvidia. DOJ/Commerce Megaspeed probe continues; the administration told the board Huang is not facing criminal charges (reported, CNBC/Business Standard). Narrative lowers its 2q TB1 odds (judgment). Watch item: any Nvidia-knew account from the 12-01 to 12-03 sessions."
+  },
+  "TB2": {
+   "status": "CLEARED (premise reversed) by chair ruling 2026-11-24, RE-ARMED; owner confirmation required to record it",
+   "evidence": "Rule: 'CEO departs under legal or regulatory pressure'. The departure no longer stands: the board unanimously reinstated Huang as President, CEO and director (8-K event date 2026-11-22, announced before the 11-23 open), citing input from senior US government levels, confidence he poses no national-security risk and satisfaction with his candour. Keeping TB2 fired would pause on an event that no longer exists (narrative, red team). The 2026-11-12 firing was never confirmed by the owner; whether it was right cannot now be decided (WSJ: additional undisclosed affairs and a transparency discussion suggest personal conduct was part of the exit). Record it as undecidable, not vindicated or wrong. Caveats: the 8-K body was not read (sec_filings partial), so the clearing rests on the board statement as reported; read the 8-K text before the owner records it. Re-fire test: a second departure or removal following adverse investigation findings (the independent-director investigation 'will proceed to conclusion'), or an official action naming him personally followed by departure. Activation condition 2: the 'permanent CEO named' leg is met by the reinstatement; the 'no Nvidia-knew report from the 12-01 to 12-03 sessions' and 'no charge or admission naming Nvidia' legs still need to be checked after 2026-12-04. Clearing TB2 does NOT un-pause buying: TB3 stands. Pausing and un-pausing is the owner's decision."
+  },
+  "TB3": {
+   "status": "FIRED (provisional on materiality; owner not confirmed) - unchanged",
+   "evidence": "Remote-access rule in force since 2026-11-19; no licence decisions reported; 90-day licence deadline about 2027-02-17. The reinstatement does not change TB3's facts. Narrative argues an administration that intervened for the CEO is somewhat more likely to grant licences (odds of materiality confirmed over 2q about 45%, judgment); that moves probabilities, not the break: un-firing needs documents (licence grants for the large SG/MY operators or a company quantification), never political goodwill or price. Baird's 'worst case for China' comment is ambiguous and gets no weight. Owner asked again to rule on materiality, ideally before G."
+  },
+  "TB4": {
+   "status": "NOT FIRED, NOT ON WATCH",
+   "evidence": "hyperscaler_capex: 0 of 4 falling (run-rate vs TTM MSFT +15.9%, GOOGL +28.5%, AMZN +43.6%, META +30.0%; proxy_flag false; no new quarter since 2026-11-15). Alphabet 2026 guidance unchanged ($195-205B), Amazon ~$220B; no guidance cut reported."
+  },
+  "TB5_proposal": {
+   "status": "PROPOSED TO OWNER, not adopted; WATCH with a hard checkpoint at the 10-Q deadline (about 2026-12-04)",
+   "evidence": "Now the live break candidate (narrative, fundamentals). Q3 10-Q not found on EDGAR (search only), delay tied by management to the internal investigation; the last three 10-Qs were filed on results day. SEC inquiry reported (WSJ 2026-11-17, Reuters 2026-11-20, accounting focus) with no company statement. Clarification proposed for the owner: a permitted 12b-25 extension does not fire TB5; missing the extended deadline, or a filing with restatement, non-reliance or material-weakness language, or an auditor resignation/qualified opinion, does; a company-confirmed formal SEC investigation, subpoena or Wells notice is an escalation review. Owner should decide adoption before 2026-12-04 so the test is pre-committed."
+  }
+ },
+ "rulings": [
+  "Never averaged. Outside view: 33/45/22 (2w, n=259), 39/43/18 (this quarter, ~7w, n=254), 50/31/19 (next quarter, 13w, n=248). Moves: 2w up +2, range -13, down +11; this_quarter up -2, range -10, down +12; next_quarter up -4, range -7, down +11.",
+  "Volatility is ONE adjustment, applied once: daily ATR 13.22 (8.0%) makes the 156.80-173.30 band about 1.25 ATRs wide, so range is cut. Red team is right that this ATR contains Monday's 45.97-point true range and Friday's ~19-point bar, so the cut stops at 32, not the 30-31 of technical, narrative and relative_strength. Holiday week and a pre-FOMC scoring close (12-08) argue for some compression.",
+  "Governance/filings group (SEC inquiry, 10-Q delay, 12-01 to 12-03 sessions, Megaspeed probe) counted ONCE, about 5 points from up to down on 2w. All six lanes priced it, several explicitly; this is the same structural double count the red team flagged last run. The thesis-break rulings are buying policy and add no further probability adjustment.",
+  "Open 125.53-156.93 gap and '156.80 sits under Monday's low' = ONE chart fact with no gap-fill base rate in the slice; it gets no weight beyond the unconditional touch rates (156.80 by 12-08: 41.2%; 173.30: 52.1%; 171.50: 60.1%). Full fill by 2026-12-31 is 5.8% (barely reachable).",
+  "Gap-and-fade bar (close 165.05 below open 167.035) is one momentum observation, offset by the other reading of the same bar (156.93 low bought, close 5.2% off the low): net zero. The overnight 163.35 comes from tv_chart_owner, which is stale/partial: not used as a current price.",
+  "Momentum is ONE group: completed weekly RSI 25.01 (11-16 bar) vs forming 40.65; 4H MACD crossed up; daily and weekly MAs mostly overhead (100W 175.25, 200D 203.24). Net about zero on direction.",
+  "Positioning: options_positioning is deferred. Sentiment's and narrative's 'covering-led rallies fade' and 'mechanical part fades' have no data behind them (n=0, record volume is direction-free). Zero weight, as red team argued.",
+  "n=0 patterns from every lane ('how these shocks usually price', 'RS snaps back then stalls', 'capitulation VIX mean-reverts') get zero weight, bullish or bearish. Conditional base rates (weekly RSI <= 36 n=13; 2w drop <= -15% n=4) no longer describe the current state (2w change +1.4%) and get zero weight.",
+  "Analyst group counted once, near-zero weight: the 11-23 upgrades (Oppenheimer, StoneX, Bernstein, Citi, BMO) follow price; average PT 242.79 sits on the ATH 243.37 and is not a target. tv_fundamentals.fwd_pe 8.4 is stale vs price; fundamentals' derived ~11x forward is used only as context.",
+  "Macro is the one independent down input I accept beyond governance: HY OAS widened to 3.76 (+0.24) while equities rallied (possibly a lagging FRED print), CPI 3.7 vs Fed funds 4.0, PCE inside the 2w window, FOMC/CPI inside this quarter. About 1 point on 2w down, 2 on this_quarter down. VIX 26.61 and S5TH 53.08 (repaired breadth) offset part of it.",
+  "2w disagreement: technical 38/30/32 and red team 36/32/32 vs fundamentals, narrative, relative_strength, sentiment 30-33 up / 36 down. The 36-down lanes rest on three items each counted four to six times (gap, governance group, fade bar). The 10-Q binary is real and dated, but narrative's own odds (~25% TB5 fire by 12-08) make a filed 10-Q the modal outcome. Ruling 35/32/33: the red team's count-once logic, plus one point of macro credit caution.",
+  "this_quarter disagreement: sentiment 30/38/32 vs red team 38/33/29 and narrative 37/32/31. Touch rates by 12-31: 181.56 51.2%, 148.55 35.7%. FOMC 12-09, CPI 12-10 (fcst 3.9 vs 3.7) and the 10-Q are two-sided. Ruling 37/33/30.",
+  "next_quarter: narrow spread (up 40-47). The late-Feb print, the investigation's conclusion and the TB3 licence deadline (~2027-02-17) all fall inside the window: range cut, down raised; base-rate up skew and intact demand kept. Sentiment's 40 up rests partly on 'paid out in one session' (n=0). Ruling 46/24/30.",
+  "Forward EPS-multiple levels (fundamentals' 149.4 / 179.3) are not used as anchors: E is what the accounting question puts in doubt (same ruling as 2026-11-22).",
+  "Outcome-bias guard: the 2026-11-22 forecasts (chair 36/28/36 at 125.53, up line 131.81) resolve at the close on or before 2026-12-06 (Fri 12-04). Several members already call them hits; they are unscored and do not enter the lessons log as hits until then.",
+  "Factual correction (red team, accepted): price has not 'priced back almost all' of the drawdown. 165.05 is about the exit-day close (166.19), 11.6% below the last pre-exit weekly close (186.64) and 32.2% below the ATH.",
+  "Data errors for the orchestrator (count-once, no weight): structure.volume_spike_ratio_mon 2.0 conflicts with 4.8 (and 4.4 in today_bar_status); ladder_audit.earnings_blackout.orders_touched_today_intraday lists C2 although the high was 171.50; tv_chart_owner oscillator, volume, weekly-candle and price_vs_sma200w fields are carried over from 2026-11-22; config/ladder.json reach blocks were computed from 125.53 and are stale.",
+  "Rule L: every price trigger below was run through `engines reach` at 165.05; all are reachable (5-95%). Dropped as unreachable: D2 101 by 2027-03-31 (4.8%), D3 90.5 by 2027-03-31 (0.9%), D1 115 by 2026-12-31 (2.5%) as triggers (kept only in the Ladder Audit). No level qualified for the Expected list on reach (>95%)."
+ ],
+ "coverage_note": "10/14 required pages ok (4 stale, 0 failed, 0 missing; 1 deferred). event_cutoff_utc 2026-11-23T21:00Z; every page was read after it, but four are partial: sec_filings (8-K body and EDGAR index not opened; 10-Q absence inferred from search; no NT 10-Q check; Form 144 seller and size unread), tv_chart_owner (1W only; several fields carried over from 2026-11-22 and pre-event; its 163.35 overnight is not a current price), sentiment_aaii (week ending 2026-11-11, pre-event) and sentiment_cnn_fg (2026-11-06). The stale sentiment pages are treated as unknown, not as current fear readings. options_positioning deferred: the direction behind the record >11M contracts is unknown. sec_filings is price-sensitive and carries the TB2 8-K text, the TB5 checkpoint and activation condition 5; tv_chart_owner is price-sensitive. This memo must not be delivered as current until sec_filings is re-read in full (8-K text, any 12b-25 / NT 10-Q, any SEC disclosure) and the owner-chart fields are re-read; the run is pre-market, so the 2026-11-24 session will also make every price page stale. Confidence 32 (30 last run): core price, macro, relative and fundamentals pages are current, but the page that decides the main dated binary is not.",
+ "evidence": [
+  {
+   "ref": "base_rates",
+   "point": "Outside view 33/45/22, 39/43/18, 50/31/19; all moves stated in rulings."
+  },
+  {
+   "ref": "news_governance",
+   "point": "Board unanimously reinstated Huang as President, CEO and director (8-K event 2026-11-22) with conditions: investigation proceeds to conclusion, new National Security and Export Control Committee, chief compliance officer; SEC inquiry, Q3 10-Q, Megaspeed probe and 12-01 to 12-03 sessions still open."
+  },
+  {
+   "ref": "snapshot.today_bar_status",
+   "point": "11-23: open 167.035, high 171.50, low 156.93, close 165.05 (+31.48%), 782.59M shares; opened a 125.53-156.93 gap below; 179.92-185.22 gap still open above."
+  },
+  {
+   "ref": "reachability.windows.2w",
+   "point": "+5% reached in 52.1% of 2w windows, -5% in 41.2%: the unconditional up skew the down-tilted lanes overrode with overlapping evidence."
+  },
+  {
+   "ref": "structure.atr_daily_pct",
+   "point": "ATR 13.22 (8.0%) includes the event days; one range adjustment only."
+  },
+  {
+   "ref": "sec_filings",
+   "point": "10-Q not found on EDGAR search (deadline about 2026-12-04; last three filed on results day); no filing disclosing an SEC inquiry; page partial."
+  },
+  {
+   "ref": "hyperscaler_capex",
+   "point": "0 of 4 falling; TB4 not fired, not on watch."
+  },
+  {
+   "ref": "tv_fundamentals",
+   "point": "Q3 FY27 revenue $115.84B (+103% YoY), DC $107.6B, Q4 guide $130B (zero China DC assumed), GM guide 71-72%, guarantees $118B vs cash $53.5B, $0 paid; next-FY growth forecast 75%."
+  },
+  {
+   "ref": "tv_purple_list",
+   "point": "VIX 26.61 (-25.8%), S5TH 53.08 (+7.16), HY OAS 3.76 (+0.24), CPI 3.7 vs Fed funds 4.0, real 10y 2.77: risk appetite repaired, policy still restrictive, credit did not join the rally."
+  },
+  {
+   "ref": "relative.nvda_vs_sox_ratio_now",
+   "point": "NVDA/SOX 17.2141 vs 14.9288 at the last completed week (+15.3% in one session); still below 18.289 thirteen weeks ago. NVDA beat SOX by about 17.4 points on 11-23: idiosyncratic."
+  },
+  {
+   "ref": "ladder_audit",
+   "point": "Approved ladder dormant before G; D1-D3 31.5-46.4% below price; C1 trigger printed before G; C2 15.9% above."
+  },
+  {
+   "ref": "coverage",
+   "point": "10/14 ok; sec_filings and tv_chart_owner partial (price-sensitive); sentiment pages pre-event; options deferred."
+  }
+ ],
+ "key_levels": [
+  {
+   "level": 186.0,
+   "why": "C2 trigger (weekly close, above 100W, after G); just above the 179.92-185.22 gap. Daily-close reach 41.3% by 12-31, 75.0% by 3-31.",
+   "ref": "ladder_audit.orders"
+  },
+  {
+   "level": 181.56,
+   "why": "Quarter up line, inside the upper gap. 51.2% by 12-31.",
+   "ref": "probabilities.defs"
+  },
+  {
+   "level": 179.92,
+   "why": "Bottom of the upper gap (Nov 9 high). 30.3% by 12-08, 55.0% by 12-31.",
+   "ref": "structure.gap_zones_open"
+  },
+  {
+   "level": 175.25,
+   "why": "100W SMA: main structural line overhead. 44.8% by 12-08.",
+   "ref": "pages.tv_technicals_1w.sma100"
+  },
+  {
+   "level": 173.3,
+   "why": "2w up line. 52.1% by 12-08.",
+   "ref": "probabilities.defs"
+  },
+  {
+   "level": 171.5,
+   "why": "11-23 high; first side of Monday's range to break on a close decides extension vs fade. 60.1% by 12-08.",
+   "ref": "snapshot.today_high"
+  },
+  {
+   "level": 161.97,
+   "why": "Fib 0.65 / old L1 pivot; weekly closes above it mean the reclaim holds.",
+   "ref": "fib_check.computed.level_0.65"
+  },
+  {
+   "level": 156.93,
+   "why": "11-23 low and top of the reinstatement gap; 156.80 2w down line just below. 19.0% by 11-27, 41.2% (156.80) by 12-08.",
+   "ref": "structure.gap_zones_open"
+  },
+  {
+   "level": 148.55,
+   "why": "Quarter down line, under the 11-12 low 148.80 and inside C1 (145.71-150). 17.5% by 12-08, 35.7% by 12-31.",
+   "ref": "probabilities.defs"
+  },
+  {
+   "level": 145.71,
+   "why": "C1 trigger; needs a fresh close at or below it then above it after G. 13.5% by 12-08, 30.3% by 12-31.",
+   "ref": "ladder_audit.orders"
+  },
+  {
+   "level": 125.53,
+   "why": "Bottom of the reinstatement gap; with 200W SMA 124.86, low 124.50 and fib 0.5 127.09 the deepest reachable confluence. 5.8% by 12-31, 24.2% by 3-31.",
+   "ref": "structure.gap_zone"
+  }
+ ],
+ "triggers": [
+  {
+   "text": "Reversal day extended: a daily close above 171.50 (Monday's high) by 2026-12-08 before any daily close below 156.93. Moves 2w toward 40/30/30 (sentiment, red team check 1).",
+   "level": 171.5,
+   "by": "2026-12-08",
+   "reach": {
+    "level": 171.5,
+    "by": "2026-12-08",
+    "trading_days": 10,
+    "move_needed_pct": 3.9,
+    "freq_pct": 60.1,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close above 175.25 (100W SMA) by 2026-12-08: first weekly-trend repair; 2w toward technical's 52/26/22, this_quarter up toward 45.",
+   "level": 175.25,
+   "by": "2026-12-08",
+   "reach": {
+    "level": 175.25,
+    "by": "2026-12-08",
+    "trading_days": 10,
+    "move_needed_pct": 6.2,
+    "freq_pct": 44.8,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Reinstatement gap failing: two consecutive daily closes below 156.80 with no reclaim of 156.93 within 1-3 closes, by 2026-12-08. 2w down toward 45-50, this_quarter down toward 38 (technical, relative_strength, sentiment).",
+   "level": 156.8,
+   "by": "2026-12-08",
+   "reach": {
+    "level": 156.8,
+    "by": "2026-12-08",
+    "trading_days": 10,
+    "move_needed_pct": -5.0,
+    "freq_pct": 41.2,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Forming weekly engulfing erased: a 2026-11-27 weekly close at or below 156.93 (the 11-27 close itself is Expected; this is its outcome). -5 from up on both quarters (technical).",
+   "level": 156.93,
+   "by": "2026-11-27",
+   "reach": {
+    "level": 156.93,
+    "by": "2026-11-27",
+    "trading_days": 3,
+    "move_needed_pct": -4.9,
+    "freq_pct": 19.0,
+    "n": 1263,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "More than a give-back: a daily close below 148.55 by 2026-12-08 (stock-specific overhang back); down in all horizons about +10 (relative_strength).",
+   "level": 148.55,
+   "by": "2026-12-08",
+   "reach": {
+    "level": 148.55,
+    "by": "2026-12-08",
+    "trading_days": 10,
+    "move_needed_pct": -10.0,
+    "freq_pct": 17.5,
+    "n": 1256,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close above 179.92 (bottom of the 179.92-185.22 gap, Nov 9 high) by 2026-12-31 that holds above 175.25: the market paying for growth, not just removing the governance discount; this_quarter up about +8 (fundamentals, sentiment).",
+   "level": 179.92,
+   "by": "2026-12-31",
+   "reach": {
+    "level": 179.92,
+    "by": "2026-12-31",
+    "trading_days": 27,
+    "move_needed_pct": 9.0,
+    "freq_pct": 55.0,
+    "n": 1239,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close below 148.55 (under the 11-12 low 148.80) by 2026-12-31: reinstatement premium gone; this_quarter down above 50 (technical) and the 125.53 gap bottom / 200W SMA becomes the live target.",
+   "level": 148.55,
+   "by": "2026-12-31",
+   "reach": {
+    "level": 148.55,
+    "by": "2026-12-31",
+    "trading_days": 27,
+    "move_needed_pct": -10.0,
+    "freq_pct": 35.7,
+    "n": 1239,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close at or below 145.71 by 2026-12-31: reinstatement rally fully failed (sentiment, this_quarter down above 50); also the first half of C1's fresh qualifying close under the re-anchor rule (only counts after G).",
+   "level": 145.71,
+   "by": "2026-12-31",
+   "reach": {
+    "level": 145.71,
+    "by": "2026-12-31",
+    "trading_days": 27,
+    "move_needed_pct": -11.7,
+    "freq_pct": 30.3,
+    "n": 1239,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Daily close above 186 by 2026-12-31 (upper gap filled): next_quarter up toward 55 (technical). C2 itself needs a WEEKLY close above 186 and above that week's 100W SMA after G; the engine measures daily closes, so the weekly version is harder than shown.",
+   "level": 186.0,
+   "by": "2026-12-31",
+   "reach": {
+    "level": 186.0,
+    "by": "2026-12-31",
+    "trading_days": 27,
+    "move_needed_pct": 12.7,
+    "freq_pct": 41.3,
+    "n": 1239,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "Full fill of the reinstatement gap: a daily close at or below 125.53 by 2027-03-31 (200W SMA 124.86, low 124.50); next_quarter down above 40 and the proposed D0 rung (if the owner adopts it) comes into play.",
+   "level": 125.53,
+   "by": "2027-03-31",
+   "reach": {
+    "level": 125.53,
+    "by": "2027-03-31",
+    "trading_days": 91,
+    "move_needed_pct": -23.9,
+    "freq_pct": 24.2,
+    "n": 1175,
+    "verdict": "reachable"
+   }
+  },
+  {
+   "text": "10-Q bullish: the Q3 FY27 10-Q is filed by its deadline (about 2026-12-04, or within a 12b-25 extension) with no restatement, non-reliance or material-weakness language, guarantee footnote consistent with $118B and $0 paid, and the SEC matter described as informal or narrow (or not disclosed with clean statements). 2w up about +5 / down about -5; next_quarter up toward 50 (fundamentals, narrative); accounting gate (activation condition 5) can then be tested.",
+   "by": "2026-12-04",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "10-Q bearish: the 10-Q misses the extended deadline, or is filed with material weakness, restatement or non-reliance language, or Nvidia discloses a formal SEC investigation, subpoena or Wells notice, or the auditor resigns. 2w down to about 42 (red team) or higher; this_quarter toward 28/27/45 (narrative); proposed TB5 would fire if adopted.",
+   "by": "2026-12-08",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "Congressional sessions (requested 2026-12-01 House interview, 2026-12-02 general counsel, 2026-12-03 Senate Banking; status after reinstatement not confirmed): a credible report that Nvidia knew of the diversion raises TB1 risk and moves this_quarter toward 28/27/45 (narrative); no new Nvidia-level disclosure removes most of the governance down tilt.",
+   "by": "2026-12-04",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "TB2 re-fire: the board investigation concludes with findings of legal or regulatory wrongdoing or of misleading the board and Huang steps down or is removed again, or an official action naming him personally is followed by his departure (narrative's re-fire test).",
+   "by": "2027-03-31",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "TB3 materiality: BIS licence grants for the large Singapore/Malaysia operators or a company quantification showing small at-risk revenue (supports an owner ruling of immaterial); denials or a company estimate of lost revenue keep TB3 fired. Political goodwill alone does not un-fire it.",
+   "by": "2027-02-17",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "NVDA/SOX ratio on the weekly closes of 2026-11-27 and 2026-12-04: both at or above 17.21 = relative turn confirmed, 2w toward 40/30/30 and next_quarter up toward 52 (relative_strength); back below 15.5 with SOX flat = stock-specific discount back (red team). Ratio, not NVDA price: no reach test.",
+   "by": "2026-12-04",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "Macro: FOMC 2026-12-09 hikes or signals several hikes with CPI 2026-12-10 at or above 3.9 = bearish for the quarter buckets; a hold without hiking bias with CPI at or below 3.7 and real 10y below 2.7 = bullish (macro). HY OAS above 4.0 with NFCI above -0.30 before 2026-12-31 = credit event, this_quarter down higher.",
+   "by": "2026-12-31",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "Q4 FY27 (late Feb 2027) revenue below $126.1B (guide floor) or gross margin below 71%: next_quarter up -10 (fundamentals); activation condition 10 pauses every tranche.",
+   "by": "2027-03-31",
+   "reach": {
+    "verdict": "event"
+   }
+  },
+  {
+   "text": "Options page read (owner decision, paid data): if the 2026-11-23 volume was mainly call buying with dealers short gamma near 160-170, add about 4 to 2w down (red team); if put closing, no change.",
+   "by": "2026-12-08",
+   "reach": {
+    "verdict": "event"
+   }
+  }
+ ],
+ "what_would_change_my_mind": [
+  "Reversal day extended: a daily close above 171.50 (Monday's high) by 2026-12-08 before any daily close below 156.93. Moves 2w toward 40/30/30 (sentiment, red team check 1).",
+  "Daily close above 175.25 (100W SMA) by 2026-12-08: first weekly-trend repair; 2w toward technical's 52/26/22, this_quarter up toward 45.",
+  "Reinstatement gap failing: two consecutive daily closes below 156.80 with no reclaim of 156.93 within 1-3 closes, by 2026-12-08. 2w down toward 45-50, this_quarter down toward 38 (technical, relative_strength, sentiment).",
+  "Forming weekly engulfing erased: a 2026-11-27 weekly close at or below 156.93 (the 11-27 close itself is Expected; this is its outcome). -5 from up on both quarters (technical).",
+  "More than a give-back: a daily close below 148.55 by 2026-12-08 (stock-specific overhang back); down in all horizons about +10 (relative_strength).",
+  "Daily close above 179.92 (bottom of the 179.92-185.22 gap, Nov 9 high) by 2026-12-31 that holds above 175.25: the market paying for growth, not just removing the governance discount; this_quarter up about +8 (fundamentals, sentiment).",
+  "Daily close below 148.55 (under the 11-12 low 148.80) by 2026-12-31: reinstatement premium gone; this_quarter down above 50 (technical) and the 125.53 gap bottom / 200W SMA becomes the live target.",
+  "Daily close at or below 145.71 by 2026-12-31: reinstatement rally fully failed (sentiment, this_quarter down above 50); also the first half of C1's fresh qualifying close under the re-anchor rule (only counts after G).",
+  "Daily close above 186 by 2026-12-31 (upper gap filled): next_quarter up toward 55 (technical). C2 itself needs a WEEKLY close above 186 and above that week's 100W SMA after G; the engine measures daily closes, so the weekly version is harder than shown.",
+  "Full fill of the reinstatement gap: a daily close at or below 125.53 by 2027-03-31 (200W SMA 124.86, low 124.50); next_quarter down above 40 and the proposed D0 rung (if the owner adopts it) comes into play.",
+  "10-Q bullish: the Q3 FY27 10-Q is filed by its deadline (about 2026-12-04, or within a 12b-25 extension) with no restatement, non-reliance or material-weakness language, guarantee footnote consistent with $118B and $0 paid, and the SEC matter described as informal or narrow (or not disclosed with clean statements). 2w up about +5 / down about -5; next_quarter up toward 50 (fundamentals, narrative); accounting gate (activation condition 5) can then be tested.",
+  "10-Q bearish: the 10-Q misses the extended deadline, or is filed with material weakness, restatement or non-reliance language, or Nvidia discloses a formal SEC investigation, subpoena or Wells notice, or the auditor resigns. 2w down to about 42 (red team) or higher; this_quarter toward 28/27/45 (narrative); proposed TB5 would fire if adopted.",
+  "Congressional sessions (requested 2026-12-01 House interview, 2026-12-02 general counsel, 2026-12-03 Senate Banking; status after reinstatement not confirmed): a credible report that Nvidia knew of the diversion raises TB1 risk and moves this_quarter toward 28/27/45 (narrative); no new Nvidia-level disclosure removes most of the governance down tilt.",
+  "TB2 re-fire: the board investigation concludes with findings of legal or regulatory wrongdoing or of misleading the board and Huang steps down or is removed again, or an official action naming him personally is followed by his departure (narrative's re-fire test).",
+  "TB3 materiality: BIS licence grants for the large Singapore/Malaysia operators or a company quantification showing small at-risk revenue (supports an owner ruling of immaterial); denials or a company estimate of lost revenue keep TB3 fired. Political goodwill alone does not un-fire it.",
+  "NVDA/SOX ratio on the weekly closes of 2026-11-27 and 2026-12-04: both at or above 17.21 = relative turn confirmed, 2w toward 40/30/30 and next_quarter up toward 52 (relative_strength); back below 15.5 with SOX flat = stock-specific discount back (red team). Ratio, not NVDA price: no reach test.",
+  "Macro: FOMC 2026-12-09 hikes or signals several hikes with CPI 2026-12-10 at or above 3.9 = bearish for the quarter buckets; a hold without hiking bias with CPI at or below 3.7 and real 10y below 2.7 = bullish (macro). HY OAS above 4.0 with NFCI above -0.30 before 2026-12-31 = credit event, this_quarter down higher.",
+  "Q4 FY27 (late Feb 2027) revenue below $126.1B (guide floor) or gross margin below 71%: next_quarter up -10 (fundamentals); activation condition 10 pauses every tranche.",
+  "Options page read (owner decision, paid data): if the 2026-11-23 volume was mainly call buying with dealers short gamma near 160-170, add about 4 to 2w down (red team); if put closing, no change."
+ ],
+ "expected": [
+  {
+   "text": "Thanksgiving week: market closed 2026-11-26, half-day 2026-11-27; weekly closes 2026-11-27 and 2026-12-04; 2w scoring close 2026-12-08.",
+   "effect": "None by themselves; range already set to 32 for the event-inflated ATR. Only outcomes (see triggers) move the numbers."
+  },
+  {
+   "text": "Q3 10-Q deadline about 2026-12-04 (40 days after 2026-10-25).",
+   "effect": "The date is certain; its outcome is the main 2w binary and is already inside the governance group (counted once, about 5 points up to down). Outcome triggers above."
+  },
+  {
+   "text": "Requested congressional sessions 2026-12-01 to 12-03 (status after reinstatement not confirmed).",
+   "effect": "May not happen; only a credible account of their content is a trigger."
+  },
+  {
+   "text": "NVDA ex-dividend 2026-12-02.",
+   "effect": "Immaterial."
+  },
+  {
+   "text": "Macro calendar: GDP/core PCE 2026-11-25, ISM 2026-12-01, ISM services 2026-12-03, NFP 2026-12-04, FOMC 2026-12-09, CPI 2026-12-10 (fcst 3.9 vs 3.7), PPI 2026-12-15.",
+   "effect": "In this_quarter as part of the down +12 (one macro adjustment); only surprise outcomes move it. FOMC/CPI fall after the 2w scoring close."
+  },
+  {
+   "text": "Remote-access rule licence deadline about 2027-02-17; Q4 FY27 results late Feb 2027 (date not confirmed) with a 3-trading-day blackout.",
+   "effect": "Both inside next_quarter: part of its range cut (-7). Outcomes (licences, guide, GM, accounting language) are triggers."
+  }
+ ],
+ "catalysts": [
+  {
+   "date": "2026-11-24",
+   "name": "First session after reinstatement day"
+  },
+  {
+   "date": "2026-11-25",
+   "name": "GDP Q3 2nd est, core PCE, personal income/spending, durables"
+  },
+  {
+   "date": "2026-11-26",
+   "name": "Thanksgiving (US market closed)"
+  },
+  {
+   "date": "2026-11-27",
+   "name": "Half-day session; weekly close"
+  },
+  {
+   "date": "2026-12-01",
+   "name": "Huang transcribed interview, House committees (requested before reinstatement; status not confirmed); ISM manufacturing"
+  },
+  {
+   "date": "2026-12-02",
+   "name": "General counsel interview (requested); NVDA ex-dividend"
+  },
+  {
+   "date": "2026-12-03",
+   "name": "Senate Banking hearing requested for Huang (status not confirmed); ISM services"
+  },
+  {
+   "date": "2026-12-04",
+   "name": "NFP; approx. Q3 10-Q deadline; weekly close"
+  },
+  {
+   "date": "2026-12-08",
+   "name": "2w bucket scoring close"
+  },
+  {
+   "date": "2026-12-09",
+   "name": "FOMC decision"
+  },
+  {
+   "date": "2026-12-10",
+   "name": "CPI (fcst 3.9, prev 3.7)"
+  },
+  {
+   "date": "2026-12-15",
+   "name": "PPI"
+  },
+  {
+   "date": "2027-02-17",
+   "name": "Approx. 90-day licence-application deadline under the remote-access rule"
+  },
+  {
+   "date": "2027-02 (late, not confirmed)",
+   "name": "NVDA Q4 FY27 results"
+  }
+ ],
+ "last_run_checkpoints_rescored": [
+  {
+   "n": 1,
+   "window": "2026-11-23 to 2026-11-25",
+   "status": "confirmed",
+   "note": "No daily close below 124.14 occurred; the 2026-11-23 close was 165.05. Invalidation (two consecutive closes below 122 by 11-25) would need about a -26% fall over the next two sessions (one-day -15% moves are 0.08% of days). Settles formally at the 11-25 close."
+  },
+  {
+   "n": 2,
+   "window": "2026-11-23 to 2026-12-04",
+   "status": "pending",
+   "note": "10-Q still not on EDGAR (search only; sec_filings stale/partial). Management has tied the delay to the internal investigation, which leans toward the 'delayed 10-Q' invalidation leg, but the deadline (about 2026-12-04) has not passed. No company confirmation of a formal SEC investigation; the 12-01 to 12-03 sessions have not happened. Cannot be scored until the 10-Q is located and read."
+  },
+  {
+   "n": 3,
+   "window": "2026-11-27 to 2026-12-04",
+   "status": "pending",
+   "note": "On track: NVDA/SOX 17.2141 at the 11-23 close (above 14.93) and price 165.05 (above 119.25). The weekly readings are on 11-27 and 12-04."
+  },
+  {
+   "n": 4,
+   "window": "2026-12-07 to 2026-12-15",
+   "status": "pending",
+   "note": "Not started; 124.14 / 112.98 lines are 24-32% below price."
+  },
+  {
+   "n": 5,
+   "window": "2026-12-16 to 2026-12-31",
+   "status": "stale",
+   "note": "Its confirm line (12-31 close above 138.08) belongs to the 125.53 frame; it still scores the 11-22 forecast but no longer describes the most likely path. The 11-22 hypothesis (washout-and-reclaim at the 200W SMA) effectively played out in one session on a governance catalyst it did not name. Path redrawn on the 148.55 / 181.56 frame."
+  }
+ ],
+ "expected_path": {
+  "hypothesis": "Reinstatement holds and the filings come in clean: no weekly close at or below 156.93, the Q3 10-Q is filed by its (extended) deadline without restatement/material-weakness language and the 12-01 to 12-03 sessions add no Nvidia-knew account, NVDA/SOX holds its repair, FOMC/CPI pass without a close below 148.55, and price works into the 179.92-185.22 gap for a 2026-12-31 close above 181.56 (this_quarter up). Most likely of three close branches (37 vs 33 range, 30 down). Redrawn: last run's checkpoint 5 is stale on the old 125.53 frame.",
+  "probability": 37,
+  "checkpoints": [
+   {
+    "n": 1,
+    "window": "2026-11-24 to 2026-11-27",
+    "confirm": "No daily close below 156.93 and the 2026-11-27 weekly close above 161.97 (forming engulfing completes)",
+    "invalidate": "2026-11-27 weekly close at or below 156.93, or two consecutive daily closes below 156.80",
+    "status": "pending"
+   },
+   {
+    "n": 2,
+    "window": "2026-11-24 to 2026-12-04",
+    "confirm": "Q3 10-Q filed (on time or within a 12b-25 extension) with no restatement, non-reliance or material-weakness language; no Nvidia-knew account from the 12-01 to 12-03 sessions",
+    "invalidate": "Extended deadline missed, material weakness/restatement disclosed, formal SEC investigation/subpoena/Wells notice confirmed, or a credible Nvidia-knew report",
+    "status": "pending"
+   },
+   {
+    "n": 3,
+    "window": "2026-11-27 to 2026-12-08",
+    "confirm": "NVDA/SOX weekly closes 11-27 and 12-04 not below 15.5; 2026-12-08 close at or above 156.80",
+    "invalidate": "NVDA/SOX back below 15.5 with SOX flat, or 2026-12-08 close below 156.80",
+    "status": "pending"
+   },
+   {
+    "n": 4,
+    "window": "2026-12-09 to 2026-12-15",
+    "confirm": "FOMC 2026-12-09, CPI 2026-12-10 and PPI 2026-12-15 pass with every daily close above 148.55",
+    "invalidate": "Daily close below 148.55, or a hike with CPI at or above 3.9",
+    "status": "pending"
+   },
+   {
+    "n": 5,
+    "window": "2026-12-16 to 2026-12-31",
+    "confirm": "Daily close above 175.25 (100W SMA), then a 2026-12-31 close above 181.56",
+    "invalidate": "2026-12-31 close at or below 181.56",
+    "status": "pending"
+   }
+  ],
+  "branches": {
+   "range": "Relief stalls under 175.25 / the upper gap while the 10-Q and sessions pass without a clear verdict; 2026-12-31 close between 148.55 and 181.56 (33).",
+   "down": "The 10-Q slips past the extended deadline or discloses a reporting problem, or a Nvidia-knew account emerges: 156.93 then 148.55 give way and the reinstatement gap starts to fill toward 145.71 (30.3% by 12-31) and 125.53 (5.8% by 12-31); 2026-12-31 close below 148.55 (30)."
+  }
+ },
+ "ladder_audit": {
+  "status": "APPROVED by owner 2026-11-22 18:19; DORMANT before G (gate_opening_date_G null). Budget $10,000 new money; holdings 30 sh @ 171.00 ($5,130), -3.5% at 165.05. filled_orders empty. Nothing here is applied; no order is to be placed or executed.",
+  "history": [
+   {
+    "order": "pre-ladder",
+    "status": "filled (owner's own order, not a ladder fill)",
+    "date": "not stated (owner reported 2026-11-22)",
+    "shares": 30,
+    "price": 171.0,
+    "usd": 5130.0,
+    "vs_price_pct": -3.5
+   },
+   {
+    "order": "L1",
+    "planned_zone": [
+     162.0,
+     164.0
+    ],
+    "planned_weight": 1.0,
+    "status": "cancelled by owner 2026-11-22; never filled. Price closed back inside this zone on 2026-11-23 (165.05 is just above it): not a fill, row kept."
+   },
+   {
+    "order": "L2",
+    "planned_zone": [
+     154.0,
+     157.0
+    ],
+    "planned_weight": 1.5,
+    "status": "cancelled by owner 2026-11-22; never filled; passed during the TB2 pause."
+   },
+   {
+    "order": "L3",
+    "planned_zone": [
+     141.0,
+     145.0
+    ],
+    "planned_weight": 2.0,
+    "status": "cancelled 2026-11-22, converted to C1; never filled."
+   },
+   {
+    "order": "L4",
+    "planned_zone": [
+     124.0,
+     128.0
+    ],
+    "planned_weight": 3.0,
+    "status": "cancelled 2026-11-22, converted to N1; in zone at the 11-22 call while paused; never filled."
+   },
+   {
+    "order": "N1",
+    "planned_zone": [
+     122.0,
+     127.0
+    ],
+    "planned_weight": 1.5,
+    "status": "dropped 2026-11-22 (proposed, never approved); weight moved to C2."
+   },
+   {
+    "order": "D1",
+    "planned_zone": [
+     111.0,
+     115.0
+    ],
+    "planned_weight": 1.0,
+    "status": "approved, dormant (before G)",
+    "dist_from_price_pct": -31.5,
+    "reach": [
+     {
+      "level": 115.0,
+      "by": "2026-12-31",
+      "trading_days": 27,
+      "move_needed_pct": -30.3,
+      "freq_pct": 2.5,
+      "n": 1239,
+      "verdict": "unreachable"
+     },
+     {
+      "level": 115.0,
+      "by": "2027-03-31",
+      "trading_days": 91,
+      "move_needed_pct": -30.3,
+      "freq_pct": 16.6,
+      "n": 1175,
+      "verdict": "reachable"
+     }
+    ],
+    "audit": "Unreachable by 2026-12-31; reachable but remote by 2027-03-31. Re-anchors at G (200W(G) minus ATR(G)), so it stays roughly where it is. Weak (ATR-derived) anchor, unchanged."
+   },
+   {
+    "order": "D2",
+    "planned_zone": [
+     97.0,
+     101.0
+    ],
+    "planned_weight": 2.0,
+    "status": "approved, dormant (before G)",
+    "dist_from_price_pct": -40.0,
+    "reach": [
+     {
+      "level": 101.0,
+      "by": "2027-03-31",
+      "trading_days": 91,
+      "move_needed_pct": -38.8,
+      "freq_pct": 4.8,
+      "n": 1175,
+      "verdict": "unreachable"
+     }
+    ],
+    "audit": "Unreachable even by 2027-03-31. Anchors strong (swing 97.40, fib 0.382 99.65 tie-break) but out of range for this plan's horizon."
+   },
+   {
+    "order": "D3",
+    "planned_zone": [
+     86.5,
+     90.5
+    ],
+    "planned_weight": 2.0,
+    "status": "approved, dormant (before G)",
+    "dist_from_price_pct": -46.4,
+    "flags": [
+     "anchor drift >2%"
+    ],
+    "reach": [
+     {
+      "level": 90.5,
+      "by": "2027-03-31",
+      "trading_days": 91,
+      "move_needed_pct": -45.2,
+      "freq_pct": 0.9,
+      "n": 1175,
+      "verdict": "unreachable"
+     }
+    ],
+    "audit": "Unreachable by 2027-03-31. 2.0 of 7.5 weight parked at a level the plan horizon almost never reaches."
+   },
+   {
+    "order": "C1",
+    "planned_zone": [
+     145.71,
+     150.0
+    ],
+    "planned_weight": 1.0,
+    "status": "approved, dormant (before G); trigger printed 2026-11-23 BEFORE G -> does not count",
+    "dist_from_price_pct": -10.4,
+    "reach": [
+     {
+      "level": 145.71,
+      "by": "2026-12-31",
+      "trading_days": 27,
+      "move_needed_pct": -11.7,
+      "freq_pct": 30.3,
+      "n": 1239,
+      "verdict": "reachable"
+     },
+     {
+      "level": 150.0,
+      "by": "2026-12-31",
+      "trading_days": 27,
+      "move_needed_pct": -9.1,
+      "freq_pct": 39.1,
+      "n": 1239,
+      "verdict": "reachable"
+     }
+    ],
+    "audit": "Ruled under reanchor_rule (5), which already covers this case: price is above the trigger, so C1 needs a fresh qualifying close made after G (a daily close at or below 145.71, then a daily close above it). The 2026-11-23 close is not that close and is not a fill. In practice C1 is now a retest-of-the-reclaimed-gap tranche, not a breakout buy. Sentiment describes this correctly; technical's request for clarification is answered by the rule as written."
+   },
+   {
+    "order": "C2",
+    "planned_zone": [
+     186.0,
+     196.71
+    ],
+    "planned_weight": 1.5,
+    "status": "approved, dormant (before G)",
+    "dist_from_price_pct": 15.9,
+    "reach": [
+     {
+      "level": 186.0,
+      "by": "2026-12-31",
+      "trading_days": 27,
+      "move_needed_pct": 12.7,
+      "freq_pct": 41.3,
+      "n": 1239,
+      "verdict": "reachable"
+     },
+     {
+      "level": 186.0,
+      "by": "2027-03-31",
+      "trading_days": 91,
+      "move_needed_pct": 12.7,
+      "freq_pct": 75.0,
+      "n": 1175,
+      "verdict": "reachable"
+     }
+    ],
+    "audit": "Now the most reachable row (daily-close basis; the weekly-close-above-100W condition is harder). The 'unreachable by 2026-12-31 (2.7%)' note in config/ladder.json was computed from 125.53 and is stale; sentiment quoted it. Data error: ladder_audit.earnings_blackout.orders_touched_today_intraday lists C2, but the 11-23 high was 171.50, below 186."
+   }
+  ],
+  "fit": "The ladder was drawn at 125.53. At 165.05 the three dip rows (5.0 of 7.5 weight) sit 31.5-46.4% below price: D1 unreachable by 2026-12-31 and only 16.6% by 2027-03-31; D2 and D3 unreachable even by 2027-03-31. The only rows reachable inside the plan horizon are C1 (as a retest after G) and C2 (a breakout above 186). If the gate opened soon, the plan would in practice be 'buy a retest of 145.71-150 or buy strength at 186', which is not what a dip ladder approved at 125.53 intended (red team). The owner should decide that knowingly. Not a reason to raise zones to meet price: the re-anchor rule forbids it, and after a +31% day the urgency trap has flipped to 'buy before it runs away' (sentiment)."
+ },
+ "ladder_proposals": [
+  "PROPOSAL ONLY: never applied by the committee; owner approval required; no order is to be placed or executed.",
+  "P1 (keep): leave D1, C1, C2, the activation conditions and the re-anchor rule as approved. C1 needs no rule change: reanchor_rule (5) already says a trigger that printed before G needs a fresh qualifying close after G (close at or below 145.71, then a close above it). The 2026-11-23 close is recorded as 'trigger printed before G', not a fill.",
+  "P2 (owner choice): D3 (86.5-90.5, w 2.0) is unreachable by 2027-03-31 (0.9%) and D2 (97-101, w 2.0) nearly so (4.8%). Option A: keep both as long-dated tail levels and accept that 4.0 of 7.5 weight is idle for this horizon. Option B (chair's suggestion): move 1.0 of D3's weight to a new dip row D0 at 125-129 (mid 127), anchored on the reinstatement-gap bottom 125.53, the 200W SMA 124.86 and the new swing low 124.50, with fib 0.5 127.09 as tie-break; reach 128: 7.3% by 2026-12-31, 25.6% by 2027-03-31. D0 mid 127 vs D1 mid 113 is about 1.06 ATR at 13.22, so it passes the spacing test only narrowly; re-check at G. The objection that dropped N1 on 2026-11-22 (1.1% below price, close to a market order) no longer applies at 24% below. Same activation conditions, pre-FOMC/CPI pacing cap and 1-ATR-below-close test as the other dip rows. Total weight stays 7.5.",
+  "P3 (data): ask the orchestrator to recompute the reach blocks in the ladder record at each run's price (config/ladder.json still carries 125.53-based figures, e.g. C2 '2.7% by 2026-12-31', now 41.3%), and to fix ladder_audit.earnings_blackout.orders_touched_today_intraday (lists C2; high was 171.50). The committee does not edit config.",
+  "P4 (gate sequencing): the owner's TB2 confirmation, TB3 materiality ruling and TB5 adoption decision are the remaining blockers besides the accounting gate; deciding TB3 and TB5 before 2026-12-04 lets G follow documents (the 10-Q) rather than Monday's price (narrative).",
+  "P5 (holdings): the 30 sh @ 171.00 stay a pre-ladder fill. No ladder row is set by distance from 171; holdings_treatment excludes averaging down to fix cost."
+ ],
+ "signals_review": {
+  "genuinely_predictive": [
+   "The dated political sequence before 2026-11-22: Trump's 'fight for your job' call (11-10, reported 11-12), Altimeter/Atreides (~$2.13B) asking the board to keep a return open (11-14), Trump 'would not mind' (11-16), Huang 'honored' to return (11-17), Trump wanting him to 'apologize and go back' (11-20). They bore on the catalyst itself and warranted a non-zero reversal probability; the committee gave it zero. They justified a reversal tail, not the 11-23 timing (the board chair's 11-17 'does not intend' was a real counter-signal, and the Sunday post likely came after the 11-22 news read)."
+  ],
+  "conditions_not_predictors": [
+   "Weekly RSI 25.01 (completed bar), daily RSI 15, ~8.4x forward, VIX 35.9 with HY OAS 3.52, NVDA/SOX -46.5% over 52 weeks, the 200W SMA / fib 0.5 confluence and the n=4 conditional table. Each was true on 11-20 and would have stayed true had the board held; some (BBPCT daily triangles, the 11-12 high-volume reversal) had already failed a week earlier. They set the SIZE of the move once a catalyst came, not its occurrence."
+  ],
+  "hindsight_relabels": [
+   "11-20 volume (633M) now called 'climactic'; on 11-22 it was accelerating with a close 0.8% off the low and no reversal bar.",
+   "4H Cipher B divergence: from a partial page whose oscillator values were later shown to be carried over.",
+   "'Four-way confluence at 124' was selected after it held; had it broken, the same lines would be 'support lost'."
+  ],
+  "not_predictable": "Size and date: one-day moves of +15% or more are 0.32% of NVDA days (reachability.one_day).",
+  "lesson_candidates_propose_only": [
+   "Every reversible thesis-break or governance state gets an explicit reversal probability in every run, with its dated signals listed (narrative (d), red team). This is the one lesson that would have changed the 11-22 forecast for the right reason.",
+   "Weigh political signals by the sender's leverage over the decision-maker: a President or Commerce/Treasury head on a company dependent on his licences is signal for governance and licence outcomes; petitions and senators' statements stay near noise. Official documents remain the only bar for firing or un-firing a thesis break.",
+   "A statement of intent ('does not intend to reinstate') is not a decision; never label a governance state 'permanent' without a structural lock (signed successor, charge, court order).",
+   "Trap clock: do not call a level break CONFIRMED before the 1-3 close clock has run (technical's 148.80 call).",
+   "Chair procedure: tabulate which evidence items each lane used and net shared items once before ruling (governance group was multi-counted two runs running).",
+   "Orchestrator: mark carried-over fields on partial pages field by field, and recompute ladder reach blocks every run.",
+   "Rejected as n=1 overcorrections: 'keep up >= down whenever forward P/E is at a multi-year low' and 'weight the up tail at least equal to the down tail' as standing rules.",
+   "No 11-22 forecast enters the log as a hit or miss before its resolution close (on or before 2026-12-06)."
+  ]
+ },
+ "notes_for_chair": []
+}

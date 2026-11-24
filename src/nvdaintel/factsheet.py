@@ -137,6 +137,12 @@ def build():
     rel["beta_vs_spx_59w"] = round(float(np.cov(rn, rp)[0, 1] / np.var(rp, ddof=1)), 2)
     rel["beta_vs_sox_59w"] = round(float(np.cov(rn, rs_)[0, 1] / np.var(rs_, ddof=1)), 2)
     rel["corr_vs_sox_59w"] = round(float(np.corrcoef(rn, rs_)[0, 1]), 2)
+    # mid-week runs: the weekly files hold completed weeks only, so also give the ratio at the last close
+    sox_live = pg["tv_purple_list"]["values"].get("sox")
+    if sox_live:
+        rel["nvda_vs_sox_ratio_last_completed_week"] = rel["nvda_vs_sox_ratio_now"]
+        rel["nvda_vs_sox_ratio_now"] = round(price / sox_live * 1000, 4)
+        rel["nvda_vs_sox_ratio_basis"] = "now = last close (snapshot price / purple-list SOX); 13w/52w changes use completed weekly closes"
     rel["this_week_nvda_minus_sox_pts"] = round(pg["tv_relative"]["values"]["nvda_perf_w"] - pg["tv_relative"]["values"]["sox_perf_w"], 1)
 
     # ladder audit
@@ -184,7 +190,7 @@ def build():
             row["avg_cost_incl_holdings"] = round((hold["shares"] * hold["avg_cost"] + new_usd) / (hold["shares"] + new_sh), 2)
         cum.append(row)
     ladder_audit = {"status": ladder["_status"], "budget_usd": ladder["budget_usd"], "orders": orders, "cumulative": cum,
-                    "earnings_blackout": {"earnings": pg["tv_fundamentals"]["values"]["next_earnings"], "blackout_trading_days": ladder["earnings_blackout_trading_days"], "blackout_window": rd["snapshot"].get("blackout_window", "2026-11-12 to 2026-11-17"), "orders_touched_today_intraday": [o["id"] for o in ladder["orders"] if rd["snapshot"]["today_low"] <= o["zone_high"]]},
+                    "earnings_blackout": {"earnings": pg["tv_fundamentals"]["values"]["next_earnings"], "blackout_trading_days": ladder["earnings_blackout_trading_days"], "blackout_window": rd["snapshot"].get("blackout_window", "2026-11-12 to 2026-11-17"), "orders_touched_today_intraday": [o["id"] for o in ladder["orders"] if o.get("type", "dip") == "dip" and rd["snapshot"]["today_low"] <= o["zone_high"]]},
                     "breakout_tranche": ladder["breakout_tranche"],
                     "confirmation_tranches": [o["id"] for o in orders if o["type"] == "confirmation"],
                     "holdings": hold or None,

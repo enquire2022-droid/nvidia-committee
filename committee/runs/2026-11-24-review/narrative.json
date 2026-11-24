@@ -1,0 +1,141 @@
+{
+  "agent": "narrative",
+  "run_id": "2026-11-24-review",
+  "as_of": "2026-11-24",
+  "price_at_call": 165.05,
+  "view": "The reinstatement reverses TB2's premise: the CEO who departed is back, with the board and the administration behind him, so the key-person discount is largely gone. On the 2026-11-23 close the market has priced back almost all of the Nov 11-20 drawdown while the accounting and filing questions are still open: the SEC inquiry, a 10-Q delayed until about 2026-12-04 pending an investigation that 'will proceed to conclusion', and congressional interviews requested for Dec 1-3. That leaves the next two weeks two-sided with a slightly heavier down tail. The quarters lean up because the governance overhang has narrowed to items that can be resolved by documents.",
+  "probabilities": {
+    "defs": "2w +/-5%, quarters +/-10%, vs price_at_call 165.05 (Mon 2026-11-23 close, pre-market Tue run). next_2_weeks: up = close > 173.30, down = close < 156.80, range between; measured at the close on or before 2026-12-08 (Tue 2026-12-08). this_quarter: close of 2026-12-31; next_quarter: close of 2027-03-31; up = close > 181.56, down = close < 148.55, range between. up + range + down = 100.",
+    "next_2_weeks": {
+      "up": 33,
+      "range": 31,
+      "down": 36
+    },
+    "this_quarter": {
+      "up": 37,
+      "range": 32,
+      "down": 31
+    },
+    "next_quarter": {
+      "up": 46,
+      "range": 25,
+      "down": 29
+    }
+  },
+  "confidence": 42,
+  "evidence": [
+    {
+      "ref": "news_governance",
+      "point": "Reinstatement. The board unanimously reinstated Huang as President, CEO and director, announced before the 2026-11-23 open (8-K event date 2026-11-22). The board cited 'a series of discussions and meetings' and 'input from senior levels of the United States government', said it is 'confident' he poses no national-security risk, and said it was satisfied with his candour. The CEO departure that TB2 rested on no longer stands."
+    },
+    {
+      "ref": "news_governance",
+      "point": "The return came with conditions. The independent-director investigation 'will proceed to conclusion' with Huang cooperating. A new National Security and Export Control Committee of independent directors is formed, and a chief compliance officer will report to the Nominating and Corporate Governance Committee. Nvidia 'will continue to cooperate with ongoing government investigations'. So the governance question is suspended, not closed: the investigation outcome is now the event that could re-fire TB2."
+    },
+    {
+      "ref": "news_governance",
+      "point": "How it happened: Trump dialled into the Sunday board meeting (Semafor), Vance spoke with Huang and directors (NYT), and the administration assured the board that Huang was not a national-security threat and was not facing criminal charges (CNBC, Business Standard). WSJ reports that Huang disclosed additional affairs to the board on Sunday and that directors discussed his lack of transparency before the unanimous vote. Two readings follow. (a) The legal pressure behind the exit has eased, which lowers my TB1 and TB2 odds. (b) A new dependency: the CEO's position now partly rests on political backing, and a candour question remains open in the board's own investigation."
+    },
+    {
+      "ref": "news_governance",
+      "point": "Still open: an SEC inquiry (WSJ 2026-11-17; Reuters 2026-11-20 with an accounting focus) with no company statement; the Q3 10-Q not filed, delayed with reference to the internal investigation, deadline about 2026-12-04; the DOJ/Commerce Megaspeed probe; congressional interviews requested 2026-12-01 to 12-03; and Goldman's note that operations in some jurisdictions may face more scrutiny. None of these was resolved by the reinstatement, and all except the Megaspeed probe have a checkpoint inside the 2w window."
+    },
+    {
+      "ref": "news_governance",
+      "point": "Remote-access export rule (effective 2026-11-19) unchanged, no licence decisions reported. TB3 evidence has not moved. The one new input is indirect: an administration that intervened to restore the CEO is arguably more likely to grant licences, which slightly lowers my odds that TB3 is confirmed as material. Baird's comment on Huang's return plus chip limits for China is ambiguous in the slice and I give it no weight."
+    },
+    {
+      "ref": "snapshot.today_bar_status",
+      "point": "Pricing of the shock: the stock opened 167.035 (+33.1% gap), fell to 156.93, closed 165.05 (+31.48%, best day since May 2003) on 4.4-4.8x average volume, with record options volume (>11M contracts) and strategist warnings of 'mechanical' buying. The close is back between the Nov 12 close (166.19) and the Nov 13 close (162.85). The market has repriced as if the drawdown since the exit were almost entirely about Huang, even though the SEC and 10-Q items arrived later and are unresolved. Overnight indicative about 163.3 (owner chart, stale/partial page) is a small give-back, not a reversal."
+    },
+    {
+      "ref": "tv_relative",
+      "point": "Monday: NVDA +31.48% against SOX +14.03%, SMH +15.03%, Nasdaq +6.51% and AMD +6.85%. About half of NVDA's move was idiosyncratic (the reinstatement) and the rest was sector beta in a broad relief rally. Over the rolling week NVDA was +3.8% against SOX -1.0% and SPX -3.68%. If the sector relief fades, part of Monday's move goes with it, whatever the governance news."
+    },
+    {
+      "ref": "tv_fundamentals",
+      "point": "Analyst actions on 2026-11-23 (one evidence group): Oppenheimer upgrade to Outperform (PT 250), StoneX to Buy (270), Bernstein to Outperform (200), Citi PT 225->240, BMO 240, Baird Neutral 200. Sell-side reversals after a resolution usually follow the price rather than lead it, so I treat them as noise. They do mean the analyst discount for governance is now mostly gone, so further upgrades add little."
+    },
+    {
+      "ref": "hyperscaler_capex",
+      "point": "TB4 monitor: 0 of 4 falling. Run-rate vs TTM is MSFT +15.9%, GOOGL +28.5%, AMZN +43.6% and META +30.0%. No new quarter has been reported since 2026-11-15. TB4 is NOT fired and NOT on watch. There is no report in news_governance of a capex guidance cut by any of the four."
+    },
+    {
+      "ref": "base_rates.next_2_weeks",
+      "point": "Outside view (n=259): 33/45/22. I moved to 33/31/36 (range -14, down +14, up 0). Daily ATR is 8.0% of price, so the +/-5% band is narrower than one average day, and closing inside it after 10 sessions is less likely than the base rate. Down is raised because the window's dated events are mostly downside-tail outcomes: 10-Q timeliness (about 12-04), the Dec 1-3 interviews and possible SEC disclosure. A 31% one-day jump also leaves an open 125.53-156.93 gap, and Monday's low (156.93) sits on the down line. Up keeps the base rate because a clean 10-Q filed on time would be a strong catalyst. The conditional base rates (weekly RSI<=36, 2w drop<=-15%) were built for the pre-jump state and no longer apply cleanly; I give them no weight."
+    },
+    {
+      "ref": "base_rates.this_quarter_approx_7w",
+      "point": "Outside view (n=254): 39/43/18. I moved to 37/32/31 (down +13, range -11, up -2). In the main path the 10-Q is filed, the investigation concludes quietly and the stock works toward the 179.92-185.22 gap, so the up line at 181.56 is reachable (27-day reach 51.2%). But the stock now carries little discount for the accounting question, so a late filing, a material-weakness disclosure or an adverse investigation finding has room to take it below 148.55 (27-day reach 35.7%)."
+    },
+    {
+      "ref": "base_rates.next_quarter_13w",
+      "point": "Outside view (n=248): 50/31/19. I moved to 46/25/29 (up -4, down +10). Q1 2027 holds the late-Feb print, the annual report and auditor opinion (date not in slice), the end of the TB3 90-day window (about 2027-02-17) and likely the investigation's conclusion. Each is an official document that can clear the overhang, which is why I am back near the base rate on up. Down stays raised because a TB5-type event (restatement or auditor issue) is still possible and the stock no longer discounts it."
+    },
+    {
+      "ref": "coverage",
+      "point": "Coverage 10/14 ok, 4 stale (tv_chart_owner, sec_filings, sentiment_aaii, sentiment_cnn_fg), options deferred. news_governance was read 2026-11-24T06:45Z, after the event cutoff of 2026-11-23T21:00Z, so it is current. sec_filings is stale/partial. I cannot read the 8-K text, cannot confirm whether a Form 12b-25 (NT 10-Q) was filed and what it says, and cannot see any SEC-inquiry disclosure. For my lane this is the most important gap and the main reason my confidence is 42. With options deferred, I cannot see how much of the Dec 1-4 tail is hedged after record call volume."
+    }
+  ],
+  "key_levels": [
+    {
+      "level": 148.55,
+      "why": "Quarter down line (-10%). The most likely route below it by 2026-12-31 is a missed 10-Q deadline, a material-weakness or restatement disclosure, or an investigation finding that puts Huang's position back in question.",
+      "ref": "probabilities.defs"
+    },
+    {
+      "level": 156.8,
+      "why": "2w down line (-5%), scored at the 2026-12-08 close. It sits just below Monday's low of 156.93, which is the top of the open 125.53-156.93 gap.",
+      "ref": "probabilities.defs"
+    },
+    {
+      "level": 156.93,
+      "why": "Reinstatement-day low and top of the open gap. A daily close below it would mean the market is unwinding the reinstatement premium, most likely on filing or SEC news.",
+      "ref": "snapshot.today_low"
+    },
+    {
+      "level": 171.5,
+      "why": "Reinstatement-day high. A close above it means the relief move is extending rather than fading.",
+      "ref": "snapshot.today_high"
+    },
+    {
+      "level": 173.3,
+      "why": "2w up line (+5%).",
+      "ref": "probabilities.defs"
+    },
+    {
+      "level": 181.56,
+      "why": "Quarter up line (+10%), inside the 179.92-185.22 gap that opened before the CEO exit. Filling that gap would mean the whole governance episode has been priced out.",
+      "ref": "structure.gap_zones_open"
+    }
+  ],
+  "what_would_change_my_mind": [
+    "Expected (not a trigger): the 10-Q extended deadline (about 2026-12-04), the requested congressional interviews (2026-12-01 to 12-03) and the 2026-12-02 ex-dividend date all fall inside the window. What matters is the outcome, below.",
+    "More bullish (signal): the Q3 10-Q is filed by about 2026-12-04 with no restatement, no material-weakness language and no new Nvidia-level legal-proceedings disclosure, and Nvidia describes the SEC inquiry as narrow. That moves my 2w toward 40/30/30 and this_quarter toward 43/30/27.",
+    "More bearish (signal): the 10-Q misses the extended deadline (about 2026-12-04), or is filed with a material weakness, restatement or non-reliance language, or the auditor resigns; OR a credible report from the Dec 1-3 sessions says Nvidia knew of the diversion. Any of these before 2026-12-31 moves this_quarter toward 28/27/45 and would fire proposed TB5 if the owner has adopted it.",
+    "TB2 re-fires: the board investigation concludes with findings of legal or regulatory wrongdoing, or of misleading the board, and Huang steps down or is removed again before 2027-03-31; or an official action (charge, SEC action) names him personally and he departs.",
+    "TB1 fires: a DOJ or Commerce charge, settlement or penalty, or a company admission, naming Nvidia itself (not Megaspeed, Alice Huang or OEMs) before 2027-03-31.",
+    "TB3 materiality: BIS licences granted to the large Singapore/Malaysia operators, or a company quantification showing small at-risk revenue, before about 2027-02-17, supports the owner ruling TB3 immaterial. Denials or a company estimate of lost revenue keeps it fired.",
+    "TB4 WATCH: two or more of MSFT/GOOGL/AMZN/META show run-rate more than 10% below TTM, or any one guides capex down. TB4 fires only if two or more guide down.",
+    "Price (checked with engines reach): a daily close below 156.80 by 2026-12-08 (-5.0%, freq 41.2%, reachable) says the reinstatement premium is unwinding. A close above 173.30 by 2026-12-08 (+5.0%, 52.1%, reachable) says the relief is extending. By 2026-12-31: a close below 148.55 (-10.0%, 35.7%) or above 181.56 (+10.0%, 51.2%), both reachable."
+  ],
+  "notes_for_chair": [
+    "TB STATUS (my readings; the chair rules and the owner confirms). TB1 NOT fired. TB2: premise REVERSED, and I recommend the chair rule it CLEARED (lapsed) rather than fired. TB3: still FIRED (provisional), materiality unresolved. TB4 NOT fired, NOT on watch (0/4). Proposed TB5 (not adopted): WATCH, with a hard checkpoint at about 2026-12-04. Buying stays paused while TB3 stands provisionally, so clearing TB2 does not by itself un-pause anything.",
+    "TB2 ruling. The rule is 'CEO departs under legal or regulatory pressure'. The departure has been undone: Huang is back as President, CEO and director by unanimous vote, and the government says he is not a national-security threat and not facing criminal charges. Keeping TB2 fired would mean pausing on an event that no longer exists. Two caveats. (1) The reasons for the exit were never made clear, and the WSJ account of undisclosed affairs and a lack of transparency suggests personal conduct may have been part of it. Whether the original 2026-11-12 firing was correct can no longer be decided, and the chair should record that honestly rather than call it vindicated or wrong. (2) The investigation continues, so TB2 should be RE-ARMED with an explicit re-fire test: a second departure, or removal, following adverse investigation findings or an official action naming him. My odds of a re-fire: 2w about 2%, 2q about 8%.",
+    "TB3 ruling. TB3 stays FIRED (provisional) on the 2026-11-15 pre-committed definition. The remote-access rule is unchanged and no licences have been decided. The reinstatement does not touch TB3's facts. Indirectly, an administration that went this far to restore the CEO is somewhat more likely to grant licences, so I lower my odds that materiality is confirmed over 2q from about 55% to about 45%. The un-fire test is unchanged: licence outcomes or a company quantification before about 2027-02-17. The owner still has to rule on materiality. I do not recommend dropping TB3 on political goodwill alone: that would be un-firing on sentiment rather than on documents.",
+    "Proposed TB5 (financial-reporting integrity; proposal only, owner decides): this is now the live break. The wording I proposed on 2026-11-22 includes 'misses a 10-Q/10-K deadline'. The Q3 10-Q is already delayed with reference to the internal investigation, and the deadline is about 2026-12-04. Clarification for the owner: a permitted 12b-25 extension should not fire TB5, but missing the extended deadline should. sec_filings is stale, so I cannot confirm the NT 10-Q text. If the owner adopts TB5 before 2026-12-04, the chair has a clean dated test. My odds (judgment): TB5 fires by 2026-12-08 about 25% (the investigation must 'proceed to conclusion', but the board's unanimous 'confidence' suggests it is well advanced); over 2q about 33%. TB5 WATCH stays on regardless.",
+    "TB odds (judgment, not slice numbers). TB1: 2w about 2%, 2q about 15% (was 4%/22%). The assurance of no criminal charges against Huang and the administration's evident backing lower the odds of enforcement naming Nvidia. The Megaspeed probe and Goldman's 'more scrutiny' point keep it above zero. TB2 re-fire: 2w about 2%, 2q about 8%. TB3 materiality confirmed: 2q about 45%. TB4: 2w about 1%, 2q about 8%. Proposed TB5: 2w about 25%, 2q about 33%.",
+    "Political signals before the 2026-11-23 open, honest post-mortem. Public signals that pointed to a reinstatement: Trump said Huang was 'going through hell' and urged him to fight for his job (2026-11-10 call, reported 2026-11-12). Altimeter and Atreides, holding about $2.13B of shares, asked the board to keep his return open (2026-11-14). Trump said he 'would not mind' a return, the petition passed 178k and Musk voiced support (2026-11-16). Huang said he would be 'honored' to return (2026-11-17). Trump said he wanted Huang to apologise and go back (2026-11-20). Trump posted on Truth Social urging a rehire, and Bessent said 'he's on the outside now' (Sun 2026-11-22, before the open). The only public counter-signal was the board chair saying the board 'does not intend to reinstate' (2026-11-17).",
+    "How I treated them. 2026-11-15 run: I put the reinstatement petition and 'Trump suggesting Tim Cook' on the 2-week NOISE list. Trump's 'fight for your job' remark does not appear in my submission, and I gave the possibility of a return no probability at all. My TB2 un-pause case required a permanent CEO to be named, which assumed Huang would not come back. 2026-11-22 run: I declared TB2 'permanent' on the strength of the board chair's statement of intent, wrote that there was 'no governance upside catalyst this quarter', and listed 'Bessent or other officials' commentary' and 'Huang's statements about returning' as NOISE. The holders' letter, Trump's 11-16 and 11-20 remarks, the petition and Musk are not mentioned. I quoted Bessent's call for an outside CEO as if it were the administration's position, and ignored the President's repeated contrary signals. That was confirmation bias: I picked the official who fitted my story. The Sunday Truth Social post and the board meeting most likely came after my 08:10Z news read, so the final step was not visible to me. The trend before it was.",
+    "What went wrong in method: (1) I used a rule that 'only official documents are signal', which is right for courts and regulators. I wrongly applied it to a decision taken by a board under pressure from a government that controls the company's export licences. There, the President's statements are an exercise of leverage, not commentary. (2) I treated a board chair's statement of intent ('does not intend') as if it were a decision. (3) I never put a probability on the reversal scenario (what you see is all there is), so the 2w up bucket in the 11-22 run was not built with a +31% path in mind. That call (37/27/36 at 125.53, up line 131.81) will probably score 'up', but for the wrong reason, and the lessons file should record it that way.",
+    "What should change (proposal for the lessons log and the owner): (a) Weigh a political signal by the sender's leverage over the actual decision-maker and by its cost. A President or Commerce/Treasury head talking about a company that depends on his licences is SIGNAL for governance and licence outcomes. Senators' statements and petitions stay closer to noise. Large holders' letters and Huang's own willingness to return are mid-weight. (b) Keep a dated tally of political signals and their direction, and treat repeated, escalating statements from the same high-leverage sender as a trend, not as separate headlines. (c) Never call a governance state 'permanent' unless something structural locks it in (a signed successor, a charge, a court order). Statements of intent get a reversal probability. (d) For every reversible break, write the reversal scenario and its odds in each run. (e) Keep 'official documents' as the bar for FIRING or UN-FIRING a thesis break, so political goodwill alone does not un-fire TB3, but let political signals move the probabilities. Applied now: Trump or Lutnick statements on chip licences are SIGNAL for TB3 materiality over the next 2 quarters.",
+    "How these shocks usually price. A key-person reversal is priced in a single session, as the gap open showed. What usually follows is a fade of the 'mechanical' part, driven by short covering and record options volume, while the open items reassert themselves. The low of the reversal day (156.93) is the first test. Regulatory and accounting items are priced in steps at each official document, so the next steps are the 10-Q (about 12-04), any SEC disclosure, and accounts of the Dec 1-3 interviews. On Monday the market gave the accounting question almost no discount, so the reaction to a negative document is likely to be larger than the reaction to a positive one.",
+    "Noise, next 2 weeks: further Trump or Musk praise of Huang in terms of his job (TB2 is resolved, so these no longer inform it), analyst upgrades and target changes (one group), Burry's short commentary, 'mechanical buying' and options-volume stories, petition counts, renewed coverage of Huang's personal life unless it shows new deception of the board, and appointees to the new board committee. Signal, next 2 weeks: whether the 10-Q is filed on time and what its controls, legal-proceedings and risk-factor language says; any Nvidia statement on the SEC inquiry (words such as 'informal', 'subpoena', 'Wells'); accounts of what Nvidia or Huang told the committees (Dec 1-3), including any challenge to the government's role in the reinstatement; departures of directors or finance or audit staff (a dissent or resignation after a 'unanimous' vote would matter); the investigation's conclusion or findings; and any BIS licence decision or administration statement on Singapore/Malaysia licences.",
+    "Noise, next 2 quarters: the political argument over whether the government should have intervened, analyst re-ratings, and share-price-driven CEO commentary. Signal, next 2 quarters: the investigation's final findings, the auditor opinion and controls language in the annual report, the outcome of the SEC inquiry, licence grants or denials before about 2027-02-17, the late-Feb print, the hyperscalers' next capex guidance, and whether the administration's support turns into licence decisions or conditions (for example compliance monitors).",
+    "Before vs after earnings: the 2026-11-17 print is behind us. After it, the stock traded on governance, not on the beat, and Monday confirmed that: a one-day +31% on a leadership decision with no change in fundamentals. Until the 10-Q is filed, my view stays governance- and documents-driven.",
+    "Changes from my 2026-11-22 submission (at 125.53, older thresholds): 2w 37/27/36 -> 33/31/36, this quarter 35/30/35 -> 37/32/31, next quarter 41/24/35 -> 46/25/29, confidence 44 -> 42. Quarter up odds rose because the key-person overhang is gone and the remaining items can be cleared by documents. Confidence is lower because sec_filings is still stale on the most important dated item (the 10-Q), and because my political read was wrong two runs running.",
+    "LADDER (governance conditions only; proposals; the owner decides; I never suggest executing orders). TB2 clearing removes one blocker. Under my readings, TB3 (provisional) still pauses all buying until the owner rules on materiality. I suggest the owner decide TB3 materiality and TB5 adoption before the 2026-12-04 10-Q deadline, so that any activation follows documents (the 10-Q) and not Monday's price. Ladder audit cross-check: Monday's close is back inside the old L1 zone (162-164) after levels L1-L4 were crossed during the pause with no fills. The chair should record these as passed or dropped, never as fills.",
+    "Cross-domain: the guarantees ($118B against $53.5B cash) and the buyback boost belong to fundamentals. Half of Monday's move being sector beta (SOX +14.03%) belongs to relative_strength and macro. Record options volume and mechanical-buying claims belong to sentiment (stale pages, options deferred). sec_filings needs a full re-read (8-K text, any NT 10-Q, SEC disclosure) before the chair rules on TB5.",
+    "Pre-mortem: if this is badly wrong in 3 months, the most likely reason is that the 10-Q was filed on time and clean, the investigation closed quietly, licences were granted, and a stock at about 8x forward earnings with political backing re-rated through the 179.92-185.22 gap. In that case my down odds and the TB3/TB5 framing kept the owner out again. The second most likely reason is the opposite: the investigation or the 10-Q exposed a reporting problem that the reinstatement had simply covered over, and my 2q TB5 odds were too low because I let the board's 'confidence' reassure me."
+  ]
+}

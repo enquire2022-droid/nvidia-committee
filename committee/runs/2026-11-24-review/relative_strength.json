@@ -1,0 +1,121 @@
+{
+  "agent": "relative_strength",
+  "run_id": "2026-11-24-review",
+  "as_of": "2026-11-24",
+  "price_at_call": 165.05,
+  "view": "Monday's +31.48% was mainly NVDA-specific: NVDA beat SOX by 17.4 points and AMD and AVGO by 25-28 points after Jensen Huang was reinstated, and NVDA/SOX jumped 15.3% (14.93 to 17.21) in one session. That repairs most of the governance discount but not the longer de-rating (NVDA/SOX still -5.9% vs 13 weeks ago and -38.3% vs 52 weeks ago; YTD NVDA -13.06% vs SOX +31.55%). One session does not turn a relative trend. Tactical: Hold/Wait for the ratio to hold above 17.21 on weekly closes before treating this as a relative-strength turn.",
+  "probabilities": {
+    "defs": "2w ±5%, quarters ±10%, vs price_at_call 165.05 (Mon 2026-11-23 close). next_2_weeks: up = close > 173.30, down = close < 156.80, range in between, measured at the close on or before 2026-12-08. this_quarter (close 2026-12-31) and next_quarter (close 2027-03-31): up > 181.56, down < 148.55, range in between. up + range + down = 100.",
+    "next_2_weeks": {
+      "up": 33,
+      "range": 31,
+      "down": 36
+    },
+    "this_quarter": {
+      "up": 36,
+      "range": 32,
+      "down": 32
+    },
+    "next_quarter": {
+      "up": 46,
+      "range": 24,
+      "down": 30
+    }
+  },
+  "confidence": 30,
+  "evidence": [
+    {
+      "ref": "tv_relative",
+      "point": "Mon 2026-11-23: NVDA +31.48%, SOX +14.03%, SMH +15.03%, Nasdaq Comp +6.51%, SPX +4.73%, AMD +6.85%, AVGO +3.0%. NVDA beat SOX by 17.4 points, SMH by 16.5, AMD by 24.6 and AVGO by 28.5. This was an idiosyncratic move with a sector lift, the mirror image of the 2026-11-16 week when NVDA lagged."
+    },
+    {
+      "ref": "relative.beta_vs_spx_59w",
+      "point": "On beta 1.94, SPX +4.73% implies about +9.2% for NVDA; the actual +31.48% leaves about 22 points of NVDA-specific gain. Part of SOX's +14.03% is itself NVDA (NVDA is a large SOX/SMH constituent; exact weight not in slice), so the ex-NVDA sector move was smaller than 14%. Judgment, not data."
+    },
+    {
+      "ref": "relative.nvda_vs_sox_ratio_now",
+      "point": "NVDA/SOX 17.2141 at Monday's close vs 14.9288 at the last completed week: +15.3% in one session. Versus 18.289 13 weeks ago it is now only -5.9% (derived), and versus 27.9219 52 weeks ago -38.3% (derived). The official 13w/52w changes (-18.4% / -46.5%) use completed weekly closes and do not yet include Monday."
+    },
+    {
+      "ref": "tv_relative",
+      "point": "Longer horizons still show NVDA lagging, even after Monday: 1M NVDA -21.77% vs SOX -10.19%; 3M -21.79% vs -17.22%; YTD -13.06% vs SOX +31.55% and AMD +107.15%. The governance repair is in the price; the year-long rotation out of NVDA into the rest of AI semis is not reversed."
+    },
+    {
+      "ref": "relative.this_week_nvda_minus_sox_pts",
+      "point": "The 4.8-point figure is TradingView rolling 5-session Perf.W (NVDA +3.8 vs SOX -1.0), which still includes the 2026-11-17 to 11-20 losses. Week-to-date (from the 125.53 / 8408.59 Friday closes) NVDA is +31.5% vs SOX +14.0%, about 17.4 points. Use the week-to-date figure for the forming week."
+    },
+    {
+      "ref": "tv_relative",
+      "point": "Rotation inside AI semis: on Monday money went back into NVDA rather than into peers (AMD +6.85%, AVGO +3.0%, far below SOX). TSM and peer 1W/13W/52W figures are not in slice, so I cannot say whether the YTD rotation into AMD is reversing beyond one day. Unknown, not neutral."
+    },
+    {
+      "ref": "tv_purple_list",
+      "point": "Market backdrop relief: VIX 26.61 (-25.8%), S5TH 53.08% (+7.16), RSP/SPY 0.2946 with RSP 1M -1.97% vs SPY -4.95% (breadth better than the cap-weighted index over a month). Broader risk appetite helped, but it explains only a small part of NVDA's move."
+    },
+    {
+      "ref": "base_rates.next_2_weeks",
+      "point": "Outside view 33/45/22. I cut range by 14 because daily ATR is 8.0% (structure.atr_daily_pct) and the 2W down line 156.80 sits just under Monday's low 156.93 with an open gap to 125.53 below; I added 14 to down for the usual give-back after a record one-day gap move into a holiday week (judgment, no analog data in slice). Up left at base: the ratio needs to prove it holds. ATR tail-widening overlaps with the technical member: count it once."
+    },
+    {
+      "ref": "base_rates.next_quarter_13w",
+      "point": "Outside view 50/31/19. Conditional samples (RSI<=36 n=13: 69/0/31; 2W drop<=-15% n=4: 100% up) are tiny and overlapping, and price is no longer at the washout low that defined them. I moved to 46/24/30: down higher because the year-long relative de-rating vs SOX is intact and late-Feb 2027 results are a binary event inside the window; up kept near base because the remaining relative gap vs 13 weeks ago (-5.9%) and vs peers YTD leaves catch-up room if governance stays settled."
+    },
+    {
+      "ref": "judgment (no data in slice)",
+      "point": "After a key-person shock is reversed, relative strength usually snaps back quickly toward the pre-shock level and then trades on the pre-shock trend. Here the pre-shock trend was already down (the ratio fell for many weeks before the CEO exit), so I expect the snap-back to stall rather than extend. Before vs after earnings: before 2026-11-17 relative was negative but resettable by the print; after it the beat failed to re-anchor, and the reset came from governance, not fundamentals. That makes the repair more fragile than an earnings-led one."
+    },
+    {
+      "ref": "coverage",
+      "point": "10/14 pages ok; tv_relative and tv_purple_list are ok and current (close 2026-11-23, read after event_cutoff). tv_chart_owner (overnight ~163.3) and sec_filings are stale/partial, so I do not use the overnight print as today's price and cannot confirm the SEC accounting matter's status. Options positioning deferred. Peer weekly/13W/52W and TSM missing from slice. Confidence 30."
+    }
+  ],
+  "key_levels": [
+    {
+      "level": 17.2141,
+      "why": "NVDA/SOX at Monday's close. A completed weekly ratio above it on 2026-11-27 and 2026-12-04 (no new post-shock low) would confirm a relative turn; a weekly close back toward 14.93 would mean the repair failed.",
+      "ref": "relative.nvda_vs_sox_ratio_now"
+    },
+    {
+      "level": 18.289,
+      "why": "NVDA/SOX 13 weeks ago. Reclaiming it would erase the quarter's relative de-rating, not just the governance discount.",
+      "ref": "relative.nvda_vs_sox_ratio_13w_ago"
+    },
+    {
+      "level": 173.3,
+      "why": "2W up threshold; above Monday's high 171.50.",
+      "ref": "snapshot.today_high"
+    },
+    {
+      "level": 156.8,
+      "why": "2W down threshold; just under Monday's low 156.93, top of the open gap 125.53-156.93.",
+      "ref": "snapshot.gap_zones_open"
+    },
+    {
+      "level": 148.55,
+      "why": "Quarter down threshold; inside the open gap.",
+      "ref": "snapshot.gap_zone"
+    },
+    {
+      "level": 181.56,
+      "why": "Quarter up threshold; just under the open gap 179.92-185.22.",
+      "ref": "snapshot.gap_zones_open"
+    }
+  ],
+  "what_would_change_my_mind": [
+    "Expected: weekly closes on 2026-11-27 and 2026-12-04, FOMC 2026-12-09 (just after the 2W window), and late-Feb 2027 results inside next_quarter. What matters is the outcome: whether NVDA/SOX holds above 17.21.",
+    "NVDA/SOX weekly close at or above 17.21 on both 2026-11-27 and 2026-12-04 while SOX is flat or up: relative turn confirmed. Move 2W to about 40/30/30 and next_quarter up to about 52.",
+    "NVDA closes below 156.80 on or before 2026-12-08 while SOX falls less than 3% over the same span (2W -5% reached in 41.2% of past windows): the governance repair is fading on its own. Raise 2W down to about 45 and next_quarter down to about 35.",
+    "NVDA closes below 148.55 on or before 2026-12-08 (2W -10% reached in 17.5% of past windows): more than a give-back; the stock-specific overhang is back. Raise down in all horizons by about 10.",
+    "NVDA closes above 181.56 on or before 2026-12-31 while beating SOX (reached in 51.2% of past windows): relative leadership resuming, not just repair. Raise this_quarter up to about 50 and next_quarter up to about 55.",
+    "AMD and AVGO outperform NVDA by 5 points or more in a week before 2026-12-08: the YTD rotation away from NVDA has resumed. Shift about 5 points from up to down in both quarters."
+  ],
+  "notes_for_chair": [
+    "Retrospective (readings_2026-11-22, close 2026-11-20). Signs that pointed to a sharp rebound: (1) the idiosyncratic gap was already shrinking - NVDA lagged SOX by 5.8 points in the week of 2026-11-16 vs 21.6 the week before, and on Fri 2026-11-20 NVDA fell only about 3.3 points more than SOX with AMD -13.25%, so the selling had become sector-wide de-risking; (2) the relative de-rating was extreme and fast (NVDA/SOX -46.5% over 52 weeks, NVDA/SPX -35.1% over 13 weeks), which leaves room for a violent snap-back if the stock-specific cause reverses; (3) beta and correlation to SOX were rising (0.62 / 0.64), so a sector bounce would carry NVDA; (4) capitulation-style backdrop: VIX 35.9 (+26%), SOX -17.13% and SPX -8.61% in a week; (5) the small conditional base rates (2W drop <= -15%: 0% down at 2W, 100% up at 13W). Signs that did not: NVDA/SOX was still making new lows (14.93) with no turn, my own rule (two weekly closes without a new ratio low) gave no signal, peer rotation data was missing, and Friday closed only 0.8% above its low. Bottom line: relative strength showed that the setup was stretched and could snap back sharply. It did not predict the catalyst, which was the board reversing the CEO exit. The size of the governance-driven relative discount turned out to measure how much could be recovered. My 2026-11-22 call (2W 35/25/40, Wait) was too bearish on direction.",
+    "Proposed lessons-log line (owner/chair to decide): 'When a single-name relative discount is driven by a reversible governance event, the size of the idiosyncratic gap is also the size of the snap-back; do not extrapolate a relative downtrend that comes from an event which can be undone.'",
+    "Ladder (proposal only; owner approval required; no orders): relative strength does not justify chasing at 165.05. If the chair keeps rungs, rungs inside the open gap 125.53-156.93 make sense only with a relative condition (NVDA/SOX not back below 14.93). Actual rung prices are not in my slice.",
+    "Cross-lane: TB2 status after the reinstatement and the status of the SEC accounting matter belong to the narrative/governance member; sec_filings is stale/partial in my slice, so I cannot tell whether the accounting overhang is resolved. My down probabilities assume it is not fully resolved.",
+    "Data: relative.this_week_nvda_minus_sox_pts (4.8) is rolling 5-session Perf.W, not the forming week; week-to-date the gap is about 17.4 points. The official 13w/52w ratio changes are on completed weeks; on Monday's close they are -5.9% and -38.3% (derived from slice ratios).",
+    "Overlap: ATR tail-widening and the oversold conditional base rates are the momentum/technical group; count once.",
+    "Pre-mortem: if this is badly wrong by March, the most likely reason is that the reinstatement ends the governance discount completely and the market rotates back from AMD/AVGO into NVDA to close the YTD gap (NVDA -13% vs SOX +32%), so the move goes far above 181.56. My down weight would then have been anchoring on the year-long relative downtrend."
+  ]
+}

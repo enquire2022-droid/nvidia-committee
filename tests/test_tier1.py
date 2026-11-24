@@ -24,10 +24,12 @@ def memo():
 
 
 def test_stale_ladder_distance_caught():
-    m = memo()
-    bad = m.replace("| L1 | 162–164 | 1.0 | −0.8% |", "| L1 | 162–164 | 1.0 | −1.7% |")
-    assert bad != m
-    assert "L1 ladder L1" in _verify(bad)
+    # use whatever ladder is current (ids change when the owner approves a new ladder)
+    fs = json.loads((R / "outputs/fact_sheet.json").read_text())
+    o = fs["ladder_audit"]["orders"][0]
+    wrong = o["dist_from_price_pct"] + 1.3
+    bad = memo() + f"\n| {o['id']} | {o['zone'][0]:g}–{o['zone'][1]:g} | {o['weight']} | {wrong:+.1f}% |\n"
+    assert f"L1 ladder {o['id']}" in _verify(bad)
 
 
 def test_wrong_chair_row_caught():

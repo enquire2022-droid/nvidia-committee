@@ -1,0 +1,215 @@
+{
+ "agent": "red_team",
+ "run_id": "2026-11-24-review",
+ "as_of": "2026-11-24",
+ "price_at_call": 165.05,
+ "view": "The six members agree: 2w 33/32/35, this quarter 34/34/32, next quarter 45/25/30. Every lane adds 10 to 14 points to 2w down and leaves up at or below base. The down tilt rests on three shared items: the open 125.53-156.93 gap, the 10-Q/SEC overhang and Monday's close below its open. Each is counted in four to six lanes, and the range cut uses an ATR inflated by Monday's own 45.97-point true range. I lean against the down tilt (2w 36/32/32, this quarter 38/33/29, next quarter 47/24/29). The members' post-mortems mostly list conditions as if they were predictors. Only the dated political signals bore on the catalyst itself. The oversold, valuation and volume signs set the size of the move once a catalyst came, and the same signs had already failed on 2026-11-12.",
+ "probabilities": {
+  "defs": "2w +/-5%, quarters +/-10%, vs price_at_call 165.05 (Mon 2026-11-23 close; pre-market Tue run). next_2_weeks: up = close > 173.30, down = close < 156.80, range between; measured at the close on or before 2026-12-08. this_quarter: close of 2026-12-31; next_quarter: close of 2027-03-31; up = close > 181.56, down = close < 148.55, range between. up + range + down = 100.",
+  "next_2_weeks": {
+   "up": 36,
+   "range": 32,
+   "down": 32
+  },
+  "this_quarter": {
+   "up": 38,
+   "range": 33,
+   "down": 29
+  },
+  "next_quarter": {
+   "up": 47,
+   "range": 24,
+   "down": 29
+  }
+ },
+ "confidence": 35,
+ "consensus": {
+  "line": "Mean of six: 2w 32.7/32.5/34.8, this quarter 34.5/34.0/31.5, next quarter 44.5/25.0/30.5. Five of six put 2w down at or above up. Every lane adds +10 to +14 to 2w down against the 33/45/22 base and moves up between -3 and +5. Confidence runs 27-42. Tactical stance is Wait or Hold in every lane.",
+  "members": {
+   "fundamentals": "31/33/36, 34/33/33, 44/24/32 (conf 32)",
+   "macro": "31/36/33, 34/34/32, 45/25/30 (conf 27)",
+   "narrative": "33/31/36, 37/32/31, 46/25/29 (conf 42)",
+   "relative_strength": "33/31/36, 36/32/32, 46/24/30 (conf 30)",
+   "sentiment": "30/34/36, 30/38/32, 40/28/32 (conf 28)",
+   "technical": "38/30/32, 36/35/29, 46/24/30 (conf 33)"
+  },
+  "shift_vs_base_2w": "up -2/-2/0/0/-3/+5, range -12/-9/-14/-14/-11/-15, down +14/+11/+14/+14/+14/+10 (fundamentals/macro/narrative/relative_strength/sentiment/technical)"
+ },
+ "opposite_case": [
+  {
+   "ref": "base_rates.next_2_weeks",
+   "point": "The outside view is 33/45/22, so up is 1.5 times down. The range cut comes from the ATR (8.0%), and a wider distribution widens both tails. Cutting range to about 32 and keeping the base ratio gives about 41/32/27 (derived). The consensus instead puts the whole range cut into down (33/32/35). The asymmetric 8 points of down tilt therefore rest entirely on lane-specific evidence, and that evidence is the three shared items below. Unconditional touch rates point the same way: 2w +5% is reached in 52.1% of windows and -5% in 41.2% (reachability.windows.2w). Monday's high of 171.50 is reached by 2026-12-08 in 60.1% of windows (engine)."
+  },
+  {
+   "ref": "snapshot.nvda_close_2w_ago_weekly",
+   "point": "Narrative says the market 'has priced back almost all of the Nov 11-20 drawdown' and gives the accounting question 'almost no discount'. The slice does not support that. Price at 165.05 is roughly the exit-day close (nov12_close 166.19), which already priced Huang out. It is 8.3% below the Nov 9 high (179.92), 11.6% below the last weekly close before the exit (186.64, nvda_ohlcv.weekly_closes_last4), and 32.2% below the ATH. So the CEO is back and price is about where it stood with him gone and no SEC story. That residual is a discount, and the slice does not show it to be zero. The claim that negative documents will hit harder than positive ones rests on that zero-discount premise."
+  },
+  {
+   "ref": "news_governance",
+   "point": "The main dated binary in the window is the 10-Q (about 2026-12-04). The evidence on its likely outcome leans benign. The board voted unanimously after hearing more disclosures on Sunday and said it was satisfied with his candour. The administration told the board there would be no criminal charges. The company says it will cooperate. No filing discloses an SEC inquiry (sec_filings, stale). Narrative's own judgment puts TB5 firing by 2026-12-08 at about 25%, so the modal outcome is a filed 10-Q, and narrative calls that 'a strong catalyst'. A 75/25 binary that is mostly good for the stock cannot by itself justify down above up."
+  },
+  {
+   "ref": "hyperscaler_capex",
+   "point": "Demand is untouched. 0 of 4 hyperscalers are falling, with run-rate vs TTM between +15.9% and +43.6%. Q4 guide is $130B, 4.2% above consensus, with zero China assumed (tv_fundamentals). Fundamentals derives about 11x forward EPS. That is up from 8.4x at the panic low but still not a growth multiple."
+  },
+  {
+   "ref": "tv_purple_list",
+   "point": "The backdrop improved during the rally rather than diverging from it. VIX fell to 26.61 (-25.8%). S5TH rose to 53.08 (+7.16), back above 50. RSP beat SPY over 1 month (-1.97% vs -4.95%). HY OAS at 3.76 is the one adverse print, and macro says this FRED series may lag Monday."
+  },
+  {
+   "ref": "relative.nvda_vs_sox_ratio_now",
+   "point": "NVDA/SOX went from 14.93 to 17.21 (+15.3%) in one session. Ex-NVDA peers lagged (AMD +6.85%, AVGO +3.0%), so the money went into the name with the governance fix. The move was not just sector beta."
+  }
+ ],
+ "hunt": [
+  {
+   "ref": "structure.atr_daily_pct",
+   "point": "DOUBLE COUNTING / EVENT-INFLATED INPUT. All six cut 2w range by 9 to 15 points for an ATR of 13.22 (8.0%). Monday's true range was 171.50 - 125.53 = 45.97 points, and Friday 11-20 was about 19 points (143.725 to 124.50). Swapping Monday's true range for a 10-point day would cut a 14-day ATR by about 2.6 points, to roughly 10.6 (6.4%) (derived; Wilder smoothing differs). The range cut is partly the event measuring itself. Thanksgiving week (half-day 11-27) and a pre-FOMC measurement close (12-08) both argue for compression. A range near 32 is defensible; below 30 is not."
+  },
+  {
+   "ref": "structure.gap_zones_open",
+   "point": "DOUBLE COUNTING / FOLK PATTERN. Fundamentals, macro, narrative, relative_strength, sentiment and technical all cite the open 125.53-156.93 gap, and the fact that 156.80 sits just under Monday's low, as reasons for down. That is one chart fact counted six times. The slice has no base rate for gap fills. Technical's engine puts a full fill to 125.53 at only 5.8% by 12-31. The 156.80 line is a mechanical -5%; its closeness to 156.93 does not change the probability of crossing it, which the unconditional rate (41.2% touch) already covers."
+  },
+  {
+   "ref": "news_governance",
+   "point": "DOUBLE COUNTING. The governance group (SEC inquiry, 10-Q delay, Dec 1-3 interviews) is a single evidence group under the shared rules. Fundamentals, narrative, relative_strength ('my down probabilities assume it is not fully resolved'), sentiment, and macro ('part of the extra down weight is the SEC/accounting tail') each price it in. Last run the red team flagged the same pattern (+14 to +20 in every lane for one SEC headline). The chair averaged it to 36/28/36, and the outcome went the other way by a wide margin. One episode proves nothing about the method (outcome bias). But the counting error is structural and has now repeated."
+  },
+  {
+   "ref": "structure.today_bar_status",
+   "point": "DOUBLE COUNTING / STALE PAGE. 'Closed below its open' and 'gap-and-fade' are cited by technical, sentiment and narrative. The overnight indicative of 163.35 is cited by fundamentals, sentiment, narrative and technical. The 163.35 comes from tv_chart_owner, which is marked stale/partial. Under Tier 1 it must not be quoted as current. Even if accurate, it is -1.0%, a small fraction of an 8% ATR. The other reading of the bar is that the 156.93 low was bought (close 5.2% off the low, 56% up the range), and nobody weighed that against the fade."
+  },
+  {
+   "ref": "options_positioning",
+   "point": "UNREAD PAGE THE CONSENSUS DEPENDS ON. Sentiment ('covering-led rallies usually fade', 'dealer short-gamma tends to unwind') and narrative ('fade of the mechanical part, driven by short covering and record options volume') base part of their down tilt on positioning that nobody read. The page is deferred. The only datum is '>11M contracts, record', which says nothing about direction: call buying, put closing and new hedges all produce record volume. Sentiment itself says this gap is the costliest of the run. By rule it is unknown, not bearish. The fade story should get no weight until the page is read."
+  },
+  {
+   "ref": "base_rates.conditional_2w_drop_le_minus15",
+   "point": "SMALL SAMPLES, BOTH WAYS. Several post-mortems now list the n=4 table (2w 50/50/0, 13w 100% up) as a sign that 'pointed to' the rebound. The four overlapping windows are about one episode, and Monday adds one more. It does not validate the table. Several members also rely on n=0 claims, judgment with no sample in the slice: 'how these shocks usually price' (narrative), 'covering-led rallies usually fade' (sentiment), 'after a key-person shock relative strength snaps back then stalls' (relative_strength), 'capitulation VIX usually mean-reverts' (macro). The chair should give zero weight to every n=0 pattern, bullish or bearish."
+  },
+  {
+   "ref": "committee/runs/2026-11-24-review",
+   "point": "LESSONS WRITTEN BUT NOT APPLIED. Fundamentals proposes 'do not tilt 2w down on governance news alone' and then tilts 2w down 36 vs 31 on the 10-Q/SEC item. To be fair, its forward P/E condition (multi-year low) no longer holds at about 11x. Sentiment proposes 'do not let a no-reversal-bar read push 2w down far above base' and then adds +14 to down, citing a bar that closed below its open. Technical proposes 'weight the up tail at least equal to the down tail' and applies it (38/30/32). It is the only member whose forecast follows its own lesson."
+  },
+  {
+   "ref": "tv_fundamentals.analysts_2026_11_23",
+   "point": "ANALYST TARGETS. These are handled well this run: fundamentals and narrative treat the upgrades as price-following, counted once. Note the anchor coincidence: the average PT (242.79) sits almost exactly on the ATH (243.37). Neither should appear as a target or as support for any horizon."
+  },
+  {
+   "ref": "snapshot.nvda_ath",
+   "point": "ANCHORING. Four anchors sit within 4% of price: the owner's cost of 171 (holdings), Monday's high of 171.50, the old L1 zone of 162-164 where price closed, and the exit-day close of 166.19. On the upside the 243.37 ATH and the 242.79 average PT both pull 'back to highs'. Sentiment and fundamentals flag these correctly. The risk this run runs the other way: 'the stock is back to the old L1 zone, so it has recovered' anchors to a zone that was built for a pre-SEC world, and that zone sets neither the up nor the down odds."
+  },
+  {
+   "ref": "tv_fundamentals.next_earnings",
+   "point": "EARNINGS AS PREDICTABLE. The late-Feb print sits inside next_quarter only. Fundamentals says a late-Feb beat 'would likely be worth more than the 11-17 beat'. Yet the 11-17 beat-and-raise was followed by -10% in three sessions. Reaction sign is not forecastable from beat size in this regime, so the print should only widen next_quarter tails. Members mostly do that (range 24-28). The same caution applies to the 10-Q, a quasi-earnings binary: narrative's claim that 'the reaction to a negative document is likely to be larger than to a positive one' has no sample behind it."
+  }
+ ],
+ "hindsight_audit": [
+  {
+   "ref": "news_governance",
+   "point": "GENUINELY PREDICTIVE, and ex ante on the catalyst itself: the dated political sequence. Trump told Huang to 'fight for' his job (call 11-10, reported 11-12). Altimeter/Atreides (~$2.13B of shares) asked the board to keep his return open (11-14). Trump 'would not mind' (11-16). Huang said he would be 'honored' (11-17). Trump said he wanted Huang to 'apologize and go back' (11-20). All were on record before the 11-22 run. They warranted a non-trivial reversal probability, and the committee gave it zero (narrative's self-audit is accurate). Two limits. The board chair's 11-17 'does not intend' was a real counter-signal at the time. And the decisive Sunday post was probably after the 11-22 news read. These signs justified a reversal tail. They did not predict the 11-23 timing."
+  },
+  {
+   "ref": "base_rates.conditional_2w_drop_le_minus15",
+   "point": "CONDITIONS, NOT PREDICTORS (they set magnitude given a catalyst): weekly RSI 25.01, daily RSI 15, 8.4x forward, VIX 35.9 with HY OAS calm, the NVDA/SOX -46.5% de-rating, the 200W SMA / fib 0.5 'confluence'. Each was true on 11-20 and would have been true if the board had held. Several were also present around 11-10 to 11-13, when the daily BBPCT triangles and the Nov 12 high-volume reversal failed (sentiment, technical). Signs that failed a week earlier cannot be credited as predictors now. The 'four-way confluence at 124' is selected after the fact: had 124 broken, the same lines would be cited as 'support lost'."
+  },
+  {
+   "ref": "pages.tv_chart_owner",
+   "point": "RELABELLED AFTER THE FACT. The 11-20 volume (633M, 3.9x) is now called 'climactic' (technical) and 'capitulation-type' (fundamentals). On 11-22, sentiment correctly noted that volume was accelerating (334M, 407M, 633M), the bar closed 0.8% off its low and there was no reversal. That is the opposite of a classic climax. The 4H Cipher B divergence comes from a partial page whose oscillator values were later shown to be carried over. Neither was a reliable signal at the time."
+  },
+  {
+   "ref": "reachability.one_day",
+   "point": "NOT PREDICTABLE: the size and date. Days of +15% or more are 0.32% of NVDA days, and +10% days are 0.55%. Macro, technical and sentiment say this plainly, and it is the most honest line in the post-mortems. The right lesson is to put an explicit probability on every reversible governance state. Rules from one episode such as 'keep up >= down at low P/E' or 'weight up tail >= down tail' are not justified: they are n=1 overcorrections."
+  },
+  {
+   "ref": "scoring",
+   "point": "OUTCOME BIAS GUARD. Several members say their 11-22 calls 'will score up' or are 'in the money'. Those forecasts resolve at the close on or before 2026-12-06 (Fri 12-04). They are unscored until then and must not enter the lessons log as hits or misses before resolution."
+  }
+ ],
+ "evidence": [
+  {
+   "ref": "base_rates.next_2_weeks",
+   "point": "Start 33/45/22. Range: cut 13 to 32 for the ATR, counted once and discounted for event inflation. Tails 68: the base ratio would give about 41/27. Governance/10-Q group counted once: about -5 from up to down, giving 36/32/32. Net vs base: up +3, range -13, down +10. I end below the base-ratio split because the 10-Q binary inside the window is real and the late filing is a genuine anomaly (three prior 10-Qs were filed on results day)."
+  },
+  {
+   "ref": "base_rates.this_quarter_approx_7w",
+   "point": "Base 39/43/18. The window is 27 trading days, and touch rates are 51.2% for +10% and 35.7% for -10% (engine, cited by narrative). I go to 38/33/29 (up -1, range -10, down +11). The FOMC (12-09), CPI (12-10, fcst 3.9 vs 3.7) and the 10-Q are real two-sided risks, and hawkish macro (CPI 3.7 vs FF 4.0) is the one independent down input I accept."
+  },
+  {
+   "ref": "base_rates.next_quarter_13w",
+   "point": "Base 50/31/19. I go to 47/24/29. The late-Feb print, the investigation's conclusion and the TB3 licence deadline (about 2027-02-17) all fall inside the window, which lowers range and raises the down tail. The base skew is not reversed, and demand evidence (capex 0/4 falling) is intact. Conditional tables get zero weight: price has left the condition."
+  },
+  {
+   "ref": "sec_filings",
+   "point": "The strongest real down item. The Q3 10-Q is not on EDGAR, delayed with reference to the internal investigation, when the last three were filed on results day. A Form 144 was filed 2026-11-19 with seller and size not read. The page is partial/stale. I keep down at 32, 10 above base, mainly for this."
+  },
+  {
+   "ref": "coverage",
+   "point": "10/14 ok. Stale: tv_chart_owner, sec_filings, AAII, CNN F&G. Options are deferred. The two pages the 2w call most depends on (the sec_filings text and options positioning) are unread. That caps my confidence at 35 and is why I move only 3 points from consensus on 2w down, not more."
+  }
+ ],
+ "ladder_critique": [
+  "Information only. The owner approved the ladder 2026-11-22 and the committee does not change it. Technical's reach numbers show D1-D3 (5.0 of 7.5 weights) are effectively unreachable before the Feb print (D1 1.9% by 12-31; D2/D3 under 4% by 3-31). The only reachable rows are C1 (its trigger already fired while dormant) and C2 at 186+ (41.3% by 12-31). If the gate opens soon, the plan in practice becomes 'buy strength at 186'. That is not what a dip ladder approved at 125.53 intended. The owner should decide knowingly whether that is acceptable, rather than let anchoring to the approved rows decide it.",
+  "C1 semantics: its trigger (close back above 145.71) printed 11-23 before gate G. The owner should rule whether C1 now means 'buy a retest of 145.71-150' or is spent. Until then it should not be read as active.",
+  "Cost anchor: 171 (owner) and 171.50 (Monday high) are not levels for any order or stance. Holdings treatment excludes averaging to fix cost."
+ ],
+ "key_levels": [
+  {
+   "level": 171.5,
+   "why": "Monday's high. A close above it before a close below 156.93 means the reversal day is being extended, not faded. Reach by 12-08: 60.1%.",
+   "ref": "snapshot.today_high"
+  },
+  {
+   "level": 156.93,
+   "why": "Monday's low and the top of the open gap. A close below it before 171.50 favours the consensus fade. Reach by 11-27: 19.0%; 2w down line 156.80 (41.2% touch).",
+   "ref": "snapshot.gap_zones_open"
+  },
+  {
+   "level": 161.97,
+   "why": "Fib 0.65 / old L1 pivot. Weekly closes 11-27 and 12-04 above it mean the reclaim holds.",
+   "ref": "fib_check.computed.level_0.65"
+  },
+  {
+   "level": 179.92,
+   "why": "Nov 9 high, bottom of the upper gap, last pre-exit trading area. Reach 30.3% by 12-08, 55.0% by 12-31.",
+   "ref": "structure.gap_zones_open"
+  },
+  {
+   "level": 148.55,
+   "why": "Quarter down line, just under C1 (145.71-150) and the 11-12 low 148.80. A close below means the reinstatement premium is gone. Reach 35.7% by 12-31.",
+   "ref": "ladder_audit.orders"
+  }
+ ],
+ "checks": [
+  {
+   "n": 1,
+   "check": "Which side of Monday's range breaks first on a daily close. A close above 171.50 before any close below 156.93 favours the red team (up >= down). A close below 156.93 first favours the consensus fade. Reach: 171.50 60.1% by 12-08; 156.93 19.0% by 11-27.",
+   "level_or_date": "171.50 / 156.93; first close outside, likely by the 2026-12-01 close"
+  },
+  {
+   "n": 2,
+   "check": "Q3 FY27 10-Q. Filed by the extended deadline with no material weakness, restatement or non-reliance language, and the SEC matter described as informal or not disclosed: favours the red team. NT-beyond-deadline, material weakness, 'subpoena'/'formal investigation'/'Wells': favours the consensus and would move my 2w down to about 42. Needs a full sec_filings read, not a search.",
+   "level_or_date": "by about 2026-12-04"
+  },
+  {
+   "n": 3,
+   "check": "NVDA/SOX ratio on the two weekly closes. Holding at or above 17.21 on both says the governance fix is sticking (red team). Back below 15.5 with SOX flat says the stock-specific discount has returned (consensus).",
+   "level_or_date": "ratio 17.21 / 15.5; weekly closes 2026-11-27 and 2026-12-04"
+  }
+ ],
+ "what_would_change_my_mind": [
+  "Expected (not triggers): Thanksgiving half-day 11-27, weekly closes 11-27 and 12-04, ex-dividend 12-02, 10-Q deadline about 12-04, FOMC 12-09, CPI 12-10, late-Feb print. Only their outcomes, below, move my view.",
+  "To the consensus (2w down >= 38): a daily close below 156.80 by 2026-12-08 (41.2% touch, reachable) before any close above 171.50, or the 10-Q late beyond the extended deadline or filed with material-weakness, restatement or non-reliance language by about 2026-12-04.",
+  "Further down: a daily close below 148.55 by 2026-12-31 (35.7%, reachable), or a disclosed formal SEC investigation or subpoena. this_quarter down to about 40.",
+  "Further up: a daily close above 179.92 by 2026-12-08 (30.3%, reachable) with a clean 10-Q filed. 2w to about 45/30/25 and this_quarter up to about 45.",
+  "Options page read (owner decision): if it shows the 11-23 volume was mainly call buying with dealers short gamma near 160-170, I accept part of the fade argument and add about 4 to 2w down."
+ ],
+ "notes_for_chair": [
+  "Count once. The three down items (open gap / 156.80 line, 10-Q/SEC group, gap-and-fade bar plus stale 163.35 overnight) each appear in four to six lanes. Re-weighting the lanes by independent evidence, not averaging them, moves 2w from 33/32/35 to about 36/32/32. The ATR range cut is valid once, but the ATR includes Monday's 45.97-point true range.",
+  "Hindsight. Credit only the dated political signals as ex-ante predictive (of a reversal tail, not the timing). Oversold, valuation, VIX and confluence readings were conditions that set magnitude, and they had failed a week earlier. Do not adopt n=1 rules such as 'up >= down whenever P/E is low'. Adopt 'every reversible governance state gets an explicit reversal probability in each run' (narrative's proposal (d)). It is the one lesson that would have changed the 11-22 forecast for the right reason.",
+  "Do not score the 11-22 forecasts before their resolution close (on or before 2026-12-06). Several members describe them as hits already.",
+  "Factual correction to narrative: price has not 'priced back almost all' of the drawdown. 165.05 is about the exit-day close (166.19) and 11.6% below the last pre-exit weekly close (186.64).",
+  "TB rulings are the chair's. I agree with narrative that TB2's premise is reversed. Clearing it on documents (the 8-K) is consistent with the rule. Keeping it fired would pause on an event that no longer exists. TB3 is unaffected. TB5 remains an owner proposal.",
+  "Data hygiene (confirming members): tv_fundamentals.fwd_pe (8.4) not rescaled to 165.05; structure.volume_spike_ratio_mon 2.0 conflicts with 4.8 (782.59M / 164.10M); ladder_audit.earnings_blackout.orders_touched_today_intraday lists C2, but the high was 171.50 < 186; tv_chart_owner oscillator, volume and candle fields are carried over from 11-22.",
+  "Pre-mortem: if I am wrong by 12-08, the likeliest reason is that the 10-Q slipped or disclosed a formal SEC investigation and the gap partly filled toward 148-150. In that case the shared governance item deserved the weight six lanes gave it, and my 'count once' discipline under-reacted to a genuinely dominant risk."
+ ]
+}

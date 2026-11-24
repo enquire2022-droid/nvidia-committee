@@ -1,0 +1,124 @@
+{
+ "agent": "sentiment",
+ "run_id": "2026-11-24-review",
+ "as_of": "2026-11-24",
+ "price_at_call": 165.05,
+ "view": "Monday's +31.48% on 782.59M shares (4.8x the 60-day average) was an event repricing and short-squeeze-type reversal into heavy pre-existing fear. It was not a capitulation bar. The candle opened at 167.035, sold off to 156.93 and closed at 165.05, below its open and 3.8% under the 171.50 high, so supply showed up into strength, much of it from holders trapped between 162 and 171. Sentiment is no longer a contrarian tailwind at 165: the fear gauge that made the reaction so big has now been spent. Tactical: Wait, no chasing. Strategic: Hold the existing 30 shares. The ladder stays as approved, and any change needs the owner's approval.",
+ "probabilities": {
+  "defs": "2w +/-5%, quarters +/-10%, vs price_at_call 165.05 (Mon 2026-11-23 close; pre-market run Tue 2026-11-24). next_2_weeks: up = close > 173.30, down = close < 156.80, range between, measured at the close on or before 2026-12-08. this_quarter: 2026-12-31 close; next_quarter: 2027-03-31 close; up = close > 181.56, down = close < 148.55, range between. up + range + down = 100.",
+  "next_2_weeks": {
+   "up": 30,
+   "range": 34,
+   "down": 36
+  },
+  "this_quarter": {
+   "up": 30,
+   "range": 38,
+   "down": 32
+  },
+  "next_quarter": {
+   "up": 40,
+   "range": 28,
+   "down": 32
+  }
+ },
+ "confidence": 28,
+ "evidence": [
+  {
+   "ref": "base_rates.next_2_weeks",
+   "point": "Outside view: 33 up / 45 range / 22 down (n=259). My forecast: up -3 to 30, range -11 to 34, down +14 to 36. Range is cut because daily ATR is 8.0% (structure.atr_daily_pct), which makes the +/-5% band less than one ATR wide. Down is raised for three reasons. The 125.53-156.93 gap is open directly below, and 156.80 is only 0.1% under Monday's low. Overnight indicative was 163.35, already a fade. And the SEC-accounting overhang and 10-Q are still unresolved (news, not my lane). The 2w-drop conditional (n=4, 50/50/0) no longer applies: two_week_change_pct is now +1.4%, so the rebound it pointed to has been realised."
+  },
+  {
+   "ref": "base_rates.next_quarter_13w",
+   "point": "Base rate 50/31/19; mine 40/28/32. I move up 10 points down from the base rate and add 13 to down. The weekly RSI <=36 conditional (n=13, 69/0/31, median +21.5%) was measured from oversold prices. Price is now 31% above the bar that produced that RSI, so a good part of that median has arguably been paid out in a single session. The late-Feb 2027 print falls inside the window, and that binary keeps range low."
+  },
+  {
+   "ref": "structure.today_bar_status",
+   "point": "Monday's bar: open 167.035, high 171.50, low 156.93, close 165.05. today_gap_open_pct is 33.1, and the close is below the open (a red body on a gap day). today_recovery_from_low_pct is 5.2, from a low that was itself 25.0% above Friday's close (today_low_vs_prev_close_pct). Reading: buyers paid up at the open, then sellers used the liquidity, and dip buyers absorbed at 156.93. That is event-driven re-rating with overhead supply, not a capitulation low. The capitulation-type signals were Friday's, and they have already resolved upward."
+  },
+  {
+   "ref": "structure.today_volume_vs_60d_avg",
+   "point": "Volume was 782.59M, 4.8x the 60-day average and the highest of this sequence (Fri Nov 20 633.4M, Mon/Tue Nov 16/17 333.8M/406.9M in tv_chart_owner). Volume this large on a +31% day is a forced repositioning: short covering and de-hedging. Without options or short-interest data I cannot split covering from new longs, and covering-led rallies usually fade once the forced buying is done. Data conflict: structure.volume_spike_ratio_mon says 2.0, which contradicts 4.8. I use 4.8 because it matches 782.59M / 164.10M."
+  },
+  {
+   "ref": "tv_purple_list",
+   "point": "Market fear eased sharply but is not gone. VIX is 26.61 (-25.8%), SOX +14.03%, SPX +4.73%, Nasdaq Comp +6.51%, S&P % above 200d at 53.08 (+7.16), HY OAS 3.76 (+0.24). VIX is still elevated, so there is room for further relief if no new shock arrives, which supports the quarter view. But HY OAS widened on an up day, so credit did not join the relief. I weight that as a mild caution."
+  },
+  {
+   "ref": "sentiment_aaii",
+   "point": "STALE and pre-crash (week ending 2026-11-11, partial): bullish 30.8, bearish 51.4, spread -20.6, against historical averages of 37.5/31.5 and a 1-year bearish high of 53.3. It cannot tell me post-reinstatement retail mood, so I treat it as unknown for today. A post-event survey that shows bullish back above 37.5 would mean the contrarian fuel is gone."
+  },
+  {
+   "ref": "sentiment_cnn_fg",
+   "point": "STALE: 20 'Extreme Fear' on 2026-11-06, with no reading after event_cutoff_utc 2026-11-23T21:00Z (latest_value null). It is unknown, not neutral. A VIX of 26.61 suggests fear rather than greed, but that is an inference, not a reading."
+  },
+  {
+   "ref": "options_positioning",
+   "point": "FAILED/deferred (paid data). The only datapoint is news: more than 11M NVDA contracts traded on 2026-11-23, a record. This is the costliest gap of the run. I cannot see whether the jump was driven by call buying and dealer short-gamma (which tends to unwind and fade) or by put closing. I also cannot see whether implied vol collapsed or where dealer gamma sits near 160/170. That is the core input for judging whether Monday is sustainable, and its absence is the main reason confidence is 28, not 35-40."
+  },
+  {
+   "ref": "weekly_rsi",
+   "point": "Signal hygiene (lessons-log 2026-11-11): now_engine 25.0 is the completed 2026-11-16 bar, and now_tradingview 40.65 is the FORMING bar (1 of 4 sessions). 'Oversold' (is_oversold true) describes last week. A forming bar on a holiday week must not be quoted as a current oversold read."
+  },
+  {
+   "ref": "tv_chart_owner",
+   "point": "STALE carry-over: weekly_candle (o 159.01, c 125.53), fourh_oscillators (RSI7 7.84, RSI14 15.12, stoch 0), daily BBPCT -2.61, volume_mon_tue_shares and price_vs_sma200w_pct 1.1 are identical to the 2026-11-22 reading and describe the pre-event chart. None of these is current. The page is partial: the 1D/4H panes were not re-read. The only fresh items are weekly_candle_forming, sma100w 175.25, sma200w 124.86, the BBPCT weekly green up-triangle (forming bar, may repaint) and overnight 163.35."
+  },
+  {
+   "ref": "config/ladder.json holdings (per brief)",
+   "point": "Owner bias audit, cost anchor and disposition effect: 30 sh at 171.00 ($5,130). At 165.05 the position is -3.5%, and Monday's high of 171.50 printed 0.3% above cost. That is a strong breakeven anchor. The two System-1 pulls are (a) 'sell when I'm back to even', which would treat 171 as a signal when it is only the owner's price, and (b) 'add now so the average looks better', which chases. Neither is in the plan. Reduce is not available below blended cost unless a thesis break fires. Adding is governed by the dormant D1-D3/C1/C2 rules, not by the P&L."
+  },
+  {
+   "ref": "snapshot.nvda_ath",
+   "point": "Owner bias audit, ATH anchor: 243.37 is 32.2% above price (structure.drawdown_from_ath_pct -32.2). After a +31% day the natural story is 'it's going back to the highs'. The record cuts both ways: the 179.92-185.22 gap and the 175.25 100W SMA sit in between, and C2 (186 weekly close) is unreachable by 2026-12-31 per the ladder. The ATH is not a target for any horizon in this forecast."
+  },
+  {
+   "ref": "base_rates.conditional_2w_drop_le_minus15",
+   "point": "Owner bias audit, 'oversold = buy' and urgency: on 2026-11-22 oversold was real, and it paid only because a governance catalyst arrived. It is not oversold now. The urgency trap has flipped from 'buy before the bounce' to 'buy before it runs away'. The approved ladder answers that by design: C1 needs a fresh close at or below 145.71 then a close above it, and it never chases. There is no earnings binary until late Feb 2027. The near-dated binaries are the 2026-12-01/12-03 testimony window, the 10-Q (about 2026-12-04), FOMC 2026-12-09 and CPI 2026-12-10, and none of them justifies acting before its outcome is known."
+  }
+ ],
+ "key_levels": [
+  {
+   "level": 156.93,
+   "why": "Monday's low and the top of the open 125.53-156.93 gap. A close below it (and below the 156.80 2w down line) means the event bid has been absorbed and the gap is in play.",
+   "ref": "snapshot.gap_zones_open"
+  },
+  {
+   "level": 171.5,
+   "why": "Monday's high, 0.3% above the owner's 171 cost. This is the breakeven-supply zone: trapped 162-171 buyers sell here. A close above it shows supply has been absorbed.",
+   "ref": "snapshot.today_high"
+  },
+  {
+   "level": 175.25,
+   "why": "100W SMA, the first structural resistance above the 2w up line 173.30",
+   "ref": "tv_chart_owner.weekly_overlays.sma100w"
+  },
+  {
+   "level": 179.92,
+   "why": "Bottom of the 179.92-185.22 unfilled gap, just below the quarter up line 181.56",
+   "ref": "snapshot.gap_zones_open"
+  },
+  {
+   "level": 145.71,
+   "why": "C1 confirmation trigger and the SEC-day gap top; quarter down line 148.55 sits just above it",
+   "ref": "snapshot.sec_day_gap_143725_145710"
+  }
+ ],
+ "what_would_change_my_mind": [
+  "Daily close above 171.50 by 2026-12-08 (reach 60.1%) on volume above the 60-day average: overhead supply absorbed, so I would raise 2w up to about 40 and cut down to about 28.",
+  "Daily close below 156.93 by 2026-12-08 (reach 41.6%): event bid absorbed, gap fill in play, so I would raise 2w down to about 50 and this_quarter down to about 40.",
+  "Daily close below 145.71 by 2026-12-31 (reach 30.3%): the reinstatement rally has fully failed, so I would move this_quarter down above 50.",
+  "Daily close above 179.92 by 2026-12-31 (reach 55.0%) that holds above the 175.25 100W SMA: I would raise this_quarter up to about 40.",
+  "Non-price: a post-event AAII survey with bullish above 37.5 (historical average), or a CNN Fear & Greed reading above 50, before 2026-12-08: the contrarian fuel is spent, so I would trim quarter up by about 5. A reading still in Extreme Fear would do the opposite.",
+  "Expected (not triggers): the testimony window 2026-12-01/12-03 and the 10-Q (about 2026-12-04) will happen. What matters is the outcome. A 10-Q that discloses the SEC matter with a restatement or material weakness would push all down buckets up by 10 or more, and a clean 10-Q would cut down by about 5."
+ ],
+ "notes_for_chair": [
+  "Before-23-Nov question, signs that pointed to a sharp rebound (inputs/readings_2026-11-22.json). (1) Extreme, broad fear: VIX 35.90 (+26.28%), SOX -10.73%, S&P % above 200d at 45.92. (2) Retail already deeply bearish: AAII bearish 51.4, near the 1-year high of 53.3, but stale (Nov 11). CNN F&G 20 Extreme Fear, also stale (Nov 6). (3) Credit not stressed: HY OAS 3.52 (+0.05), so it was equity fear without a funding crisis. (4) Extreme oscillators on completed bars: weekly RSI14 25.01 (lowest since 2023, below the 35.7 at the Apr 2025 low), RSI7 11.78, weekly and daily stoch RSI 0/0, daily RSI14 15.05, 4H RSI7 7.84. (5) Climax-type volume: 633.4M on Nov 20 (3.9x), with 2.05B shares traded that week, the seventh straight down week and the worst since Oct 2008. (6) Price at a long-term anchor: 200W SMA 124.14 (1.1% above) and fib 0.5 at 127.09. (7) Outside view: after 2w drops of -15% or worse, n=4 gave 50/50/0 over 2w and 100/0/0 over 13w.",
+  "Before-23-Nov question, signs that did NOT point to a rebound. (1) Friday Nov 20 closed only 0.8% off its low, with no reversal bar. (2) Volume was accelerating through the week (333.8M, 406.9M, 633.4M), not drying up into a lower low. (3) Weekly MACD histogram -10.11 and BBPCT weekly -33.29 / daily -2.61 still falling, with no bullish divergence. (4) Price closed below the rising trendline from the 2023 lows (~140). (5) The Nov 12 high-volume reversal had already failed, so volume alone had a bad record. (6) The new SEC-accounting overhang was unresolved. (7) The governance read was that the board would NOT reinstate Huang (Chair Jones). No sentiment input could have timed Monday. The rebound came from a governance catalyst that the narrative evidence said was unlikely.",
+  "Lesson proposal for lessons-log (chair or owner to decide). Extreme fear and oversold readings did not time the low, but they set the size of the reaction. A +31.48% day is far outside NVDA's one-day history (one_day ge_+15 = 0.32%). My 2026-11-22 sentiment call was 2w 33/25/42 (down-skewed), resolving 2026-12-04, and price now sits far above its 131.81 up line. The volume description ('not capitulation') was accurate, but I gave too little weight to the asymmetry: with sentiment that washed out, a positive surprise moves price much more than a negative one. Next time, do not let a 'no reversal bar' read push 2w down far above base when fear is this broad.",
+  "Data-quality flags for the chair. (a) The tv_chart_owner oscillator, volume and weekly-candle values in this slice are carried over from 2026-11-22 and are pre-event. Do not use them as current; the technical member should be warned. (b) structure.volume_spike_ratio_mon = 2.0 conflicts with today_volume_vs_60d_avg 4.8 and the 4.4x in today_bar_status; 782.59M / 164.10M = 4.8. (c) The weekly RSI oversold flag refers to the completed 2026-11-16 bar. The forming bar reads 40.65 on TradingView.",
+  "Cross-domain (not my lane). Whether TB2 is now lifted by the reinstatement, and whether the 2026-12-01/12-03 testimony still goes ahead, are for narrative and the chair. Reinstatement removes the departure, but the TB2 un-pause test in activation condition 2 also needs no Nvidia-knew report and no charge. The SEC/10-Q gate (condition 5) is untouched by Monday.",
+  "Owner position (from config/ladder.json holdings): 30 sh at 171, now -3.5%. The committee should not frame anything relative to 171. In particular, 'back to breakeven' at 171-171.50 is not a sell signal, and averaging down to 'fix' the cost is excluded by holdings_treatment. Pre-mortem: 'three months from now this was wrong because the reinstatement started a durable re-rating, the 10-Q was clean, and fear kept unwinding into the Feb print, so up dominated and my 32 down was too high.'",
+  "No order is suggested. The ladder (D1-D3, C1, C2) stays dormant before G and changes only with the owner's approval."
+ ]
+}
