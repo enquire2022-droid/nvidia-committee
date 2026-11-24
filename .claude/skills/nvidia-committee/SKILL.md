@@ -64,11 +64,12 @@ thesis-break rulings or the ladder. Gaps over 10 points are questions for the ne
 ## 5. Charts
 ```
 python -m nvdaintel.pathchart <run_id>        # actual path + branches; probabilities from chair.json
+python -m nvdaintel.cyclechart <run_id>       # psychology cycle, "you are here" from chair.cycle_placement (from the run after 2026-11-24)
 ```
 
 ## 6. Memo — `outputs/reviews/<run_id>.md`, from chair.json + fact sheet only
 Order: **Final committee decision** box (strategic, tactical, thesis break, what it means for you, **Expected** line with effects,
-**What would change it** = chair.triggers with their reachability %) → Bottom line + what changed (+ the coverage line verbatim) →
+**What would change it** = chair.triggers with their reachability %) → Bottom line + what changed (+ the coverage line verbatim) → **Cycle placement** (chair's stage, basis, agrees-with-probabilities line, cycle chart) →
 Macro (Purple List + dated catalysts) → Technicals (1W/1D/4H) → Fundamentals & earnings setup → Relative strength → Sentiment →
 Narrative & governance (incl. TB4 capex monitor) → Kahneman (System 1 / System 2) → Outlook (probabilities + base rates) →
 Expected path (chart + checkpoint table with status) → **Ladder Audit** (full history from `ladder_audit.history`, then resting orders,

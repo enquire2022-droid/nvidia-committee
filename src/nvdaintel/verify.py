@@ -133,8 +133,12 @@ def main(memo, run_id):
             continue
         if not matches(x, vals):
             bad.append(n)
-    missing = [s for s in SECTIONS if s.lower() not in text.lower()]
+    chair = json.loads((ROOT / "committee/runs" / run_id / "chair.json").read_text())
+    secs = SECTIONS + (["Cycle placement"] if "cycle_placement" in chair else [])
+    missing = [s for s in secs if s.lower() not in text.lower()]
     lab = labelled(text, run_id)
+    if "cycle_placement" in chair and str(chair["cycle_placement"].get("stage", "")).lower() not in text.lower():
+        lab.append("L5 memo does not state the chair's cycle_placement stage")
     print(f"numbers checked: {len(nums)}; unmatched: {len(bad)}; labelled-check failures: {len(lab)}; missing sections: {len(missing)}")
     if bad:
         print("UNMATCHED:", sorted(set(bad)))

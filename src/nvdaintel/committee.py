@@ -62,7 +62,14 @@ def check(path):
         if not e.get("ref") or not e.get("point"):
             errs.append("evidence items need ref and point")
     if d.get("agent") == "chair":   # decision record (Tier 1, 15 Nov 2026)
-        for k in ("decision", "tb_rulings", "triggers", "expected", "rulings", "expected_path", "ladder_proposals", "coverage_note", "label"):
+        req = ["decision", "tb_rulings", "triggers", "expected", "rulings", "expected_path", "ladder_proposals", "coverage_note", "label"]
+        if str(d.get("as_of", "")) > "2026-11-24":          # cycle placement required from the run after 2026-11-24 (owner, 24 Nov 2026)
+            req.append("cycle_placement")
+            cp = d.get("cycle_placement") or {}
+            for k in ("stage", "basis", "agrees_with_probabilities"):
+                if k not in cp:
+                    errs.append(f"chair: cycle_placement.{k} missing")
+        for k in req:
             if k not in d:
                 errs.append(f"chair: missing {k}")
         for k in ("strategic", "tactical"):

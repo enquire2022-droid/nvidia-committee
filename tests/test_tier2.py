@@ -29,3 +29,11 @@ def test_shadow_history_runs():
     assert out.returncode == 0
     h = json.loads((R / "outputs/shadow/2026-11-24-review_history_check.json").read_text())
     assert {c["window"] for c in h["calls"]} == {"next_2_weeks", "this_quarter", "next_quarter"}
+
+
+def test_chair_needs_cycle_placement_after_2026_11_24(tmp_path):
+    c = json.loads((R / "committee/runs/2026-11-24-review/chair.json").read_text())
+    c["as_of"] = "2026-12-04"; c.pop("cycle_placement", None)
+    f = tmp_path / "chair.json"; f.write_text(json.dumps(c))
+    out = subprocess.run([sys.executable, "-m", "nvdaintel.committee", "check", str(f)], env=ENV, cwd=R, capture_output=True, text=True)
+    assert "cycle_placement" in (out.stdout + out.stderr)

@@ -96,5 +96,17 @@ when you cite one; it may describe the setup, not shift the numbers. Untested si
 The volatility-scaled starting point (normal on log returns, 52-week vol, half drift) did NOT beat the base rates in the
 2021+ test (2 weeks: Brier 0.625 vs 0.621); the base rates stay the starting point.
 
+## Cycle placement (owner-approved 24 Nov 2026, adapted from BTC committee2 rule L; first used in the run after 2026-11-24)
+Stages (market-psychology cycle for a stock): Euphoria, Complacency, Anxiety, Denial, Panic, Capitulation, Depression,
+Relief rally, Hope, Optimism, Belief, Thrill.
+1. **Owner of the label.** The sentiment member proposes `cycle_placement_proposal` {stage, why, refs}; the chair rules and saves
+   `cycle_placement` {stage, since, basis, agrees_with_probabilities}. The memo has a "Cycle placement" line and the chart.
+2. **Moves only on structure, never on a probability alone.** A weekly close below the established drawdown low
+   (`ladder_triggers.details.B_structure_break`) = "Depression: new low". Two weekly closes back above the 100W SMA = "Hope confirmed"
+   (trigger C). Between those lines the label may move one step only with a stated reason (e.g. Capitulation -> Relief rally after
+   a reversal week); it never jumps to Hope/Optimism on one day's move.
+3. **Label must agree with the probabilities next to it** (owner's lesson, Jul 2026): a bottom-is-in label (Hope or later) cannot sit
+   next to this-quarter down >= 30 or a 2-week down above up. The red team checks this every run and names any contradiction.
+
 ## Equity Bottom / Top checklists
 **Draft, not approved, not back-tested.** Report them as information only until the owner approves them after a back-test on NVDA's 2018, 2022 and 2025 drawdowns.

@@ -33,7 +33,8 @@ Write `committee/runs/<run_id>/chair.json` with the standard submission fields (
 probabilities with defs, confidence, evidence, key_levels, what_would_change_my_mind, notes_for_chair = []) plus:
 `decision` {strategic {stance, reason}, tactical {stance, reason}, reduce_available}, `tb_rulings`, `triggers` [{text, level?, by, reach}],
 `expected` [{text, effect}], `rulings` [..], `expected_path` {hypothesis, probability, checkpoints[], branches}, `ladder_proposals` [..],
-`coverage_note`, `label` = "uncalibrated expert judgment" until >= 20 forecasts have resolved.
+`coverage_note`, `cycle_placement` {stage, since, basis, agrees_with_probabilities (true/false + one line)} ruled from the sentiment
+member's proposal and the red team's check (rules in `agents/_shared_rules.md`, "Cycle placement"), `label` = "uncalibrated expert judgment" until >= 20 forecasts have resolved.
 Every number you write must come from the fact sheet, a submission's probabilities/levels, or a reach result. Validate:
 `PYTHONPATH=src python -m nvdaintel.committee check committee/runs/<run_id>/chair.json` until OK. Reply with the JSON only.
 Never place, suggest executing, or edit orders; never edit config.
