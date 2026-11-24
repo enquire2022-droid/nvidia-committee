@@ -1,0 +1,152 @@
+{
+ "label": "SHADOW, context only, LOW CONFIDENCE (few episodes; NVDA's business changed a lot since 1999)",
+ "sample": "NVDA weekly closes 1999-01-18 to 2026-11-23 (last bar may be forming)",
+ "threshold": "drawdown of 30% or more from an all-time-high weekly close",
+ "completed_episodes": [
+  {
+   "peak_week": "1999-08-16",
+   "peak_close": 0.056,
+   "trough_week_close": "1999-09-20",
+   "depth_close_pct": -32.6,
+   "depth_low_pct": -37.7,
+   "weeks_top_to_low": 5,
+   "recovered_week": "1999-11-01",
+   "weeks_low_to_new_high": 6,
+   "ongoing": false
+  },
+  {
+   "peak_week": "2000-03-06",
+   "peak_close": 0.2458,
+   "trough_week_close": "2000-04-10",
+   "depth_close_pct": -41.7,
+   "depth_low_pct": -51.7,
+   "weeks_top_to_low": 5,
+   "recovered_week": "2000-05-30",
+   "weeks_low_to_new_high": 7,
+   "ongoing": false
+  },
+  {
+   "peak_week": "2000-09-25",
+   "peak_close": 0.3411,
+   "trough_week_close": "2000-12-26",
+   "depth_close_pct": -60.0,
+   "depth_low_pct": -66.4,
+   "weeks_top_to_low": 13,
+   "recovered_week": "2001-04-16",
+   "weeks_low_to_new_high": 16,
+   "ongoing": false
+  },
+  {
+   "peak_week": "2001-06-04",
+   "peak_close": 0.4031,
+   "trough_week_close": "2001-09-17",
+   "depth_close_pct": -44.2,
+   "depth_low_pct": -53.2,
+   "weeks_top_to_low": 15,
+   "recovered_week": "2001-11-05",
+   "weeks_low_to_new_high": 7,
+   "ongoing": false
+  },
+  {
+   "peak_week": "2001-12-31",
+   "peak_close": 0.5802,
+   "trough_week_close": "2002-09-30",
+   "depth_close_pct": -88.3,
+   "depth_low_pct": -89.7,
+   "weeks_top_to_low": 39,
+   "recovered_week": "2006-11-13",
+   "weeks_low_to_new_high": 215,
+   "ongoing": false
+  },
+  {
+   "peak_week": "2007-10-15",
+   "peak_close": 0.9347,
+   "trough_week_close": "2008-11-17",
+   "depth_close_pct": -82.9,
+   "depth_low_pct": -84.6,
+   "weeks_top_to_low": 57,
+   "recovered_week": "2016-05-09",
+   "weeks_low_to_new_high": 390,
+   "ongoing": false
+  },
+  {
+   "peak_week": "2018-09-24",
+   "peak_close": 7.0255,
+   "trough_week_close": "2018-12-17",
+   "depth_close_pct": -53.9,
+   "depth_low_pct": -55.7,
+   "weeks_top_to_low": 12,
+   "recovered_week": "2020-02-10",
+   "weeks_low_to_new_high": 60,
+   "ongoing": false
+  },
+  {
+   "peak_week": "2020-02-18",
+   "peak_close": 7.3518,
+   "trough_week_close": "2020-03-16",
+   "depth_close_pct": -30.0,
+   "depth_low_pct": -38.6,
+   "weeks_top_to_low": 4,
+   "recovered_week": "2020-05-04",
+   "weeks_low_to_new_high": 7,
+   "ongoing": false
+  },
+  {
+   "peak_week": "2021-11-15",
+   "peak_close": 32.985,
+   "trough_week_close": "2022-10-10",
+   "depth_close_pct": -66.0,
+   "depth_low_pct": -67.2,
+   "weeks_top_to_low": 47,
+   "recovered_week": "2023-05-22",
+   "weeks_low_to_new_high": 32,
+   "ongoing": false
+  },
+  {
+   "peak_week": "2024-11-04",
+   "peak_close": 147.63,
+   "trough_week_close": "2025-03-31",
+   "depth_close_pct": -36.1,
+   "depth_low_pct": -41.3,
+   "weeks_top_to_low": 21,
+   "recovered_week": "2025-06-23",
+   "weeks_low_to_new_high": 12,
+   "ongoing": false
+  }
+ ],
+ "current": {
+  "peak_week": "2026-09-28",
+  "peak_close": 233.95,
+  "trough_week_close": "2026-11-16",
+  "depth_close_pct": -46.3,
+  "depth_low_pct": -46.8,
+  "weeks_top_to_low": 7,
+  "recovered_week": null,
+  "weeks_low_to_new_high": null,
+  "ongoing": true
+ },
+ "weeks_since_peak": 8,
+ "completed_stats": {
+  "depth_close_pct": {
+   "min": -88.3,
+   "median": -49.05,
+   "max": -30.0
+  },
+  "depth_low_pct": {
+   "min": -89.7,
+   "median": -54.45,
+   "max": -37.7
+  },
+  "weeks_top_to_low": {
+   "min": 4.0,
+   "median": 14.0,
+   "max": 57.0
+  },
+  "weeks_low_to_new_high": {
+   "min": 6.0,
+   "median": 14.0,
+   "max": 390.0
+  }
+ },
+ "n_completed": 10
+}

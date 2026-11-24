@@ -3,7 +3,7 @@ hyperscaler capex monitor (TB4), full ladder history. Called by factsheet.build(
 
 python -m nvdaintel.engines reach <level> <YYYY-MM-DD>   # one trigger: how often NVDA has moved that far in that window
 """
-import json, sys, pathlib, datetime as dt
+import json, math, sys, pathlib, datetime as dt
 import numpy as np
 import pandas as pd
 
@@ -161,3 +161,97 @@ if __name__ == "__main__":
         print(json.dumps(reach_trigger(float(sys.argv[2]), sys.argv[3], fs["snapshot"]["nvda_price"], fs["as_of"]), indent=1))
     else:
         print(__doc__)
+
+
+# ---- Ladder change triggers (owner-approved 24 Nov 2026, adapted from BTC committee2 rule P) ----
+# A level changes only when what it is tied to changes, never because the expected path failed. Proposals only.
+DRIFT_LOG = ROOT / "outputs/ladder_drift_log.jsonl"
+
+
+def _weekly_full():
+    d = json.loads((ROOT / "data/nvda_weekly_full.json").read_text())
+    return pd.DataFrame({k: d[k] for k in "ohlcv"}, index=pd.to_datetime(d["t"], unit="s").normalize())
+
+
+def ladder_triggers(ladder, as_of, sma200w, atr_daily, thesis_breaks=None, log=True, max_drift_pct=2.0):
+    wk = _weekly_full()
+    asof = pd.Timestamp(as_of)
+    comp = wk[wk.index <= asof - pd.Timedelta(days=7)]          # completed weeks only
+    last_week = str(comp.index[-1].date())
+    fired, notes = [], {}
+    # A. anchor drift on two consecutive completed weeks, same direction (dynamic anchors only)
+    rows = []
+    for o in ladder["orders"]:
+        if o.get("type", "dip") != "dip":
+            continue
+        mid = (o["zone_low"] + o["zone_high"]) / 2
+        for a in o.get("anchors", []):
+            name = a["name"]; val = None
+            if "sma200w" in name:
+                val = sma200w
+            elif name == "anchor_rule" and o["id"] == "D1":
+                val = sma200w - atr_daily                         # D1 = 200W SMA minus one daily ATR
+            if val is None:
+                continue
+            rows.append({"week": last_week, "order": o["id"], "anchor": name, "value": round(val, 2), "zone_mid": mid,
+                         "drift_pct": round((val / mid - 1) * 100, 2)})
+    hist = []
+    if DRIFT_LOG.exists():
+        hist = [json.loads(x) for x in DRIFT_LOG.read_text().splitlines() if x.strip()]
+    if log and rows and not any(h["week"] == last_week for h in hist):
+        DRIFT_LOG.parent.mkdir(parents=True, exist_ok=True)
+        with DRIFT_LOG.open("a") as f:
+            for r in rows:
+                f.write(json.dumps(r) + "\n")
+        hist += rows
+    drift_hits = []
+    for r in rows:
+        prev = [h for h in hist if h["order"] == r["order"] and h["anchor"] == r["anchor"] and h["week"] < r["week"]]
+        if prev:
+            p = sorted(prev, key=lambda x: x["week"])[-1]
+            if abs(r["drift_pct"]) > max_drift_pct and abs(p["drift_pct"]) > max_drift_pct and np.sign(r["drift_pct"]) == np.sign(p["drift_pct"]):
+                drift_hits.append(f"{r['order']} anchor {r['anchor']} {r['value']} vs zone mid {r['zone_mid']} ({r['drift_pct']:+.1f}%) two weeks running")
+    notes["A_anchor_drift"] = {"rows_this_week": rows, "hits": drift_hits}
+    if drift_hits:
+        fired.append("A")
+    # B. structure break: weekly close below the established drawdown low (a low 4+ weeks old; newer lows = bottoming)
+    c, low = comp.c, comp.l
+    pk = int(np.argmax(c.values)); seg = low.iloc[pk:]
+    lo_i = int(np.argmin(seg.values)); lo_val = float(seg.iloc[lo_i]); lo_date = seg.index[lo_i]
+    weeks_old = len(seg) - 1 - lo_i
+    established = weeks_old >= 4
+    b = established and float(c.iloc[-1]) < lo_val
+    notes["B_structure_break"] = {"drawdown_low": round(lo_val, 2), "low_week": str(lo_date.date()), "weeks_old": weeks_old,
+                                  "established": established, "last_weekly_close": round(float(c.iloc[-1]), 2), "fired": b}
+    if b:
+        fired.append("B")
+    # C. regime change: two consecutive weekly closes above the 100W SMA within the last 8 weeks, after a close below it
+    s100 = c.rolling(100).mean()
+    above = (c > s100)
+    cfire = False
+    for k in range(max(2, len(c) - 8), len(c)):
+        if above.iloc[k] and above.iloc[k - 1] and not above.iloc[k - 2]:
+            cfire = True
+    notes["C_regime_change"] = {"sma100w_last_completed": round(float(s100.iloc[-1]), 2), "fired": cfire}
+    if cfire:
+        fired.append("C")
+    # D. shock or thesis-break change: a daily move > 4x its prior 60-day stdev in the last 5 sessions, or a TB status change in 7 days
+    dd = json.loads((ROOT / "data/nvda_daily.json").read_text())
+    dc = pd.Series(dd["c"], index=pd.to_datetime(dd["t"], unit="s").normalize())
+    r1 = np.log(dc).diff(); sd = r1.rolling(60).std().shift(1)
+    shocks = [f"{d.date()} {100 * (math.exp(x) - 1):+.1f}% ({abs(x) / s:.1f} sd)" for d, x, s in zip(r1.index[-5:], r1.values[-5:], sd.values[-5:]) if abs(x) > 4 * s]
+    tb_changes = []
+    for b_ in (thesis_breaks or {}).get("breaks", []):
+        st = str(b_.get("status", ""))
+        for tag in ("2026-", "2027-"):
+            pass
+        if any(k in st for k in ("CLEARED", "FIRED", "WATCH")) and b_.get("changed_on") and (asof - pd.Timestamp(b_["changed_on"])).days <= 7:
+            tb_changes.append(f"{b_['id']}: {st[:60]}")
+    notes["D_shock_or_thesis_break"] = {"shocks": shocks, "tb_changes": tb_changes}
+    if shocks or tb_changes:
+        fired.append("D")
+    return {"rule": "Ladder change triggers (owner-approved 24 Nov 2026): A anchor drift >2% two weekly runs, B weekly close below the "
+                    "established drawdown low, C confirmed 100W reclaim within 8 weeks, D shock (>4 sd day) or thesis-break change within 7 days. "
+                    "Proposals only; never because the expected path failed.",
+            "last_completed_week": last_week, "fired": fired, "details": notes,
+            "memo_line": ("Ladder: no change trigger - hold" if not fired else f"Ladder review opened by trigger(s) {', '.join(fired)}")}

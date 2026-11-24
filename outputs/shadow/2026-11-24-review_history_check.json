@@ -1,0 +1,178 @@
+{
+ "label": "SHADOW: history's odds for the chair's own calls (volatility units); never moves the numbers",
+ "price_at_call": 165.05,
+ "weekly_vol_52w_pct": 6.0,
+ "calls": [
+  {
+   "window": "next_2_weeks",
+   "weeks": 2,
+   "history": {
+    "up": 31.7,
+    "range": 46.7,
+    "down": 21.6
+   },
+   "history_band90": {
+    "up": [
+     28.8,
+     34.6
+    ],
+    "down": [
+     19.1,
+     24.3
+    ]
+   },
+   "chair": {
+    "up": 35,
+    "range": 32,
+    "down": 33
+   },
+   "n_eff": 700
+  },
+  {
+   "window": "this_quarter",
+   "weeks": 5,
+   "history": {
+    "up": 30.3,
+    "range": 54.5,
+    "down": 15.2
+   },
+   "history_band90": {
+    "up": [
+     26.0,
+     35.0
+    ],
+    "down": [
+     12.0,
+     19.1
+    ]
+   },
+   "chair": {
+    "up": 37,
+    "range": 33,
+    "down": 30
+   },
+   "n_eff": 279
+  },
+  {
+   "window": "next_quarter",
+   "weeks": 18,
+   "history": {
+    "up": 52.8,
+    "range": 26.4,
+    "down": 20.8
+   },
+   "history_band90": {
+    "up": [
+     43.5,
+     61.9
+    ],
+    "down": [
+     14.3,
+     29.4
+    ]
+   },
+   "chair": {
+    "up": 46,
+    "range": 24,
+    "down": 30
+   },
+   "n_eff": 77
+  }
+ ],
+ "ladder_touch_odds": [
+  {
+   "order": "D0",
+   "type": "dip",
+   "level": 129.0,
+   "touch_1w_pct": 0.6,
+   "touch_1w_band90": [
+    0.3,
+    1.0
+   ],
+   "touch_4w_pct": 6.0,
+   "touch_4w_band90": [
+    4.2,
+    8.5
+   ]
+  },
+  {
+   "order": "D1",
+   "type": "dip",
+   "level": 115.0,
+   "touch_1w_pct": 0.1,
+   "touch_1w_band90": [
+    0.0,
+    0.4
+   ],
+   "touch_4w_pct": 2.2,
+   "touch_4w_band90": [
+    1.2,
+    3.9
+   ]
+  },
+  {
+   "order": "D2",
+   "type": "dip",
+   "level": 101.0,
+   "touch_1w_pct": 0.0,
+   "touch_1w_band90": [
+    0,
+    0.2
+   ],
+   "touch_4w_pct": 0.9,
+   "touch_4w_band90": [
+    0.3,
+    2.1
+   ]
+  },
+  {
+   "order": "D3",
+   "type": "dip",
+   "level": 90.5,
+   "touch_1w_pct": 0.0,
+   "touch_1w_band90": [
+    0,
+    0.2
+   ],
+   "touch_4w_pct": 0.1,
+   "touch_4w_band90": [
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "order": "C1",
+   "type": "confirmation",
+   "level": 141.34,
+   "touch_1w_pct": 2.6,
+   "touch_1w_band90": [
+    2.0,
+    3.4
+   ],
+   "touch_4w_pct": 16.8,
+   "touch_4w_band90": [
+    13.8,
+    20.4
+   ]
+  },
+  {
+   "order": "C2",
+   "type": "confirmation",
+   "level": 180.42,
+   "touch_1w_pct": 14.0,
+   "touch_1w_band90": [
+    12.5,
+    15.6
+   ],
+   "touch_4w_pct": 47.5,
+   "touch_4w_band90": [
+    43.1,
+    51.9
+   ]
+  }
+ ],
+ "flags": [
+  "next_2_weeks down: chair 33 vs history 21.6 (gap > 10): question for the next run",
+  "this_quarter down: chair 30 vs history 15.2 (gap > 10): question for the next run"
+ ]
+}

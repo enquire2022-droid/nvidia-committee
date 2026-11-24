@@ -1,0 +1,948 @@
+{
+ "sample": "NVDA weekly closes 1999-01-18 to 2026-11-16 (n=1453), completed bars",
+ "verdicts": [
+  {
+   "signal": "weekly_rsi14_le_36 (first week at or below)",
+   "horizon": "2w_5pct",
+   "side": "up",
+   "verdict": "NONE",
+   "train": "n=17 up 23.5% vs base 33.2% (edge -9.6, p=0.607, BH fail)",
+   "test": "n=6 up 50.0% vs base 35.1% (edge 14.9, p=0.429)"
+  },
+  {
+   "signal": "weekly_rsi14_le_36 (first week at or below)",
+   "horizon": "2w_5pct",
+   "side": "down",
+   "verdict": "WEAK",
+   "train": "n=17 down 35.3% vs base 23.3% (edge 12.0, p=0.253, BH fail)",
+   "test": "n=6 down 33.3% vs base 22.0% (edge 11.4, p=0.619)"
+  },
+  {
+   "signal": "weekly_rsi14_le_36 (first week at or below)",
+   "horizon": "13w_10pct",
+   "side": "up",
+   "verdict": "NONE",
+   "train": "n=11 up 45.5% vs base 48.4% (edge -3.0, p=1.000, BH fail)",
+   "test": "n=3 up 66.7% vs base 53.7% (edge 12.9, p=1.000)"
+  },
+  {
+   "signal": "weekly_rsi14_le_36 (first week at or below)",
+   "horizon": "13w_10pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=11 down 45.5% vs base 22.3% (edge 23.2, p=0.075, BH fail)",
+   "test": "n=3 down 0.0% vs base 17.7% (edge -17.7, p=1.000)"
+  },
+  {
+   "signal": "weekly_rsi14_lt_30 (first week below)",
+   "horizon": "2w_5pct",
+   "side": "up",
+   "verdict": "NONE",
+   "train": "n=15 up 53.3% vs base 33.2% (edge 20.2, p=0.106, BH fail)",
+   "test": "n=0 up None% vs base 35.1% (edge None, p=1.000)"
+  },
+  {
+   "signal": "weekly_rsi14_lt_30 (first week below)",
+   "horizon": "2w_5pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=15 down 20.0% vs base 23.3% (edge -3.3, p=1.000, BH fail)",
+   "test": "n=0 down None% vs base 22.0% (edge None, p=1.000)"
+  },
+  {
+   "signal": "weekly_rsi14_lt_30 (first week below)",
+   "horizon": "13w_10pct",
+   "side": "up",
+   "verdict": "NONE",
+   "train": "n=8 up 62.5% vs base 48.4% (edge 14.1, p=0.496, BH fail)",
+   "test": "n=0 up None% vs base 53.7% (edge None, p=1.000)"
+  },
+  {
+   "signal": "weekly_rsi14_lt_30 (first week below)",
+   "horizon": "13w_10pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=8 down 25.0% vs base 22.3% (edge 2.7, p=1.000, BH fail)",
+   "test": "n=0 down None% vs base 17.7% (edge None, p=1.000)"
+  },
+  {
+   "signal": "wavetrend_green_dot_oversold (WT1 crosses up, WT2 <= -53)",
+   "horizon": "2w_5pct",
+   "side": "up",
+   "verdict": "NONE",
+   "train": "n=6 up 33.3% vs base 33.2% (edge 0.2, p=1.000, BH fail)",
+   "test": "n=0 up None% vs base 35.1% (edge None, p=1.000)"
+  },
+  {
+   "signal": "wavetrend_green_dot_oversold (WT1 crosses up, WT2 <= -53)",
+   "horizon": "2w_5pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=6 down 33.3% vs base 23.3% (edge 10.0, p=0.629, BH fail)",
+   "test": "n=0 down None% vs base 22.0% (edge None, p=1.000)"
+  },
+  {
+   "signal": "wavetrend_green_dot_oversold (WT1 crosses up, WT2 <= -53)",
+   "horizon": "13w_10pct",
+   "side": "up",
+   "verdict": "NONE",
+   "train": "n=6 up 100.0% vs base 48.4% (edge 51.6, p=0.013, BH fail)",
+   "test": "n=0 up None% vs base 53.7% (edge None, p=1.000)"
+  },
+  {
+   "signal": "wavetrend_green_dot_oversold (WT1 crosses up, WT2 <= -53)",
+   "horizon": "13w_10pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=6 down 0.0% vs base 22.3% (edge -22.3, p=0.349, BH fail)",
+   "test": "n=0 down None% vs base 17.7% (edge None, p=1.000)"
+  },
+  {
+   "signal": "wavetrend_green_dot_any (WT1 crosses up WT2)",
+   "horizon": "2w_5pct",
+   "side": "up",
+   "verdict": "WEAK",
+   "train": "n=80 up 33.8% vs base 33.2% (edge 0.6, p=0.906, BH fail)",
+   "test": "n=25 up 48.0% vs base 35.1% (edge 12.9, p=0.209)"
+  },
+  {
+   "signal": "wavetrend_green_dot_any (WT1 crosses up WT2)",
+   "horizon": "2w_5pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=80 down 23.8% vs base 23.3% (edge 0.5, p=0.895, BH fail)",
+   "test": "n=25 down 12.0% vs base 22.0% (edge -10.0, p=0.333)"
+  },
+  {
+   "signal": "wavetrend_green_dot_any (WT1 crosses up WT2)",
+   "horizon": "13w_10pct",
+   "side": "up",
+   "verdict": "WEAK",
+   "train": "n=55 up 49.1% vs base 48.4% (edge 0.7, p=1.000, BH fail)",
+   "test": "n=17 up 58.8% vs base 53.7% (edge 5.1, p=0.809)"
+  },
+  {
+   "signal": "wavetrend_green_dot_any (WT1 crosses up WT2)",
+   "horizon": "13w_10pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=55 down 20.0% vs base 22.3% (edge -2.3, p=0.871, BH fail)",
+   "test": "n=17 down 17.6% vs base 17.7% (edge -0.0, p=1.000)"
+  },
+  {
+   "signal": "two_week_drop_le_-15pct",
+   "horizon": "2w_5pct",
+   "side": "up",
+   "verdict": "NONE",
+   "train": "n=47 up 40.4% vs base 33.2% (edge 7.3, p=0.283, BH fail)",
+   "test": "n=9 up 22.2% vs base 35.1% (edge -12.9, p=0.508)"
+  },
+  {
+   "signal": "two_week_drop_le_-15pct",
+   "horizon": "2w_5pct",
+   "side": "down",
+   "verdict": "WEAK",
+   "train": "n=47 down 34.0% vs base 23.3% (edge 10.7, p=0.086, BH fail)",
+   "test": "n=9 down 22.2% vs base 22.0% (edge 0.3, p=1.000)"
+  },
+  {
+   "signal": "two_week_drop_le_-15pct",
+   "horizon": "13w_10pct",
+   "side": "up",
+   "verdict": "WEAK",
+   "train": "n=24 up 58.3% vs base 48.4% (edge 9.9, p=0.415, BH fail)",
+   "test": "n=5 up 60.0% vs base 53.7% (edge 6.3, p=1.000)"
+  },
+  {
+   "signal": "two_week_drop_le_-15pct",
+   "horizon": "13w_10pct",
+   "side": "down",
+   "verdict": "WEAK",
+   "train": "n=24 down 37.5% vs base 22.3% (edge 15.2, p=0.085, BH fail)",
+   "test": "n=5 down 40.0% vs base 17.7% (edge 22.3, p=0.216)"
+  },
+  {
+   "signal": "drawdown_ge_30pct_from_ath (first week)",
+   "horizon": "2w_5pct",
+   "side": "up",
+   "verdict": "WEAK",
+   "train": "n=14 up 57.1% vs base 33.2% (edge 24.0, p=0.084, BH fail)",
+   "test": "n=6 up 66.7% vs base 35.1% (edge 31.6, p=0.193)"
+  },
+  {
+   "signal": "drawdown_ge_30pct_from_ath (first week)",
+   "horizon": "2w_5pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=14 down 28.6% vs base 23.3% (edge 5.3, p=0.751, BH fail)",
+   "test": "n=6 down 16.7% vs base 22.0% (edge -5.3, p=1.000)"
+  },
+  {
+   "signal": "drawdown_ge_30pct_from_ath (first week)",
+   "horizon": "13w_10pct",
+   "side": "up",
+   "verdict": "WEAK",
+   "train": "n=10 up 50.0% vs base 48.4% (edge 1.6, p=1.000, BH fail)",
+   "test": "n=3 up 66.7% vs base 53.7% (edge 12.9, p=1.000)"
+  },
+  {
+   "signal": "drawdown_ge_30pct_from_ath (first week)",
+   "horizon": "13w_10pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=10 down 20.0% vs base 22.3% (edge -2.3, p=1.000, BH fail)",
+   "test": "n=3 down 33.3% vs base 17.7% (edge 15.6, p=0.442)"
+  },
+  {
+   "signal": "weekly_close_below_sma200w (first week)",
+   "horizon": "2w_5pct",
+   "side": "up",
+   "verdict": "WEAK",
+   "train": "n=15 up 13.3% vs base 33.2% (edge -19.8, p=0.167, BH fail)",
+   "test": "n=1 up 0.0% vs base 35.1% (edge -35.1, p=1.000)"
+  },
+  {
+   "signal": "weekly_close_below_sma200w (first week)",
+   "horizon": "2w_5pct",
+   "side": "down",
+   "verdict": "WEAK",
+   "train": "n=15 down 20.0% vs base 23.3% (edge -3.3, p=1.000, BH fail)",
+   "test": "n=1 down 0.0% vs base 22.0% (edge -22.0, p=1.000)"
+  },
+  {
+   "signal": "weekly_close_below_sma200w (first week)",
+   "horizon": "13w_10pct",
+   "side": "up",
+   "verdict": "NONE",
+   "train": "n=9 up 22.2% vs base 48.4% (edge -26.2, p=0.182, BH fail)",
+   "test": "n=1 up 100.0% vs base 53.7% (edge 46.3, p=1.000)"
+  },
+  {
+   "signal": "weekly_close_below_sma200w (first week)",
+   "horizon": "13w_10pct",
+   "side": "down",
+   "verdict": "NONE",
+   "train": "n=9 down 22.2% vs base 22.3% (edge -0.0, p=1.000, BH fail)",
+   "test": "n=1 down 0.0% vs base 17.7% (edge -17.7, p=1.000)"
+  }
+ ],
+ "rows": [
+  {
+   "signal": "weekly_rsi14_le_36 (first week at or below)",
+   "horizon": "2w_5pct",
+   "period": "train",
+   "n_episodes": 17,
+   "base": {
+    "up": 33.2,
+    "range": 43.5,
+    "down": 23.3
+   },
+   "up": 23.5,
+   "up_edge_pts": -9.6,
+   "up_p": 0.6069925456117077,
+   "down": 35.3,
+   "down_edge_pts": 12.0,
+   "down_p": 0.25295972885451107,
+   "dates": [
+    "2010-06-21",
+    "2011-08-01",
+    "2012-11-12",
+    "2018-10-22",
+    "2018-11-12",
+    "2019-05-28"
+   ]
+  },
+  {
+   "signal": "weekly_rsi14_lt_30 (first week below)",
+   "horizon": "2w_5pct",
+   "period": "train",
+   "n_episodes": 15,
+   "base": {
+    "up": 33.2,
+    "range": 43.5,
+    "down": 23.3
+   },
+   "up": 53.3,
+   "up_edge_pts": 20.2,
+   "up_p": 0.1058971612482224,
+   "down": 20.0,
+   "down_edge_pts": -3.3,
+   "down_p": 1.0,
+   "dates": [
+    "2008-10-20",
+    "2010-06-28",
+    "2010-07-26",
+    "2010-08-09",
+    "2018-11-19",
+    "2018-12-17"
+   ]
+  },
+  {
+   "signal": "wavetrend_green_dot_oversold (WT1 crosses up, WT2 <= -53)",
+   "horizon": "2w_5pct",
+   "period": "train",
+   "n_episodes": 6,
+   "base": {
+    "up": 33.2,
+    "range": 43.5,
+    "down": 23.3
+   },
+   "up": 33.3,
+   "up_edge_pts": 0.2,
+   "up_p": 1.0,
+   "down": 33.3,
+   "down_edge_pts": 10.0,
+   "down_p": 0.628892970066745,
+   "dates": [
+    "1999-05-03",
+    "2002-08-19",
+    "2004-08-23",
+    "2008-11-03",
+    "2010-08-16",
+    "2011-08-29"
+   ]
+  },
+  {
+   "signal": "wavetrend_green_dot_any (WT1 crosses up WT2)",
+   "horizon": "2w_5pct",
+   "period": "train",
+   "n_episodes": 80,
+   "base": {
+    "up": 33.2,
+    "range": 43.5,
+    "down": 23.3
+   },
+   "up": 33.8,
+   "up_edge_pts": 0.6,
+   "up_p": 0.9058656049989661,
+   "down": 23.8,
+   "down_edge_pts": 0.5,
+   "down_p": 0.8952307398727977,
+   "dates": [
+    "2019-08-26",
+    "2020-02-10",
+    "2020-04-06",
+    "2020-07-06",
+    "2020-08-03",
+    "2020-10-12"
+   ]
+  },
+  {
+   "signal": "two_week_drop_le_-15pct",
+   "horizon": "2w_5pct",
+   "period": "train",
+   "n_episodes": 47,
+   "base": {
+    "up": 33.2,
+    "range": 43.5,
+    "down": 23.3
+   },
+   "up": 40.4,
+   "up_edge_pts": 7.3,
+   "up_p": 0.28282581968337045,
+   "down": 34.0,
+   "down_edge_pts": 10.7,
+   "down_p": 0.0857715124436716,
+   "dates": [
+    "2011-03-14",
+    "2011-09-26",
+    "2016-01-11",
+    "2018-10-15",
+    "2018-11-12",
+    "2020-03-16"
+   ]
+  },
+  {
+   "signal": "drawdown_ge_30pct_from_ath (first week)",
+   "horizon": "2w_5pct",
+   "period": "train",
+   "n_episodes": 14,
+   "base": {
+    "up": 33.2,
+    "range": 43.5,
+    "down": 23.3
+   },
+   "up": 57.1,
+   "up_edge_pts": 24.0,
+   "up_p": 0.08418150854855383,
+   "down": 28.6,
+   "down_edge_pts": 5.3,
+   "down_p": 0.7511554424874659,
+   "dates": [
+    "2006-05-15",
+    "2008-01-14",
+    "2008-02-04",
+    "2016-02-08",
+    "2018-11-12",
+    "2020-03-16"
+   ]
+  },
+  {
+   "signal": "weekly_close_below_sma200w (first week)",
+   "horizon": "2w_5pct",
+   "period": "train",
+   "n_episodes": 15,
+   "base": {
+    "up": 33.2,
+    "range": 43.5,
+    "down": 23.3
+   },
+   "up": 13.3,
+   "up_edge_pts": -19.8,
+   "up_p": 0.16726788331267725,
+   "down": 20.0,
+   "down_edge_pts": -3.3,
+   "down_p": 1.0,
+   "dates": [
+    "2012-01-09",
+    "2012-04-16",
+    "2012-07-02",
+    "2012-09-04",
+    "2013-06-03",
+    "2013-07-15"
+   ]
+  },
+  {
+   "signal": "weekly_rsi14_le_36 (first week at or below)",
+   "horizon": "2w_5pct",
+   "period": "test",
+   "n_episodes": 6,
+   "base": {
+    "up": 35.1,
+    "range": 43.0,
+    "down": 22.0
+   },
+   "up": 50.0,
+   "up_edge_pts": 14.9,
+   "up_p": 0.4294201396885337,
+   "down": 33.3,
+   "down_edge_pts": 11.4,
+   "down_p": 0.618660491669825,
+   "dates": [
+    "2022-05-09",
+    "2022-06-13",
+    "2022-06-27",
+    "2022-08-29",
+    "2022-09-12",
+    "2025-03-31"
+   ]
+  },
+  {
+   "signal": "weekly_rsi14_lt_30 (first week below)",
+   "horizon": "2w_5pct",
+   "period": "test",
+   "n_episodes": 0,
+   "base": {
+    "up": 35.1,
+    "range": 43.0,
+    "down": 22.0
+   },
+   "up": null,
+   "up_edge_pts": null,
+   "up_p": 1.0,
+   "down": null,
+   "down_edge_pts": null,
+   "down_p": 1.0,
+   "dates": []
+  },
+  {
+   "signal": "wavetrend_green_dot_oversold (WT1 crosses up, WT2 <= -53)",
+   "horizon": "2w_5pct",
+   "period": "test",
+   "n_episodes": 0,
+   "base": {
+    "up": 35.1,
+    "range": 43.0,
+    "down": 22.0
+   },
+   "up": null,
+   "up_edge_pts": null,
+   "up_p": 1.0,
+   "down": null,
+   "down_edge_pts": null,
+   "down_p": 1.0,
+   "dates": []
+  },
+  {
+   "signal": "wavetrend_green_dot_any (WT1 crosses up WT2)",
+   "horizon": "2w_5pct",
+   "period": "test",
+   "n_episodes": 25,
+   "base": {
+    "up": 35.1,
+    "range": 43.0,
+    "down": 22.0
+   },
+   "up": 48.0,
+   "up_edge_pts": 12.9,
+   "up_p": 0.20860712051513622,
+   "down": 12.0,
+   "down_edge_pts": -10.0,
+   "down_p": 0.3332400735276159,
+   "dates": [
+    "2025-10-27",
+    "2025-12-29",
+    "2026-01-26",
+    "2026-04-06",
+    "2026-07-20",
+    "2026-08-03"
+   ]
+  },
+  {
+   "signal": "two_week_drop_le_-15pct",
+   "horizon": "2w_5pct",
+   "period": "test",
+   "n_episodes": 9,
+   "base": {
+    "up": 35.1,
+    "range": 43.0,
+    "down": 22.0
+   },
+   "up": 22.2,
+   "up_edge_pts": -12.9,
+   "up_p": 0.5084732293943611,
+   "down": 22.2,
+   "down_edge_pts": 0.3,
+   "down_p": 1.0,
+   "dates": [
+    "2022-04-18",
+    "2022-06-13",
+    "2022-08-29",
+    "2024-09-03",
+    "2025-03-03",
+    "2025-03-31"
+   ]
+  },
+  {
+   "signal": "drawdown_ge_30pct_from_ath (first week)",
+   "horizon": "2w_5pct",
+   "period": "test",
+   "n_episodes": 6,
+   "base": {
+    "up": 35.1,
+    "range": 43.0,
+    "down": 22.0
+   },
+   "up": 66.7,
+   "up_edge_pts": 31.6,
+   "up_p": 0.1931668505961789,
+   "down": 16.7,
+   "down_edge_pts": -5.3,
+   "down_p": 1.0,
+   "dates": [
+    "2022-01-24",
+    "2022-02-28",
+    "2022-04-11",
+    "2023-03-06",
+    "2025-03-31",
+    "2025-04-14"
+   ]
+  },
+  {
+   "signal": "weekly_close_below_sma200w (first week)",
+   "horizon": "2w_5pct",
+   "period": "test",
+   "n_episodes": 1,
+   "base": {
+    "up": 35.1,
+    "range": 43.0,
+    "down": 22.0
+   },
+   "up": 0.0,
+   "up_edge_pts": -35.1,
+   "up_p": 1.0,
+   "down": 0.0,
+   "down_edge_pts": -22.0,
+   "down_p": 1.0,
+   "dates": [
+    "2022-09-19"
+   ]
+  },
+  {
+   "signal": "weekly_rsi14_le_36 (first week at or below)",
+   "horizon": "13w_10pct",
+   "period": "train",
+   "n_episodes": 11,
+   "base": {
+    "up": 48.4,
+    "range": 29.3,
+    "down": 22.3
+   },
+   "up": 45.5,
+   "up_edge_pts": -3.0,
+   "up_p": 1.0,
+   "down": 45.5,
+   "down_edge_pts": 23.2,
+   "down_p": 0.07536519003004961,
+   "dates": [
+    "2008-11-10",
+    "2010-05-10",
+    "2011-08-01",
+    "2012-11-12",
+    "2018-10-22",
+    "2019-05-28"
+   ]
+  },
+  {
+   "signal": "weekly_rsi14_lt_30 (first week below)",
+   "horizon": "13w_10pct",
+   "period": "train",
+   "n_episodes": 8,
+   "base": {
+    "up": 48.4,
+    "range": 29.3,
+    "down": 22.3
+   },
+   "up": 62.5,
+   "up_edge_pts": 14.1,
+   "up_p": 0.4956191546474256,
+   "down": 25.0,
+   "down_edge_pts": 2.7,
+   "down_p": 1.0,
+   "dates": [
+    "2004-08-02",
+    "2008-03-10",
+    "2008-06-30",
+    "2008-10-06",
+    "2010-06-28",
+    "2018-11-19"
+   ]
+  },
+  {
+   "signal": "wavetrend_green_dot_oversold (WT1 crosses up, WT2 <= -53)",
+   "horizon": "13w_10pct",
+   "period": "train",
+   "n_episodes": 6,
+   "base": {
+    "up": 48.4,
+    "range": 29.3,
+    "down": 22.3
+   },
+   "up": 100.0,
+   "up_edge_pts": 51.6,
+   "up_p": 0.012901796662245084,
+   "down": 0.0,
+   "down_edge_pts": -22.3,
+   "down_p": 0.3493311974320982,
+   "dates": [
+    "1999-05-03",
+    "2002-08-19",
+    "2004-08-23",
+    "2008-11-03",
+    "2010-08-16",
+    "2011-08-29"
+   ]
+  },
+  {
+   "signal": "wavetrend_green_dot_any (WT1 crosses up WT2)",
+   "horizon": "13w_10pct",
+   "period": "train",
+   "n_episodes": 55,
+   "base": {
+    "up": 48.4,
+    "range": 29.3,
+    "down": 22.3
+   },
+   "up": 49.1,
+   "up_edge_pts": 0.7,
+   "up_p": 1.0,
+   "down": 20.0,
+   "down_edge_pts": -2.3,
+   "down_p": 0.871095955131573,
+   "dates": [
+    "2018-08-06",
+    "2019-01-07",
+    "2019-06-24",
+    "2020-02-10",
+    "2020-07-06",
+    "2020-10-12"
+   ]
+  },
+  {
+   "signal": "two_week_drop_le_-15pct",
+   "horizon": "13w_10pct",
+   "period": "train",
+   "n_episodes": 24,
+   "base": {
+    "up": 48.4,
+    "range": 29.3,
+    "down": 22.3
+   },
+   "up": 58.3,
+   "up_edge_pts": 9.9,
+   "up_p": 0.4150822115969787,
+   "down": 37.5,
+   "down_edge_pts": 15.2,
+   "down_p": 0.0848983104224097,
+   "dates": [
+    "2010-05-03",
+    "2011-02-28",
+    "2011-09-26",
+    "2016-01-11",
+    "2018-10-15",
+    "2020-03-16"
+   ]
+  },
+  {
+   "signal": "drawdown_ge_30pct_from_ath (first week)",
+   "horizon": "13w_10pct",
+   "period": "train",
+   "n_episodes": 10,
+   "base": {
+    "up": 48.4,
+    "range": 29.3,
+    "down": 22.3
+   },
+   "up": 50.0,
+   "up_edge_pts": 1.6,
+   "up_p": 1.0,
+   "down": 20.0,
+   "down_edge_pts": -2.3,
+   "down_p": 1.0,
+   "dates": [
+    "2002-03-18",
+    "2006-03-06",
+    "2008-01-14",
+    "2016-02-08",
+    "2018-11-12",
+    "2020-03-16"
+   ]
+  },
+  {
+   "signal": "weekly_close_below_sma200w (first week)",
+   "horizon": "13w_10pct",
+   "period": "train",
+   "n_episodes": 9,
+   "base": {
+    "up": 48.4,
+    "range": 29.3,
+    "down": 22.3
+   },
+   "up": 22.2,
+   "up_edge_pts": -26.2,
+   "up_p": 0.1816293329199425,
+   "down": 22.2,
+   "down_edge_pts": -0.0,
+   "down_p": 1.0,
+   "dates": [
+    "2011-06-13",
+    "2011-09-19",
+    "2011-12-27",
+    "2012-04-16",
+    "2012-09-04",
+    "2013-06-03"
+   ]
+  },
+  {
+   "signal": "weekly_rsi14_le_36 (first week at or below)",
+   "horizon": "13w_10pct",
+   "period": "test",
+   "n_episodes": 3,
+   "base": {
+    "up": 53.7,
+    "range": 28.6,
+    "down": 17.7
+   },
+   "up": 66.7,
+   "up_edge_pts": 12.9,
+   "up_p": 1.0,
+   "down": 0.0,
+   "down_edge_pts": -17.7,
+   "down_p": 1.0,
+   "dates": [
+    "2022-05-09",
+    "2022-08-29",
+    "2025-03-31"
+   ]
+  },
+  {
+   "signal": "weekly_rsi14_lt_30 (first week below)",
+   "horizon": "13w_10pct",
+   "period": "test",
+   "n_episodes": 0,
+   "base": {
+    "up": 53.7,
+    "range": 28.6,
+    "down": 17.7
+   },
+   "up": null,
+   "up_edge_pts": null,
+   "up_p": 1.0,
+   "down": null,
+   "down_edge_pts": null,
+   "down_p": 1.0,
+   "dates": []
+  },
+  {
+   "signal": "wavetrend_green_dot_oversold (WT1 crosses up, WT2 <= -53)",
+   "horizon": "13w_10pct",
+   "period": "test",
+   "n_episodes": 0,
+   "base": {
+    "up": 53.7,
+    "range": 28.6,
+    "down": 17.7
+   },
+   "up": null,
+   "up_edge_pts": null,
+   "up_p": 1.0,
+   "down": null,
+   "down_edge_pts": null,
+   "down_p": 1.0,
+   "dates": []
+  },
+  {
+   "signal": "wavetrend_green_dot_any (WT1 crosses up WT2)",
+   "horizon": "13w_10pct",
+   "period": "test",
+   "n_episodes": 17,
+   "base": {
+    "up": 53.7,
+    "range": 28.6,
+    "down": 17.7
+   },
+   "up": 58.8,
+   "up_edge_pts": 5.1,
+   "up_p": 0.8094076822744191,
+   "down": 17.6,
+   "down_edge_pts": -0.0,
+   "down_p": 1.0,
+   "dates": [
+    "2025-01-06",
+    "2025-04-28",
+    "2025-09-29",
+    "2025-12-29",
+    "2026-04-06",
+    "2026-07-20"
+   ]
+  },
+  {
+   "signal": "two_week_drop_le_-15pct",
+   "horizon": "13w_10pct",
+   "period": "test",
+   "n_episodes": 5,
+   "base": {
+    "up": 53.7,
+    "range": 28.6,
+    "down": 17.7
+   },
+   "up": 60.0,
+   "up_edge_pts": 6.3,
+   "up_p": 1.0,
+   "down": 40.0,
+   "down_edge_pts": 22.3,
+   "down_p": 0.21615800221116854,
+   "dates": [
+    "2021-03-01",
+    "2022-01-24",
+    "2022-06-13",
+    "2024-09-03",
+    "2025-03-03"
+   ]
+  },
+  {
+   "signal": "drawdown_ge_30pct_from_ath (first week)",
+   "horizon": "13w_10pct",
+   "period": "test",
+   "n_episodes": 3,
+   "base": {
+    "up": 53.7,
+    "range": 28.6,
+    "down": 17.7
+   },
+   "up": 66.7,
+   "up_edge_pts": 12.9,
+   "up_p": 1.0,
+   "down": 33.3,
+   "down_edge_pts": 15.6,
+   "down_p": 0.44229555397521136,
+   "dates": [
+    "2022-01-24",
+    "2023-03-06",
+    "2025-03-31"
+   ]
+  },
+  {
+   "signal": "weekly_close_below_sma200w (first week)",
+   "horizon": "13w_10pct",
+   "period": "test",
+   "n_episodes": 1,
+   "base": {
+    "up": 53.7,
+    "range": 28.6,
+    "down": 17.7
+   },
+   "up": 100.0,
+   "up_edge_pts": 46.3,
+   "up_p": 1.0,
+   "down": 0.0,
+   "down_edge_pts": -17.7,
+   "down_p": 1.0,
+   "dates": [
+    "2022-09-19"
+   ]
+  }
+ ],
+ "vol_anchor_vs_base_rate": {
+  "2w_5pct": {
+   "all_2000+": {
+    "n_windows": 696,
+    "brier_base": 0.641,
+    "brier_vol": 0.615,
+    "diff_vol_minus_base": -0.026,
+    "ci90": [
+     -0.037,
+     -0.016
+    ]
+   },
+   "test_2021+": {
+    "n_windows": 153,
+    "brier_base": 0.621,
+    "brier_vol": 0.625,
+    "diff_vol_minus_base": 0.004,
+    "ci90": [
+     -0.01,
+     0.018
+    ]
+   }
+  },
+  "13w_10pct": {
+   "all_2000+": {
+    "n_windows": 106,
+    "brier_base": 0.649,
+    "brier_vol": 0.624,
+    "diff_vol_minus_base": -0.025,
+    "ci90": [
+     -0.069,
+     0.019
+    ]
+   },
+   "test_2021+": {
+    "n_windows": 23,
+    "brier_base": 0.613,
+    "brier_vol": 0.611,
+    "diff_vol_minus_base": -0.001,
+    "ci90": [
+     -0.06,
+     0.062
+    ]
+   }
+  }
+ },
+ "vol_anchor_today": {
+  "2w_5pct": {
+   "up": 26,
+   "range": 44,
+   "down": 30,
+   "weekly_vol_52w_pct": 6.0,
+   "as_of_completed_week": "2026-11-16"
+  },
+  "13w_10pct": {
+   "up": 26,
+   "range": 35,
+   "down": 39,
+   "weekly_vol_52w_pct": 6.0,
+   "as_of_completed_week": "2026-11-16"
+  }
+ }
+}

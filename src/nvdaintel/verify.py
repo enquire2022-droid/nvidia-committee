@@ -45,6 +45,11 @@ def known(run_id):
     vals = set()
     harvest(json.loads((ROOT / "outputs/fact_sheet.json").read_text()), vals)
     harvest(json.loads((ROOT / "outputs/scorecard.json").read_text()) if (ROOT / "outputs/scorecard.json").exists() else {}, vals)
+    # shadow checks and the signal-test record (owner-approved 24 Nov 2026) are citable in the "Shadow checks" section
+    for f in [ROOT / "outputs/shadow/drawdown_clock.json", ROOT / "research/tier2_signals.json",
+              *(ROOT / "outputs/shadow").glob("*_history_check.json")]:
+        if f.exists():
+            harvest(json.loads(f.read_text()), vals)
     for p in (ROOT / "config").glob("*.json"):
         harvest(json.loads(p.read_text()), vals)
     run = ROOT / "committee/runs" / run_id

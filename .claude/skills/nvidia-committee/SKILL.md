@@ -53,6 +53,14 @@ Dispatch `nvda-chair` (fresh agent) with the run id. It writes `chair.json` (dec
 Expected list, rulings, expected path with checkpoint status, ladder proposals, coverage note) and must pass `check`.
 Do not edit chair.json. If it fails a gate, send it back to the chair with the gate's message.
 
+## 4b. Shadow checks (owner-approved 24 Nov 2026) — only AFTER chair.json is final
+```
+python -m nvdaintel.shadow drawdown              # drawdown clock (context, low confidence)
+python -m nvdaintel.shadow history <run_id>      # history check: history's odds for the chair's calls + ladder touch odds
+```
+No member, red team or chair reads `outputs/shadow/` before its own file is final. Shadow checks never move probabilities,
+thesis-break rulings or the ladder. Gaps over 10 points are questions for the next run, not corrections.
+
 ## 5. Charts
 ```
 python -m nvdaintel.pathchart <run_id>        # actual path + branches; probabilities from chair.json
@@ -65,7 +73,8 @@ Macro (Purple List + dated catalysts) → Technicals (1W/1D/4H) → Fundamentals
 Narrative & governance (incl. TB4 capex monitor) → Kahneman (System 1 / System 2) → Outlook (probabilities + base rates) →
 Expected path (chart + checkpoint table with status) → **Ladder Audit** (full history from `ladder_audit.history`, then resting orders,
 distances from the fact sheet) → Strategy → Thesis-break update → Committee table (every member, red team, chair rulings) →
-**Performance review** → Dashboard → Sources (every page in config/pages.json with ✓ / stale / ✗ and read time).
+**Performance review** → **Shadow checks** (drawdown clock line; history check table with flags; the ladder-trigger
+line from `ladder_triggers.memo_line` and, if fired, the review) → Dashboard → Sources (every page in config/pages.json with ✓ / stale / ✗ and read time).
 
 ## 7. Verifier gate
 ```

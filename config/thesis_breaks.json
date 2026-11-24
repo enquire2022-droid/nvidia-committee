@@ -5,26 +5,30 @@
       "id": "TB1",
       "rule": "Export-control violations by Nvidia confirmed (government finding, charge, settlement or company admission)",
       "status": "NOT FIRED",
-      "as_of": "2026-11-24"
+      "as_of": "2026-11-24",
+      "changed_on": null
     },
     {
       "id": "TB2",
       "rule": "CEO departs under legal or regulatory pressure",
       "status": "CLEARED 2026-11-24 (owner confirmed): premise reversed - board reinstated Huang as President, CEO and director effective immediately (8-K, event date 2026-11-22, Item 5.02, read 2026-11-24). RE-ARMED.",
       "refire_test": "Fires again if the independent board investigation concludes with findings of legal or regulatory wrongdoing or of misleading the board and Huang steps down or is removed, or an official action names him personally and he departs.",
-      "history": "FIRED by chair ruling 2026-11-12 (never owner-confirmed); whether that firing was right is recorded as undecidable."
+      "history": "FIRED by chair ruling 2026-11-12 (never owner-confirmed); whether that firing was right is recorded as undecidable.",
+      "changed_on": "2026-11-24"
     },
     {
       "id": "TB3",
       "rule": "New export restrictions enacted that materially cut Nvidia's addressable market",
       "status": "FIRED (provisional on materiality) - kept by owner 2026-11-24",
-      "clear_test": "Owner rules it immaterial only on documents: BIS licence grants for the large Singapore/Malaysia operators, or a company quantification of at-risk revenue (e.g. in the Q3 10-Q). Never on price or political goodwill. Re-decide when the 10-Q is read; licence deadline about 2027-02-17."
+      "clear_test": "Owner rules it immaterial only on documents: BIS licence grants for the large Singapore/Malaysia operators, or a company quantification of at-risk revenue (e.g. in the Q3 10-Q). Never on price or political goodwill. Re-decide when the 10-Q is read; licence deadline about 2027-02-17.",
+      "changed_on": "2026-11-22"
     },
     {
       "id": "TB4",
       "rule": "Hyperscaler AI capex cuts (two or more of the top four guide capex down)",
       "status": "NOT FIRED, NOT ON WATCH",
-      "as_of": "2026-11-24"
+      "as_of": "2026-11-24",
+      "changed_on": null
     },
     {
       "id": "TB5",
@@ -35,7 +39,8 @@
         "A permitted 12b-25 extension does NOT fire TB5; missing the extended deadline does.",
         "A company-confirmed formal SEC investigation or subpoena (without Wells notice/enforcement action) triggers an escalation review with the owner, not an automatic fire.",
         "A press report alone is WATCH."
-      ]
+      ],
+      "changed_on": "2026-11-24"
     }
   ]
 }

@@ -79,5 +79,22 @@ guidance cuts by two or more of the four.
 5. **Count shared evidence once (chair).** The chair tabulates which evidence items each member used and nets shared items once
    before ruling.
 
+## Added 24 Nov 2026 (owner-approved, adapted from BTC committee2)
+**Ladder change triggers.** A ladder level changes only when what it is tied to changes, never because the expected path
+failed (a broken path redraws the path, not the ladder). A review opens only when `ladder_triggers.fired` lists one:
+A anchor drift above 2% on two consecutive completed weeks, same direction (dynamic anchors: 200W SMA, D1's 200W-minus-ATR);
+B weekly close below the established drawdown low (a low 4+ weeks old; newer lows are bottoming);
+C regime change (two consecutive weekly closes back above the 100W SMA within the last 8 weeks);
+D shock (a daily move above 4 standard deviations in the last 5 sessions) or a thesis-break status change within 7 days.
+The chair proposes; the owner approves. With no trigger, the memo says "Ladder: no change trigger - hold".
+
+**Signals must be tested.** `research/tier2_signals.json` holds the walk-forward verdict for each tested signal
+(train to 2020, test 2021+, independent episodes, Benjamini-Hochberg). Only an EDGE verdict may move probabilities.
+At the first test (24 Nov 2026) no signal had an edge: weekly RSI <= 36 and < 30, the WaveTrend green dot (oversold and
+any), a 2-week drop of 15% or more, a first 30% drawdown, a first weekly close below the 200W SMA. Say "no tested edge"
+when you cite one; it may describe the setup, not shift the numbers. Untested signals: same rule until tested.
+The volatility-scaled starting point (normal on log returns, 52-week vol, half drift) did NOT beat the base rates in the
+2021+ test (2 weeks: Brier 0.625 vs 0.621); the base rates stay the starting point.
+
 ## Equity Bottom / Top checklists
 **Draft, not approved, not back-tested.** Report them as information only until the owner approves them after a back-test on NVDA's 2018, 2022 and 2025 drawdowns.

@@ -205,6 +205,9 @@ def build():
                     "holdings_vs_price_pct": round((price / hold["avg_cost"] - 1) * 100, 1) if hold.get("avg_cost") else None,
                     "blend_note": None if budget else "budget not set: average cost including existing holdings cannot be computed",
                     "history": engines.ladder_history(ladder)}
+    fs_lt = engines.ladder_triggers(ladder, rd["as_of"], pg["tv_technicals_1w"]["values"].get("sma200"),
+                                    pg["tv_technicals_1d"]["values"].get("atr14") or 0.0,
+                                    json.loads((ROOT / "config/thesis_breaks.json").read_text()))
 
     cov = engines.coverage(rd, rd["as_of"])
     fs = {
@@ -213,7 +216,7 @@ def build():
         "hyperscaler_capex": engines.capex_monitor(),
         "as_of": rd["as_of"], "price_note": rd["price_note"], "snapshot": rd["snapshot"],
         "base_rates": base, "weekly_rsi": weekly_rsi, "structure": structure, "fib_check": fib_check,
-        "relative": rel, "ladder_audit": ladder_audit, "thesis_breaks": tb["breaks"],
+        "relative": rel, "ladder_audit": ladder_audit, "ladder_triggers": fs_lt, "thesis_breaks": tb["breaks"],
         "thesis_break_status": rd.get("thesis_break_status", {}),
         "pages": pg,
     }
