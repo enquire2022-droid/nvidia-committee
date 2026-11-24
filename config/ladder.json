@@ -1,5 +1,5 @@
 {
-  "_status": "APPROVED by owner 2026-11-22 18:19 (Qatar): chair ladder addendum of run 2026-11-22-review (dip D1-D3, confirmation C1-C2). DORMANT: nothing is eligible before gate-opening date G (activation conditions); buying paused under TB2 and TB3 (owner rulings pending). Budget = $10,000 NEW MONEY on top of the existing 30 sh @171 (total exposure up to $15,130). Committee audits, never applies changes; no order is placed by the committee.",
+  "_status": "APPROVED by owner 2026-11-22 18:19 (Qatar): chair ladder addendum of run 2026-11-22-review (dip D1-D3, confirmation C1-C2). DORMANT: nothing is eligible before gate-opening date G (activation conditions); buying paused under TB2 and TB3 (owner rulings pending). Budget = $10,000 NEW MONEY on top of the existing 30 sh @171 (total exposure up to $15,130). Committee audits, never applies changes; no order is placed by the committee. Revised 2026-11-24 (owner 'approved as recommended'): D0 125-129 (w 1.0) added from D3 (2.0 -> 1.0); total weight 7.5.",
   "budget_usd": 10000.0,
   "holdings": {
     "shares": 30,
@@ -10,6 +10,39 @@
   },
   "earnings_blackout_trading_days": 3,
   "orders": [
+    {
+      "id": "D0",
+      "type": "dip",
+      "former_id": null,
+      "zone_low": 125.0,
+      "zone_high": 129.0,
+      "weight": 1.0,
+      "usd": 1333.33,
+      "indicative_price": 127.0,
+      "indicative_shares": 10,
+      "anchors": [
+        {
+          "name": "reinstatement_gap_bottom_12553",
+          "value": 125.53
+        },
+        {
+          "name": "sma200w",
+          "value": 124.86
+        },
+        {
+          "name": "swing_low_12450",
+          "value": 124.5
+        },
+        {
+          "name": "fib_05_tiebreak",
+          "value": 127.09
+        }
+      ],
+      "anchor_rule": "Fixed structure: reinstatement-gap bottom 125.53, 200W SMA (124.86 at 2026-11-24), swing low 124.50; fib 0.5 127.09 tie-break. Re-check the 200W SMA at G.",
+      "condition": "Resting buy-limit only after G, if zone_high is at least 1 ATR(G) below the close on G, and all activation conditions hold. Counts toward the pre-FOMC/CPI cap. Spacing to D1 is narrow (about 1.06 ATR at 13.22): weight capped at 1.0.",
+      "status": "approved, dormant (before G)",
+      "reach_note": "recomputed each run in fact_sheet.ladder_audit.orders[].reach_now (no stored figures)"
+    },
     {
       "id": "D1",
       "type": "dip",
@@ -31,62 +64,7 @@
       "order": null,
       "condition": "Resting buy-limit only after G and only if (a) zone_high is at least 1 ATR(G) below the close on G, (b) NVDA/SOX has made no new low below 14.93 for two consecutive weekly closes (relative_strength gate), (c) all activation conditions hold. Counts toward the pre-FOMC/CPI cap.",
       "status": "approved, dormant (before G)",
-      "reach": {
-        "115_by_2026-12-31": {
-          "level": 115.0,
-          "by": "2026-12-31",
-          "trading_days": 28,
-          "move_needed_pct": -8.4,
-          "freq_pct": 42.6,
-          "n": 1237,
-          "verdict": "reachable"
-        },
-        "113_by_2026-12-31": {
-          "level": 113.0,
-          "by": "2026-12-31",
-          "trading_days": 28,
-          "move_needed_pct": -10.0,
-          "freq_pct": 36.5,
-          "n": 1237,
-          "verdict": "reachable"
-        },
-        "111_by_2026-12-31": {
-          "level": 111.0,
-          "by": "2026-12-31",
-          "trading_days": 28,
-          "move_needed_pct": -11.6,
-          "freq_pct": 31.0,
-          "n": 1237,
-          "verdict": "reachable"
-        },
-        "115_by_2027-03-31": {
-          "level": 115.0,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": -8.4,
-          "freq_pct": 55.9,
-          "n": 1173,
-          "verdict": "reachable"
-        },
-        "113_by_2027-03-31": {
-          "level": 113.0,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": -10.0,
-          "freq_pct": 51.0,
-          "n": 1173,
-          "verdict": "reachable"
-        },
-        "111_by_2027-03-31": {
-          "level": 111.0,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": -11.6,
-          "freq_pct": 45.7,
-          "n": 1173,
-          "verdict": "reachable"
-        }
-      }
+      "reach_note": "recomputed each run in fact_sheet.ladder_audit.orders[].reach_now (no stored figures)"
     },
     {
       "id": "D2",
@@ -113,44 +91,7 @@
       "order": null,
       "condition": "Resting buy-limit only after G AND after the CPI 2026-12-10 session (pacing cap), if zone_high is at least 1 ATR(G) below the latest close and all activation conditions hold.",
       "status": "approved, dormant (before G)",
-      "reach": {
-        "101_by_2026-12-31": {
-          "level": 101.0,
-          "by": "2026-12-31",
-          "trading_days": 28,
-          "move_needed_pct": -19.5,
-          "freq_pct": 12.3,
-          "n": 1237,
-          "verdict": "reachable"
-        },
-        "97_by_2026-12-31": {
-          "level": 97.0,
-          "by": "2026-12-31",
-          "trading_days": 28,
-          "move_needed_pct": -22.7,
-          "freq_pct": 7.2,
-          "n": 1237,
-          "verdict": "reachable"
-        },
-        "101_by_2027-03-31": {
-          "level": 101.0,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": -19.5,
-          "freq_pct": 28.8,
-          "n": 1173,
-          "verdict": "reachable"
-        },
-        "97_by_2027-03-31": {
-          "level": 97.0,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": -22.7,
-          "freq_pct": 25.6,
-          "n": 1173,
-          "verdict": "reachable"
-        }
-      }
+      "reach_note": "recomputed each run in fact_sheet.ladder_audit.orders[].reach_now (no stored figures)"
     },
     {
       "id": "D3",
@@ -158,9 +99,9 @@
       "former_id": "N4",
       "zone_low": 86.5,
       "zone_high": 90.5,
-      "weight": 2.0,
-      "usd": 2666.67,
-      "indicative_shares": 30,
+      "weight": 1.0,
+      "usd": 1333.33,
+      "indicative_shares": 15,
       "indicative_price": 88.5,
       "anchors": [
         {
@@ -177,35 +118,7 @@
       "order": null,
       "condition": "Resting buy-limit only after G AND after the CPI 2026-12-10 session; all activation conditions hold. Unreachable by 2026-12-31 (90.5: 3.2%), so a next-quarter, tail level; dated to 2027-03-31.",
       "status": "approved, dormant (before G)",
-      "reach": {
-        "90.5_by_2026-12-31": {
-          "level": 90.5,
-          "by": "2026-12-31",
-          "trading_days": 28,
-          "move_needed_pct": -27.9,
-          "freq_pct": 3.2,
-          "n": 1237,
-          "verdict": "unreachable"
-        },
-        "90.5_by_2027-03-31": {
-          "level": 90.5,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": -27.9,
-          "freq_pct": 20.1,
-          "n": 1173,
-          "verdict": "reachable"
-        },
-        "86.5_by_2027-03-31": {
-          "level": 86.5,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": -31.1,
-          "freq_pct": 15.5,
-          "n": 1173,
-          "verdict": "reachable"
-        }
-      }
+      "reach_note": "recomputed each run in fact_sheet.ladder_audit.orders[].reach_now (no stored figures)"
     },
     {
       "id": "C1",
@@ -228,44 +141,7 @@
       "order": "After the qualifying close: buy-stop-limit, stop 145.71, limit 150.0, valid 10 sessions; no fill above 150. If price is already above 145.71 at G, C1 needs a fresh qualifying close (a close at or below 145.71 followed by a close above it); it never chases.",
       "condition": "All activation conditions; counts toward the pre-FOMC/CPI cap. EPS-multiple levels are not used (red team).",
       "status": "approved, dormant (before G)",
-      "reach": {
-        "145.71_by_2026-12-31": {
-          "level": 145.71,
-          "by": "2026-12-31",
-          "trading_days": 28,
-          "move_needed_pct": 16.1,
-          "freq_pct": 33.9,
-          "n": 1237,
-          "verdict": "reachable"
-        },
-        "145.71_by_2027-03-31": {
-          "level": 145.71,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": 16.1,
-          "freq_pct": 66.8,
-          "n": 1173,
-          "verdict": "reachable"
-        },
-        "150_by_2026-12-31": {
-          "level": 150.0,
-          "by": "2026-12-31",
-          "trading_days": 28,
-          "move_needed_pct": 19.5,
-          "freq_pct": 27.1,
-          "n": 1237,
-          "verdict": "reachable"
-        },
-        "150_by_2027-03-31": {
-          "level": 150.0,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": 19.5,
-          "freq_pct": 58.5,
-          "n": 1173,
-          "verdict": "reachable"
-        }
-      }
+      "reach_note": "recomputed each run in fact_sheet.ladder_audit.orders[].reach_now (no stored figures)"
     },
     {
       "id": "C2",
@@ -288,35 +164,7 @@
       "order": "After the qualifying weekly close: buy-stop-limit, stop 186, limit 186 + 1 ATR(G) (196.71 at today's ATR), valid 5 sessions. If unfilled, re-arm only on a new weekly close above 186 that follows a weekly close below it.",
       "condition": "All activation conditions. Unreachable by 2026-12-31 (2.7%); dated to 2027-03-31. The engine measures daily closes, so a weekly close is harder than shown.",
       "status": "approved, dormant (before G)",
-      "reach": {
-        "186_by_2026-12-31": {
-          "level": 186.0,
-          "by": "2026-12-31",
-          "trading_days": 28,
-          "move_needed_pct": 48.2,
-          "freq_pct": 2.7,
-          "n": 1237,
-          "verdict": "unreachable"
-        },
-        "186_by_2027-03-31": {
-          "level": 186.0,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": 48.2,
-          "freq_pct": 32.5,
-          "n": 1173,
-          "verdict": "reachable"
-        },
-        "174.97_by_2027-03-31": {
-          "level": 174.97,
-          "by": "2027-03-31",
-          "trading_days": 92,
-          "move_needed_pct": 39.4,
-          "freq_pct": 36.1,
-          "n": 1173,
-          "verdict": "reachable"
-        }
-      }
+      "reach_note": "recomputed each run in fact_sheet.ladder_audit.orders[].reach_now (no stored figures)"
     }
   ],
   "pre_ladder_fills": [
@@ -392,7 +240,7 @@
     "1. Owner approval of levels, weights and a budget (budget_usd is null). Nothing is live until then, and no order is ever placed by the committee.",
     "2. TB2: owner confirms or rejects the 2026-11-12 ruling; if confirmed, the un-pause test (no credible Nvidia-knew report from the 12-01 to 12-03 sessions or their replacements, no charge or admission naming Nvidia, permanent CEO named or credible timeline) must be met and approved by the owner.",
     "3. TB3: owner rules the remote-access rule immaterial on evidence (licence grants for the large SG/MY operators or a company quantification of at-risk revenue) before ~2027-02-17, or rules TB3 not fired; never on price.",
-    "4. TB1 and TB4 not fired; proposed TB5 not fired if the owner adopts it. Any thesis break firing later pauses every tranche, and resting dip orders are withdrawn until the owner lifts the pause and G is recomputed.",
+    "4. TB1 and TB4 not fired; TB5 not fired (adopted 2026-11-24). Any thesis break firing later pauses every tranche, and resting dip orders are withdrawn until the owner lifts the pause and G is recomputed.",
     "5. Accounting gate: the Q3 10-Q is located and read (legal proceedings, any SEC disclosure, guarantee footnote); Nvidia has described the scope of the SEC matter or the 10-Q is silent on it with clean statements; no restatement, non-reliance, material weakness, auditor change or missed filing.",
     "6. Data gate: sec_filings, the three technicals pages and tv_relative re-read in full; no activation on stale pages.",
     "7. Gate-opening and re-anchor: nothing is eligible before G; zones recomputed on G per reanchor_rule; no chasing, no instant fills.",
@@ -405,7 +253,8 @@
   "_change_log": [
     "2026-11-22: owner reported 30 sh @171 filled and the other orders cancelled; owner asked to update the complete ladder -> chair's 2026-11-22 replacement (C1, N1-N4, breakout) adopted as dormant; old L1-L4 moved to dropped_orders.",
     "2026-11-22 18:11: owner approved fixes D/E: ladder back to PROPOSED pending chair revision; orders typed dip/confirmation; averages exclude confirmation tranches and blend holdings when a budget exists.",
-    "2026-11-22 18:19: owner APPROVED chair ladder addendum (D1 111-115 w1, D2 97-101 w2, D3 86.5-90.5 w2, C1 145.71/150 w1, C2 186/196.71 w1.5) with $10,000 new-money budget; dormant until G; TB2/TB3/TB5 owner rulings still pending."
+    "2026-11-22 18:19: owner APPROVED chair ladder addendum (D1 111-115 w1, D2 97-101 w2, D3 86.5-90.5 w2, C1 145.71/150 w1, C2 186/196.71 w1.5) with $10,000 new-money budget; dormant until G; TB2/TB3/TB5 owner rulings still pending.",
+    "2026-11-24 11:16: owner approved chair proposal P2 option B: new dip D0 125-129 weight 1.0 (anchors 125.53 gap bottom, 200W SMA 124.86, swing low 124.50; fib 0.5 tie-break); D3 weight 2.0 -> 1.0. Reach blocks recomputed at 165.05 (P3)."
   ],
   "budget_type": "new money (owner 2026-11-22): existing $5,130 position is NOT deducted; total NVDA exposure up to 5,130 + 10,000 = $15,130",
   "breakout_tranche": {

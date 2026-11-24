@@ -4,6 +4,7 @@ python -m nvdaintel.factsheet
 """
 import json, math, pathlib
 import numpy as np
+import pandas as pd
 from nvdaintel import engines
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -169,7 +170,14 @@ def build():
             flags.append("dip order above price")
         if otype == "dip" and o["zone_low"] <= price <= o["zone_high"]:
             flags.append("price inside zone")
+        # reachability recomputed at THIS run's price (owner-approved 2026-11-24, chair proposal P3); never stored in config
+        asof = pd.Timestamp(rd["as_of"])
+        q_end = (asof + pd.offsets.QuarterEnd(0)).strftime("%Y-%m-%d")
+        nq_end = (asof + pd.offsets.QuarterEnd(0) + pd.offsets.QuarterEnd(1)).strftime("%Y-%m-%d")
+        lvl = o["zone_high"] if otype == "dip" else o["zone_low"]
+        reach_now = {d: engines.reach_trigger(lvl, d, price, rd["as_of"]) for d in (q_end, nq_end)}
         orders.append({"id": o["id"], "type": otype, "zone": [o["zone_low"], o["zone_high"]], "mid": mid, "weight": o["weight"],
+                       "reach_now": {d: {"level": r["level"], "freq_pct": r["freq_pct"], "verdict": r["verdict"]} for d, r in reach_now.items()},
                        "dist_from_price_pct": round((mid / price - 1) * 100, 1), "gap_from_prev_pct": gap,
                        "anchors": anchors, "flags": flags})
         prev_mid = mid if otype == "dip" else prev_mid

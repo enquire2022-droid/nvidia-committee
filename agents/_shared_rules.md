@@ -40,10 +40,11 @@ Validate: `PYTHONPATH=src python -m nvdaintel.committee check <file>` must print
 Price momentum (RSI, MACD, MAs, Stochastic, oscillators) = one group. Analyst targets and ratings = one group. Governance / export-control news = one group, however many headlines.
 
 ## Stance words
-Accumulate / Hold / Wait / Reduce / Avoid New Entry: strategic (18-36 months) and tactical (1-12 weeks). Reduce is not available while price is below the owner's blended cost unless a thesis break fires (owner holds no recorded position yet).
+Accumulate / Hold / Wait / Reduce / Avoid New Entry: strategic (18-36 months) and tactical (1-12 weeks). Reduce is not available while price is below the owner's blended cost unless a thesis break fires (owner holds 30 shares at $171 since 2026-11-22; see config/ladder.json holdings).
 
-## Thesis breaks (approved): any one pauses all buying
-TB1 export violations confirmed; TB2 CEO departs under legal pressure; TB3 new export restrictions enacted; TB4 hyperscaler capex cuts.
+## Thesis breaks (approved): any FIRED one pauses all buying
+TB1 export violations confirmed; TB2 CEO departs under legal pressure; TB3 new export restrictions enacted that materially cut the addressable market;
+TB4 hyperscaler capex cuts; TB5 financial-reporting integrity failure (adopted 2026-11-24). Current status, re-fire and clear tests: `config/thesis_breaks.json`.
 
 ## Tier 1 rules (owner-approved 15 Nov 2026, adapted from BTC committee2)
 
@@ -65,6 +66,18 @@ Two or more with run-rate more than 10% below TTM = TB4 WATCH (narrative member 
 guidance cuts by two or more of the four.
 
 **Independent chair.** The chair is a fresh agent (`nvda-chair`). Members write for the chair, not for the orchestrator.
+
+## Lessons adopted 2026-11-24 (owner-approved, after the Huang reinstatement)
+1. **Reversal probability.** Every reversible governance or thesis-break state (a CEO exit, a rule, a probe) gets an explicit
+   probability of reversal in every run, with the dated signals for and against listed. Never leave it at zero by default.
+2. **Weigh political signals by leverage.** A President, Treasury or Commerce head speaking about a company that depends on their
+   licences or approvals is signal for governance and licence outcomes. Petitions, celebrities and individual legislators stay near noise.
+   Official documents remain the only bar for firing or clearing a thesis break.
+3. **Intent is not a decision.** "Does not intend to" is a statement of intent. Never call a governance state permanent without a
+   structural lock (a signed successor, a charge, a court order, a filing).
+4. **Trap clock first.** Do not call a level break CONFIRMED before its 1-3 close trap clock has run.
+5. **Count shared evidence once (chair).** The chair tabulates which evidence items each member used and nets shared items once
+   before ruling.
 
 ## Equity Bottom / Top checklists
 **Draft, not approved, not back-tested.** Report them as information only until the owner approves them after a back-test on NVDA's 2018, 2022 and 2025 drawdowns.
